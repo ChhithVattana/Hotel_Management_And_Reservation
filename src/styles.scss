@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+@media screen and (min-width: 1400px){
+  .fs-xxl-1{
+    font-size: 2.5rem !important;
+  }
+  .fs-xxl-2{
+    font-size: 2rem !important;
+  }
+  .fs-xxl-3{
+    font-size: 1.75rem !important;
+  }
+  .fs-xxl-4{
+    font-size: 1.5rem !important;
+  }
+  .fs-xxl-5{
+    font-size: 1.25rem !important;
+  }
+  .fs-xxl-6{
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 993px){
+  .fs-lg-1{
+    font-size: 2.5rem !important;
+  }
+  .fs-lg-2{
+    font-size: 2rem !important;
+  }
+  .fs-lg-3{
+    font-size: 1.75rem !important;
+  }
+  .fs-lg-4{
+    font-size: 1.5rem !important;
+  }
+  .fs-lg-5{
+    font-size: 1.25rem !important;
+  }
+  .fs-lg-6{
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .fs-sm-1{
+    font-size: 2.5rem !important;
+  }
+  .fs-sm-2{
+    font-size: 2rem !important;
+  }
+  .fs-sm-3{
+    font-size: 1.75rem !important;
+  }
+  .fs-sm-4{
+    font-size: 1.5rem !important;
+  }
+  .fs-sm-5{
+    font-size: 1.25rem !important;
+  }
+  .fs-sm-6{
+    font-size: 1rem !important;
+  }
+}
