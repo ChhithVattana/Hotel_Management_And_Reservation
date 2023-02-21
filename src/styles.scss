@@ -2,65 +2,111 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
-@media screen and (min-width: 1400px){
-  .fs-xxl-1{
+@media screen and (min-width: 1400px) {
+  .fs-xxl-1 {
     font-size: 2.5rem !important;
   }
-  .fs-xxl-2{
+  .fs-xxl-2 {
     font-size: 2rem !important;
   }
-  .fs-xxl-3{
+  .fs-xxl-3 {
     font-size: 1.75rem !important;
   }
-  .fs-xxl-4{
+  .fs-xxl-4 {
     font-size: 1.5rem !important;
   }
-  .fs-xxl-5{
+  .fs-xxl-5 {
     font-size: 1.25rem !important;
   }
-  .fs-xxl-6{
+  .fs-xxl-6 {
     font-size: 1rem !important;
   }
 }
 
-@media screen and (max-width: 993px){
-  .fs-lg-1{
+@media screen and (max-width: 993px) {
+  .fs-lg-1 {
     font-size: 2.5rem !important;
   }
-  .fs-lg-2{
+  .fs-lg-2 {
     font-size: 2rem !important;
   }
-  .fs-lg-3{
+  .fs-lg-3 {
     font-size: 1.75rem !important;
   }
-  .fs-lg-4{
+  .fs-lg-4 {
     font-size: 1.5rem !important;
   }
-  .fs-lg-5{
+  .fs-lg-5 {
     font-size: 1.25rem !important;
   }
-  .fs-lg-6{
+  .fs-lg-6 {
     font-size: 1rem !important;
   }
 }
 
-@media screen and (max-width: 576px){
-  .fs-sm-1{
+@media screen and (max-width: 576px) {
+  .fs-sm-1 {
     font-size: 2.5rem !important;
   }
-  .fs-sm-2{
+  .fs-sm-2 {
     font-size: 2rem !important;
   }
-  .fs-sm-3{
+  .fs-sm-3 {
     font-size: 1.75rem !important;
   }
-  .fs-sm-4{
+  .fs-sm-4 {
     font-size: 1.5rem !important;
   }
-  .fs-sm-5{
+  .fs-sm-5 {
     font-size: 1.25rem !important;
   }
-  .fs-sm-6{
+  .fs-sm-6 {
     font-size: 1rem !important;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .fs-content {
+    font-size: 20px !important;
+  }
+  .pt-6 {
+    padding-top: 6rem !important;
+  }
+  .pt-7 {
+    padding-top: 12rem !important;
+  }
+  .pb-6 {
+    padding-bottom: 6rem !important;
+  }
+  .pb-7 {
+    padding-bottom: 12rem !important;
+  }
+  .ps-6 {
+    padding-left: 6rem !important;
+  }
+  .ps-7 {
+    padding-left: 12rem !important;
+  }
+  .pe-6 {
+    padding-right: 6rem !important;
+  }
+  .pe-7 {
+    padding-right: 12rem !important;
+  }
+  .py-6 {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+  .py-7 {
+    padding-top: 12rem !important;
+    padding-bottom: 12rem !important;
+  }
+  .px-6 {
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+  }
+  .px-7 {
+    padding-left: 12rem !important;
+    padding-right: 12rem !important;
   }
 }
