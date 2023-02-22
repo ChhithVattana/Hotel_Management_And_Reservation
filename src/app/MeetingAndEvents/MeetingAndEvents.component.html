@@ -1,0 +1,39 @@
+<div class="meeting">
+  <div class="bg-blue">
+    <div class="container">
+      <div class="row p-5">
+        <div class="d-flex">
+          <h2 class="fw-700 blue">MEETINGS & EVENTS</h2>
+          <hr
+            style="
+              width: 50%;
+              height: 2px;
+              border-width: 1px;
+              border-color: black;
+              opacity: 1;
+            "
+            class="mx-5"
+          />
+          <a href="" style="text-decoration: none">
+            <div class="fs-link blue" style="font-weight: 600">
+              View All <i class="bi bi-arrow-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row py-5 px-2">
+        <div class="col-xxl-4" *ngFor="let i of [1, 2, 3]">
+          <div class="card mx-auto">
+            <div class="card-header">
+              <div class="bg-img event-img-1"></div>
+            </div>
+            <div class="card-body text-center p-4">
+              <p class="fs-lg-content blue fw-600">CONFERENCE ROOMS</p>
+              <p class="fs-content">Enjoy a seamless experience organising and holding a meeting in our varied selection of meeting rooms.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

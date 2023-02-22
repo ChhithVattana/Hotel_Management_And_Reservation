@@ -2,6 +2,83 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
+/*follow-up standard for our website*/
+
+.blue {
+  color: #0057b2;
+}
+
+.bg-blue {
+  background-color: #ebf5ff;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.fs-lg-content {
+  font-size: 24px !important;
+}
+
+.fs-content {
+  font-size: 20px !important;
+}
+
+.fs-link{
+  font-size: 18px !important;
+}
+
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+/*==========================================*/
+
+.pt-6 {
+  padding-top: 6rem !important;
+}
+.pt-7 {
+  padding-top: 12rem !important;
+}
+.pb-6 {
+  padding-bottom: 6rem !important;
+}
+.pb-7 {
+  padding-bottom: 12rem !important;
+}
+.ps-6 {
+  padding-left: 6rem !important;
+}
+.ps-7 {
+  padding-left: 12rem !important;
+}
+.pe-6 {
+  padding-right: 6rem !important;
+}
+.pe-7 {
+  padding-right: 12rem !important;
+}
+.py-6 {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
+.py-7 {
+  padding-top: 12rem !important;
+  padding-bottom: 12rem !important;
+}
+.px-6 {
+  padding-left: 6rem !important;
+  padding-right: 6rem !important;
+}
+.px-7 {
+  padding-left: 12rem !important;
+  padding-right: 12rem !important;
+}
+
 @media screen and (min-width: 1400px) {
   .fs-xxl-1 {
     font-size: 2.5rem !important;
@@ -62,51 +139,5 @@
   }
   .fs-sm-6 {
     font-size: 1rem !important;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .fs-content {
-    font-size: 20px !important;
-  }
-  .pt-6 {
-    padding-top: 6rem !important;
-  }
-  .pt-7 {
-    padding-top: 12rem !important;
-  }
-  .pb-6 {
-    padding-bottom: 6rem !important;
-  }
-  .pb-7 {
-    padding-bottom: 12rem !important;
-  }
-  .ps-6 {
-    padding-left: 6rem !important;
-  }
-  .ps-7 {
-    padding-left: 12rem !important;
-  }
-  .pe-6 {
-    padding-right: 6rem !important;
-  }
-  .pe-7 {
-    padding-right: 12rem !important;
-  }
-  .py-6 {
-    padding-top: 6rem !important;
-    padding-bottom: 6rem !important;
-  }
-  .py-7 {
-    padding-top: 12rem !important;
-    padding-bottom: 12rem !important;
-  }
-  .px-6 {
-    padding-left: 6rem !important;
-    padding-right: 6rem !important;
-  }
-  .px-7 {
-    padding-left: 12rem !important;
-    padding-right: 12rem !important;
   }
 }

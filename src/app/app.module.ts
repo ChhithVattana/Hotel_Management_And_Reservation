@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './NavigationBar/NavigationBar.component';
 import { FooterComponent } from './Footer/Footer.component';
 import { HomePageComponent } from './HomePage/HomePage.component';
+import { MeetingAndEventsComponent } from './MeetingAndEvents/MeetingAndEvents.component';
+import { RoomsComponent } from './Rooms/Rooms.component';
 
 const appRoutes: Routes = [
   {
@@ -16,12 +18,14 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
     NavigationBarComponent,
     FooterComponent,
     HomePageComponent,
-  ],
+      MeetingAndEventsComponent,
+      RoomsComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

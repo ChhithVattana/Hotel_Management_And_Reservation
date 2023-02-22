@@ -1,0 +1,41 @@
+hr {
+  position: relative;
+  top: 3px;
+}
+
+i {
+  position: relative;
+  top: 1px;
+}
+
+a {
+  position: relative;
+  top: 5px;
+}
+
+.card {
+  width: 400px;
+  height: 450px;
+  padding: 0px;
+  border: none;
+  background-color: inherit;
+}
+
+.card-header {
+  width: 100%;
+  height: 240px;
+  padding: 0px;
+  border: none;
+}
+
+.bg-img {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
+}
+
+.event-img-1{
+  background-image: url("https://s3-alpha-sig.figma.com/img/8dd2/4328/220efb22f182cc8a5a1fde3bc735730e?Expires=1678060800&Signature=PNH2PofkEgBSbMApg0y7rxN5AAvdRKgMCXMvvaJ2ndMQzTh8BKyxVj0EtoQLJnHnoVHc-XKjaeg7qJg2pcyfkTk97f4mg11rJy2t~VhkhCAfFIdKi1vuWh0r1mHQIvFgELVi0VTidGjXcFhKcTKTE18oGqP89uWBNvymHlkKsi7hMjanBTDOVP60JOeS9QS1sjXtkMOZqlr7lk27EECR1yXdFioby2OkUy-riHoNgfgm4UAr5sVQ0we1LA4rgykvXUbc8j9S0xsKUot4Yca1gzEeaONkefoJCk0bl4LI67rB~LHNRoXZEm1Fkwy3RW4IC7radz0XzaBIcuqsHDmw8g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
