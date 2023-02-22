@@ -2,26 +2,55 @@
   width: 100%;
   background-color: rgb(130, 109, 109);
   border-radius: 15px;
+  overflow: hidden;
 }
 
 .img-1 {
   content: url("https://s3-alpha-sig.figma.com/img/8165/9180/20220747c9ba908a25e893388a56b590?Expires=1678060800&Signature=dxZfBkI-iLqzhJF4YbJU263MDUmYd5Ij8jVBpRNxU~Dgg3HTqiPoDOCWAcYXQRCwQe7Yd9ScdTQBvPG-xOHUBjrtSxOYZ~bxgW8s3Z7SbEEoXlydm2jj0aa1gzkj4IiJA3kI~i~7jVGaYJuMxeANocoJPh70DtwjB8wyrrAmLzC0jJXIRtTkp1YWDbAIThZIkJKYMqPo-ef2r9-eDJ9NJPt~jmaLTbL~YbaDcbCM15mXQ3O-Vs4NLGshAe577IIpeMf1TovRKoIsBrmawoZdqAXlwWR37DLzlqhHuSNpFYLfzaO~CPSEx5glhm~~fnB492XJ85VV011zHOJAbzeSdg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
   height: 150px;
+  width: 100%;
+  object-fit: cover;
+  transition: all .3s ease-in-out;
 }
 
 .img-2 {
   content: url("https://s3-alpha-sig.figma.com/img/9f5d/14db/2ee4fac5bf4ba556a663f3c225bac37e?Expires=1678060800&Signature=EeXv7HCoFv9b~70B2-D-g7JVbTuTXKpFRBDfF3P0MXkARy-gg7RxShLtwTN7NKldyZo3MzGZ1pwdacscNffOoRBAiDuiRKVSB8fEqZNYyHV7rkq3VuxiWmwDxRY3kzog2O7DLAu6P7yEE4CXyu7rQ9MTTBE-U~SNNqn1yQyE2MQ7VXPbBmdmEAX7P48BkMiaIGBb-CWKsB3MzxbZST9HprQ4ZfMd1b-3tS0Bn34rykDOk58XCgNGMlESvesMQftcQkW-rsGamtCWVKiYSerE-Jt9hFTTiHn1RjeyxBLt2ipTRTrfaZnP44iX9dgN3-kx4HQjFUnb3lvFHCsqBt9FJg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
   height: 400px;
+  width: 100%;
+  object-fit: cover;
+  transition: all .3s ease-in-out;
 }
 
 .img-3 {
   content: url("https://s3-alpha-sig.figma.com/img/7a38/a6cc/cb977d664af2cd620bafff08baceda6c?Expires=1678060800&Signature=RakXHmoOeqrJ-SwzLQQlvfbkYdwPI96l-BaqSllGzQfAw2w0jGRZe4xch~yibE7KlMWknvxqZOH5UhCT90oDAwl6ZeWa8btNmiPv26FU2w1nZQ2ozzlbAz54ytzbxffAFbZmzIZhL1xqOQ23BloEchiFpxylgM0a86dliKNND9gk8lYQWjy-BBwLXGolil9HOQTGbJedzd2RkVunv6SB9NHo0qLhWnMnwZe4WTEnY71Q1EDHDX8XMeKHFVDZ7iunLlL6yCNG-P8m3ddyaSDwrzJLQlN1useVdIWZIy2CT-f28YF3sMDtJWk0KJr-v30GDnFiFSZkd-04dflmBRHT6Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
   height: 400px;
+  width: 100%;
+  object-fit: cover;
+  transition: all .3s ease-in-out;
 }
 
 .img-4 {
   content: url("https://s3-alpha-sig.figma.com/img/aa20/eeae/20a9f88b673a9d1cf7a9ecffab292fef?Expires=1678060800&Signature=OZzXeD-8ocuBnQmG6-qb7NMbpNmaTYWmGq4avgtAwE5r53p5njeK1pssWvvfYu4J84amZF8rgmYQg3jy9u-xnQIKlDil5JG2WOePvOXeHqq5qMNyBcge8ycvXOYQrbPc5N7hGZJlw-tGEHLTDO9I~tr~6fKQ~Pao0wgCBCicgIt1DtKYCcQDydGev4yZyjhLYz1OSPd8MqPXcOXQMikrUfF1A2CvGsyBac4OL8huJxGUmWxrZDvaaTx~vaewnRtbA00burl1Bov1Y1NmTmc9CIWkWVkP4af7qoTMX5b0kB9DXXT1A2ABvopfJsH1fgfT1L~NIlSABZElfdEa4N9eZg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
   height: 150px;
+  width: 100%;
+  object-fit: cover;
+  transition: all .3s ease-in-out;
+}
+
+.img-1:hover {
+  transform: scale(1.2);
+}
+
+.img-2:hover {
+  transform: scale(1.2);
+}
+
+.img-3:hover {
+  transform: scale(1.2);
+}
+
+.img-4:hover {
+  transform: scale(1.2);
 }
 
 .btn {
@@ -85,17 +114,6 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("https://s3-alpha-sig.figma.com/img/3249/7e44/6a3bc705bede25bc46fedf201a5bf8a1?Expires=1678060800&Signature=A6OsvU24YldDbqkoeojL4swrI~553g2uYAl54OcvPBeFAGBzGKqbMq0wvoesYTTa1~u2meUco9CcmjOoos5nrK09IoiSUGEPJUU8JgyHUq6IyIxZo74XvfXJKNOleVJ1xDMVzGQ6fvzEQaN3x0PMqlc21ens4Ve~OD39DFV6DFakQ4FahcXl-tWK7zKCu8NfSPNTeMHSGfdvKLXUwA2hD8AJGXjw8b97WpHPex7OGpDo57mhUyA3uyA~tJu1FCODpYXjUB6ot64s2ajZbZa-L6U1yYi3QHp8Hbi0NVOr1OQcz3w4mhIyRUjQL55UU5A~nw8R3BBIHZmWC4ZTCSyR1A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
-}
-
-.service-img {
-  width: 100%;
-  height: 250px;
-  border-radius: 15px;
-  background-color: #0057b2;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("https://s3-alpha-sig.figma.com/img/b202/b510/e4bd546aafad8956e20c17c73f53a23b?Expires=1678060800&Signature=nUrecK3dOUsaBwt56Zn5phVpN9PRLriEP72LTwKVmBqCtyZ8wYpFJFBykt-GGswx971fcKSbo35XcATlvj-e8rqcVv8qcy4rAEgeDNbYKvg0GL4lJmf27dO58TmYwYoMQ0PosFVYSEChY4R4zyQQ0nD1qIw4LBQQJe10pXYfR9l9Q9iB~Qcpgjxn4vOo6KRgDW3-uDghkzAR8gBpwPPKplzhwEfVq9zGa-wSahNfGNk2R5XXvBtggpTEwd~weWVWLwHE4CsRPT9EovTcnDFGXyxj0h6t95P9VsSrvk93rYTAXATDklVrW7GM8WtNNcw1Bj8WS9LneJ-OHCl7x0gMiw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
 }
 
 .about-us {

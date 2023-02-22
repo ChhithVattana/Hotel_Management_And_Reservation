@@ -9,6 +9,7 @@ import { FooterComponent } from './Footer/Footer.component';
 import { HomePageComponent } from './HomePage/HomePage.component';
 import { MeetingAndEventsComponent } from './MeetingAndEvents/MeetingAndEvents.component';
 import { RoomsComponent } from './Rooms/Rooms.component';
+import { OurServiceComponent } from './OurService/OurService.component';
 
 const appRoutes: Routes = [
   {
@@ -18,13 +19,14 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
     NavigationBarComponent,
     FooterComponent,
     HomePageComponent,
       MeetingAndEventsComponent,
-      RoomsComponent
+      RoomsComponent,
+      OurServiceComponent
    ],
   imports: [
     BrowserModule,

@@ -25,7 +25,9 @@ a {
   width: 100%;
   height: 240px;
   padding: 0px;
+  border-radius: 10px;
   border: none;
+  overflow: hidden;
 }
 
 .bg-img {
@@ -33,7 +35,14 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 15px;
+  border-radius: 10px;
+  transition: all .3s ease-in-out;
+}
+
+.bg-img:hover {
+  border-radius: 10px 10px 0px 0px;
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .event-img-1{
