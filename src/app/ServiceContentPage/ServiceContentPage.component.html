@@ -1,0 +1,63 @@
+<div class="service-content">
+  <div class="bg-img-head position-relative">
+    <div class="header-text text-white">
+      <h1 class="fw-bold fs-64 text-center">RELAX AND INDULGE</h1>
+    </div>
+  </div>
+  <div class="line"></div>
+  <div class="bg-whtie">
+    <div class="container">
+      <div class="row py-6 px-6">
+        <h1 class="fs-46 fw-700 mb-5">Swimmgin Pool</h1>
+        <p class="fs-content">
+          Our fitness centre, equipped with free weights and cardio machines, is
+          the perfect place to work up a sweat. It doesn't matter if you're here
+          for work or play, you'll still be able to top off your stay with an
+          extra bit of an endorphin rush.
+        </p>
+        <div class="fs-content py-6">
+          <p><b>Opeing Hour:</b> DAILY 6AM- 10PM</p>
+          <p><b>Location:</b> Floor 5th</p>
+          <p><b>Rea Size:</b> 443 sqm</p>
+        </div>
+      </div>
+      <div class="row text-center px-7">
+        <div class="container p-0">
+          <!-- Active image or big image -->
+          <div class="mySlides" style="display: block">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/c1c0/05c1/090c9df2b00741c6a7a77659a4cab1ae?Expires=1678060800&Signature=KvmT-WZxPYkX8t3hOzH~k0grRcvnlQ2JpsIpMWHZxG-lF6LH3yu5IwOO~RNIEHmG6MytKzRZAzVlWFUgqQJiKWtUaPlF2jHXmNRRDRVm35EdcZiT7QTTpZ575eWiMafHh~TlF8FntwDSzevHoYH9oPvdzviB7MuF25N3nS5UQTTdD0dQs5AL-xSEMeGoqMBSyxns6Jevb4n9Qxj8uW2-XmDKcMA2F1e4cjEZbRQIvHdfJFSsL6rtZDBgUDyakX3TadZpGo54bCER8OGsm0X6CfXwvMo1~sB6bAOq9zAFq0xskeC9rmb3LMwveiMuJQGZXSgO4bjZWOFf7nEj1wSahA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              class="mb-img"
+            />
+          </div>
+
+          <!-- Unactive Image ignore the first one -->
+          <div class="mySlides" *ngFor="let item of [1, 2, 3, 4] | slice : 1">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/b202/b510/e4bd546aafad8956e20c17c73f53a23b?Expires=1678060800&Signature=nUrecK3dOUsaBwt56Zn5phVpN9PRLriEP72LTwKVmBqCtyZ8wYpFJFBykt-GGswx971fcKSbo35XcATlvj-e8rqcVv8qcy4rAEgeDNbYKvg0GL4lJmf27dO58TmYwYoMQ0PosFVYSEChY4R4zyQQ0nD1qIw4LBQQJe10pXYfR9l9Q9iB~Qcpgjxn4vOo6KRgDW3-uDghkzAR8gBpwPPKplzhwEfVq9zGa-wSahNfGNk2R5XXvBtggpTEwd~weWVWLwHE4CsRPT9EovTcnDFGXyxj0h6t95P9VsSrvk93rYTAXATDklVrW7GM8WtNNcw1Bj8WS9LneJ-OHCl7x0gMiw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              class="mb-img"
+            />
+          </div>
+
+          <!-- Next and previous buttons -->
+            <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+            <a class="next" (click)="plusSlides(1)">&#10095;</a>
+
+          <!-- bottom img -->
+          <div class="row px-2 mb-lg-5">
+            <div class="col p-1" *ngFor="let item of [1, 2, 3, 4]; index as i">
+              <img
+                class="demo cursor"
+                src="https://s3-alpha-sig.figma.com/img/327e/fb7e/b32173077152b87f3c26277f97126f1d?Expires=1678060800&Signature=JuSIJdhPS2w6NBtF-7XTTFFAJCIIDc407477Pe5womG9JoHDU4~hYedqyofTSX0kr3lla5Ir9Ic5XYCpR4~IfXQkg5yFlK9Zw~9h4N-x2RBR4nIubJUsGjUUp733YU45~aEQtzSWCpTYelmbTdN08ke3wKHAWUtC606sY5S5UpQWZfFJSf3Bl1WpaLbd3DJP7VAdIk9J2bPj1txP~~q2xopwtR7MwKJWkyXU9Y08W7aKwBFFLf7krEsnxO-TtRfUsVWm54QmP~OT7cFHbzJ7YojFyJg0Cg6XdbmpHD097F0aYIltiZxoz3ACr0Qq0jv8GHK7yueDLZGO6oX35YwL8w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                style="width: 100%; height: 100%"
+                (click)="currentSlide(i + 1)"
+                alt="The Woods"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-OurService></app-OurService>
+    </div>
+  </div>
+</div>

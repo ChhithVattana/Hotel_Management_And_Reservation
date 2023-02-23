@@ -53,30 +53,6 @@
   transform: scale(1.2);
 }
 
-.btn {
-  border: 1px solid #0057b2;
-}
-
-.btn.btn-black {
-  border: 1px solid black;
-}
-
-.btn.btn-white {
-  border: 1px solid white;
-}
-
-.btn.hover-blue:hover {
-  color: white;
-  background-color: #307BF6;
-  border: 1px solid #307BF6;
-}
-
-.btn.hover-lblue:hover {
-  color: white;
-  background-color: #28A7E1;
-  border: 1px solid #28A7E1;
-}
-
 .box {
   width: 90%;
   height: 200px;

@@ -10,23 +10,39 @@ import { HomePageComponent } from './HomePage/HomePage.component';
 import { MeetingAndEventsComponent } from './MeetingAndEvents/MeetingAndEvents.component';
 import { RoomsComponent } from './Rooms/Rooms.component';
 import { OurServiceComponent } from './OurService/OurService.component';
+import { ServicePageComponent } from './ServicePage/ServicePage.component';
+import { ServiceContentPageComponent } from './ServiceContentPage/ServiceContentPage.component';
 
 const appRoutes: Routes = [
   {
     path: '',
     component: HomePageComponent,
   },
+  {
+    path: 'home',
+    component: HomePageComponent,
+  },
+  {
+    path: 'services',
+    component: ServicePageComponent,
+  },
+  {
+    path: 'services/content',
+    component: ServiceContentPageComponent,
+  },
 ];
 
 @NgModule({
-  declarations: [			
+  declarations: [
     AppComponent,
     NavigationBarComponent,
     FooterComponent,
     HomePageComponent,
       MeetingAndEventsComponent,
       RoomsComponent,
-      OurServiceComponent
+      OurServiceComponent,
+      ServicePageComponent,
+      ServiceContentPageComponent
    ],
   imports: [
     BrowserModule,
@@ -34,7 +50,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes, {
       useHash: true,
       anchorScrolling: 'enabled',
-      scrollPositionRestoration: 'enabled',
+      scrollPositionRestoration: 'top',
     }),
   ],
   providers: [],
