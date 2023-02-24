@@ -12,6 +12,8 @@ import { RoomsComponent } from './Rooms/Rooms.component';
 import { OurServiceComponent } from './OurService/OurService.component';
 import { ServicePageComponent } from './ServicePage/ServicePage.component';
 import { ServiceContentPageComponent } from './ServiceContentPage/ServiceContentPage.component';
+import { MeetingAndEventPageComponent } from './MeetingAndEventPage/MeetingAndEventPage.component';
+import { MeetingAndEventContentPageComponent } from './MeetingAndEventContentPage/MeetingAndEventContentPage.component';
 
 const appRoutes: Routes = [
   {
@@ -30,6 +32,14 @@ const appRoutes: Routes = [
     path: 'services/content',
     component: ServiceContentPageComponent,
   },
+  {
+    path: 'meeting&event',
+    component: MeetingAndEventPageComponent,
+  },
+  {
+    path: 'meeting&event/content',
+    component: MeetingAndEventContentPageComponent,
+  },
 ];
 
 @NgModule({
@@ -42,7 +52,9 @@ const appRoutes: Routes = [
       RoomsComponent,
       OurServiceComponent,
       ServicePageComponent,
-      ServiceContentPageComponent
+      ServiceContentPageComponent,
+      MeetingAndEventPageComponent,
+      MeetingAndEventContentPageComponent
    ],
   imports: [
     BrowserModule,
