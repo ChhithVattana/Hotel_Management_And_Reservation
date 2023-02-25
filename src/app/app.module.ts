@@ -9,22 +9,26 @@ import { FooterComponent } from './Footer/Footer.component';
 import { HomePageComponent } from './HomePage/HomePage.component';
 import { MeetingAndEventsComponent } from './MeetingAndEvents/MeetingAndEvents.component';
 import { RoomsComponent } from './Rooms/Rooms.component';
+import { AboutUSComponent } from './AboutUS/AboutUS.component';
+import { HotelFacilitiesComponent } from './HotelFacilities/HotelFacilities.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: HomePageComponent,
+    component: AboutUSComponent,
   },
 ];
 
 @NgModule({
-  declarations: [		
+  declarations: [
     AppComponent,
     NavigationBarComponent,
     FooterComponent,
     HomePageComponent,
       MeetingAndEventsComponent,
-      RoomsComponent
+      RoomsComponent,
+      AboutUSComponent,
+      HotelFacilitiesComponent
    ],
   imports: [
     BrowserModule,
