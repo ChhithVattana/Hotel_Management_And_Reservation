@@ -5,18 +5,26 @@
         <div class="col-xxl-6">
           <div class="row p-5 py-6">
             <div class="col-xxl-6 p-1">
-              <div class="img img-1 my-xxl-2"></div>
-              <div class="img img-2 my-xxl-2"></div>
+              <div class="img my-xxl-2">
+                <div class="img-1"></div>
+              </div>
+              <div class="img my-xxl-2">
+                <div class="img-2"></div>
+              </div>
             </div>
             <div class="col-xxl-6 p-1">
-              <div class="img img-3 my-xxl-2"></div>
-              <div class="img img-4 my-xxl-2"></div>
+              <div class="img my-xxl-2">
+                <div class="img-3"></div>
+              </div>
+              <div class="img my-xxl-2">
+                <div class="img-4"></div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-xxl-6">
           <div class="row py-5 pe-6 my-xxl-2">
-            <h2 class="fw-bold py-5 pt-6 mt-5 blue">
+            <h2 class="fw-bold pb-4 pt-6 mt-5 blue">
               WELCOME TO SUNWAY HOTEL PHNOM PENH
             </h2>
             <p class="fs-content">
@@ -25,7 +33,10 @@
               voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
             </p>
             <div class="mt-3">
-              <button type="button" class="btn fs-content px-4 blue fw-bold hover-blue ​">
+              <button
+                type="button"
+                class="btn fs-content px-4 blue fw-bold hover-blue ​"
+              >
                 Read More
               </button>
             </div>
@@ -135,11 +146,28 @@
             "
             class="mx-5"
           />
-          <a href="" style="text-decoration: none">
+          <!-- <a href="" style="text-decoration: none">
             <div class="fs-link blue" style="font-weight: 600">
               View All <i class="bi bi-arrow-right"></i>
             </div>
-          </a>
+          </a> -->
+          <button class="cus-btn">
+            <p class="fs-link blue">View All</p>
+            <svg
+              stroke-width="4"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+              ></path>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
@@ -150,15 +178,17 @@
     <div class="container">
       <div class="row p-5 py-6">
         <div class="col-xxl-6">
-          <h2 class="l-blue fw-400 py-3">Our Restaurant</h2>
-          <h1 class="py-1">Explore what we offer</h1>
+          <h2 class="l-blue fw-400 pt-3 m-0">Our Restaurant</h2>
+          <h1 class="pb-1">Explore what we offer</h1>
           <p class="fs-content py-3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis
             aliquam, quam ut congue dictumst. Placerat eget amet sit scelerisque
             donec proin. In viverra viverra turpis odio vitae. Amet odio quis
             pellentesque sem viverra eu diam eu.
           </p>
-          <button class="btn btn-black px-4 py-2 fw-bold hover-lblue">EXPLORE</button>
+          <button class="btn btn-black px-4 py-2 fw-bold hover-lblue">
+            EXPLORE
+          </button>
         </div>
         <div class="col-xxl-6">
           <div class="res-img"></div>
@@ -166,29 +196,7 @@
       </div>
     </div>
   </div>
-  <div class="bg-white">
-    <div class="container">
-      <div class="text-center p-5">
-        <h2 class="blue fw-700">Our Services</h2>
-        <p class="fs-content py-4 px-7">
-          Our services and facilities at Sunway Hotel Phnom Penh are the little
-          added touches that help make our guests feel more at home. Because in
-          the end, it's not just about the accommodation, but the entire
-          experience as a whole.
-        </p>
-      </div>
-      <div class="row px-5 py-3">
-        <div *ngFor="let i of [1, 2, 3, 4, 5, 6]" class="col-xxl-4 p-1">
-          <div class="service-img"></div>
-        </div>
-      </div>
-      <div class="row py-4 pb-6">
-        <div class="text-center">
-          <button class="btn blue fw-600 px-4 hover-blue">View More</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-OurService></app-OurService>
   <div class="bg-white">
     <div class="about-us py-5">
       <div class="abt-info p-5">
@@ -204,7 +212,9 @@
           local and international satellite channels including movies, news,
           documentaries, sports and music.
         </p>
-        <button class="btn btn-white text-white mt-4 px-4 hover-blue">About Us</button>
+        <button class="btn btn-white text-white mt-4 px-4 hover-blue">
+          About Us
+        </button>
       </div>
       <div class="bg-img"></div>
     </div>

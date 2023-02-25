@@ -1,0 +1,67 @@
+<div class="service">
+  <div class="bg-img-head position-relative">
+    <div class="header-text text-white">
+      <h1 class="fw-bold fs-96 text-center">Wellness & Services</h1>
+      <p class="fw-bold fs-content text-center">
+        ENHANCE YOUR WELLNESS & SERVICES EXPERIENCES
+      </p>
+    </div>
+  </div>
+  <div class="line"></div>
+  <div class="bg-blue">
+    <div class="container">
+      <div class="text-center p-5 px-7">
+        <h1 class="fs-46 mt-3">Sed ut perspiciatis unde omnis</h1>
+        <p class="fs-link">
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+          fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+          sequi nesciunt. Neque porro quisquam est, qui dolorem.
+        </p>
+      </div>
+      <div class="row px-6" *ngFor="let i of [1, 2, 3]">
+        <div class="col-xxl-6 box p-0">
+          <div class="bg-img"></div>
+        </div>
+        <div class="col-xxl-6 box bg-white">
+          <div class="px-4 py-6">
+            <p class="green fw-700 mb-1">Available</p>
+            <h2 class="fw-700 blue mb-3">Swimming Pool</h2>
+            <p class="fs-content">
+              Let us guide you towards a better lifestyle and balance your body,
+              mind, and soul with our signature wellness journeys at
+              TODAY.FITNESS. We know everyone’s fitness levels, capabilities and
+              goals are different, so we have personal trainers.........
+            </p>
+            <button
+              class="btn px-4 hover-blue blue fw-600 fs-content"
+              (click)="onClickNavigate()"
+            >
+              More Detail
+            </button>
+          </div>
+        </div>
+        <div class="col-xxl-6 box bg-white">
+          <div class="px-4 py-6">
+            <p class="green fw-700 mb-1">Available</p>
+            <h2 class="fw-700 blue mb-3">Swimming Pool</h2>
+            <p class="fs-content">
+              Let us guide you towards a better lifestyle and balance your body,
+              mind, and soul with our signature wellness journeys at
+              TODAY.FITNESS. We know everyone’s fitness levels, capabilities and
+              goals are different, so we have personal trainers.........
+            </p>
+            <button
+              class="btn px-4 hover-blue blue fw-600 fs-content"
+              (click)="onClickNavigate()"
+            >
+              More Detail
+            </button>
+          </div>
+        </div>
+        <div class="col-xxl-6 box p-0">
+          <div class="bg-img"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
