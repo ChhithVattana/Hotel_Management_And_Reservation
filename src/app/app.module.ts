@@ -18,15 +18,24 @@ import { ServicePageComponent } from './ServicePage/ServicePage.component';
 import { ServiceContentPageComponent } from './ServiceContentPage/ServiceContentPage.component';
 import { MeetingAndEventPageComponent } from './MeetingAndEventPage/MeetingAndEventPage.component';
 import { MeetingAndEventContentPageComponent } from './MeetingAndEventContentPage/MeetingAndEventContentPage.component';
+import { ContactUSComponent } from './ContactUS/ContactUS.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: AboutUSComponent,
+    component: HomePageComponent,
   },
   {
     path: 'home',
     component: HomePageComponent,
+  },
+  {
+    path: 'aboutus',
+    component: AboutUSComponent,
+  },
+  {
+    path: 'contactus',
+    component: ContactUSComponent,
   },
   {
     path: 'services',
@@ -61,7 +70,8 @@ const appRoutes: Routes = [
     ServiceContentPageComponent,
     MeetingAndEventPageComponent,
     MeetingAndEventContentPageComponent,
-  ],
+      ContactUSComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

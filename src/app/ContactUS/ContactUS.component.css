@@ -1,0 +1,99 @@
+.bg-img-head {
+  width: 100%;
+  height: 700px;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 100%,
+      transparent 70%
+    ),
+    url("https://s3-alpha-sig.figma.com/img/45ba/5362/78d3f201a17222424b31b9988861b7c8?Expires=1678060800&Signature=LQ1C5I00qizluhAGaxPuvcR1JnELY2X71BU2vA3u5dtjGLkYNUR4Tk8sLGPQo28zYfl9kHOgvseS~NDHtLI4nl6EfkBOyAUfq0t0lb5~xJAVipme4fs8nAnFZin~mHeJRBypbICk8GRn3lhOU3jnJpYXdT8AieSDE79-QzS9OKcxfF4y10d7cWpFI-EaoTbxLPV8szvKz~AXAOPA6KW0jzJeWmi~AhBd95SJAr9APwTNWmmK5hwAFnyyhLOAZmKeIcwsUItUT~6cPFWnpz~NZifq~kj9WAs2vjMDx-0x2dcLPvx-PJma9Qd1ifvQwt6wimtdgVAYAVa~sVRgKRfRFQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 40%;
+}
+
+.header-text {
+  position: relative;
+  top: 40%;
+}
+
+.line {
+  width: 100%;
+  height: 10px;
+  background-color: #0057b2;
+}
+
+/* form css */
+.wave-group {
+  position: relative;
+}
+
+.wave-group .input {
+  font-size: 20px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+
+.wave-group .input:focus {
+  outline: none;
+}
+
+.wave-group .label {
+  color: #999;
+  font-size: 20px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+
+.wave-group .label-char {
+  transition: 0.1s ease all;
+  transition-delay: calc(var(--index) * .05s);
+}
+
+.wave-group .input:focus ~ label .label-char,
+.wave-group .input:valid ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 16px;
+  color: #0057b2;
+}
+
+.wave-group .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.wave-group .bar:before,.wave-group .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #0057b2;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.wave-group .bar:before {
+  left: 50%;
+}
+
+.wave-group .bar:after {
+  right: 50%;
+}
+
+.wave-group .input:focus ~ .bar:before,
+.wave-group .input:focus ~ .bar:after {
+  width: 50%;
+}
+
+
