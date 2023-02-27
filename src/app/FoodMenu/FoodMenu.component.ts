@@ -26,10 +26,8 @@ export class FoodMenuComponent implements OnInit {
     // });
     this.tmp = this._data.getAllData()
     this.tmp.forEach((element: any) => {
-      console.log(element)
       if (element.id != this.route.snapshot.params['name']) {
-        console.log(element.id)
-        this.tmp.pop(element)
+        element = null
       }
     })
     this.data = this.tmp

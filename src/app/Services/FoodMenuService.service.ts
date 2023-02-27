@@ -8,12 +8,6 @@ export class FoodMenuServiceService {
 
   data = [
     {
-      id: 'launch',
-      name: 'launch',
-      price: '70$',
-      description: 'blah blah blah blah',
-    },
-    {
       id: 'breakfast',
       name: 'name',
       price: '10$',
@@ -48,6 +42,12 @@ export class FoodMenuServiceService {
       name: 'name',
       price: '60$',
       description: 'blah blah blah blah',
+    },
+    {
+      id: 'launch',
+      name: 'name',
+      price: '10$',
+      description: '============================',
     },
   ];
 
