@@ -19,6 +19,8 @@ import { ServiceContentPageComponent } from './ServiceContentPage/ServiceContent
 import { MeetingAndEventPageComponent } from './MeetingAndEventPage/MeetingAndEventPage.component';
 import { MeetingAndEventContentPageComponent } from './MeetingAndEventContentPage/MeetingAndEventContentPage.component';
 import { ContactUSComponent } from './ContactUS/ContactUS.component';
+import { DinningPageComponent } from './DinningPage/DinningPage.component';
+import { FoodMenuComponent } from './FoodMenu/FoodMenu.component';
 
 const appRoutes: Routes = [
   {
@@ -53,6 +55,21 @@ const appRoutes: Routes = [
     path: 'meeting&event/content',
     component: MeetingAndEventContentPageComponent,
   },
+  {
+    path: 'dinning',
+    component: DinningPageComponent,
+  },
+  {
+    path: 'dinning/restaurant/:name',
+    component: DinningPageComponent,
+    children:[
+      {
+        path: '',
+        outlet: 'menu',
+        component: FoodMenuComponent,
+      },
+    ]
+  },
 ];
 
 @NgModule({
@@ -70,7 +87,9 @@ const appRoutes: Routes = [
     ServiceContentPageComponent,
     MeetingAndEventPageComponent,
     MeetingAndEventContentPageComponent,
-      ContactUSComponent
+      ContactUSComponent,
+      DinningPageComponent,
+      FoodMenuComponent
    ],
   imports: [
     BrowserModule,
