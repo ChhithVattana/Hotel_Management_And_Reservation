@@ -24,6 +24,8 @@ import { BreakfastMenuComponent } from './BreakfastMenu/BreakfastMenu.component'
 import { LaunchMenuComponent } from './LaunchMenu/LaunchMenu.component';
 import { DinnerMenuComponent } from './DinnerMenu/DinnerMenu.component';
 import { DrinkMenuComponent } from './DrinkMenu/DrinkMenu.component';
+import { OurRoomPageComponent } from './OurRoomPage/OurRoomPage.component';
+import { SearchBoxComponent } from './SearchBox/SearchBox.component';
 
 const appRoutes: Routes = [
   {
@@ -45,6 +47,10 @@ const appRoutes: Routes = [
   {
     path: 'services',
     component: ServicePageComponent,
+  },
+  {
+    path: 'ourroom',
+    component: OurRoomPageComponent,
   },
   {
     path: 'services/content',
@@ -109,7 +115,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     NavigationBarComponent,
     FooterComponent,
@@ -128,7 +134,9 @@ const appRoutes: Routes = [
       BreakfastMenuComponent,
       LaunchMenuComponent,
       DinnerMenuComponent,
-      DrinkMenuComponent
+      DrinkMenuComponent,
+      OurRoomPageComponent,
+      SearchBoxComponent
    ],
   imports: [
     BrowserModule,
