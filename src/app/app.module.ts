@@ -20,7 +20,10 @@ import { MeetingAndEventPageComponent } from './MeetingAndEventPage/MeetingAndEv
 import { MeetingAndEventContentPageComponent } from './MeetingAndEventContentPage/MeetingAndEventContentPage.component';
 import { ContactUSComponent } from './ContactUS/ContactUS.component';
 import { DinningPageComponent } from './DinningPage/DinningPage.component';
-import { FoodMenuComponent } from './FoodMenu/FoodMenu.component';
+import { BreakfastMenuComponent } from './BreakfastMenu/BreakfastMenu.component';
+import { LaunchMenuComponent } from './LaunchMenu/LaunchMenu.component';
+import { DinnerMenuComponent } from './DinnerMenu/DinnerMenu.component';
+import { DrinkMenuComponent } from './DrinkMenu/DrinkMenu.component';
 
 const appRoutes: Routes = [
   {
@@ -60,13 +63,46 @@ const appRoutes: Routes = [
     component: DinningPageComponent,
   },
   {
-    path: 'dinning/restaurant/:name',
+    path: 'dinning/breakfast',
     component: DinningPageComponent,
     children:[
       {
         path: '',
         outlet: 'menu',
-        component: FoodMenuComponent,
+        component: BreakfastMenuComponent,
+      },
+    ]
+  },
+  {
+    path: 'dinning/launch',
+    component: DinningPageComponent,
+    children:[
+      {
+        path: '',
+        outlet: 'menu',
+        component: LaunchMenuComponent,
+      },
+    ]
+  },
+  {
+    path: 'dinning/dinner',
+    component: DinningPageComponent,
+    children:[
+      {
+        path: '',
+        outlet: 'menu',
+        component: DinnerMenuComponent,
+      },
+    ]
+  },
+  {
+    path: 'dinning/drink',
+    component: DinningPageComponent,
+    children:[
+      {
+        path: '',
+        outlet: 'menu',
+        component: DrinkMenuComponent,
       },
     ]
   },
@@ -89,7 +125,10 @@ const appRoutes: Routes = [
     MeetingAndEventContentPageComponent,
       ContactUSComponent,
       DinningPageComponent,
-      FoodMenuComponent
+      BreakfastMenuComponent,
+      LaunchMenuComponent,
+      DinnerMenuComponent,
+      DrinkMenuComponent
    ],
   imports: [
     BrowserModule,

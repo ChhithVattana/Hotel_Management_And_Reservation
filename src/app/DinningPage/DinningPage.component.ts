@@ -6,10 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./DinningPage.component.css'],
 })
 export class DinningPageComponent implements OnInit {
+  constructor() {}
 
-  constructor(
-  ) {}
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
