@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-MeetingAndEvents',
@@ -7,8 +8,12 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class MeetingAndEventsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  onClickNavigate() {
+    this.router.navigate(['/meeting&event/content']);
   }
 }

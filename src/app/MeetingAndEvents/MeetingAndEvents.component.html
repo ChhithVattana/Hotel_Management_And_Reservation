@@ -14,7 +14,7 @@
             "
             class="mx-5"
           />
-          <a href="" style="text-decoration: none">
+          <a routerLink="/meeting&event" style="text-decoration: none">
             <div class="fs-link blue" style="font-weight: 600">
               View All <i class="bi bi-arrow-right"></i>
             </div>
@@ -23,13 +23,16 @@
       </div>
       <div class="row py-5 px-2">
         <div class="col-xxl-4" *ngFor="let i of [1, 2, 3]">
-          <div class="card mx-auto">
+          <div class="card mx-auto" (click)="onClickNavigate()">
             <div class="card-header">
               <div class="bg-img event-img-1"></div>
             </div>
             <div class="card-body text-center p-4 pt-3">
               <p class="fs-lg-content blue fw-600">CONFERENCE ROOMS</p>
-              <p class="fs-content">Enjoy a seamless experience organising and holding a meeting in our varied selection of meeting rooms.</p>
+              <p class="fs-content">
+                Enjoy a seamless experience organising and holding a meeting in
+                our varied selection of meeting rooms.
+              </p>
             </div>
           </div>
         </div>
