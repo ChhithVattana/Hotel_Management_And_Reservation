@@ -2,7 +2,7 @@
   width: 100%;
   height: 250px;
   border-radius: 15px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   background-color: #0057b2;
   background-size: cover;
   background-position: center;
@@ -11,16 +11,27 @@
 }
 
 .service-img:hover {
-  transform: scale(1.2);
   cursor: pointer;
 }
 
 .btn.hover-blue:hover {
   color: white;
-  background-color: #307BF6;
-  border: 1px solid #307BF6;
+  background-color: #307bf6;
+  border: 1px solid #307bf6;
 }
 
 .btn {
   border: 1px solid #0057b2;
+}
+
+.on-hover {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, transparent 100%);
+  transform: translateY(80%);
+  transition: 0.3s;
+}
+
+.service-img:hover > .on-hover {
+  transform: translateY(0%);
 }
