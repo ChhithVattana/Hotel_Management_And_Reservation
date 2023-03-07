@@ -71,10 +71,10 @@ hr {
   top: 3px;
 }
 
-i {
+/* i {
   position: relative;
   top: 1px;
-}
+} */
 
 a {
   position: relative;
@@ -219,7 +219,7 @@ img {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: #234567;
+  color: black;
  }
 
  .cta svg {
@@ -229,7 +229,7 @@ img {
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke: #234567;
+  stroke: black;
   stroke-width: 2;
   transform: translateX(-5px);
   transition: all 0.3s ease;
