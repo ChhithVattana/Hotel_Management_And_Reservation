@@ -10,7 +10,7 @@
   height: 150px;
   width: 100%;
   object-fit: cover;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .img-2 {
@@ -18,7 +18,7 @@
   height: 400px;
   width: 100%;
   object-fit: cover;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .img-3 {
@@ -26,7 +26,7 @@
   height: 400px;
   width: 100%;
   object-fit: cover;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .img-4 {
@@ -34,7 +34,7 @@
   height: 150px;
   width: 100%;
   object-fit: cover;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .img-1:hover {
@@ -57,10 +57,10 @@
   width: 90%;
   height: 200px;
   border-radius: 5px;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
 }
 
-.icon{
+.icon {
   width: 50px;
   height: 50px;
   background-color: green;
@@ -171,9 +171,9 @@ img {
   transition: all 0.2s ease;
   border: none;
   background: none;
- }
+}
 
- .cta:before {
+.cta:before {
   content: "";
   position: absolute;
   top: 0;
@@ -184,18 +184,18 @@ img {
   width: 45px;
   height: 45px;
   transition: all 0.3s ease;
- }
+}
 
- .cta span {
+.cta span {
   position: relative;
   font-family: "Ubuntu", sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.05em;
   color: black;
- }
+}
 
- .cta svg {
+.cta svg {
   position: relative;
   top: 0;
   margin-left: 10px;
@@ -206,28 +206,28 @@ img {
   stroke-width: 2;
   transform: translateX(-5px);
   transition: all 0.3s ease;
- }
+}
 
- .cta:hover:before {
+.cta:hover:before {
   width: 100%;
   background: #307bf6;
- }
+}
 
- .cta:hover > span {
+.cta:hover > span {
   color: white;
- }
+}
 
- .cta:hover > svg {
+.cta:hover > svg {
   stroke: white;
- }
+}
 
- .cta:hover svg {
+.cta:hover svg {
   transform: translateX(0);
- }
+}
 
- .cta:active {
+.cta:active {
   transform: scale(0.95);
- }
+}
 
 .cta-lbue {
   position: relative;
@@ -236,9 +236,9 @@ img {
   transition: all 0.2s ease;
   border: none;
   background: none;
- }
+}
 
- .cta-lbue:before {
+.cta-lbue:before {
   content: "";
   position: absolute;
   top: 0;
@@ -249,18 +249,18 @@ img {
   width: 45px;
   height: 45px;
   transition: all 0.3s ease;
- }
+}
 
- .cta-lbue span {
+.cta-lbue span {
   position: relative;
   font-family: "Ubuntu", sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.05em;
   color: black;
- }
+}
 
- .cta-lbue svg {
+.cta-lbue svg {
   position: relative;
   top: 0;
   margin-left: 10px;
@@ -271,43 +271,41 @@ img {
   stroke-width: 2;
   transform: translateX(-5px);
   transition: all 0.3s ease;
- }
+}
 
- .cta-lbue:hover:before {
+.cta-lbue:hover:before {
   width: 100%;
   background: #28a7e1;
- }
+}
 
- .cta-lbue:hover > span {
+.cta-lbue:hover > span {
   color: white;
- }
+}
 
- .cta-lbue:hover > svg {
+.cta-lbue:hover > svg {
   stroke: white;
- }
+}
 
- .cta-lbue:hover svg {
+.cta-lbue:hover svg {
   transform: translateX(0);
- }
+}
 
- .cta-lbue:active {
+.cta-lbue:active {
   transform: scale(0.95);
- }
+}
 
- /* restaurant pic style */
- .card-cus {
+/* restaurant pic style */
+.card-cus {
   overflow: hidden;
   width: 90%;
   height: 380px;
   background-color: #212121;
-  box-shadow: 5px 5px 20px #191919,
-               -5px -5px 20px #292929;
   transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
-               transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
- }
+    transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
 
- .card-cus:hover {
+.card-cus:hover {
   border-bottom-right-radius: 50px;
   border-top-left-radius: 50px;
   transform: scale(1.05);
- }
+}

@@ -145,9 +145,9 @@
   </div>
   <div class="bg-blue">
     <div class="container">
-      <div class="row p-5 pt-6">
-        <div class="d-flex">
-          <h2 class="fw-700 blue" style="width: 322.22px">Our Rooms</h2>
+      <div class="row p-5 pe-3">
+        <div class="d-flex justify-content-between p-0">
+          <h2 class="fw-700 blue mb-0">Our Rooms</h2>
           <hr
             style="
               width: 50%;
@@ -158,12 +158,23 @@
             "
             class="mx-5"
           />
-          <!-- <a href="" style="text-decoration: none">
-            <div class="fs-link blue" style="font-weight: 600">
-              View All <i class="bi bi-arrow-right"></i>
-            </div>
-          </a> -->
-          <button class="cus-btn" (click)="onClickOurRoom()">View All</button>
+          <a routerLink="/meeting&event" style="text-decoration: none">
+            <button class="cus-btn">
+              View All<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-arrow-right-short mb-1"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                />
+              </svg>
+            </button>
+          </a>
         </div>
       </div>
     </div>
