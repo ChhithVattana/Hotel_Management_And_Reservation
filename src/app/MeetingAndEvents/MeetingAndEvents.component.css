@@ -48,3 +48,44 @@ a {
 .event-img-1{
   background-image: url("https://s3-alpha-sig.figma.com/img/355d/aa2d/b4ec4f062fcb15f4e1c28ad517c9aa43?Expires=1679270400&Signature=KsIaeZeUUtXflDHuW1dl7V7acUT9jkYl81ddO2DEA1R4f9~knJtCBNzRmt~8NIG216ndbgel~xmMsGPgPsqDlmXQbuG75AUwb5Z5btpYBH212O5k50cgxLLWlJp~JBFLEXAg-POM~zbdjWaTNFQHjLqL-LW4pNTGKmh5oMSfIVaLjZt4S1i2VUQZ03GDLxtMshSYZ~l4f0ZoC8DFs72Zs432KZfEXZ62Rdn0SyZ7dsEjWJ6yf88XIc64fOOKlR8UdOev3OhCklqS67TGy~wh1~wZPzJZE0AdEBhpVKRpLJXRuiZNwssuMEQ5htvSaWAOaV~A6bI964pdGtwPshhI~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
 }
+
+/* Button Style ViewAll */
+.cus-btn {
+  font-size: 18px;
+  color: black;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.cus-btn:focus,
+.cus-btn:hover {
+  color: #0057b2;
+}
+
+.cus-btn:focus:after,
+.cus-btn:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.cus-btn:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #0057b2;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}

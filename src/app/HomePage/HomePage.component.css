@@ -82,10 +82,9 @@ a {
 }
 
 .res-img {
-  width: 90%;
+  width: 100%;
   height: 380px;
   background-color: #0057b2;
-  border-radius: 20px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -124,69 +123,43 @@ img {
 
 /* Button Style ViewAll */
 .cus-btn {
-  padding: 0;
-  margin: 0;
+  font-size: 18px;
+  color: black;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
   border: none;
   background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
 
-.cus-btn {
-  --primary-color: #111;
-  --hovered-color: #c84747;
-  position: relative;
-  display: flex;
-  font-weight: 600;
-  font-size: 20px;
-  gap: 0.5rem;
-  align-items: center;
+.cus-btn:focus,
+.cus-btn:hover {
+  color: #0057b2;
 }
 
-.cus-btn p {
-  margin: 0;
-  position: relative;
-  font-size: 20px;
+.cus-btn:focus:after,
+.cus-btn:hover:after {
+  width: 100%;
+  left: 0%;
 }
 
-.cus-btn::after {
-  position: absolute;
+.cus-btn:after {
   content: "";
-  width: 0;
-  left: 0;
-  bottom: 5px;
-  background: var(--hovered-color);
-  height: 1px;
-  transition: 0.3s ease-out;
-}
-
-.cus-btn p::before {
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
   position: absolute;
-/*   box-sizing: border-box; */
-  content: "ViewAll";
   width: 0%;
-  inset: 0;
-  color: var(--hovered-color);
-  overflow: hidden;
-  transition: 0.3s ease-out;
-}
-
-.cus-btn:hover::after {
-  width: 100%;
-}
-
-.cus-btn:hover p::before {
-  width: 100%;
-}
-
-.cus-btn:hover svg {
-  transform: translateX(4px);
-  color: var(--hovered-color)
-}
-
-.cus-btn svg {
-  transition: 0.2s;
-  position: relative;
-  width: 15px;
-  transition-delay: 0.2s;
+  height: 2px;
+  background-color: #0057b2;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
 /* Button Custom */
@@ -319,4 +292,22 @@ img {
 
  .cta-lbue:active {
   transform: scale(0.95);
+ }
+
+ /* restaurant pic style */
+ .card-cus {
+  overflow: hidden;
+  width: 90%;
+  height: 380px;
+  background-color: #212121;
+  box-shadow: 5px 5px 20px #191919,
+               -5px -5px 20px #292929;
+  transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
+               transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+ }
+
+ .card-cus:hover {
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  transform: scale(1.05);
  }
