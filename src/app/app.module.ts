@@ -27,6 +27,8 @@ import { DrinkMenuComponent } from './DrinkMenu/DrinkMenu.component';
 import { OurRoomPageComponent } from './OurRoomPage/OurRoomPage.component';
 import { SearchBoxComponent } from './SearchBox/SearchBox.component';
 import { RoomContentPageComponent } from './RoomContentPage/RoomContentPage.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 const appRoutes: Routes = [
   {
@@ -76,46 +78,46 @@ const appRoutes: Routes = [
   {
     path: 'dinning/breakfast',
     component: DinningPageComponent,
-    children:[
+    children: [
       {
         path: '',
         outlet: 'menu',
         component: BreakfastMenuComponent,
       },
-    ]
+    ],
   },
   {
     path: 'dinning/launch',
     component: DinningPageComponent,
-    children:[
+    children: [
       {
         path: '',
         outlet: 'menu',
         component: LaunchMenuComponent,
       },
-    ]
+    ],
   },
   {
     path: 'dinning/dinner',
     component: DinningPageComponent,
-    children:[
+    children: [
       {
         path: '',
         outlet: 'menu',
         component: DinnerMenuComponent,
       },
-    ]
+    ],
   },
   {
     path: 'dinning/drink',
     component: DinningPageComponent,
-    children:[
+    children: [
       {
         path: '',
         outlet: 'menu',
         component: DrinkMenuComponent,
       },
-    ]
+    ],
   },
 ];
 
@@ -134,24 +136,26 @@ const appRoutes: Routes = [
     ServiceContentPageComponent,
     MeetingAndEventPageComponent,
     MeetingAndEventContentPageComponent,
-      ContactUSComponent,
-      DinningPageComponent,
-      BreakfastMenuComponent,
-      LaunchMenuComponent,
-      DinnerMenuComponent,
-      DrinkMenuComponent,
-      OurRoomPageComponent,
-      SearchBoxComponent,
-      RoomContentPageComponent
-   ],
+    ContactUSComponent,
+    DinningPageComponent,
+    BreakfastMenuComponent,
+    LaunchMenuComponent,
+    DinnerMenuComponent,
+    DrinkMenuComponent,
+    OurRoomPageComponent,
+    SearchBoxComponent,
+    RoomContentPageComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MaterialModule,
     RouterModule.forRoot(appRoutes, {
       useHash: true,
       anchorScrolling: 'enabled',
       scrollPositionRestoration: 'top',
     }),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

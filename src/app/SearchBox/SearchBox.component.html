@@ -2,13 +2,66 @@
   <div class="d-flex w-100 h-100">
     <div class="bg-box">
       <div class="row h-100 p-3 px-4">
-        <div class="col-xxl-3">
+        <div class="col-xxl-4">
           <p class="text-white fs-link fw-700 mb-0">Check-in:</p>
-          <input class="date" type="date" />
+          <mat-form-field appearance="fill">
+            <mat-label>Check-in date</mat-label>
+            <input matInput [matDatepicker]="picker" class="bg-blue" />
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
         </div>
-        <div class="col-xxl-3"></div>
-        <div class="col-xxl-3"></div>
-        <div class="col-xxl-3"></div>
+        <div class="col-xxl-4">
+          <p class="text-white fs-link fw-700 mb-0">Check-out:</p>
+          <mat-form-field appearance="fill">
+            <mat-label>Check-out date</mat-label>
+            <input matInput [matDatepicker]="picker2" />
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker2"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col-xxl-2">
+          <p class="text-white fs-link fw-700 mb-0">Check-in:</p>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xxl-2">
+          <p class="text-white fs-link fw-700 mb-0">Check-in:</p>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <div class="bg-btn position-relative">

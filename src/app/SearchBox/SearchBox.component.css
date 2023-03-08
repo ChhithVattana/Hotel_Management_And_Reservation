@@ -22,3 +22,13 @@
   height: 50px;
   background-color: #d1e8fd;
 }
+
+/* Dtaepicker style */
+
+.mat-mdc-form-field {
+  display: block;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: whitesmoke;
+}
