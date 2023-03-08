@@ -20,8 +20,4 @@ export class HomePageComponent implements OnInit {
   onClickAboutUs() {
     this.router.navigate(['/aboutus']);
   }
-
-  onClickOurRoom() {
-    this.router.navigate(['/ourroom']);
-  }
 }
