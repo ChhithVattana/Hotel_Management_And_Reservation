@@ -66,9 +66,19 @@
 .demo:hover {
   opacity: 1;
 }
+
 .mb-img{
   width: 100%;
   height: 500px;
   object-fit: cover;
   object-position: 0px 55%;
+}
+
+@media screen and (max-width: 576px) {
+  .mb-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: 0px 55%;
+  }
 }

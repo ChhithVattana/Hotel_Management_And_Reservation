@@ -6,7 +6,7 @@
       rgba(0, 0, 0, 0.2) 100%,
       transparent 70%
     ),
-    url("https://s3-alpha-sig.figma.com/img/8d88/d83a/4d67b64c423437bee592269953cd17ad?Expires=1678060800&Signature=pUkGgvZROqmOP9Quq6PT~ecMzrCLx-oaG2~D1hHCjS7GbDm40baKLp17-pqhjA3cpnu73cSIgFcfhexouIisVSABGjH67JGirYItsJeQQhOVDb6Q6nQhXDSfj49yYYYWiZs7~fGQoZvMLkiQk4bNnNrZ8bg~M1rDzbaTyn7OhYK6o-70-yQlsBMcZQLjp8uxLw0z4Peg~F5MhJVR07VD~eLef3i2hJCX7YJ1h1sza1qsNiFTkXyW8fJ9Te~UAb0QCUgVhkXWC7WhLQJCGOTRtjmdr2dxzZJrwzlqWtSNjmXTWFf6VwZq2opKxRUwjbE-rBLQa7sPAu7a1WNscgdqeg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    url("https://s3-alpha-sig.figma.com/img/8d88/d83a/4d67b64c423437bee592269953cd17ad?Expires=1679270400&Signature=ENLFSzsYoIuolB-qKh0goCJ4ez4-ao6rd-LPQvka2nbPRUJx1uP-q9x329tj~j1QF0Dlxhuo5Bt4K93WSGBUzdpIwCv3Ghcn4JZsyP8D2N0-XFPtGWMyalPeHzSIzdUcGutWmGMc4zchAOkgkw4ycFMufpXvaaClwlG5Ulp-wMeq-nN5Vo3MdXkMZnnMU4aV0R51EnOW4VWITPDr~H8bfOFbiwDQ3sB84dJ7WEa45cn~HsYboctPjnEHsSmkQqRbEgOYSpvAvDZC4BBlfCZVP8XrAMwJF1vqeDZm6qYKi1T8FNTz49A5o8jnOVk46WSwbFFAOZLT76K8DSLnvCRGvw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 40%;
@@ -38,7 +38,7 @@
 .bg-img-body-1 {
   height: 500px;
   background-color: #0057b2;
-  background-image: url("https://s3-alpha-sig.figma.com/img/2e1d/7c36/8efd4d47b861db4d18cc58a2e0d9a8bb?Expires=1678060800&Signature=k2hkLM4KGfJqtwFOMsPT1WvraFoXNUqynQpqck3qgrEpIjc1-R~V~Smm0BMyKoNyQlBYn2sVhNCkqruvFcdeHLA1KXY6-B0eJEKK01Duy3BXkjjXzBagFi5ZFNYeMLWgWpLyybkirDuPNVvSETJjGQKRpUF8i0cZ8501wOe0dpHQ6h3G3w2~D9YpPz~j8jYAVZWJ-mUnpKuJDkVFdXSKWX2i9U1vfhZzOXL72XvXaOvIhU6fYtkfNBPSshfOVKdq6EHcBi94r2aKZSExbYfOY4Ro5BCIkVeJtSw06Ix7~HXF884GRrlen1b2qIoodi~Tm1x19o5SuqVeUi5yc7YWuw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+  background-image: url("https://s3-alpha-sig.figma.com/img/2e1d/7c36/8efd4d47b861db4d18cc58a2e0d9a8bb?Expires=1679270400&Signature=ky3DUHN4X3VEknOoZp88Y3avz-35~ihCU6JBFYNMu7vpUvblXxnhxbUci5kOKtTpot5CYsihoqELikVhAkp4PneMBgURzReXTlHgadxaEmA227OkAWz~RLurNUmSdXLHgO5GM32VzXo4EAEJ7lrb4tyku~bA48H4yQRO9MbpcwK6S5NCcn67A1Jy7mvhCv36FONWxe5YjufiC6Bj8USPemR4O7ucPbydk7z2cAnv1L0-d~QkxxcdDXAKtv6USGKGqPVz7tUt7WOLRhlO~PngGzpfX-nzmIcZbEgW7HZSLydeZdWtcC1tvJtdHQ0BymDEgGydmabtyTgFhEJtOPPaqw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
 }
 
 .row.row-1 {
@@ -50,3 +50,53 @@
   height: 230px;
 }
 
+.row.row-2, .row-2 img {
+  width: 100%;
+  height: 230px;
+}
+
+@media screen and (max-width: 576px) {
+  .bg-img-head {
+    width: 100%;
+    height: 670px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 100%,
+        transparent 70%
+      ),
+      url("https://s3-alpha-sig.figma.com/img/8d88/d83a/4d67b64c423437bee592269953cd17ad?Expires=1679270400&Signature=ENLFSzsYoIuolB-qKh0goCJ4ez4-ao6rd-LPQvka2nbPRUJx1uP-q9x329tj~j1QF0Dlxhuo5Bt4K93WSGBUzdpIwCv3Ghcn4JZsyP8D2N0-XFPtGWMyalPeHzSIzdUcGutWmGMc4zchAOkgkw4ycFMufpXvaaClwlG5Ulp-wMeq-nN5Vo3MdXkMZnnMU4aV0R51EnOW4VWITPDr~H8bfOFbiwDQ3sB84dJ7WEa45cn~HsYboctPjnEHsSmkQqRbEgOYSpvAvDZC4BBlfCZVP8XrAMwJF1vqeDZm6qYKi1T8FNTz49A5o8jnOVk46WSwbFFAOZLT76K8DSLnvCRGvw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 70%;
+  }
+
+  .img {
+    width: 100%;
+    height: 650px;
+    background-color: #0057b2;
+  }
+
+  .bg-img-body {
+    width: 100%;
+    height: 300px;
+    background-color: #0057b2;
+  }
+  .bg-img-body-1 {
+    height: auto;
+    background-color: #0057b2;
+    background-image: url("https://s3-alpha-sig.figma.com/img/2e1d/7c36/8efd4d47b861db4d18cc58a2e0d9a8bb?Expires=1679270400&Signature=ky3DUHN4X3VEknOoZp88Y3avz-35~ihCU6JBFYNMu7vpUvblXxnhxbUci5kOKtTpot5CYsihoqELikVhAkp4PneMBgURzReXTlHgadxaEmA227OkAWz~RLurNUmSdXLHgO5GM32VzXo4EAEJ7lrb4tyku~bA48H4yQRO9MbpcwK6S5NCcn67A1Jy7mvhCv36FONWxe5YjufiC6Bj8USPemR4O7ucPbydk7z2cAnv1L0-d~QkxxcdDXAKtv6USGKGqPVz7tUt7WOLRhlO~PngGzpfX-nzmIcZbEgW7HZSLydeZdWtcC1tvJtdHQ0BymDEgGydmabtyTgFhEJtOPPaqw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+  }
+
+  .row.row-1 {
+    width: 100%;
+    height: 400px;
+  }
+  .row.row-2, .row-2 img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .mb-lh{
+    line-height: 30px;
+  }
+}

@@ -6,7 +6,7 @@
       rgba(0, 0, 0, 0.2) 100%,
       transparent 70%
     ),
-    url("https://s3-alpha-sig.figma.com/img/45ba/5362/78d3f201a17222424b31b9988861b7c8?Expires=1678060800&Signature=LQ1C5I00qizluhAGaxPuvcR1JnELY2X71BU2vA3u5dtjGLkYNUR4Tk8sLGPQo28zYfl9kHOgvseS~NDHtLI4nl6EfkBOyAUfq0t0lb5~xJAVipme4fs8nAnFZin~mHeJRBypbICk8GRn3lhOU3jnJpYXdT8AieSDE79-QzS9OKcxfF4y10d7cWpFI-EaoTbxLPV8szvKz~AXAOPA6KW0jzJeWmi~AhBd95SJAr9APwTNWmmK5hwAFnyyhLOAZmKeIcwsUItUT~6cPFWnpz~NZifq~kj9WAs2vjMDx-0x2dcLPvx-PJma9Qd1ifvQwt6wimtdgVAYAVa~sVRgKRfRFQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    url("https://s3-alpha-sig.figma.com/img/45ba/5362/78d3f201a17222424b31b9988861b7c8?Expires=1679270400&Signature=f0CVmTsu7sQQCetqUCiCGzRxl~weX7Y834MED8K5kN2cg~N0Et067s~1pPOx5sOvMTTc1JF18hRzH6qePlnPH2wYzJo0-4ef2Bu5L-vNdlnnNYHzkDuUyVGJv4I~H6TA52-o2jvdgeXSpFjjLjjzfEndEg-KbupoJsCkcE7CutKlW2Hp9GLYBiSASZwurTgHWxVvg42JqxB4rETc6GA2krFarqS1-BgX~WslTtAHaYtpIkM7H4e6IJfG~UtWnEQ58cloGnz1X~85RH6A8jI9xuGLLijNFsC210FeUQxmm~OKRpaj8D5cPhGOg5lTPacrLH4f-nXHOdBnoyN6vNQPQA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 40%;
@@ -128,4 +128,20 @@ button::before {
 
 button:hover::before {
   width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .bg-img-head {
+    width: 100%;
+    height: 670px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 100%,
+        transparent 70%
+      ),
+      url("https://s3-alpha-sig.figma.com/img/45ba/5362/78d3f201a17222424b31b9988861b7c8?Expires=1679270400&Signature=f0CVmTsu7sQQCetqUCiCGzRxl~weX7Y834MED8K5kN2cg~N0Et067s~1pPOx5sOvMTTc1JF18hRzH6qePlnPH2wYzJo0-4ef2Bu5L-vNdlnnNYHzkDuUyVGJv4I~H6TA52-o2jvdgeXSpFjjLjjzfEndEg-KbupoJsCkcE7CutKlW2Hp9GLYBiSASZwurTgHWxVvg42JqxB4rETc6GA2krFarqS1-BgX~WslTtAHaYtpIkM7H4e6IJfG~UtWnEQ58cloGnz1X~85RH6A8jI9xuGLLijNFsC210FeUQxmm~OKRpaj8D5cPhGOg5lTPacrLH4f-nXHOdBnoyN6vNQPQA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-x: 30%;
+  }
 }

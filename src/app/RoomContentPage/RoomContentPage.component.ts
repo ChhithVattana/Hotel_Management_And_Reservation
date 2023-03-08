@@ -12,14 +12,6 @@ export class RoomContentPageComponent implements OnInit {
 
   ngOnInit() {}
 
-  plusSlides(n: any) {
-    this.showSlides((this.slideIndex += n));
-  }
-
-  currentSlide(n: any) {
-    this.showSlides((this.slideIndex = n));
-  }
-
   showSlides(n: any) {
     let i;
     let slides = document.getElementsByClassName(
