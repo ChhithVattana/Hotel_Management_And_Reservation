@@ -6,7 +6,7 @@
       rgba(0, 0, 0, 0.2) 100%,
       transparent 70%
     ),
-    url("https://s3-alpha-sig.figma.com/img/c1c0/05c1/090c9df2b00741c6a7a77659a4cab1ae?Expires=1678060800&Signature=KvmT-WZxPYkX8t3hOzH~k0grRcvnlQ2JpsIpMWHZxG-lF6LH3yu5IwOO~RNIEHmG6MytKzRZAzVlWFUgqQJiKWtUaPlF2jHXmNRRDRVm35EdcZiT7QTTpZ575eWiMafHh~TlF8FntwDSzevHoYH9oPvdzviB7MuF25N3nS5UQTTdD0dQs5AL-xSEMeGoqMBSyxns6Jevb4n9Qxj8uW2-XmDKcMA2F1e4cjEZbRQIvHdfJFSsL6rtZDBgUDyakX3TadZpGo54bCER8OGsm0X6CfXwvMo1~sB6bAOq9zAFq0xskeC9rmb3LMwveiMuJQGZXSgO4bjZWOFf7nEj1wSahA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    url("https://s3-alpha-sig.figma.com/img/9dce/a97b/6a08b9dba9e5f56d5e35adba79b34390?Expires=1679270400&Signature=AHYzxHF4TRrrqGm5DHhGhckmTPWyRdFLVSOUc-NwhbQbOSN4nensRUf-gK6wF2Cmjnf88msvVAwy2QIh7kI8zXQeJNB3rPqnFC3ecQ0rLyWI70Xwu0p~60CiPd87nh9Ehy9TIzg-6he1hIJPAbyvTao7Uc37vW18RINW3oJzTwna7BnWd6B9HmDyXugV-OJ8jvmPE~jBUYs2OfwhhWNeG9BJRbc9rgXfSzDzyJEtP6NCRDanWsz~93kXXK7obRN9FYMBKpIzLzPpjEY4276er-5Od6hVwGvZJ4YypYfCuCLnqOrJ3h1D5jeTC3HE8naMLShgpnelr6~a4~ksqWBVqg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position-y: 90%;
@@ -131,6 +131,13 @@
 .mb-img {
   width: 100%;
   height: 500px;
+  object-fit: cover;
+}
+
+.bottom-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 576px) {
@@ -142,7 +149,7 @@
         rgba(0, 0, 0, 0.2) 100%,
         transparent 70%
       ),
-      url("https://s3-alpha-sig.figma.com/img/c1c0/05c1/090c9df2b00741c6a7a77659a4cab1ae?Expires=1678060800&Signature=KvmT-WZxPYkX8t3hOzH~k0grRcvnlQ2JpsIpMWHZxG-lF6LH3yu5IwOO~RNIEHmG6MytKzRZAzVlWFUgqQJiKWtUaPlF2jHXmNRRDRVm35EdcZiT7QTTpZ575eWiMafHh~TlF8FntwDSzevHoYH9oPvdzviB7MuF25N3nS5UQTTdD0dQs5AL-xSEMeGoqMBSyxns6Jevb4n9Qxj8uW2-XmDKcMA2F1e4cjEZbRQIvHdfJFSsL6rtZDBgUDyakX3TadZpGo54bCER8OGsm0X6CfXwvMo1~sB6bAOq9zAFq0xskeC9rmb3LMwveiMuJQGZXSgO4bjZWOFf7nEj1wSahA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+      url("https://s3-alpha-sig.figma.com/img/9dce/a97b/6a08b9dba9e5f56d5e35adba79b34390?Expires=1679270400&Signature=AHYzxHF4TRrrqGm5DHhGhckmTPWyRdFLVSOUc-NwhbQbOSN4nensRUf-gK6wF2Cmjnf88msvVAwy2QIh7kI8zXQeJNB3rPqnFC3ecQ0rLyWI70Xwu0p~60CiPd87nh9Ehy9TIzg-6he1hIJPAbyvTao7Uc37vW18RINW3oJzTwna7BnWd6B9HmDyXugV-OJ8jvmPE~jBUYs2OfwhhWNeG9BJRbc9rgXfSzDzyJEtP6NCRDanWsz~93kXXK7obRN9FYMBKpIzLzPpjEY4276er-5Od6hVwGvZJ4YypYfCuCLnqOrJ3h1D5jeTC3HE8naMLShgpnelr6~a4~ksqWBVqg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: 40%;
@@ -151,5 +158,13 @@
   .mb-img {
     width: 100%;
     height: 175px;
+    object-fit: cover;
   }
+
+  .bottom-img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+  }
+
 }
