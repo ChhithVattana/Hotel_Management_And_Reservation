@@ -23,9 +23,7 @@
   background-color: #0057b2;
 }
 
-
 /* slider click */
-
 
 .img {
   width: 100%;
@@ -37,7 +35,6 @@
   width: 100%;
   height: 400px;
 }
-
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
@@ -130,8 +127,29 @@
 .demo:hover {
   opacity: 1;
 }
-.mb-img{
+
+.mb-img {
   width: 100%;
   height: 500px;
 }
 
+@media screen and (max-width: 576px) {
+  .bg-img-head {
+    width: 100%;
+    height: 450px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 100%,
+        transparent 70%
+      ),
+      url("https://s3-alpha-sig.figma.com/img/c1c0/05c1/090c9df2b00741c6a7a77659a4cab1ae?Expires=1678060800&Signature=KvmT-WZxPYkX8t3hOzH~k0grRcvnlQ2JpsIpMWHZxG-lF6LH3yu5IwOO~RNIEHmG6MytKzRZAzVlWFUgqQJiKWtUaPlF2jHXmNRRDRVm35EdcZiT7QTTpZ575eWiMafHh~TlF8FntwDSzevHoYH9oPvdzviB7MuF25N3nS5UQTTdD0dQs5AL-xSEMeGoqMBSyxns6Jevb4n9Qxj8uW2-XmDKcMA2F1e4cjEZbRQIvHdfJFSsL6rtZDBgUDyakX3TadZpGo54bCER8OGsm0X6CfXwvMo1~sB6bAOq9zAFq0xskeC9rmb3LMwveiMuJQGZXSgO4bjZWOFf7nEj1wSahA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 40%;
+  }
+
+  .mb-img {
+    width: 100%;
+    height: 175px;
+  }
+}
