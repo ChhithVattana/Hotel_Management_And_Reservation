@@ -1,6 +1,6 @@
 .logo {
-  width: 150px;
-  height: 90px;
+  width: 100%;
+  height: 50px;
   object-fit: cover;
 }
 .navbar {
@@ -8,8 +8,14 @@
   --bs-nav-link-font-size: 16px;
 }
 
+.navbar-nav .show > .nav-link,
+.navbar-nav .nav-link.active {
+  color: #0057b2;
+}
+
 a {
-  color: #fff;
+  color: black;
+  font-weight: 700;
   text-transform: uppercase;
   margin-right: 20px;
   letter-spacing: 0.15em;
@@ -22,7 +28,7 @@ a:after {
   height: 2px;
   left: 50%;
 
-  background: #fff;
+  background: #0057b2;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
@@ -31,12 +37,117 @@ a:hover:after {
   left: 0;
 }
 .blur {
-  background: rgba(0, 0, 0, 0.3);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
+.nav-link:hover,
+.nav-link:focus {
+  color: #0057b2;
+}
+.navbar-toggler {
+  padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+  font-size: var(--bs-navbar-toggler-font-size);
+  line-height: 1;
+  color: var(--bs-navbar-color);
+  background-color: transparent;
+  border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+  border-radius: var(--bs-navbar-toggler-border-radius);
+  transition: var(--bs-navbar-toggler-transition);
+}
+
+.fixed-top-1 {
+  position: fixed;
+  top: 66px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+/* Custom hamburger */
+.switch {
+  position: relative;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg,
+            rgba(255, 255, 255, 0) 20%,
+            rgb(255, 255, 255, 0) 100%);
+  border-radius: 5px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+}
+
+.switch div {
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  position: absolute;
+}
+
+.switch span {
+  background: black;
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s, width 0.5s;
+}
+
+.switch .line-1 {
+  width: 100%;
+  transform: translate(-50%, -10px);
+  transform-origin: 0 0;
+}
+
+.switch .line-3 {
+  width: 100%;
+  left: auto;
+  right: 0;
+  transform: translate(0, 10px);
+  transform-origin: 100% 0;
+}
+
+input:checked + div span.line-1 {
+  width: 50%;
+  transform: translate(0, 0) rotate(-45deg);
+}
+
+input:checked +  div span.line-3 {
+  width: 50%;
+  transform: translate(-100%, 0) rotate(-45deg);
+}
+
+input:checked + div span.line-2 {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
 @media screen and (max-height: 300px) {
   ul {
     margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav-1 {
+    display: none;
+  }
+  .fixed-top-1 {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    left: 0;
+    z-index: 1030;
   }
 }
