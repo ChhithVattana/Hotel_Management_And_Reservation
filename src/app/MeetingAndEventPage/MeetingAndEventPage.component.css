@@ -45,3 +45,24 @@
 .btn {
   width: 150px;
 }
+
+@media screen and (max-width: 576px) {
+  .bg-img-head {
+    width: 100%;
+    height: 670px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 100%,
+        transparent 70%
+      ),
+      url("https://s3-alpha-sig.figma.com/img/8494/5f61/63130f99bbc637eae74b07ff5c6d5224?Expires=1679270400&Signature=gd1w59FxhvKUyyyG4CEp~hloOPd0unJTkrhHqAqNT2l-QYufcXfv~gZ6yl8l4fRj2ublQLoEDVXo-ERrqKgMqh12Y-Y7RnVUmCRfaStqxinD3JFfe3nnu~8mb8SopKA4CnNy1HPHS8O5bHC-Iqa9bJb4QcUIQrBV~FyE6DsPXKa9wjucQvY70VuEjQzlb3Nu19L9Vgh7DfD7F3uMqm1iW9gWsNE9YT0BvnSEyPj2NBCoou7KtDtbNq5hXuBCm0YSVU~PC40~jrXHfWq1lnQPGFrUQXRG0zvzxJJMCbMObdmkpLAChttY2H8vz~L3H4hj6IoFwHmimJQd~bF0IWxhPQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 40%;
+  }
+
+  .box {
+    height: 630px;
+    background-color: #0057b2;
+  }
+}

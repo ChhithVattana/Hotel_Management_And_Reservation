@@ -1,18 +1,18 @@
-<div class="meeting bg-blue">
+<div class="meeting bg-blue overflow-hidden">
   <div class="bg-img-head position-relative">
     <div class="header-text text-white">
-      <h1 class="fw-bold fs-96 text-center">Meetings & Events</h1>
+      <h1 class="fw-bold fs-sm-34 fs-96 text-center">Meetings & Events</h1>
     </div>
   </div>
   <div class="line"></div>
   <div class="bg-blue">
-    <div class="container">
-      <div class="row py-5">
+    <div class="container px-xxl-0 px-4">
+      <div class="row py-xxl-5 py-4">
         <div class="col-xxl-6">
-          <p class="fs-lg-content blue fw-700">
+          <p class="fs-lg-content fs-sm-24 blue fw-700">
             EXPLORE SUNWAY HOTEL PHNOM PENH'S EVENT SPACES IN PHNOM PENH
           </p>
-          <p class="fs-link">
+          <p class="fs-link fs-sm-16">
             Located at the top of the highest tower in Cambodia and bathed in
             natural daylight, Rosewood Phnom Penh’s 1,000 square meters of
             distinctive, residential-style gathering places impart both grace
@@ -21,11 +21,11 @@
         </div>
         <div class="col-xxl-6">
           <div class="ps-7">
-            <p class="fs-lg-content blue fw-700">Connect with us</p>
-            <p class="fs-content">
+            <p class="fs-lg-content fs-sm-24 blue fw-700">Connect with us</p>
+            <p class="fs-content fs-sm-16">
               <i class="bi bi-telephone-fill blue pe-3"></i>+855 987 211 43
             </p>
-            <p class="fs-content">
+            <p class="fs-content fs-sm-16">
               <i class="bi bi-envelope-fill blue pe-3"></i>abcde09828@gmail.com
             </p>
           </div>
@@ -41,11 +41,11 @@
       <div class="container">
         <div class="row mb-5">
           <div
-            class="col-xxl-6 box bg-white position-relative"
-            [ngStyle]="{ order: indexOfelement % 2 }"
+            class="col-xxl-6 box bg-white position-relative px-xxl-0 px-4"
+            [ngStyle]="{ order: indexOfelement % num }"
           >
-            <div class="px-4 py-5 h-100">
-              <h2 class="fw-700 blue mb-4">GRAND BALLROOM</h2>
+            <div class="px-xxl-4 py-xxl-5 py-4 h-100">
+              <h2 class="fw-700 fs-sm-32 blue mb-4">GRAND BALLROOM</h2>
               <p class="fs-content">
                 Looking for the best meeting venue for event in Phnom Penh?
                 Sofitel offers a range of meeting spaces from a 1,400sqm Grand
@@ -54,7 +54,7 @@
                 rooms ideal for medium-size and small meetings in Phnom Penh.
               </p>
               <div class="position-absolute bottom-0 left-0 py-5">
-                <div class="fs-content py-3">
+                <div class="fs-content fs-sm-16 py-3">
                   <p><i class="bi bi-clock-fill pe-3 blue"></i><b>Opeing Hour:</b> DAILY 6AM- 10PM</p>
                   <p><i class="bi bi-geo-alt-fill pe-3 blue"></i><b>Location:</b> Floor 5th</p>
                   <p><i class="bi bi-info-circle-fill pe-3 blue"></i><b>Area Size:</b> 443 sqm</p>
@@ -70,7 +70,7 @@
           </div>
           <div
             class="col-xxl-6 box p-0"
-            [ngStyle]="{ order: indexOfelement / 2 }"
+            [ngStyle]="{ order: indexOfelement / num }"
           >
             <div class="bg-img"></div>
           </div>

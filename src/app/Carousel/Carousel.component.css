@@ -1,0 +1,53 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+  height: 700px;
+  width: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.content {
+  position: relative;
+  top: 100%;
+}
+
+.bg{
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.55) 11.46%, rgba(0, 0, 0, 0) 80.21%);
+}
+
+@media screen and (max-width: 576px) {
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    width: 100%;
+  }
+
+  .content {
+    position: relative;
+    top: 50%;
+  }
+
+  .bg{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0) 80.21%);
+  }
+}

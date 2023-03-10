@@ -1,0 +1,32 @@
+<div class="carousel">
+  <div
+    class="slide"
+    *ngFor="let image of images; let i = index"
+    [class.active]="isCurrentIndex(i)"
+  >
+    <img src="{{ image }}" alt="Slide {{ i }}" />
+  </div>
+  <div class="bg w-100 h-100 position-relative">
+    <div class="container px-xxl-auto px-4 position-relative">
+      <div class="row">
+        <div class="col-xxl-7">
+          <div class="content">
+            <h2 class="fs-46 fs-sm-34 fw-700 text-white mb-4">
+              Sed ut perspiciatis unde omnis
+            </h2>
+            <p class="fs-link fs-sm-16 text-white">
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+              fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+            </p>
+            <button
+              class="btn btn-white hover-blue text-white fs-content fw-600 px-4 mt-3"
+            >
+              More Info
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -30,6 +30,7 @@ import { SearchBoxComponent } from './SearchBox/SearchBox.component';
 import { RoomContentPageComponent } from './RoomContentPage/RoomContentPage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { CarouselComponent } from './Carousel/Carousel.component';
 
 const appRoutes: Routes = [
   {
@@ -146,7 +147,8 @@ const appRoutes: Routes = [
     OurRoomPageComponent,
     SearchBoxComponent,
     RoomContentPageComponent,
-  ],
+      CarouselComponent
+   ],
   imports: [
     BrowserModule,
     CommonModule,
