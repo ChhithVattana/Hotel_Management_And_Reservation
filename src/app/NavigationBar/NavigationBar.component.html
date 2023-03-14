@@ -17,9 +17,9 @@
       />
     </div>
     <div class="position-relative d-flex my-auto">
-      <a class="nav-link m-0 fs-16" routerLink="/contactus">Contact Us</a>
+      <a class="nav-link m-0 fs-16" (click)="currentLink(2)" routerLink="/contactus">Contact Us</a>
       <div class="mx-2">|</div>
-      <a class="nav-link m-0 fs-16" routerLink="/aboutus">About Us</a>
+      <a class="nav-link m-0 fs-16" (click)="currentLink(3)" routerLink="/aboutus">About Us</a>
     </div>
   </div>
 </nav>
@@ -59,25 +59,25 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">HOME</a>
+          <a class="nav-link active" aria-current="page" href="#" (click)="currentLink(4)">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/ourroom">Our Room</a>
+          <a class="nav-link" routerLink="/ourroom" (click)="currentLink(5)">Our Room</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/services">Services</a>
+          <a class="nav-link" routerLink="/services" (click)="currentLink(6)">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/meeting&event">Meeting and Event</a>
+          <a class="nav-link" routerLink="/meeting&event" (click)="currentLink(7)">Meeting and Event</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/dinning">Restaurant</a>
+          <a class="nav-link" routerLink="/dinning" (click)="currentLink(8)">Restaurant</a>
         </li>
         <li class="nav-item mb-res">
-          <a class="nav-link" routerLink="/contactus">Contact Us</a>
+          <a class="nav-link" routerLink="/contactus" (click)="currentLink(9)">Contact Us</a>
         </li>
         <li class="nav-item mb-res">
-          <a class="nav-link" routerLink="/aboutus">About Us</a>
+          <a class="nav-link" routerLink="/aboutus" (click)="currentLink(10)">About Us</a>
         </li>
       </ul>
     </div>

@@ -241,14 +241,14 @@ button {
   padding: 0;
   font-size: inherit;
   font-family: inherit;
- }
+}
 
- button.learn-more {
+button.learn-more {
   width: 12rem;
   height: auto;
- }
+}
 
- button.learn-more .circle {
+button.learn-more .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
   display: block;
@@ -257,26 +257,26 @@ button {
   height: 3rem;
   background: #282936;
   border-radius: 1.625rem;
- }
+}
 
- button.learn-more .circle .icon {
+button.learn-more .circle .icon {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto;
   background: #fff;
- }
+}
 
- button.learn-more .circle .icon.arrow {
+button.learn-more .circle .icon.arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   left: 0.625rem;
   width: 1.125rem;
   height: 0.125rem;
   background: none;
- }
+}
 
- button.learn-more .circle .icon.arrow::before {
+button.learn-more .circle .icon.arrow::before {
   position: absolute;
   content: "";
   top: -0.29rem;
@@ -286,9 +286,9 @@ button {
   border-top: 0.125rem solid #fff;
   border-right: 0.125rem solid #fff;
   transform: rotate(45deg);
- }
+}
 
- button.learn-more .button-text {
+button.learn-more .button-text {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
@@ -302,20 +302,20 @@ button {
   line-height: 1.6;
   text-align: center;
   text-transform: uppercase;
- }
+}
 
- button:hover .circle {
+button:hover .circle {
   width: 100%;
- }
+}
 
- button:hover .circle .icon.arrow {
+button:hover .circle .icon.arrow {
   background: #fff;
   transform: translate(1rem, 0);
- }
+}
 
- button:hover .button-text {
+button:hover .button-text {
   color: #fff;
- }
+}
 
 .cta-lbue {
   position: relative;
@@ -396,4 +396,55 @@ button {
   border-bottom-right-radius: 50px;
   border-top-left-radius: 50px;
   transform: scale(1.05);
+}
+
+iframe {
+  width: 600px;
+  height: 470px;
+}
+
+@media screen and (max-width: 576px) {
+  .img-1 {
+    height: 90px;
+  }
+  .img-3 {
+    height: 90px;
+  }
+  .img-2 {
+    height: 240px;
+  }
+  .img-4 {
+    height: 240px;
+  }
+  hr {
+    display: none;
+  }
+  .card-cus {
+    overflow: hidden;
+    width: 100%;
+    height: 380px;
+    background-color: #212121;
+    transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
+      transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+
+  .abt-info {
+    position: absolute;
+    background-color: #0057b2;
+    width: 100%;
+    height: 580px;
+    top: 1.7%;
+    left: 0%;
+    z-index: 1;
+  }
+  .bg-img {
+    height: 500px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
 }
