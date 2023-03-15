@@ -14,18 +14,20 @@ a {
 }
 
 .card {
-  width: 400px;
+  width: 100%;
   height: 450px;
   padding: 0px;
+  border-radius: 10px;
   border: none;
   background-color: inherit;
+  cursor: pointer;
 }
 
 .card-header {
   width: 100%;
   height: 240px;
   padding: 0px;
-  border-radius: 10px;
+  border-radius: 8px 8px 0px 0px;
   border: none;
   overflow: hidden;
 }
@@ -35,8 +37,8 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 10px;
-  transition: all .3s ease-in-out;
+  border-radius: 9px 9px 0px 0px;
+  transition: all 0.3s ease-in-out;
 }
 
 .bg-img:hover {
@@ -45,7 +47,7 @@ a {
   cursor: pointer;
 }
 
-.event-img-1{
+.event-img-1 {
   background-image: url("https://s3-alpha-sig.figma.com/img/355d/aa2d/b4ec4f062fcb15f4e1c28ad517c9aa43?Expires=1679270400&Signature=KsIaeZeUUtXflDHuW1dl7V7acUT9jkYl81ddO2DEA1R4f9~knJtCBNzRmt~8NIG216ndbgel~xmMsGPgPsqDlmXQbuG75AUwb5Z5btpYBH212O5k50cgxLLWlJp~JBFLEXAg-POM~zbdjWaTNFQHjLqL-LW4pNTGKmh5oMSfIVaLjZt4S1i2VUQZ03GDLxtMshSYZ~l4f0ZoC8DFs72Zs432KZfEXZ62Rdn0SyZ7dsEjWJ6yf88XIc64fOOKlR8UdOev3OhCklqS67TGy~wh1~wZPzJZE0AdEBhpVKRpLJXRuiZNwssuMEQ5htvSaWAOaV~A6bI964pdGtwPshhI~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
 }
 
@@ -88,6 +90,45 @@ a {
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: width, left;
+}
+
+/* custom card */
+.card-cus {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+}
+
+.card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #008bf8;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+
+/*Hover*/
+.card-cus:hover {
+  border-color: #008bf8;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card-cus:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
 }
 
 @media screen and (max-width: 576px) {
