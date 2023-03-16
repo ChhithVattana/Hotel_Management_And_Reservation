@@ -58,6 +58,7 @@
   height: 200px;
   border-radius: 5px;
   background-color: #f3f3f3;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .icon {
@@ -83,6 +84,7 @@ a {
 .res-img {
   width: 100%;
   height: 380px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #0057b2;
   background-size: cover;
   background-position: center;
