@@ -52,11 +52,6 @@
   cursor: pointer;
 }
 
-.room-img-1{
-  /* background-image: url("https://s3-alpha-sig.figma.com/img/bb5b/607e/94178cb523017f2a3ab4864db43190d0?Expires=1679270400&Signature=C~KjseW8ViKVwudalZOCXKOwTWy05HHqnynHsb8vqrB05BLTIm69gcyVmp72w8s0YIrppuCW2RnqaedjKL6TrMb5lin2w8zJjDPuE~RR85tWphWdZD6mJB8Yhz3Lt~W5wfApGu8ntC8UVNpdN5TLVZWEfXAIC4YZGTf3RMlfs6xgm3GbAIz3zJTFOoAQjVm85AUzziHhbTc8OBNwD6tUBRsC8tYWpMy4e2m2UJ9n4E75FKjlyPpeM3drcUQj--8CJSHQP7v4uishLdeK0NmnpSVCd5XP9oviqgKKwjgsvaqH233S82oFq7YSkE1wtk~0MBf-cNvmNQ9lownJykyxig__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"); */
-}
-
-
 /* card hover style */
 .card:hover {
   width: 100%;
