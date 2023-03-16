@@ -132,10 +132,11 @@ i {
 }
 
 .img-pf {
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   transition: 0.5s;
   border-radius: 50%;
+  border: 3px solid white;
   object-fit: cover;
   background-color: #0057b2;
   transition: 0.5s;
