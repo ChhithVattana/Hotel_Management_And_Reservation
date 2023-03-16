@@ -64,6 +64,10 @@ i {
   font-size: 20px;
 }
 
+.pf i:hover {
+  cursor: pointer;
+}
+
 .header-abt {
   padding: 0px 250px 0px 250px;
 }
@@ -129,5 +133,12 @@ i {
 
   .header-abt {
     padding: 0px;
+  }
+  .img-pf {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #0057b2;
   }
 }
