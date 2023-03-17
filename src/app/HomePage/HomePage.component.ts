@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,6 +11,15 @@ export class HomePageComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    console.log("Hello")
+  }
+
+  ngDoCheck(){
+    console.log("do check")
+  }
+
+  ngAfterViewInit(){
+    console.log("after view init")
   }
 
   onClickRestaurant() {
@@ -19,5 +28,10 @@ export class HomePageComponent implements OnInit {
 
   onClickAboutUs() {
     this.router.navigate(['/aboutus']);
+  }
+
+  isLoaded(): boolean {
+    console.log("is loaded")
+    return true;
   }
 }

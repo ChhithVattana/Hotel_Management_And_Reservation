@@ -31,6 +31,7 @@ import { RoomContentPageComponent } from './RoomContentPage/RoomContentPage.comp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { CarouselComponent } from './Carousel/Carousel.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 const appRoutes: Routes = [
   {
@@ -154,6 +155,7 @@ const appRoutes: Routes = [
     CommonModule,
     AppRoutingModule,
     MaterialModule,
+    NgxSkeletonLoaderModule,
     RouterModule.forRoot(appRoutes, {
       useHash: true,
       anchorScrolling: 'enabled',
