@@ -10,6 +10,7 @@ export class NavigationBarComponent implements OnInit {
   isSticky: boolean = false;
   tmp: number = 0;
   index = 1;
+  scrWidth: any;
   private navbar!: HTMLElement;
 
   constructor(private elementRef: ElementRef) {}
@@ -36,7 +37,6 @@ export class NavigationBarComponent implements OnInit {
       }
     } else {
       this.isSticky = false;
-      console.log(this.isSticky);
     }
   }
 
@@ -52,7 +52,6 @@ export class NavigationBarComponent implements OnInit {
     for(i = 0; i < link.length; i++) {
       link[i].className = link[i].className.replace(' active', '');
     }
-    console.log(this.index)
     link[this.index - 1].className += ' active';
   }
 }

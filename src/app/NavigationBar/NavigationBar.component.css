@@ -139,10 +139,9 @@ input:checked + div span.line-2 {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-@media screen and (max-height: 300px) {
-  ul {
-    margin-top: 40px;
-  }
+.free-space {
+  width: 55.6px;
+  height: 44.6px;
 }
 
 @media screen and (max-width: 576px) {
@@ -173,6 +172,32 @@ input:checked + div span.line-2 {
     width: 100%;
     height: 40px;
     object-fit: cover;
+  }
+}
+@media screen and (max-height: 300px) {
+  ul {
+    margin-top: 40px;
+  }
+  .logo-2 {
+    display: block;
+    width: 100%;
+    height: 30px;
+    object-fit: cover;
+  }
+  .switch {
+    width: 20px;
+    height: 20px;
+  }
+  .switch div {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    line-height: 0.8px;
+    position: absolute;
+  }
+  .free-space {
+    width: 35.6px;
+    height: 35.6px;
   }
 }
 @media screen and (min-width: 768px) {
