@@ -32,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { CarouselComponent } from './Carousel/Carousel.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   {
@@ -56,6 +57,10 @@ const appRoutes: Routes = [
   },
   {
     path: 'ourroom/content',
+    component: RoomContentPageComponent,
+  },
+  {
+    path: 'ourroom/content/:id',
     component: RoomContentPageComponent,
   },
   {
@@ -148,11 +153,12 @@ const appRoutes: Routes = [
     OurRoomPageComponent,
     SearchBoxComponent,
     RoomContentPageComponent,
-      CarouselComponent
-   ],
+    CarouselComponent,
+  ],
   imports: [
     BrowserModule,
     CommonModule,
+    HttpClientModule,
     AppRoutingModule,
     MaterialModule,
     NgxSkeletonLoaderModule,

@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ImageModel } from '../Model/ImageModel';
+import { RoomModel } from '../Model/RoomModel';
+import { ImageService } from '../Service/Image.service';
+import { RoomServicesService } from '../Service/RoomServices.service';
 
 @Component({
   selector: 'app-RoomContentPage',
@@ -7,10 +12,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomContentPageComponent implements OnInit {
   slideIndex = 1;
+  roomData: RoomModel[] = [];
+  imageData: ImageModel[] = [];
 
-  constructor() {}
+  constructor(
+    private _roomData: RoomServicesService,
+    private _imageData: ImageService,
+    private route: ActivatedRoute,
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.roomData = this._roomData.getRoomById(this.route.snapshot.params['id'])
+    this.imageData = this._imageData.getImageById(this.route.snapshot.params['id'])
+  }
 
   showSlides(n: any) {
     let i;
