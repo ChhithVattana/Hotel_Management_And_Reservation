@@ -16,10 +16,10 @@ export class ImageService {
 
   imageData: ImageModel[] = [];
 
-  getAllRoom() {
+  getAllImage() {
     this.imageData = [];
     this.http
-      .get('http://localhost:6969/api/v1/roomType?page=0&size=10&q=', this.httpOption)
+      .get('http://localhost:6969/api/v1/images?page=0&size=10&q=', this.httpOption)
       .toPromise()
       .then((res: any) => {
         res.result.forEach((r: ImageModel) => {

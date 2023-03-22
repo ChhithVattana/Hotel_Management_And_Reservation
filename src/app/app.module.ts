@@ -56,10 +56,6 @@ const appRoutes: Routes = [
     component: OurRoomPageComponent,
   },
   {
-    path: 'ourroom/content',
-    component: RoomContentPageComponent,
-  },
-  {
     path: 'ourroom/content/:id',
     component: RoomContentPageComponent,
   },

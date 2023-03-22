@@ -18,10 +18,10 @@ export class OurRoomPageComponent implements OnInit {
     this.data = this.roomData.getAllRoom();
   }
 
-  onClickNavigate(){
+  onClickNavigateTest(){
     this.router.navigate(['/ourroom/content']);
   }
-  onClickNavigateTest(room: any){
+  onClickNavigate(room: any){
     this.router.navigate([`/ourroom/content/${room.id}`]);
   }
 }

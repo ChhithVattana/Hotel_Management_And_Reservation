@@ -19,6 +19,7 @@
 
 .card-body {
   height: 239px;
+  overflow-y: auto;
 }
 
 .card-footer {
@@ -73,6 +74,10 @@
   animation: cardAnimacion 1.4s;
   box-shadow: 0 0 0 0.8em rgba(255, 255, 255, 0);
   border-radius: 10px;
+}
+
+div.card-body::-webkit-scrollbar {
+  width: 1px;
 }
 
 @-webkit-keyframes cardAnimacion {

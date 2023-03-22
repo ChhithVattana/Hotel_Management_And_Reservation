@@ -14,16 +14,26 @@ export class RoomContentPageComponent implements OnInit {
   slideIndex = 1;
   roomData: RoomModel[] = [];
   imageData: ImageModel[] = [];
+  activeImage: ImageModel[] = [];
 
   constructor(
     private _roomData: RoomServicesService,
     private _imageData: ImageService,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
-    this.roomData = this._roomData.getRoomById(this.route.snapshot.params['id'])
-    this.imageData = this._imageData.getImageById(this.route.snapshot.params['id'])
+    console.log('hello roomcontent')
+    this.roomData = this._roomData.getRoomById(
+      this.route.snapshot.params['id']
+    );
+    // this.imageData = this._imageData.getImageById(
+    //   this.route.snapshot.params['id']
+    // );
+  }
+
+  currentSlide(n: any) {
+    this.showSlides((this.slideIndex = n));
   }
 
   showSlides(n: any) {

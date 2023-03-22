@@ -4,6 +4,7 @@ export class RoomModel {
     public name: string,
     public numGuest: number,
     public price: number,
+    public url: String,
     public description: string
   ) {}
 }

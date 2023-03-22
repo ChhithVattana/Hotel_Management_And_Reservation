@@ -5,23 +5,23 @@
         class="row py-2 pb-5 px-2"
         *ngIf="getScreenSize() > 600; else onecard"
       >
-        <div class="col-xxl-3" *ngFor="let i of data">
+        <div class="col-xxl-3" *ngFor="let i of roomData.slice(0,4)">
           <div class="card mx-auto secondAnimation">
-            <div class="card-header" (click)="onClickNavigate()">
+            <div class="card-header" (click)="onClickNavigate(i)" >
               <div
                 class="bg-img room-img-1"
-                [ngStyle]="{ 'background-image': 'url(' + i.image + ')' }"
+                [ngStyle]="{ 'background-image': 'url(' + i.url + ')' }"
               ></div>
             </div>
             <div class="card-body p-4">
-              <p class="fs-22 blue fw-700">{{i.roomType}}</p>
+              <p class="fs-22 blue fw-700">{{i.name}}</p>
               <p class="fs-content mb-0">
-                {{i.roomInfo}}
+                {{i.description}}
               </p>
             </div>
             <div class="card-footer px-4 py-3">
               <div class="row">
-                <div class="col-6 fs-link"><b class="fw-700 fs-22">{{i.roomPrice}}</b>/night</div>
+                <div class="col-6 fs-link"><b class="fw-700 fs-22">{{i.price}}</b>/night</div>
                 <div class="col-6 fw-700 fs-lg-content text-end">
                   <button class="btn fw-600 blue px-3 hover-blue">
                     Book Now
@@ -35,7 +35,7 @@
       <ng-template #onecard>
         <div class="col-xxl-3" *ngFor="let i of [1]">
           <div class="card mx-auto secondAnimation">
-            <div class="card-header" (click)="onClickNavigate()">
+            <div class="card-header" (click)="onClickNavigate(i)">
               <div class="bg-img room-img-1"></div>
             </div>
             <div class="card-body p-4">
