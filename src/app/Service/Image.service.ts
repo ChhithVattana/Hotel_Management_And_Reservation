@@ -15,6 +15,7 @@ export class ImageService {
   constructor(private http: HttpClient) {}
 
   imageData: ImageModel[] = [];
+  imageDataDetail: ImageModel[] = [];
 
   getAllImage() {
     this.imageData = [];
@@ -31,16 +32,16 @@ export class ImageService {
   }
 
   getImageById(id: number) {
-    this.imageData = [];
+    this.imageDataDetail = [];
     this.http
       .get(`http://localhost:6969/api/v1/images/getById?id=${id}`, this.httpOption)
       .toPromise()
       .then((res: any) => {
         res.result.forEach((r: ImageModel) => {
-          this.imageData.push(r);
+          this.imageDataDetail.push(r);
         });
       });
-      console.log(this.imageData);
-    return this.imageData;
+      console.log(this.imageDataDetail);
+    return this.imageDataDetail;
   }
 }

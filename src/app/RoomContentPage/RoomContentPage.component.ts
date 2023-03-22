@@ -27,9 +27,9 @@ export class RoomContentPageComponent implements OnInit {
     this.roomData = this._roomData.getRoomById(
       this.route.snapshot.params['id']
     );
-    // this.imageData = this._imageData.getImageById(
-    //   this.route.snapshot.params['id']
-    // );
+    this.imageData = this._imageData.getImageById(
+      this.route.snapshot.params['id']
+    );
   }
 
   currentSlide(n: any) {

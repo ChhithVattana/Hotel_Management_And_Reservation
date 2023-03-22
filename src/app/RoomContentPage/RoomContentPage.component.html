@@ -114,7 +114,7 @@
           <div
             class="mySlides"
             style="display: block"
-            *ngFor="let item of imageData.slice(0,1)"
+            *ngFor="let item of imageData.slice(0, 1)"
           >
             <img [src]="item.url" class="mb-img" />
           </div>
@@ -131,12 +131,22 @@
               *ngFor="let item of imageData; index as i"
             >
               <img
-                class="demo cursor"
+                *ngIf="i === 0; else other"
+                class="demo cursor active"
                 [src]="item.url"
                 style="width: 100%; height: 85%"
                 (click)="currentSlide(i + 1)"
                 alt="The Woods"
               />
+              <ng-template #other>
+                <img
+                  class="demo cursor"
+                  [src]="item.url"
+                  style="width: 100%; height: 85%"
+                  (click)="currentSlide(i + 1)"
+                  alt="The Woods"
+                />
+              </ng-template>
             </div>
           </div>
         </div>
@@ -146,7 +156,7 @@
           {{ item.name }}
         </p>
         <p class="col-6 text-end mt-xxl-0 mt-2">
-          <b class="fw-600 fs-28 fs-sm-20">{{ item.price }}$</b
+          <b class="fw-700 fs-28 fs-sm-20">{{ item.price }}$</b
           ><b class="fs-content fs-sm-16 fw-600">/Night</b>
         </p>
         <div class="col-xxl-10 fs-content fs-sm-16">

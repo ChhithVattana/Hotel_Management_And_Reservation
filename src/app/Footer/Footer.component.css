@@ -7,7 +7,7 @@ a {
 }
 .bg {
   width: 100%;
-  background-color: rgb(40, 167, 225)
+  background-color: #002449
 }
 /* img {
   content: url("../../assets/Logo.png");
@@ -25,9 +25,7 @@ footer {
   background-size: 100% 100%;
   background-image: linear-gradient(
       to bottom,
-      rgb(40, 167, 225),
-      rgb(40, 167, 225),
-      rgb(40, 167, 225)
+      #002449
     ),
     url("https://images.unsplash.com/photo-1534214526114-0ea4d47b04f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
 }
