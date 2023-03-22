@@ -92,7 +92,10 @@
             and 65” TVs.
           </p>
           <div class="row p-xxl-4 p-auto py-xxl-4 py-4">
-            <div class="col-xxl-3 col-4 pe-xxl-auto pe-0" style="border-right: 1px solid #b6b6b6">
+            <div
+              class="col-xxl-3 col-4 pe-xxl-auto pe-0"
+              style="border-right: 1px solid #b6b6b6"
+            >
               <p class="fs-content fs-sm-16 lh-sm m-0">
                 CHECK-IN <br /><br />
                 2:00 PM
@@ -118,11 +121,12 @@
   <div class="bg-white">
     <div class="container px-xxl-auto px-0">
       <div class="row py-6">
-        <div
-          class="col-xxl-6 p-2"
-          *ngFor="let item of data"
-        >
-          <div class="card p-0" (click)="onClickNavigate(item)">
+        <div class="col-xxl-6 p-2" *ngFor="let item of data">
+          <div
+            class="card p-0"
+            [ngStyle]="{ 'background-image': 'url(' + item.url + ')' }"
+            (click)="onClickNavigate(item)"
+          >
             <div class="on-hover"></div>
             <div class="card-header d-flex" style="z-index: 1">
               <p class="hover-underline text-white fw-600 fs-link">
@@ -131,8 +135,10 @@
             </div>
             <div class="card-body"></div>
             <div class="card-footer">
-              <div class="text-white fs-content fs-sm-20 fw-600">{{item.price}}$ / Night</div>
-              <div class="text-white fs-32 fw-700">{{item.name}}</div>
+              <div class="text-white fs-content fs-sm-20 fw-600">
+                {{ item.price }}$ / Night
+              </div>
+              <div class="text-white fs-32 fw-700">{{ item.name }}</div>
               <div class="line mt-2"></div>
               <div class="row mt-3">
                 <div class="col-8 text-white">
@@ -156,4 +162,3 @@
     </div>
   </div>
 </div>
-

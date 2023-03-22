@@ -13,6 +13,7 @@ export class RoomServicesService {
   };
   constructor(private http: HttpClient) {}
 
+  roomDataDetail: RoomModel[] = [];
   roomData: RoomModel[] = [];
 
   getAllRoom() {
@@ -30,14 +31,14 @@ export class RoomServicesService {
   }
 
   getRoomById(id: number) {
-    this.roomData = [];
+    this.roomDataDetail = [];
     this.http
       .get(`http://localhost:6969/api/v1/roomType/getById?id=${id}`, this.httpOption)
       .toPromise()
       .then((res: any) => {
-        this.roomData.push(res.result)
+        this.roomDataDetail.push(res.result)
       });
-      console.log(this.roomData);
-    return this.roomData;
+      console.log(this.roomDataDetail);
+    return this.roomDataDetail;
   }
 }
