@@ -9,12 +9,12 @@ a {
   width: 100%;
   background-color: #002449
 }
-/* img {
-  content: url("../../assets/Logo.png");
-  object-fit: cover;
-  width: 175px;
+img {
+  content: url("../../assets/Hotel-Main-White-2.png");
+  object-fit: contain;
+  width: 270px;
   height: 96px;
-} */
+}
 
 .bg-footer {
   overflow-y: hidden;
@@ -23,9 +23,4 @@ footer {
   height: 100%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-image: linear-gradient(
-      to bottom,
-      #002449
-    ),
-    url("https://images.unsplash.com/photo-1534214526114-0ea4d47b04f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
 }

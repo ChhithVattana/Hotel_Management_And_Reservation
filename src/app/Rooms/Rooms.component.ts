@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { HostListener } from '@angular/core';
 import { ImageService } from '../Service/Image.service';
@@ -21,16 +21,22 @@ export class RoomsComponent implements OnInit {
     return (this.scrWidth = window.innerWidth);
   }
 
+  // output to share data from child to parent
+  @Output() newRoomEvent = new EventEmitter<any>();
+  onClickNewRoom(value: any) {
+    let tmp = this._roomData.getRoomById(value.id)
+    this.newRoomEvent.emit(tmp);
+  }
+
   constructor(
     private router: Router,
     private _imageData: ImageService,
-    private _roomData: RoomServicesService
+    private _roomData: RoomServicesService,
   ) {}
 
   ngOnInit() {
-    console.log('hello room');
     this.roomData = this._roomData.getAllRoom();
-    // this.imageData = this._imageData.getAllImage()
+    this.imageData = this._imageData.getAllImage()
   }
 
   onClickNavigate(room: any) {

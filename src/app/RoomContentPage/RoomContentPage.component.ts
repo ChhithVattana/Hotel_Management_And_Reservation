@@ -23,13 +23,17 @@ export class RoomContentPageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.log('hello roomcontent')
     this.roomData = this._roomData.getRoomById(
       this.route.snapshot.params['id']
     );
     this.imageData = this._imageData.getImageById(
       this.route.snapshot.params['id']
     );
+  }
+
+  getNewRoomDetail(newRoom: any) {
+    this.roomData = [];
+    this.roomData = newRoom;
   }
 
   currentSlide(n: any) {

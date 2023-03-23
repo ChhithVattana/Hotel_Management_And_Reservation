@@ -7,7 +7,7 @@
       >
         <div class="col-xxl-3" *ngFor="let i of roomData.slice(0,4)">
           <div class="card mx-auto secondAnimation">
-            <div class="card-header" (click)="onClickNavigate(i)" >
+            <div class="card-header" (click)="onClickNavigate(i)" (click)="onClickNewRoom(i)">
               <div
                 class="bg-img room-img-1"
                 [ngStyle]="{ 'background-image': 'url(' + i.url + ')' }"
