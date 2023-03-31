@@ -1,6 +1,3 @@
-import { RoomCapacityModel } from "./RoomCapacityModel";
-import { RoomFloorModel } from "./RoomFloorModel";
-
 export class RoomModel {
   constructor(
     public id: number,
@@ -11,7 +8,7 @@ export class RoomModel {
     public mainDescription: String,
     public subDescription: String,
     public url: String,
-    public roomCapacity: RoomCapacityModel,
-    public roomFloor: RoomFloorModel,
+    public capacity: number,
+    public floor: String,
   ) {}
 }
