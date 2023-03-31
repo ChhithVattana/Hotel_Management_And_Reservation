@@ -4,8 +4,8 @@
       <div class="col-xxl-3 p-xxl-3 ps-xxl-5">
         <p class="text-white fs-link fw-700 mb-0">Check-in:</p>
         <mat-form-field appearance="fill">
-          <mat-label>Check-in date</mat-label>
-          <input matInput [matDatepicker]="picker" class="bg-blue" />
+          <mat-label>MM/DD/YYYY</mat-label>
+          <input matInput [matDatepicker]="picker" class="bg-blue" [formControl]="date"/>
           <mat-datepicker-toggle
             matIconSuffix
             [for]="picker"
@@ -16,8 +16,8 @@
       <div class="col-xxl-3 p-xxl-3 ps-xxl-3">
         <p class="text-white fs-link fw-700 mb-0">Check-out:</p>
         <mat-form-field appearance="fill">
-          <mat-label>Check-out date</mat-label>
-          <input matInput [matDatepicker]="picker2" />
+          <mat-label>MM/DD/YYYY</mat-label>
+          <input matInput [matDatepicker]="picker2" [formControl]="date1"/>
           <mat-datepicker-toggle
             matIconSuffix
             [for]="picker2"
@@ -28,8 +28,7 @@
       <div class="col-xxl-2 p-xxl-3 ps-xxl-3 mb-xxl-auto mb-4">
         <p class="text-white fs-link fw-700 mb-0">Rooms:</p>
         <select class="form-select fs-link" aria-label="Default select example">
-          <option selected>Select</option>
-          <option value="1">1</option>
+          <option selected value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
@@ -40,8 +39,7 @@
       <div class="col-xxl-2 p-xxl-3 ps-xxl-3 mb-xxl-auto mb-4">
         <p class="text-white fs-link fw-700 mb-0">Adults:</p>
         <select class="form-select fs-link" aria-label="Default select example">
-          <option selected>Select</option>
-          <option value="1">1</option>
+          <option selected value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
@@ -58,11 +56,4 @@
       </div>
     </div>
   </div>
-  <!-- <div class="bg-btn check-available position-relative">
-      <div
-        class="fs-lg-content fw-700 position-absolute top-50 start-50 translate-middle w-100 text-center"
-      >
-        Check Available
-      </div>
-    </div> -->
 </div>
