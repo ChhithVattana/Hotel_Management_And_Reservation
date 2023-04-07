@@ -29,7 +29,6 @@ export class ReservationService {
           this.availableRoomType.push(r);
           return
         });
-        this.availableRoomType.push(res.length)
       });
     console.log(this.availableRoomType);
     return this.availableRoomType;

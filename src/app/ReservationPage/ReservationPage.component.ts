@@ -20,7 +20,11 @@ export class ReservationPageComponent implements OnInit {
 
   ngOnInit() {
     this.roomData = this._roomData.getAllRoom();
-    this._reservation.getavailableRoomType("king")
+    this.autoCall()
   }
 
+  autoCall() {
+    console.log(this.roomData)
+    this._reservation.getavailableRoomType("king")
+  }
 }
