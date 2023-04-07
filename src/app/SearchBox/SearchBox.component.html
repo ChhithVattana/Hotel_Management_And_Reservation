@@ -5,7 +5,12 @@
         <p class="text-white fs-link fw-700 mb-0">Check-in:</p>
         <mat-form-field appearance="fill">
           <mat-label>MM/DD/YYYY</mat-label>
-          <input matInput [matDatepicker]="picker" class="bg-blue" [formControl]="date"/>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            class="bg-blue"
+            [formControl]="date"
+          />
           <mat-datepicker-toggle
             matIconSuffix
             [for]="picker"
@@ -17,7 +22,7 @@
         <p class="text-white fs-link fw-700 mb-0">Check-out:</p>
         <mat-form-field appearance="fill">
           <mat-label>MM/DD/YYYY</mat-label>
-          <input matInput [matDatepicker]="picker2" [formControl]="date1"/>
+          <input matInput [matDatepicker]="picker2" [formControl]="date1" />
           <mat-datepicker-toggle
             matIconSuffix
             [for]="picker2"
@@ -47,7 +52,10 @@
           <option value="6">6</option>
         </select>
       </div>
-      <div class="bg-btn col-xxl-2 check-available position-relative">
+      <div
+        class="bg-btn col-xxl-2 check-available position-relative"
+        (click)="goToUrl('http://localhost:4200/#/reservation')"
+      >
         <div
           class="fs-lg-content fw-700 pc-res w-100 text-center py-xxl-auto py-2"
         >

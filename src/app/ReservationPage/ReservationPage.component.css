@@ -1,0 +1,27 @@
+.bg-siliver {
+  background-color: #EAEDED;
+}
+
+.free-top {
+  width: 100%;
+  height: 173px;
+}
+
+.free-top {
+  top: 85px;
+}
+
+.bg-room{
+  height: 350px;
+}
+
+img {
+  border-radius: 10px 0px 0px 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.info-box {
+  border-radius: 0px 10px 10px 0px;
+}

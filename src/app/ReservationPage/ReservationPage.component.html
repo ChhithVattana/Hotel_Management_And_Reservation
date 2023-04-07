@@ -1,0 +1,64 @@
+<div class="bg-siliver">
+  <div class="container">
+    <div class="space-top">
+      <div class="position-relative free-top w-100">
+        <app-SearchBox></app-SearchBox>
+      </div>
+    </div>
+    <div class="container">
+      <div *ngFor="let item of roomData">
+        <div class="row bg-room mb-4 pb-2">
+          <div class="col-xxl-4 p-0">
+            <img [src]="item.url" alt="img" />
+          </div>
+          <div class="col-xxl-8 bg-white px-5 py-4 info-box">
+            <div class="ms-1 d-flex flex-column justify-content-between h-100">
+              <h2 class="fs-lg-content">{{ item.name }}</h2>
+              <p class="mb-2" style="color: #6c757d">
+                {{ item.mainDescription }}
+              </p>
+              <div class="row">
+                <div class="col-6 my-1">
+                  <div class="d-flex position-relative">
+                    <i class="bi bi-steam fs-22"></i>
+                    <p class="ms-2 my-auto">{{ item.bedType }}</p>
+                  </div>
+                </div>
+                <div class="col-6 my-1">
+                  <div class="d-flex position-relative">
+                    <i class="bi bi-steam fs-22"></i>
+                    <p class="ms-2 my-auto">King Bed and Double Bed</p>
+                  </div>
+                </div>
+                <div class="col-6 my-1">
+                  <div class="d-flex position-relative">
+                    <i class="bi bi-steam fs-22"></i>
+                    <p class="ms-2 my-auto">King Bed and Double Bed</p>
+                  </div>
+                </div>
+                <div class="col-6 my-1">
+                  <div class="d-flex position-relative">
+                    <i class="bi bi-steam fs-22"></i>
+                    <p class="ms-2 my-auto">King Bed and Double Bed</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="d-flex justify-content-end">
+                  <div
+                    class="fs-lg-content position-relative my-auto fw-600 me-3"
+                  >
+                    ${{ item.price }}
+                  </div>
+                  <button class="btn px-4 blue fs-content fw-600 hover-blue">
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

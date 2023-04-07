@@ -23,4 +23,8 @@ export class SearchBoxComponent implements OnInit {
     date.setDate(date.getDate() + 1)
     return date
   }
+
+  goToUrl(link: string) {
+    window.open(link, "_blank")
+  }
 }

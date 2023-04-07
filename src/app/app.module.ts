@@ -34,6 +34,7 @@ import { MaterialModule } from './material/material.module';
 import { CarouselComponent } from './Carousel/Carousel.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { HttpClientModule } from '@angular/common/http';
+import { ReservationPageComponent } from './ReservationPage/ReservationPage.component';
 
 const appRoutes: Routes = [
   {
@@ -124,6 +125,10 @@ const appRoutes: Routes = [
       },
     ],
   },
+  {
+    path: 'reservation',
+    component: ReservationPageComponent,
+  }
 ];
 
 @NgModule({
@@ -151,7 +156,8 @@ const appRoutes: Routes = [
     SearchBoxComponent,
     RoomContentPageComponent,
     CarouselComponent,
-  ],
+      ReservationPageComponent
+   ],
   imports: [
     BrowserModule,
     CommonModule,
