@@ -5,6 +5,7 @@ import { ImageService } from '../Service/Image.service';
 import { RoomServicesService } from '../Service/RoomServices.service';
 import { RoomModel } from '../Model/RoomModel';
 import { ImageModel } from '../Model/ImageModel';
+import { RoomTypeModel } from '../Model/RoomTypeModel';
 
 @Component({
   selector: 'app-Rooms',
@@ -13,7 +14,7 @@ import { ImageModel } from '../Model/ImageModel';
 })
 export class RoomsComponent implements OnInit {
   scrWidth: any;
-  roomData: RoomModel[] = [];
+  roomData: RoomTypeModel[] = [];
   imageData: ImageModel[] = [];
 
   @HostListener('window:resize', ['$event'])
@@ -34,8 +35,8 @@ export class RoomsComponent implements OnInit {
     private _roomData: RoomServicesService,
   ) {}
 
-  ngOnInit() {
-    this.roomData = this._roomData.getAllRoom();
+  async ngOnInit() {
+    this.roomData = await this._roomData.getAllRoom();
     this.imageData = this._imageData.getAllImage()
   }
 

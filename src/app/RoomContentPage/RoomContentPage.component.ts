@@ -4,6 +4,7 @@ import { ImageModel } from '../Model/ImageModel';
 import { RoomModel } from '../Model/RoomModel';
 import { ImageService } from '../Service/Image.service';
 import { RoomServicesService } from '../Service/RoomServices.service';
+import { RoomTypeModel } from '../Model/RoomTypeModel';
 
 @Component({
   selector: 'app-RoomContentPage',
@@ -12,7 +13,7 @@ import { RoomServicesService } from '../Service/RoomServices.service';
 })
 export class RoomContentPageComponent implements OnInit {
   slideIndex = 1;
-  roomData: RoomModel[] = [];
+  roomData: RoomTypeModel[] = [];
   imageData: ImageModel[] = [];
   activeImage: ImageModel[] = [];
 
@@ -22,8 +23,8 @@ export class RoomContentPageComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
-  ngOnInit() {
-    this.roomData = this._roomData.getRoomById(
+  async ngOnInit() {
+    this.roomData = await this._roomData.getRoomById(
       this.route.snapshot.params['id']
     );
     this.imageData = this._imageData.getImageById(

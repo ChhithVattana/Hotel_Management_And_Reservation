@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RoomModel } from '../Model/RoomModel';
 import { RoomServicesService } from '../Service/RoomServices.service';
+import { RoomTypeModel } from '../Model/RoomTypeModel';
 
 @Component({
   selector: 'app-OurRoomPage',
@@ -10,12 +11,12 @@ import { RoomServicesService } from '../Service/RoomServices.service';
 })
 export class OurRoomPageComponent implements OnInit {
 
-  data: RoomModel[] = [];
+  data: RoomTypeModel[] = [];
 
   constructor(private router: Router, private roomData: RoomServicesService) { }
 
-  ngOnInit() {
-    this.data = this.roomData.getAllRoom();
+  async ngOnInit() {
+    this.data = await this.roomData.getAllRoom();
   }
 
   onClickNavigateTest(){

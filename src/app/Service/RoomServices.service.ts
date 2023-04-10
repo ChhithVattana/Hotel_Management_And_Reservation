@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { RoomModel } from '../Model/RoomModel';
+import { RoomTypeModel } from '../Model/RoomTypeModel';
 
 @Injectable({
   providedIn: 'root',
@@ -13,16 +14,16 @@ export class RoomServicesService {
   };
   constructor(private http: HttpClient) {}
 
-  roomDataDetail: RoomModel[] = [];
-  roomData: RoomModel[] = [];
+  roomDataDetail: RoomTypeModel[] = [];
+  roomData: RoomTypeModel[] = [];
 
-  getAllRoom() {
+  async getAllRoom() {
     this.roomData = [];
-    this.http
+    await this.http
       .get('http://localhost:6969/api/v1/roomType?page=0&size=10&q=', this.httpOption)
       .toPromise()
       .then((res: any) => {
-        res.result.forEach((r: RoomModel) => {
+        res.result.forEach((r: RoomTypeModel) => {
           this.roomData.push(r);
         });
       });
@@ -30,9 +31,9 @@ export class RoomServicesService {
     return this.roomData;
   }
 
-  getRoomById(id: number) {
+  async getRoomById(id: number) {
     this.roomDataDetail = [];
-    this.http
+    await this.http
       .get(`http://localhost:6969/api/v1/roomType/getById?id=${id}`, this.httpOption)
       .toPromise()
       .then((res: any) => {

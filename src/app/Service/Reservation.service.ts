@@ -16,21 +16,19 @@ export class ReservationService {
 
   availableRoomType: RoomModel[] = [];
 
-  getavailableRoomType(name: any) {
+  async getavailableRoomType(name: String) {
     this.availableRoomType = [];
-    this.http
+    await this.http
       .get(
-        `http://localhost:6969/api/v1/reservation/searchAvailable?page=0&size=10&checkInOn=2023-05-02&checkOutOn=2023-05-03&q=${name}&isAvailable=true`,
+        `http://localhost:6969/api/v1/reservation/searchAvailable?page=0&size=10&checkInOn=2023-04-02&checkOutOn=2023-04-03&q=${name}&capacity=2&isAvailable=true`,
         this.httpOption
       )
       .toPromise()
       .then((res: any) => {
         res.result.forEach((r: RoomModel) => {
           this.availableRoomType.push(r);
-          return
         });
       });
-    console.log(this.availableRoomType);
     return this.availableRoomType;
   }
 }
