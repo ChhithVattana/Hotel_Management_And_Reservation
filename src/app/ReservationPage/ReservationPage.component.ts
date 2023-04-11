@@ -3,6 +3,7 @@ import { RoomModel } from '../Model/RoomModel';
 import { RoomServicesService } from '../Service/RoomServices.service';
 import { ReservationService } from '../Service/Reservation.service';
 import { RoomTypeModel } from '../Model/RoomTypeModel';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-ReservationPage',
@@ -17,16 +18,21 @@ export class ReservationPageComponent implements OnInit {
 
   constructor(
     private _roomData: RoomServicesService,
-    private _reservation: ReservationService
+    private _reservation: ReservationService,
+    private route: ActivatedRoute
   ) {}
 
   async ngOnInit() {
+    var dateIn = this.route.snapshot.params['date']
+    var dateOut = this.route.snapshot.params['date1']
+    var capacity = this.route.snapshot.params['adults']
+    console.log(dateIn, dateOut, capacity)
     this.roomData = await this._roomData.getAllRoom();
-    this.availableRoomData('');
+    this.availableRoomData(dateIn, dateOut, capacity);
   }
 
-  async availableRoomData(name: String) {
-    this.data = await this._reservation.getavailableRoomType(name);
+  async availableRoomData(dateIn: Date, dateOut: Date, capacity: number) {
+    this.data = await this._reservation.getavailableRoomType(dateIn, dateOut, capacity);
     console.log(this.data);
   }
 

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -126,9 +127,13 @@ const appRoutes: Routes = [
     ],
   },
   {
-    path: 'reservation',
+    path: 'reservation/searchAvailable',
     component: ReservationPageComponent,
-  }
+  },
+  {
+    path: 'reservation/searchAvailable?checkInOn=:date&checkOutOn=:date1&adults=:adults&rooms=:rooms&isAvailable=true',
+    component: ReservationPageComponent,
+  },
 ];
 
 @NgModule({
@@ -156,8 +161,8 @@ const appRoutes: Routes = [
     SearchBoxComponent,
     RoomContentPageComponent,
     CarouselComponent,
-      ReservationPageComponent
-   ],
+    ReservationPageComponent,
+  ],
   imports: [
     BrowserModule,
     CommonModule,
@@ -174,7 +179,7 @@ const appRoutes: Routes = [
     }),
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

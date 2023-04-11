@@ -13,6 +13,9 @@ export class AppComponent {
 
   showNavigationBar(): boolean {
     const currentUrl = this.router.url;
-    return currentUrl !== '/reservation';
+    if(currentUrl.includes('reservation')){
+      return false;
+    }
+    return true;
   }
 }

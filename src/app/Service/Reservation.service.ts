@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { RoomModel } from '../Model/RoomModel';
+import { DatePipe } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
@@ -12,15 +13,21 @@ export class ReservationService {
     }),
   };
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private datePipe: DatePipe) {}
 
   availableRoomType: RoomModel[] = [];
 
-  async getavailableRoomType(name: String) {
+  async getavailableRoomType(dateIn: Date, dateOut: Date, capacity: number) {
     this.availableRoomType = [];
     await this.http
       .get(
-        `http://localhost:6969/api/v1/reservation/searchAvailable?page=0&size=10&checkInOn=2023-04-02&checkOutOn=2023-04-03&q=${name}&capacity=2&isAvailable=true`,
+        `http://localhost:6969/api/v1/reservation/searchAvailable?page=0&size=10&checkInOn=${this.datePipe.transform(
+          dateIn,
+          'yyyy-MM-dd'
+        )}&checkOutOn=${this.datePipe.transform(
+          dateOut,
+          'yyyy-MM-dd'
+        )}&q=&capacity=${capacity}&isAvailable=true`,
         this.httpOption
       )
       .toPromise()
