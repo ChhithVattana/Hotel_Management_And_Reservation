@@ -131,7 +131,7 @@ const appRoutes: Routes = [
     component: ReservationPageComponent,
   },
   {
-    path: 'reservation/searchAvailable?checkInOn=:date&checkOutOn=:date1&adults=:adults&rooms=:rooms&isAvailable=true',
+    path: 'reservation/searchAvailable?checkInOn=:dateIn&checkOutOn=:dateOut&adults=:capacity&rooms=:rooms&isAvailable=true',
     component: ReservationPageComponent,
   },
 ];

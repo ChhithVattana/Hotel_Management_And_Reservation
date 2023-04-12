@@ -23,16 +23,23 @@ export class ReservationPageComponent implements OnInit {
   ) {}
 
   async ngOnInit() {
-    var dateIn = this.route.snapshot.params['date']
-    var dateOut = this.route.snapshot.params['date1']
-    var capacity = this.route.snapshot.params['adults']
-    console.log(dateIn, dateOut, capacity)
     this.roomData = await this._roomData.getAllRoom();
-    this.availableRoomData(dateIn, dateOut, capacity);
+    this.route.queryParams.subscribe(params => {
+      const dateIn = params['checkInOn'];
+      const dateOut = params['checkOutOn'];
+      const capacity = params['adults'];
+      this.noRoom = params['rooms'];
+      console.log(dateIn, dateOut, capacity, this.noRoom);
+      this.availableRoomData(dateIn, dateOut, capacity);
+    });
   }
 
   async availableRoomData(dateIn: Date, dateOut: Date, capacity: number) {
-    this.data = await this._reservation.getavailableRoomType(dateIn, dateOut, capacity);
+    this.data = await this._reservation.getavailableRoomType(
+      dateIn,
+      dateOut,
+      capacity
+    );
     console.log(this.data);
   }
 

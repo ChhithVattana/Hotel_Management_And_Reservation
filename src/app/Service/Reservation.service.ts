@@ -19,6 +19,7 @@ export class ReservationService {
 
   async getavailableRoomType(dateIn: Date, dateOut: Date, capacity: number) {
     this.availableRoomType = [];
+    console.log(dateIn, dateOut, capacity);
     await this.http
       .get(
         `http://localhost:6969/api/v1/reservation/searchAvailable?page=0&size=10&checkInOn=${this.datePipe.transform(
