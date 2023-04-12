@@ -2,7 +2,81 @@
   <div class="container">
     <div class="space-top">
       <div class="position-relative free-top w-100">
-        <app-SearchBox></app-SearchBox>
+        <form [formGroup]="form" (submit)="onSubmit()">
+          <div class="search-box">
+            <div class="bg-box">
+              <div class="row h-100 p-xxl-0 p-3 px-xxl-auto px-4">
+                <div class="col-xxl-3 p-xxl-3 ps-xxl-5">
+                  <p class="text-white fs-link fw-700 mb-0">Check-in:</p>
+                  <mat-form-field appearance="fill">
+                    <mat-label>MM/DD/YYYY</mat-label>
+                    <input
+                      matInput
+                      [matDatepicker]="picker"
+                      class="bg-blue"
+                      formControlName="date"
+                    />
+                    <mat-datepicker-toggle
+                      matIconSuffix
+                      [for]="picker"
+                    ></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                </div>
+                <div class="col-xxl-3 p-xxl-3 ps-xxl-3">
+                  <p class="text-white fs-link fw-700 mb-0">Check-out:</p>
+                  <mat-form-field appearance="fill">
+                    <mat-label>MM/DD/YYYY</mat-label>
+                    <input matInput [matDatepicker]="picker2" formControlName="date1" />
+                    <mat-datepicker-toggle
+                      matIconSuffix
+                      [for]="picker2"
+                    ></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                  </mat-form-field>
+                </div>
+                <div class="col-xxl-2 p-xxl-3 ps-xxl-3 mb-xxl-auto mb-4">
+                  <p class="text-white fs-link fw-700 mb-0">Rooms:</p>
+                  <select
+                    class="form-select fs-link"
+                    aria-label="rooms"
+                    formControlName="rooms"
+                  >
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </div>
+                <div class="col-xxl-2 p-xxl-3 ps-xxl-3 mb-xxl-auto mb-4">
+                  <p class="text-white fs-link fw-700 mb-0">Adults:</p>
+                  <select
+                    class="form-select fs-link"
+                    aria-label="adults"
+                    formControlName="adults"
+                  >
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </div>
+                <div class="bg-btn col-xxl-2 check-available position-relative px-0">
+                  <button
+                    class="h-100 w-100 fs-lg-content fw-700 pc-res text-center py-xxl-auto py-2"
+                    type="submit"
+                  >
+                    Check Available
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
     <div class="container">
