@@ -95,13 +95,13 @@ img {
   border-radius: 0.275rem 0.275rem 1px 1px;
 }
 
-button {
+button.submit {
   border: none;
   background-color: inherit;
   color: #307BF6;
 }
 
-button:hover{
+button.submit:hover{
   color: white
 }
 
