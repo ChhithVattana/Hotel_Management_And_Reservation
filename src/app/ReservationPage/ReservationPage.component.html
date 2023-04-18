@@ -93,14 +93,21 @@
       <div *ngIf="check; else notAvailable">
         <div *ngFor="let item of roomData">
           <div class="row bg-room mb-4" *ngIf="checkEachRoom(item.name)">
-            <div class="col-xxl-4 p-0">
+            <div class="col-xxl-5 p-0">
               <img [src]="item.url" alt="img" />
             </div>
-            <div class="col-xxl-8 bg-white px-5 py-4 info-box">
+            <div class="col-xxl-7 bg-white px-5 py-4 info-box">
               <div
                 class="ms-1 d-flex flex-column justify-content-between h-100"
               >
-                <h2 class="fs-lg-content">{{ item.name }}</h2>
+                <div class="d-flex justify-content-between">
+                  <h2 class="fs-lg-content fw-700">{{ item.name }}</h2>
+                  <div class="d-flex position-relative h-100">
+                    <h2 class="fs-link fw-700 green my-auto">
+                      Available: {{ checkEachRoomAvailable(item.name) }}
+                    </h2>
+                  </div>
+                </div>
                 <p class="mb-2" style="color: #6c757d">
                   {{ item.mainDescription }}
                 </p>
@@ -134,19 +141,13 @@
                 </div>
                 <div class="row">
                   <div class="col-4">
-                    <div class="d-flex position-relative h-100">
-                      <h2 class="fs-link fw-700 green my-auto">
-                        Available: {{ checkEachRoomAvailable(item.name) }}
-                      </h2>
+                    <div class="fs-content position-relative my-auto me-3">
+                      <b class="fs-lg-content fw-700">${{ item.price }}</b
+                      >/per
                     </div>
                   </div>
                   <div class="col-8">
                     <div class="d-flex justify-content-end">
-                      <div
-                        class="fs-lg-content position-relative my-auto fw-600 me-3"
-                      >
-                        ${{ item.price }}
-                      </div>
                       <button
                         class="btn px-4 blue hover-blue fs-content fw-600"
                       >
