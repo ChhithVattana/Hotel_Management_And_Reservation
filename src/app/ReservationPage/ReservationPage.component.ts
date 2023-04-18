@@ -3,7 +3,7 @@ import { RoomModel } from '../Model/RoomModel';
 import { RoomServicesService } from '../Service/RoomServices.service';
 import { ReservationService } from '../Service/Reservation.service';
 import { RoomTypeModel } from '../Model/RoomTypeModel';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
 import {
   FormBuilder,
@@ -23,11 +23,13 @@ export class ReservationPageComponent implements OnInit {
   data: RoomModel[] = [];
   noRoom: number = 1;
   form: FormGroup;
+  check: boolean = false;
 
   constructor(
     private _roomData: RoomServicesService,
     private _reservation: ReservationService,
     private route: ActivatedRoute,
+    private router: Router,
     private datePipe: DatePipe,
     private fb: FormBuilder
   ) {
@@ -52,9 +54,13 @@ export class ReservationPageComponent implements OnInit {
         date: dateIn,
         date1: dateOut,
         adults: capacity,
-        rooms: this.noRoom
-      })
+        rooms: this.noRoom,
+      });
     });
+    // Reload page when query params change manually
+    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
   }
 
   async availableRoomData(dateIn: Date, dateOut: Date, capacity: number) {
@@ -63,7 +69,13 @@ export class ReservationPageComponent implements OnInit {
       dateOut,
       capacity
     );
+    if (this.data.length === 0) {
+      this.check = false;
+    } else {
+      this.check = true;
+    }
     console.log(this.data);
+    console.log(this.check);
   }
 
   checkEachRoom(name: String): boolean {
@@ -74,8 +86,10 @@ export class ReservationPageComponent implements OnInit {
       }
     }
     if (tmp >= this.noRoom) {
+      this.check = true;
       return true;
     }
+    this.check = false;
     return false;
   }
 
@@ -101,10 +115,6 @@ export class ReservationPageComponent implements OnInit {
     return this.datePipe.transform(date, 'yyyy-MM-dd');
   }
 
-  goToUrl(link: string) {
-    window.open(link, '_blank');
-  }
-
   onSubmit() {
     const date = (<HTMLInputElement>(
       document.querySelector('[formControlName="date"]')
@@ -119,14 +129,12 @@ export class ReservationPageComponent implements OnInit {
       document.querySelector('[aria-label="adults"]')
     )).value;
     console.log(date, date1, rooms, adults);
-    this.goToUrl(
-      `http://localhost:4200/#/reservation/searchAvailable?checkInOn=${this.datePipe.transform(
-        date,
-        'yyyy-MM-dd'
-      )}&checkOutOn=${this.datePipe.transform(
-        date1,
-        'yyyy-MM-dd'
-      )}&adults=${adults}&rooms=${rooms}&isAvailable=true`
-    );
+    // get the new param and change the url value
+    const queryParams = { ...this.route.snapshot.queryParams };
+    queryParams['checkInOn'] = this.datePipe.transform(date, 'yyyy-MM-dd');
+    queryParams['checkOutOn'] = this.datePipe.transform(date1, 'yyyy-MM-dd');
+    queryParams['adults'] = adults;
+    queryParams['rooms'] = rooms;
+    this.router.navigate(['/reservation/searchAvailable'], { queryParams });
   }
 }

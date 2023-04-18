@@ -12,7 +12,9 @@
 }
 
 .bg-room{
-  height: 350px;
+  height: 310px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 10px 10px;
 }
 
 img {
@@ -30,8 +32,13 @@ img {
   width: 99%;
   height: 120px;
   background-color: inherit;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   top: -60px;
   position: absolute;
+}
+
+.onHover select:hover {
+  cursor: pointer;
 }
 
 .pc-res {
@@ -103,6 +110,11 @@ button.submit {
 
 button.submit:hover{
   color: white
+}
+
+.not-available {
+  width: 100%;
+  height: 70vh;
 }
 
 @media screen and (max-width: 576px) {
