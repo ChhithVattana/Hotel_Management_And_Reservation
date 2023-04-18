@@ -14,6 +14,9 @@ import { RoomsComponent } from './Rooms/Rooms.component';
 
 import { AboutUSComponent } from './AboutUS/AboutUS.component';
 import { HotelFacilitiesComponent } from './HotelFacilities/HotelFacilities.component';
+import { LoginPageComponent } from './Admin/LoginPage/LoginPage.component';
+import { MenuPageComponent } from './Admin/MenuPage/MenuPage.component';
+import { AllRoomsComponent } from './Admin/AllRooms/AllRooms.component';
 
 import { OurServiceComponent } from './OurService/OurService.component';
 import { ServicePageComponent } from './ServicePage/ServicePage.component';
@@ -34,6 +37,16 @@ import { MaterialModule } from './material/material.module';
 import { CarouselComponent } from './Carousel/Carousel.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { HttpClientModule } from '@angular/common/http';
+import { EditAllRoomsComponent } from './Admin/EditAllRooms/EditAllRooms.component';
+import { AddRoomTypeComponent } from './Admin/AddRoomType/AddRoomType.component';
+import { EditRoomsTypeComponent } from './Admin/EditRoomsType/EditRoomsType.component';
+import { EditPicRoomTypeComponent } from './Admin/EditPicRoomType/EditPicRoomType.component';
+import { AllRoomTypeComponent } from './Admin/AllRoomType/AllRoomType.component';
+import { AllEmployeesComponent } from './Admin/AllEmployees/AllEmployees.component';
+import { AddAllEmployeesComponent } from './Admin/AddAllEmployees/AddAllEmployees.component';
+import { EditAllEmployeesComponent } from './Admin/EditAllEmployees/EditAllEmployees.component';
+import { UserComponent } from './Admin/User/User.component';
+import { AddUserComponent } from './Admin/AddUser/AddUser.component';
 
 const appRoutes: Routes = [
   {
@@ -124,6 +137,58 @@ const appRoutes: Routes = [
       },
     ],
   },
+  {
+    path: 'admin',
+    component: LoginPageComponent
+  },
+  {
+    path: 'admin/allrooms',
+    component: AllRoomsComponent
+  },
+  {
+    path:'admin/menupage',
+    component: MenuPageComponent
+  },
+  {
+    path:'admin/editallrooms',
+    component: EditAllRoomsComponent
+  },
+  {
+    path: 'admin/allroomtype',
+    component: AllRoomTypeComponent
+  },
+  {
+    path: 'admin/addroomtype',
+    component: AddRoomTypeComponent
+  },
+  {
+    path: 'admin/editroomtype',
+    component: EditRoomsTypeComponent
+  },
+  {
+    path: 'admin/editpicroomtype',
+    component: EditPicRoomTypeComponent
+  },
+  {
+     path: 'admin/allemployees',
+     component: AllEmployeesComponent
+  },
+  {
+    path: 'admin/editallemployees',
+    component: EditAllEmployeesComponent
+ },
+ {
+  path: 'admin/addallemployees',
+  component: AddAllEmployeesComponent
+},
+{
+  path:'admin/user',
+  component: UserComponent
+},
+{
+  path:'admin/adduser',
+  component: AddUserComponent
+},
 ];
 
 @NgModule({
@@ -151,7 +216,20 @@ const appRoutes: Routes = [
     SearchBoxComponent,
     RoomContentPageComponent,
     CarouselComponent,
-  ],
+    MenuPageComponent,
+    AllRoomsComponent,
+    EditAllRoomsComponent,
+    AllRoomTypeComponent,
+    AddRoomTypeComponent,
+    EditRoomsTypeComponent,
+    EditPicRoomTypeComponent,
+    LoginPageComponent,
+    AllEmployeesComponent,
+    AddAllEmployeesComponent,
+    EditAllEmployeesComponent,
+    UserComponent,
+    AddUserComponent,
+   ],
   imports: [
     BrowserModule,
     CommonModule,

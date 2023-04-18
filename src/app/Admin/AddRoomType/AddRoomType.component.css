@@ -1,0 +1,53 @@
+.bg1{
+  background-color: white;
+  width: 99%;
+  height: 75px;
+}
+.bg2{
+  width: 99%;
+  height: 640px;
+  margin-top: 10px;
+}
+.sm-2{
+  width: 13.666667%;
+}
+.sm-1{
+  width: 6.33333%;
+  margin-top: 2px;
+}
+.sm-3{
+  width: 1.666667%;
+}
+.icon{
+  --bs-btn-padding-y: -0.625rem;
+  border: none;
+}
+.col-sm-2{
+  width: 10% !important;
+}
+
+.form-select{
+  height: 46px;
+  width: 346px;
+  padding-left: 10px;
+}
+.input{
+  height: 46px;
+  width: 346px
+}
+.checkbox3{
+  width: 23.5%;
+}
+.checkbox4{
+  width: 23.5%;
+}
+.checkbox1{
+  width: 25%;
+}
+.checkbox2{
+  width: 26.5%;
+}
+.checkbox5{
+  width: 27%;
+}
+

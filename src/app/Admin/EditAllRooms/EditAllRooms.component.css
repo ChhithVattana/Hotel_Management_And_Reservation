@@ -1,0 +1,73 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.bg{
+  height: 100%;
+  background-color: white;
+}
+.size{
+  height: 73px;
+  width: 100%;
+}
+.size1{
+  height: 623px;
+  width: 100%;
+  margin-top: 10px;
+}
+.colorgray{
+  color: gray;
+}
+.bg-dropdown{
+  background-color: gray;
+  height: 37px;
+  width: 100%;
+}
+.color1{
+  background-color: #002449;
+  color: white;
+}
+.color1:hover{
+  background-color: blue;
+}
+
+.color2
+{
+  background-color: red;
+  color: white;
+}
+.color2:hover{
+  background-color: rgb(188, 187, 187);
+}
+.sm-2{
+  width: 13.666667%;
+}
+.sm-1{
+  width: 6.33333%;
+  margin-top: 2px;
+}
+.sm-3{
+  width: 1.666667%;
+}
+.icon{
+  --bs-btn-padding-y: -0.625rem;
+  border: none;
+}
+.sm{
+  width: 12.5%;
+}
+.mt{
+  margin-top: 1rem;
+}
+.form-select{
+  width: 346px;
+ height: 46px;
+ padding-left: 10px;
+}
+.input-group{
+  width: 346px;
+  height: 46px;
+}
+.form-control{
+  padding-left: 10px;
+}

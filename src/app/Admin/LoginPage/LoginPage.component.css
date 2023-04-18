@@ -1,0 +1,47 @@
+.bg{
+  background-image: url('https://s3-alpha-sig.figma.com/img/1e8a/4520/f48e6ccf7857f9a97e7ede23c68a2c06?Expires=1682899200&Signature=Ur4LAVt-E62jLNoV2SOJAOQdy8Ik5KV2tORIVgcZKStVXyybG~qMs~Z4Q3pQOad49Uw0SKgAAsNFBfk6JYpaccgJ19Xh3nASu3TMAADEr81YplSa~b-NXU5M8Jf32XhFeA39-TF-8wAXZ3HFgBK8ouXrhKfWdt0yB4DBmOCr1szTZQJYp2QgWT93xhmRYo8E09GIqefkknupwCJVw0TOLxILlpnNeJeKGH1Si7ZUzQPuKnT1ND9s0y6P3qvLIaQ2A~ZAKihSjSM528SejaqT9rM9RSWnvL5od4GIhR~gdd8dRYiXy9JhqBwzxjvQo7ghw6kG6939bSe9KmhA0e1AgA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+  height: 745px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-color{
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 1px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+* {
+  box-sizing: border-box;
+}
+.logo{
+  content: url('src/assets/Hotel-Main.png');
+  height: 81px;
+  width: 440px;
+}
+.text{
+  color: black;
+}
+.input1{
+  width: 464px;
+  height: 60px;
+  border-radius: 10px;
+}
+.btn.login{
+  background-color: #22B07D;
+  border: 1px solid #22B07D;
+  height: 60px;
+  width: 464px;
+}

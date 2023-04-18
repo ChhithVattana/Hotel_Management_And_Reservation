@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.btn1{
+  border: none;
+}
+.bg{
+  background-color: #e8e8e8;
+  width: 1103px;
+  height: 500px;
+}
+.input-group{
+  height: 52px;
+  width: 346px;
+ padding-top: 8px;
+}
+.form-select{
+  height: 44px;
+  width: 346px;
+ padding-left: 8px;
+ color: #898989;
+}
+.sm-1{
+  width: 14%;
+}
+.btn.add{
+  color: white;
+  background-color: #0057B2;
+  width: 190px;
+  height: 44px;
+}
+.btn.add:hover{
+  background-color: #307bf6;
+}
+.mt{
+  margin-top: 1rem;
+}
