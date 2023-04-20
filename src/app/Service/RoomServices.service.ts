@@ -10,7 +10,6 @@ export class RoomServicesService {
   httpOption = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': 'Basic VmF0dGFuYTpTZXl5'
     }),
   };
   constructor(private http: HttpClient) {}
