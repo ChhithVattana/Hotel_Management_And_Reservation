@@ -6,6 +6,7 @@ import { RoomServicesService } from '../Service/RoomServices.service';
 import { RoomModel } from '../Model/RoomModel';
 import { ImageModel } from '../Model/ImageModel';
 import { RoomTypeModel } from '../Model/RoomTypeModel';
+import { AuthService } from '../Service/Auth.service';
 
 @Component({
   selector: 'app-Rooms',

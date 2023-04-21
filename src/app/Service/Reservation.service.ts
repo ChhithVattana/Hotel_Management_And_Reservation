@@ -10,6 +10,7 @@ export class ReservationService {
   httpOption = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('access_token')}`
     }),
   };
 

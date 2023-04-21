@@ -6,10 +6,10 @@ import { ImageModel } from '../Model/ImageModel';
   providedIn: 'root'
 })
 export class ImageService {
-
   httpOption = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('access_token')}`
     }),
   };
   constructor(private http: HttpClient) {}
