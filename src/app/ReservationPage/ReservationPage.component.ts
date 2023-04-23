@@ -11,6 +11,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { AuthGaurdService } from '../Service/AuthGaurd.service';
 
 @Component({
   selector: 'app-ReservationPage',
@@ -31,6 +32,7 @@ export class ReservationPageComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private datePipe: DatePipe,
+    private authGuard: AuthGaurdService,
     private fb: FormBuilder
   ) {
     this.form = fb.group({
@@ -42,6 +44,7 @@ export class ReservationPageComponent implements OnInit {
   }
 
   async ngOnInit() {
+    this.authGuard.canActivate();
     this.roomData = await this._roomData.getAllRoom();
     this.route.queryParams.subscribe((params) => {
       const dateIn = params['checkInOn'];
