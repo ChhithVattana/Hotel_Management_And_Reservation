@@ -36,11 +36,14 @@ import { CarouselComponent } from './Carousel/Carousel.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { HttpClientModule } from '@angular/common/http';
 import { ReservationPageComponent } from './ReservationPage/ReservationPage.component';
+import { LoadingPageComponent } from './LoadingPage/LoadingPage.component';
+import { AuthService } from './Service/Auth.service';
+import { AuthGaurdService } from './Service/AuthGaurd.service';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: HomePageComponent,
+    component: LoadingPageComponent,
   },
   {
     path: 'home',
@@ -162,7 +165,8 @@ const appRoutes: Routes = [
     RoomContentPageComponent,
     CarouselComponent,
     ReservationPageComponent,
-  ],
+      LoadingPageComponent
+   ],
   imports: [
     BrowserModule,
     CommonModule,
@@ -179,7 +183,7 @@ const appRoutes: Routes = [
     }),
     BrowserAnimationsModule,
   ],
-  providers: [DatePipe],
+  providers: [DatePipe, AuthService, AuthGaurdService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

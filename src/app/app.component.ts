@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from './Service/Auth.service';
+import { AuthGaurdService } from './Service/AuthGaurd.service';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +10,11 @@ import { AuthService } from './Service/Auth.service';
 export class AppComponent implements OnInit  {
   title = 'Hotel_Management_And_Reservation';
 
-  constructor(private router: Router, private auth: AuthService){}
+  constructor(private router: Router, private authGuard: AuthGaurdService){}
 
-  async ngOnInit() {
+  ngOnInit() {
     console.log('app component webclient worked')
-    await this.auth.webClient()
+    this.authGuard.canActivate()
   }
 
   showNavigationBar(): boolean {

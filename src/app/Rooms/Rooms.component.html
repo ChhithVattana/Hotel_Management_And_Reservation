@@ -1,6 +1,9 @@
 <div class="room">
   <div class="bg-blue">
     <div class="container">
+      <div *ngIf="checkData()">
+        {{reload()}}
+      </div>
       <div
         class="row py-2 pb-5 px-2"
         *ngIf="getScreenSize() > 600; else onecard"

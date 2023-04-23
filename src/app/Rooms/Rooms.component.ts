@@ -7,6 +7,7 @@ import { RoomModel } from '../Model/RoomModel';
 import { ImageModel } from '../Model/ImageModel';
 import { RoomTypeModel } from '../Model/RoomTypeModel';
 import { AuthService } from '../Service/Auth.service';
+import { AuthGaurdService } from '../Service/AuthGaurd.service';
 
 @Component({
   selector: 'app-Rooms',
@@ -34,14 +35,28 @@ export class RoomsComponent implements OnInit {
     private router: Router,
     private _imageData: ImageService,
     private _roomData: RoomServicesService,
+    private authGuard: AuthGaurdService
   ) {}
 
   async ngOnInit() {
     this.roomData = await this._roomData.getAllRoom();
     this.imageData = this._imageData.getAllImage()
+    console.log("hello")
   }
 
   onClickNavigate(room: any) {
     this.router.navigate([`/ourroom/content/${room.id}`]);
+  }
+
+  checkData(): boolean {
+    console.log(this.roomData)
+    if (this.roomData === null) {
+      return true;
+    }
+    return false
+  }
+
+  reload(){
+    window.location.reload();
   }
 }
