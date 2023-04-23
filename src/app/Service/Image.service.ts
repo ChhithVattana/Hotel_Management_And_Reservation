@@ -3,15 +3,9 @@ import { Injectable } from '@angular/core';
 import { ImageModel } from '../Model/ImageModel';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ImageService {
-  httpOption = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${localStorage.getItem('access_token')}`
-    }),
-  };
   constructor(private http: HttpClient) {}
 
   imageData: ImageModel[] = [];
@@ -19,29 +13,41 @@ export class ImageService {
 
   getAllImage() {
     this.imageData = [];
+    let httpOption = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('access_token')}`,
+      }),
+    };
     this.http
-      .get('http://localhost:6969/api/v1/images?page=0&size=10&q=', this.httpOption)
+      .get('http://localhost:6969/api/v1/images?page=0&size=10&q=', httpOption)
       .toPromise()
       .then((res: any) => {
         res.result.forEach((r: ImageModel) => {
           this.imageData.push(r);
         });
       });
-      console.log(this.imageData);
+    console.log(this.imageData);
     return this.imageData;
   }
 
   getImageById(id: number) {
     this.imageDataDetail = [];
+    let httpOption = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('access_token')}`,
+      }),
+    };
     this.http
-      .get(`http://localhost:6969/api/v1/images/getById?id=${id}`, this.httpOption)
+      .get(`http://localhost:6969/api/v1/images/getById?id=${id}`, httpOption)
       .toPromise()
       .then((res: any) => {
         res.result.forEach((r: ImageModel) => {
           this.imageDataDetail.push(r);
         });
       });
-      console.log(this.imageDataDetail);
+    console.log(this.imageDataDetail);
     return this.imageDataDetail;
   }
 }

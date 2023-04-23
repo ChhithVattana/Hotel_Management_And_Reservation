@@ -7,19 +7,18 @@ import { DatePipe } from '@angular/common';
   providedIn: 'root',
 })
 export class ReservationService {
-  httpOption = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${localStorage.getItem('access_token')}`
-    }),
-  };
-
   constructor(private http: HttpClient, private datePipe: DatePipe) {}
 
   availableRoomType: RoomModel[] = [];
 
   async getavailableRoomType(dateIn: Date, dateOut: Date, capacity: number) {
     this.availableRoomType = [];
+    let httpOption = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('access_token')}`
+      }),
+    };
     console.log(dateIn, dateOut, capacity);
     await this.http
       .get(
@@ -30,7 +29,7 @@ export class ReservationService {
           dateOut,
           'yyyy-MM-dd'
         )}&q=&capacity=${capacity}&isAvailable=true`,
-        this.httpOption
+        httpOption
       )
       .toPromise()
       .then((res: any) => {

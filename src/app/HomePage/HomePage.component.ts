@@ -10,8 +10,8 @@ import { AuthService } from '../Service/Auth.service';
 export class HomePageComponent implements OnInit {
   constructor(private router: Router, private auth: AuthService) {}
 
-  async ngOnInit() {
-    await this.auth.webClient();
+  ngOnInit() {
+    console.log('I am Home Page');
   }
 
   onClickRestaurant() {

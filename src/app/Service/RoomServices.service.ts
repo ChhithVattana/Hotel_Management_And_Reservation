@@ -8,23 +8,25 @@ import { AuthService } from './Auth.service';
   providedIn: 'root',
 })
 export class RoomServicesService {
-  httpOption = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${localStorage.getItem('access_token')}`,
-    }),
-  };
+
   constructor(private http: HttpClient) {}
 
   roomDataDetail: RoomTypeModel[] = [];
   roomData: RoomTypeModel[] = [];
 
   async getAllRoom() {
+    console.log('getAllroom()');
     this.roomData = [];
+    let httpOption = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('access_token')}`,
+      }),
+    };
     await this.http
       .get(
         'http://localhost:6969/api/v1/roomType?page=0&size=10&q=',
-        this.httpOption
+        httpOption
       )
       .toPromise()
       .then((res: any) => {
@@ -38,10 +40,16 @@ export class RoomServicesService {
 
   async getRoomById(id: number) {
     this.roomDataDetail = [];
+    let httpOption = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('access_token')}`,
+      }),
+    };
     await this.http
       .get(
         `http://localhost:6969/api/v1/roomType/getById?id=${id}`,
-        this.httpOption
+        httpOption
       )
       .toPromise()
       .then((res: any) => {
