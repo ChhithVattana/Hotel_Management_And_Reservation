@@ -45,6 +45,8 @@
 .hover1{
   border: 1px solid #002449;
   background-color: #002449;
+  height: 38px;
+  width: 100%;
 
 }
 .text{
@@ -95,4 +97,7 @@
 }
 .more{
   margin-top: 33px;
+}
+.mt{
+margin-top: 0.35rem;
 }

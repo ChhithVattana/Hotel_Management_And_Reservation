@@ -55,7 +55,7 @@
 }
 .borders{
   border: 1px solid red;
-  height: 402px;
+  height: 516px;
   width: 100%;
 }
 .acctionicon1{
@@ -70,8 +70,8 @@
 }
 .icon1{
   border: none;
-  height: 23px;
-  width: 25px;
+  height: 35px;
+  width: 37px;
 }
 .btn1{
   --bs-btn-padding-x: -0.25rem;
@@ -81,7 +81,7 @@
 }
 .btn.blue{
   border-radius: 10px;
-  background-color: #0057B2;
+  background-color: #002449;;
   color: white;
   width:  180px;
   height: 44px;

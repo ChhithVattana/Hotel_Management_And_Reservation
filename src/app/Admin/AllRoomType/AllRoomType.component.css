@@ -61,7 +61,7 @@
 .borders{
   border: 1px solid red;
 
-  height: 486px;
+  height: 516px;
   width: 100%;
 }
 .iconedit{
@@ -94,20 +94,20 @@
 .btn.icon1{
   background-color: #EBF5FF;
   border: 1px solid #EBF5FF;
-  height: 32px;
-  width: 34px;
+  height: 35px;
+  width: 37px;
 }
 .btn.icon2{
   background-color: #DEEDE5;
   border: 1px solid #DEEDE5;
-  height: 32px;
-  width: 34px;
+  height: 35px;
+  width: 37px;
 }
 .btn.icon3{
   background-color: #EDDEDE;
   border: 1px solid #EDDEDE;
-  height: 32px;
-  width: 34px;
+  height: 35px;
+  width: 37px;
 }
 .btn.dblue{
   background-color: #002449;

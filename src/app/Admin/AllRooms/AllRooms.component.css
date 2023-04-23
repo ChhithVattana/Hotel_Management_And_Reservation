@@ -59,7 +59,7 @@
 }
 .astatus{
   background-color: #DEEDE5;
-  height: 34.5px;
+  height: 35px;
   text-align: center;
   padding-top: 0.5rem;
   color: #427A5B;
@@ -76,7 +76,7 @@
 .borders{
   border: 1px solid red;
 
-  height: 512px;
+  height: 516px;
   width: 100%;
 }
 .sm-2{
