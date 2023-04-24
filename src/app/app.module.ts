@@ -158,7 +158,7 @@ const appRoutes: Routes = [
     component: AllRoomTypeComponent
   },
   {
-    path: 'admin/addroomtype',
+    path: 'admin/allroomtype/addroomtype',
     component: AddRoomTypeComponent
   },
   {
@@ -178,7 +178,7 @@ const appRoutes: Routes = [
     component: EditAllEmployeesComponent
  },
  {
-  path: 'admin/addallemployees',
+  path: 'admin/allemployees/addallemployees',
   component: AddAllEmployeesComponent
 },
 {
@@ -186,7 +186,7 @@ const appRoutes: Routes = [
   component: UserComponent
 },
 {
-  path:'admin/adduser',
+  path:'admin/user/adduser',
   component: AddUserComponent
 },
 ];

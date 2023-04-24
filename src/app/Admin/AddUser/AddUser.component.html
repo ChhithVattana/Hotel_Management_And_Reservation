@@ -1,4 +1,3 @@
-
 <div class="allpage">
   <div class="row">
     <div class="col-2 col-sm-2">
@@ -7,7 +6,7 @@
     <div class="col-10 col-sm-2 mt-6">
       <div class="row">
         <div class="col-2 sm-1 mt-2">
-          <button class="btn btn1">
+          <button class="btn btn1" (click)="onClickBack()">
             <div class="icon"></div>
           </button>
         </div>
@@ -70,7 +69,10 @@
           </div>
           <div class="row">
             <div class="col-4 col-sm-4">
-              <select class="form-select fw-400 fs-16 mt-2" aria-label="Default select example">
+              <select
+                class="form-select fw-400 fs-16 mt-2"
+                aria-label="Default select example"
+              >
                 <option selected>Select Gender</option>
                 <option value="1">Male</option>
                 <option value="2">Female</option>
@@ -116,16 +118,19 @@
               </div>
             </div>
             <div class="col-4 col-sm-4">
-              <select class="form-select fw-400 fs-16 mt-2" aria-label="Default select example">
+              <select
+                class="form-select fw-400 fs-16 mt-2"
+                aria-label="Default select example"
+              >
                 <option selected>Select Positon</option>
                 <option value="1">Male</option>
                 <option value="2">Female</option>
                 <option value="3">Other</option>
               </select>
             </div>
-             <div class="mt-5">
+            <div class="mt-5">
               <button class="btn add fs-17 fw-600">Add User</button>
-             </div>
+            </div>
           </div>
         </div>
       </div>
