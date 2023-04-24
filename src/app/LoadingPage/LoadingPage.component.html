@@ -1,12 +1,14 @@
 <div *ngIf="isLoading">
-  <div class="loading">
-    <div class="loading-circle"></div>
-    <h1>Loading...</h1>
+  <div class="position-absolute top-50 start-50 translate-middle">
+    <div class="dot-spinner">
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+      <div class="dot-spinner__dot"></div>
+    </div>
   </div>
 </div>
-<!-- <ng-container *ngIf="isLoading">
-  <ngx-skeleton-loader
-    [count]="10"
-    animation="pulse"
-  ></ngx-skeleton-loader>
-</ng-container> -->
