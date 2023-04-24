@@ -140,4 +140,16 @@ export class ReservationPageComponent implements OnInit {
     queryParams['rooms'] = rooms;
     this.router.navigate(['/reservation/searchAvailable'], { queryParams });
   }
+
+  // convert the last sentence of the text into ... because its too long
+  truncateText(text: String, maxLength: number): String {
+    if (text.length <= maxLength) {
+      return text;
+    }
+
+    // Truncate to the nearest sentence within maxLength
+    const truncatedText = text.slice(0, maxLength).replace(/([^.?!])\s+[a-zA-Z0-9]*$/, "$1...");
+
+    return truncatedText;
+  }
 }

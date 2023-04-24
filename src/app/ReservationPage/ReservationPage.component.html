@@ -93,10 +93,10 @@
       <div *ngIf="check; else notAvailable">
         <div *ngFor="let item of roomData">
           <div class="row bg-room mb-xxl-4 mb-3" *ngIf="checkEachRoom(item.name)">
-            <div class="col-xxl-5 p-0">
+            <div class="col-xxl-5 p-0 h-100">
               <img [src]="item.url" alt="img" />
             </div>
-            <div class="col-xxl-7 bg-white px-xxl-5 py-xxl-4 p-3 info-box">
+            <div class="col-xxl-7 bg-white px-xxl-5 py-xxl-4 p-3 info-box h-100">
               <div
                 class="ms-1 d-flex flex-column justify-content-between h-100"
               >
@@ -108,8 +108,8 @@
                     </h2>
                   </div>
                 </div>
-                <p class="mb-2" style="color: #6c757d">
-                  {{ item.mainDescription }}
+                <p class="mb-2" style="color: #6c757d; overflow: hidden; max-width: fit-content;">
+                  {{ truncateText(item.mainDescription, 300) }}
                 </p>
                 <div class="row">
                   <div class="col-xxl-6 my-1">

@@ -23,40 +23,47 @@ export class RoomsComponent implements OnInit {
   getScreenSize() {
     return (this.scrWidth = window.innerWidth);
   }
-
   // output to share data from child to parent
   @Output() newRoomEvent = new EventEmitter<any>();
   onClickNewRoom(value: any) {
-    let tmp = this._roomData.getRoomById(value.id)
+    let tmp = this._roomData.getRoomById(value.id);
     this.newRoomEvent.emit(tmp);
   }
-
   constructor(
     private router: Router,
     private _imageData: ImageService,
     private _roomData: RoomServicesService,
     private authGuard: AuthGaurdService
   ) {}
-
   async ngOnInit() {
     this.roomData = await this._roomData.getAllRoom();
     // this.imageData = this._imageData.getAllImage();
-    console.log("I am Room Content CArds")
+    console.log('I am Room Content CArds');
   }
-
   onClickNavigate(room: any) {
     this.router.navigate([`/ourroom/content/${room.id}`]);
   }
-
   checkData(): boolean {
-    console.log(this.roomData)
+    console.log(this.roomData);
     if (this.roomData === null) {
       return true;
     }
-    return false
+    return false;
   }
-
-  reload(){
+  reload() {
     window.location.reload();
+  }
+  // convert the last sentence of the text into ... because its too long
+  truncateText(text: String, maxLength: number): String {
+    if (text.length <= maxLength) {
+      return text;
+    }
+
+    // Truncate to the nearest sentence within maxLength
+    const truncatedText = text
+      .slice(0, maxLength)
+      .replace(/([^.?!])\s+[a-zA-Z0-9]*$/, '$1...');
+
+    return truncatedText;
   }
 }
