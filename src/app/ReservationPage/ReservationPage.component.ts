@@ -88,11 +88,12 @@ export class ReservationPageComponent implements OnInit {
         tmp++;
       }
     }
+    console.log(tmp)
     if (tmp >= this.noRoom) {
-      this.check = true;
+      console.log("trueeeeeeeeeeeeeeee")
       return true;
     }
-    this.check = false;
+    console.log("falseeeeeeeeeeeeeeee")
     return false;
   }
 

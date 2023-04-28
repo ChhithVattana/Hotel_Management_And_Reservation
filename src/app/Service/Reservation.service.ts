@@ -28,7 +28,7 @@ export class ReservationService {
         )}&checkOutOn=${this.datePipe.transform(
           dateOut,
           'yyyy-MM-dd'
-        )}&q=&capacity=${capacity}&isAvailable=true`,
+        )}&adults=${capacity}&isAvailable=true`,
         httpOption
       )
       .toPromise()
