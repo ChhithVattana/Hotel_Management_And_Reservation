@@ -1,4 +1,15 @@
-<div class="bg-siliver">
+<div class="bg-siliver" style="z-index: 1">
+  <div
+    *ngIf="isLoading"
+    class="position-absolute"
+    style="
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(0, 0, 0);
+      z-index: 2;
+      opacity: 0.4;
+    "
+  ></div>
   <div class="container">
     <div class="space-top">
       <div class="position-relative free-top w-100">
@@ -91,8 +102,25 @@
         </form>
       </div>
     </div>
+    <div *ngIf="isLoading">
+      <div
+        class="position-absolute top-50 start-50 translate-middle"
+        style="z-index: 3"
+      >
+        <div class="dot-spinner">
+          <div class="dot-spinner__dot"></div>
+          <div class="dot-spinner__dot"></div>
+          <div class="dot-spinner__dot"></div>
+          <div class="dot-spinner__dot"></div>
+          <div class="dot-spinner__dot"></div>
+          <div class="dot-spinner__dot"></div>
+          <div class="dot-spinner__dot"></div>
+          <div class="dot-spinner__dot"></div>
+        </div>
+      </div>
+    </div>
     <div class="container">
-      <div *ngIf="check; else notAvailable">
+      <div *ngIf="check">
         <div *ngFor="let item of roomData">
           <div
             class="row bg-room mb-xxl-4 mb-3"
@@ -128,19 +156,19 @@
                 <div class="row">
                   <div class="col-xxl-6 my-1">
                     <div class="d-flex position-relative">
-                      <i class="bi bi-steam fs-22"></i>
+                      <i class="bi bi-info-square-fill blue fs-22"></i>
                       <p class="ms-2 fw-600 my-auto">{{ item.bedType }}</p>
                     </div>
                   </div>
                   <div class="col-xxl-6 my-1">
                     <div class="d-flex position-relative">
-                      <i class="bi bi-steam fs-22"></i>
+                      <i class="bi-grid-3x3-gap-fill blue fs-22"></i>
                       <p class="ms-2 fw-600 my-auto">{{ item.roomSize }} m2</p>
                     </div>
                   </div>
                   <div class="col-xxl-6 my-1">
                     <div class="d-flex position-relative">
-                      <i class="bi bi-steam fs-22"></i>
+                      <i class="bi bi-people-fill blue fs-22"></i>
                       <p class="ms-2 fw-600 my-auto">
                         Up to {{ item.capacity }} Adults
                       </p>
@@ -148,7 +176,7 @@
                   </div>
                   <div class="col-xxl-6 my-1">
                     <div class="d-flex position-relative">
-                      <i class="bi bi-steam fs-22"></i>
+                      <i class="bi bi-cup-fill blue fs-22"></i>
                       <p class="ms-2 fw-600 my-auto">Free Breakfast</p>
                     </div>
                   </div>
@@ -177,7 +205,7 @@
           </div>
         </div>
       </div>
-      <ng-template #notAvailable>
+      <!-- <ng-template #notAvailable>
         <div class="not-available d-flex justify-content-center">
           <img
             src="../../assets/not found.png"
@@ -185,7 +213,7 @@
             alt="not found"
           />
         </div>
-      </ng-template>
+      </ng-template> -->
     </div>
   </div>
 </div>

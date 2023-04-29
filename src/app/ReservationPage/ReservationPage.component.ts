@@ -25,6 +25,7 @@ export class ReservationPageComponent implements OnInit {
   noRoom: number = 1;
   form: FormGroup;
   check: boolean = false;
+  isLoading: boolean = true;
 
   constructor(
     private _roomData: RoomServicesService,
@@ -64,6 +65,7 @@ export class ReservationPageComponent implements OnInit {
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     };
+    this.isLoading = false;
   }
 
   async availableRoomData(dateIn: Date, dateOut: Date, capacity: number) {
@@ -153,4 +155,5 @@ export class ReservationPageComponent implements OnInit {
 
     return truncatedText;
   }
+
 }
