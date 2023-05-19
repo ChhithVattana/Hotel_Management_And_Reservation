@@ -1,8 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { RoomModel } from '../Model/RoomModel';
 import { RoomTypeModel } from '../Model/RoomTypeModel';
-import { AuthService } from './Auth.service';
 
 @Injectable({
   providedIn: 'root',
@@ -25,7 +23,7 @@ export class RoomServicesService {
     };
     await this.http
       .get(
-        'http://localhost:6969/api/v1/roomType?page=0&size=10&q=',
+        'http://18.138.248.92:6969/api/v1/roomType?page=0&size=10&q=',
         httpOption
       )
       .toPromise()
@@ -48,7 +46,7 @@ export class RoomServicesService {
     };
     await this.http
       .get(
-        `http://localhost:6969/api/v1/roomType/getById?id=${id}`,
+        `http://18.138.248.92:6969/api/v1/roomType/getById?id=${id}`,
         httpOption
       )
       .toPromise()

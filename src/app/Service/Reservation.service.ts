@@ -22,7 +22,7 @@ export class ReservationService {
     console.log(dateIn, dateOut, capacity);
     await this.http
       .get(
-        `http://localhost:6969/api/v1/reservation/searchAvailable?page=0&size=10&checkInOn=${this.datePipe.transform(
+        `http://18.138.248.92:6969/api/v1/reservation/searchAvailable?page=0&size=10&checkInOn=${this.datePipe.transform(
           dateIn,
           'yyyy-MM-dd'
         )}&checkOutOn=${this.datePipe.transform(

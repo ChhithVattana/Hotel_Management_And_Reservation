@@ -20,7 +20,7 @@ export class ImageService {
       }),
     };
     this.http
-      .get('http://localhost:6969/api/v1/images?page=0&size=10&q=', httpOption)
+      .get('http://18.138.248.92:6969/api/v1/images?page=0&size=10&q=', httpOption)
       .toPromise()
       .then((res: any) => {
         res.result.forEach((r: ImageModel) => {
@@ -40,7 +40,7 @@ export class ImageService {
       }),
     };
     this.http
-      .get(`http://localhost:6969/api/v1/images/getById?id=${id}`, httpOption)
+      .get(`http://18.138.248.92:6969/api/v1/images/getById?id=${id}`, httpOption)
       .toPromise()
       .then((res: any) => {
         res.result.forEach((r: ImageModel) => {

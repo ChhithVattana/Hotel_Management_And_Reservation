@@ -25,7 +25,7 @@ export class AuthService {
     body.set('username', 'admin');
     body.set('password', 'admin');
     await this.http
-      .post('http://localhost:6969/oauth/token', body, this.httpOptions)
+      .post('http://18.138.248.92:6969/oauth/token', body, this.httpOptions)
       .toPromise()
       .then((res: any) => {
         console.log(res);
