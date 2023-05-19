@@ -15,7 +15,6 @@ export class LoadingPageComponent implements OnInit {
   constructor(private router: Router ,private authService: AuthService) { }
 
   async ngOnInit() {
-    console.log('I am loading Component')
     if(!this.authService.isAuthenticated()) {
       await this.authService.webClient();
     }

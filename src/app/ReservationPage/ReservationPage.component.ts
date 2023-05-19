@@ -52,7 +52,6 @@ export class ReservationPageComponent implements OnInit {
       const dateOut = params['checkOutOn'];
       const capacity = params['adults'];
       this.noRoom = params['rooms'];
-      console.log(dateIn, dateOut, capacity, this.noRoom);
       this.availableRoomData(dateIn, dateOut, capacity);
       this.form.patchValue({
         date: dateIn,
@@ -79,8 +78,6 @@ export class ReservationPageComponent implements OnInit {
     } else {
       this.check = true;
     }
-    console.log(this.data);
-    console.log(this.check);
   }
 
   checkEachRoom(name: String): boolean {
@@ -90,12 +87,9 @@ export class ReservationPageComponent implements OnInit {
         tmp++;
       }
     }
-    console.log(tmp)
     if (tmp >= this.noRoom) {
-      console.log("trueeeeeeeeeeeeeeee")
       return true;
     }
-    console.log("falseeeeeeeeeeeeeeee")
     return false;
   }
 
@@ -134,7 +128,6 @@ export class ReservationPageComponent implements OnInit {
     const adults = (<HTMLSelectElement>(
       document.querySelector('[aria-label="adults"]')
     )).value;
-    console.log(date, date1, rooms, adults);
     // get the new param and change the url value
     const queryParams = { ...this.route.snapshot.queryParams };
     queryParams['checkInOn'] = this.datePipe.transform(date, 'yyyy-MM-dd');

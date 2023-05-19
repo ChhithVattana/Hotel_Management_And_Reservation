@@ -11,7 +11,6 @@ export class HomePageComponent implements OnInit {
   constructor(private router: Router, private auth: AuthService) {}
 
   ngOnInit() {
-    console.log('I am Home Page');
   }
 
   onClickRestaurant() {

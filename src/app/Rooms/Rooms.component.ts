@@ -38,7 +38,6 @@ export class RoomsComponent implements OnInit {
   async ngOnInit() {
     this.roomData = await this._roomData.getAllRoom();
     // this.imageData = this._imageData.getAllImage();
-    console.log('I am Room Content CArds');
   }
   onClickNavigate(room: any) {
     this.router.navigate([`/ourroom/content/${room.id}`]);

@@ -19,7 +19,6 @@ export class ReservationService {
         Authorization: `Bearer ${localStorage.getItem('access_token')}`
       }),
     };
-    console.log(dateIn, dateOut, capacity);
     await this.http
       .get(
         `http://18.138.248.92:6969/api/v1/reservation/searchAvailable?page=0&size=10&checkInOn=${this.datePipe.transform(

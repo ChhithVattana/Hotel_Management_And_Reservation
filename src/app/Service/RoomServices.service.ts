@@ -13,7 +13,6 @@ export class RoomServicesService {
   roomData: RoomTypeModel[] = [];
 
   async getAllRoom() {
-    console.log('getAllroom()');
     this.roomData = [];
     let httpOption = {
       headers: new HttpHeaders({
@@ -32,7 +31,6 @@ export class RoomServicesService {
           this.roomData.push(r);
         });
       });
-    console.log(this.roomData);
     return this.roomData;
   }
 
@@ -53,7 +51,6 @@ export class RoomServicesService {
       .then((res: any) => {
         this.roomDataDetail.push(res.result);
       });
-    console.log(this.roomDataDetail);
     return this.roomDataDetail;
   }
 }

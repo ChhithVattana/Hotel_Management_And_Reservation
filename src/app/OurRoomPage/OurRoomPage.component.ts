@@ -22,7 +22,6 @@ export class OurRoomPageComponent implements OnInit {
   async ngOnInit() {
     this.authGuard.canActivate()
     this.data = await this.roomData.getAllRoom();
-    console.log('I am ourRooom page')
   }
 
   onClickNavigateTest() {

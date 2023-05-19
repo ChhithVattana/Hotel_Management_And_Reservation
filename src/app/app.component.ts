@@ -13,7 +13,6 @@ export class AppComponent implements OnInit  {
   constructor(private router: Router, private authGuard: AuthGaurdService){}
 
   ngOnInit() {
-    console.log('app component webclient worked')
     this.authGuard.canActivate()
   }
 

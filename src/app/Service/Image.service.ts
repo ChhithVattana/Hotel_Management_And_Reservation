@@ -27,7 +27,6 @@ export class ImageService {
           this.imageData.push(r);
         });
       });
-    console.log(this.imageData);
     return this.imageData;
   }
 
@@ -47,7 +46,6 @@ export class ImageService {
           this.imageDataDetail.push(r);
         });
       });
-    console.log(this.imageDataDetail);
     return this.imageDataDetail;
   }
 }
