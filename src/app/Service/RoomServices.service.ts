@@ -44,7 +44,7 @@ export class RoomServicesService {
     };
     await this.http
       .get(
-        `http://18.138.248.92:6969/api/v1/roomType/getById?id=${id}`,
+        `https://m1g7.seyna.iteg7.com/api/v1/roomType/getById?id=${id}`,
         httpOption
       )
       .toPromise()

@@ -21,7 +21,7 @@ export class ReservationService {
     };
     await this.http
       .get(
-        `http://18.138.248.92:6969/api/v1/reservation/searchAvailable?page=0&size=10&checkInOn=${this.datePipe.transform(
+        `https://m1g7.seyna.iteg7.com/api/v1/reservation/searchAvailable?page=0&size=10&checkInOn=${this.datePipe.transform(
           dateIn,
           'yyyy-MM-dd'
         )}&checkOutOn=${this.datePipe.transform(
