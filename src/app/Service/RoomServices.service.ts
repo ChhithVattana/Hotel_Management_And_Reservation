@@ -22,7 +22,7 @@ export class RoomServicesService {
     };
     await this.http
       .get(
-        'http://18.138.248.92:6969/api/v1/roomType?page=0&size=10&q=',
+        'https://m1g7.seyna.iteg7.com/api/v1/roomType?page=0&size=10&q=',
         httpOption
       )
       .toPromise()
