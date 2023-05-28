@@ -213,6 +213,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    LoadingPageComponent,
     NavigationBarComponent,
     FooterComponent,
     HomePageComponent,
