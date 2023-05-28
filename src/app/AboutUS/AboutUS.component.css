@@ -6,7 +6,7 @@
       rgba(0, 0, 0, 0.2) 100%,
       transparent 70%
     ),
-    url("https://s3-alpha-sig.figma.com/img/8d88/d83a/4d67b64c423437bee592269953cd17ad?Expires=1679270400&Signature=ENLFSzsYoIuolB-qKh0goCJ4ez4-ao6rd-LPQvka2nbPRUJx1uP-q9x329tj~j1QF0Dlxhuo5Bt4K93WSGBUzdpIwCv3Ghcn4JZsyP8D2N0-XFPtGWMyalPeHzSIzdUcGutWmGMc4zchAOkgkw4ycFMufpXvaaClwlG5Ulp-wMeq-nN5Vo3MdXkMZnnMU4aV0R51EnOW4VWITPDr~H8bfOFbiwDQ3sB84dJ7WEa45cn~HsYboctPjnEHsSmkQqRbEgOYSpvAvDZC4BBlfCZVP8XrAMwJF1vqeDZm6qYKi1T8FNTz49A5o8jnOVk46WSwbFFAOZLT76K8DSLnvCRGvw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    url("../../assets/resources/us/head_about_us.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 40%;
@@ -128,6 +128,7 @@ i {
 .abt-box {
   height: 430px;
   width: 100%;
+  padding: 0px 15px 0px 15px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -137,7 +138,7 @@ i {
   transition: 0.5s;
   border-radius: 50%;
   border: 3px solid white;
-  object-fit: cover;
+  object-fit: fill;
   background-color: #0057b2;
   transition: 0.5s;
 }
@@ -159,7 +160,7 @@ i {
         rgba(0, 0, 0, 0.2) 100%,
         transparent 70%
       ),
-      url("https://s3-alpha-sig.figma.com/img/8d88/d83a/4d67b64c423437bee592269953cd17ad?Expires=1679270400&Signature=ENLFSzsYoIuolB-qKh0goCJ4ez4-ao6rd-LPQvka2nbPRUJx1uP-q9x329tj~j1QF0Dlxhuo5Bt4K93WSGBUzdpIwCv3Ghcn4JZsyP8D2N0-XFPtGWMyalPeHzSIzdUcGutWmGMc4zchAOkgkw4ycFMufpXvaaClwlG5Ulp-wMeq-nN5Vo3MdXkMZnnMU4aV0R51EnOW4VWITPDr~H8bfOFbiwDQ3sB84dJ7WEa45cn~HsYboctPjnEHsSmkQqRbEgOYSpvAvDZC4BBlfCZVP8XrAMwJF1vqeDZm6qYKi1T8FNTz49A5o8jnOVk46WSwbFFAOZLT76K8DSLnvCRGvw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+      url("../../assets/resources/us/head_about_us.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: 70%;
@@ -184,7 +185,7 @@ i {
 
   .row.row-1 {
     width: 100%;
-    height: 340px;
+    height: 100%;
   }
   .row.row-2,
   .row-2 img {

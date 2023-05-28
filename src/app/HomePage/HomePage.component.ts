@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../Service/Auth.service';
 
 @Component({
   selector: 'app-HomePage',
@@ -7,9 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./HomePage.component.css'],
 })
 export class HomePageComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private auth: AuthService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   onClickRestaurant() {
     this.router.navigate(['/dinning']);

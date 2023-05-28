@@ -10,7 +10,7 @@
       <div class="row py-xxl-5 py-4">
         <div class="col-xxl-6">
           <p class="fs-lg-content fs-sm-24 blue fw-700">
-            EXPLORE SUNWAY HOTEL PHNOM PENH'S EVENT SPACES IN PHNOM PENH
+            EXPLORE MALLIKA HOTEL PHNOM PENH'S EVENT SPACES IN PHNOM PENH
           </p>
           <p class="fs-link fs-sm-16">
             Located at the top of the highest tower in Cambodia and bathed in
@@ -36,8 +36,8 @@
   <div class="bg-blue">
     <div
       class="px-6 bg-white"
-      style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);"
-      *ngFor="let i of [1, 2, 3, 4, 5, 6]; let indexOfelement = index"
+      style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15)"
+      *ngFor="let i of data; let indexOfelement = index"
     >
       <div class="container">
         <div class="row mb-5">
@@ -46,21 +46,29 @@
             [ngStyle]="{ order: indexOfelement % num }"
           >
             <div class="px-xxl-4 py-xxl-5 py-4 h-100">
-              <h2 class="fw-700 fs-sm-32 blue mb-4">GRAND BALLROOM</h2>
+              <h2 class="fw-700 fs-sm-32 blue mb-4">{{ i.name }}</h2>
               <p class="fs-content">
-                Looking for the best meeting venue for event in Phnom Penh?
-                Sofitel offers a range of meeting spaces from a 1,400sqm Grand
-                Ballroom that can hosts up to 1,500 guests ideal for large
-                celebrations and events to other 5 smaller-sized Sofitel meeting
-                rooms ideal for medium-size and small meetings in Phnom Penh.
+                {{ i.des }}
               </p>
               <div class="position-absolute bottom-0 left-0 py-5">
                 <div class="fs-content fs-sm-16 py-3">
-                  <p><i class="bi bi-clock-fill pe-3 blue"></i><b>Opeing Hour:</b> DAILY 6AM- 10PM</p>
-                  <p><i class="bi bi-geo-alt-fill pe-3 blue"></i><b>Location:</b> Floor 5th</p>
-                  <p><i class="bi bi-info-circle-fill pe-3 blue"></i><b>Area Size:</b> 443 sqm</p>
+                  <p>
+                    <i class="bi bi-clock-fill pe-3 blue"></i
+                    ><b>Opeing Hour:</b> DAILY 6AM- 10PM
+                  </p>
+                  <p>
+                    <i class="bi bi-geo-alt-fill pe-3 blue"></i
+                    ><b>Location:</b> {{ i.location }}
+                  </p>
+                  <p>
+                    <i class="bi bi-info-circle-fill pe-3 blue"></i
+                    ><b>Area Size:</b> {{ i.size }}
+                  </p>
                 </div>
-                <button class="btn hover-blue blue fw-600 fs-content me-3" (click)="onClickNagivate()">
+                <button
+                  class="btn hover-blue blue fw-600 fs-content me-3"
+                  (click)="onClickNagivate()"
+                >
                   More Detail
                 </button>
                 <button class="btn btn-red hover-red red fw-600 fs-content">
@@ -73,7 +81,7 @@
             class="col-xxl-6 box p-0"
             [ngStyle]="{ order: indexOfelement / num }"
           >
-            <div class="bg-img"></div>
+            <div class="bg-img" style="background-image: url({{i.img}});"></div>
           </div>
         </div>
       </div>

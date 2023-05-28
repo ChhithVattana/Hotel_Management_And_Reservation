@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -50,11 +51,14 @@ import { AddUserComponent } from './Admin/AddUser/AddUser.component';
 import { DoneComponent } from './Admin/Confirmation/Done/Done.component';
 import { SaveComponent } from './Admin/Confirmation/Save/Save.component';
 import { DeleteComponent } from './Admin/Confirmation/Delete/Delete.component';
+import { LoadingPageComponent } from './LoadingPage/LoadingPage.component';
+import { AuthService } from './Service/Auth.service';
+import { AuthGaurdService } from './Service/AuthGaurd.service';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: HomePageComponent,
+    component: LoadingPageComponent,
   },
   {
     path: 'home',
@@ -264,7 +268,7 @@ const appRoutes: Routes = [
     }),
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [DatePipe, AuthService, AuthGaurdService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

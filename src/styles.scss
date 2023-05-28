@@ -31,7 +31,7 @@
   background-color: #ebf5ff;
 }
 .bg-dblue {
-  background-color: #D1E8FD;
+  background-color: #d1e8fd;
 }
 
 .bg-white {
@@ -43,43 +43,43 @@
 }
 
 .fs-96 {
-  font-size: 96px !important;
+  font-size: calc(96px * 0.9) !important;
 }
 
 .fs-64 {
-  font-size: 64px !important;
+  font-size: calc(64px * 0.9) !important;
 }
 
 .fs-46 {
-  font-size: 46px !important;
+  font-size: calc(46px * 0.9) !important;
 }
 
 .fs-32 {
-  font-size: 32px !important;
+  font-size: calc(32px * 0.9) !important;
 }
 
 .fs-28 {
-  font-size: 28px !important;
+  font-size: calc(28px * 0.9) !important;
 }
 
 .fs-lg-content {
-  font-size: 24px !important;
+  font-size: calc(24px * 0.9) !important;
 }
 
 .fs-22 {
-  font-size: 22px !important;
+  font-size: calc(22px * 0.9) !important;
 }
 
 .fs-content {
-  font-size: 20px !important;
+  font-size: calc(20px * 0.9) !important;
 }
 
 .fs-link {
-  font-size: 18px !important;
+  font-size: calc(18px * 0.9) !important;
 }
 
 .fs-16 {
-  font-size: 16px !important;
+  font-size: calc(16px * 0.9) !important;
 }
 .fs-15{
   font-size: 15px !important;
@@ -153,6 +153,9 @@
 }
 
 @media screen and (min-width: 1400px) {
+  .container {
+    max-width: calc(1320px * 0.9);
+  }
   .fs-xxl-1 {
     font-size: 2.5rem !important;
   }
@@ -300,25 +303,25 @@
     font-size: 1rem !important;
   }
   .fs-sm-34 {
-    font-size: 34px !important;
+    font-size: calc(34px * 0.9) !important;
   }
   .fs-sm-32 {
-    font-size: 32px !important;
+    font-size: calc(32px * 0.9) !important;
   }
   .fs-sm-28 {
-    font-size: 28px !important;
+    font-size: calc(28px * 0.9) !important;
   }
   .fs-sm-24 {
-    font-size: 24px !important;
+    font-size: calc(24px * 0.9) !important;
   }
   .fs-sm-20 {
-    font-size: 20px !important;
+    font-size: calc(20px * 0.9) !important;
   }
   .fs-sm-18 {
-    font-size: 18px !important;
+    font-size: calc(18px * 0.9) !important;
   }
   .fs-sm-16 {
-    font-size: 16px !important;
+    font-size: calc(16px * 0.9) !important;
   }
 
   // padding

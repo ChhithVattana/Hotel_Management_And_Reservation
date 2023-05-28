@@ -1,44 +1,56 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { RoomModel } from '../Model/RoomModel';
+import { RoomTypeModel } from '../Model/RoomTypeModel';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RoomServicesService {
-  httpOption = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-    }),
-  };
+
   constructor(private http: HttpClient) {}
 
-  roomDataDetail: RoomModel[] = [];
-  roomData: RoomModel[] = [];
+  roomDataDetail: RoomTypeModel[] = [];
+  roomData: RoomTypeModel[] = [];
 
-  getAllRoom() {
+  async getAllRoom() {
     this.roomData = [];
-    this.http
-      .get('http://localhost:6969/api/v1/roomType?page=0&size=10&q=', this.httpOption)
+    let httpOption = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('access_token')}`,
+      }),
+    };
+    await this.http
+      .get(
+        'https://m1g7.seyna.iteg7.com/api/v1/roomType?page=0&size=10&q=',
+        httpOption
+      )
       .toPromise()
       .then((res: any) => {
-        res.result.forEach((r: RoomModel) => {
+        res.result.forEach((r: RoomTypeModel) => {
           this.roomData.push(r);
         });
       });
-      console.log(this.roomData);
     return this.roomData;
   }
 
-  getRoomById(id: number) {
+  async getRoomById(id: number) {
     this.roomDataDetail = [];
-    this.http
-      .get(`http://localhost:6969/api/v1/roomType/getById?id=${id}`, this.httpOption)
+    let httpOption = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('access_token')}`,
+      }),
+    };
+    await this.http
+      .get(
+        `https://m1g7.seyna.iteg7.com/api/v1/roomType/getById?id=${id}`,
+        httpOption
+      )
       .toPromise()
       .then((res: any) => {
-        this.roomDataDetail.push(res.result)
+        this.roomDataDetail.push(res.result);
       });
-      console.log(this.roomDataDetail);
     return this.roomDataDetail;
   }
 }

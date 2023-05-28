@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthGaurdService } from '../Service/AuthGaurd.service';
 
 @Component({
   selector: 'app-DinningPage',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./DinningPage.component.css'],
 })
 export class DinningPageComponent implements OnInit {
-  constructor() {}
+  constructor(private authGuard: AuthGaurdService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.authGuard.canActivate();
+  }
 }
