@@ -14,6 +14,6 @@ export class AllRoomsComponent implements OnInit {
   }
 
   onClickAddRoom(){
-    this.router.navigate(['admin/allrooms/addroom']);
+    this.router.navigate(['admin/allrooms/editallrooms']);
   }
 }

@@ -1,47 +1,102 @@
-.bg{
-  background-image: url('https://s3-alpha-sig.figma.com/img/1e8a/4520/f48e6ccf7857f9a97e7ede23c68a2c06?Expires=1682899200&Signature=Ur4LAVt-E62jLNoV2SOJAOQdy8Ik5KV2tORIVgcZKStVXyybG~qMs~Z4Q3pQOad49Uw0SKgAAsNFBfk6JYpaccgJ19Xh3nASu3TMAADEr81YplSa~b-NXU5M8Jf32XhFeA39-TF-8wAXZ3HFgBK8ouXrhKfWdt0yB4DBmOCr1szTZQJYp2QgWT93xhmRYo8E09GIqefkknupwCJVw0TOLxILlpnNeJeKGH1Si7ZUzQPuKnT1ND9s0y6P3qvLIaQ2A~ZAKihSjSM528SejaqT9rM9RSWnvL5od4GIhR~gdd8dRYiXy9JhqBwzxjvQo7ghw6kG6939bSe9KmhA0e1AgA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
-  height: 745px;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.bg-color{
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 1px solid #f1f1f1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 500px;
-  height: 500px;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-}
 * {
-  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-.logo{
-  content: url('src/assets/Hotel-Main.png');
-  height: 81px;
-  width: 440px;
+
+.bg-image {
+  background-image: url('https://s3-alpha-sig.figma.com/img/1e8a/4520/f48e6ccf7857f9a97e7ede23c68a2c06?Expires=1683504000&Signature=WXBOWgwNcHgk9vTAFR-QTKqYKn9RT3e3wNwuznUVhsR3shkm8-saQf7eWOcjQXEglCcmo2-Fl~~A9gS-gEDanNG-fbgNWIdLFscM4CB7McPrd-Vu0x0pBNpSN~RDapjwyQ9~GBpYv0TkbICCohgGeuIQJ-AwBU4bNcHrhzburOERLF0XyO1Lb8KHvT4v1zjV7dOG9NgeJxgxcGcqRymqrEXlMMkzVXNyK6lohLNsCgQndvwChE1GXggWgbGI1qGl5HBIYtFYZNUouk3ApPzREzK3CU~gjFtqO0hNuX9fxzoBIQUhYIOVFkk-A3QMODO-Of9JX8El-kJLCONxP8DkRg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4') !important;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
-.text{
-  color: black;
+
+.pt {
+  padding-top: 8rem;
 }
-.input1{
-  width: 464px;
-  height: 60px;
-  border-radius: 10px;
+
+.bg-color {
+  height: 500px;
+  width: 500px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
-.btn.login{
+
+.logo {
+  content: url('src\assets\Hotel-main-back2.png');
+  height: 70px;
+  width: 400px;
+  margin: auto;
+}
+
+.pt-17 {
+  padding-top: 17px;
+}
+
+.pt-33 {
+  padding-top: 13px;
+}
+
+.pt-45 {
+  padding-top: 25px;
+}
+
+.mb-45 {
+  margin-bottom: 40px;
+}
+
+.form-control {
+  height: 50px;
+  width: 400px;
+  margin: auto;
+  padding-left: 20px;
+  border-radius: 12px;
+}
+
+.form-floating>label {
+  padding-left: 60px;
+  padding-top: 12px;
+  color: #A8A8A8;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.user {
+  background-image: url('https://s3-alpha-sig.figma.com/img/93c8/48d5/5d382e188f1e376ba1dbc117f762d9ff?Expires=1683504000&Signature=DNZsJwDtuJzm~80LsZs4-s-VjKATXqOtKI1MudbkAwl8IaSdnC-xVpvE1XcMJUA1Q58OTKach5hqjY~uaQMWW5DMLteUKPpeZdbwX2qJUkSs6yWdw1l4zNByKr~AN0nVs-5XyMHIV0V7qO6RJ9GPolS6TEnL5yBacuGcy3NfqDGNR5enXGrne2niNN5XeKWCQeD0kA4D8LqGkQBmk0JkKbV~XpufI2gkug1GTp6x6mdHNlkmE1sJJChd9andX7kBQ9ZnRcIEcyTkTvFKSOL17CxpZI2K6vnt8px6Hs3V3D-acHaVpBxAUHPs1jNsjjJeJYKQh83uCqJGDj8SBKUEHg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+  border: none;
+  background-size: 20px;
+  background-position: right calc(0.375em + 0.8rem) center;
+  background-repeat: no-repeat;
+}
+
+.pass {
+  background-image: url('https://s3-alpha-sig.figma.com/img/cbc3/900d/f39c93dc35c3e62714e934afd26b1d8b?Expires=1683504000&Signature=NzS-FN6Ztjb7h8GsPQKpypSMAHHpWfC-zTZtxS11NG9VavhdLYPt~~VZD9srVtBqzXBPqC5iUym81VNQQt1k3nZMLmj5gmLHt6LS7BPQdZtIVuyzf5DtrE2Uk8yxRKxTrYq6YtVuQiRHCuyFlj~DrtoHHZAToOcMP6xL7svDoRR1w9rMgSFOUo4PvfPTprryphgo1qapP2-TuQEqva23HojHEuSSRpS90fuNOG8-OhYQfogaZbIeU0rcozwZSr6ps3sxd8by89ENfEHjV3LZvuzk0MVikQ84Ef1-Q~vocJzmjFjd4qMAYAjclWzatV0WC5-4eGhRwqSnmLL~o9nGyw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+  border: none;
+  background-size: 20px;
+  background-position: right calc(0.375em + 0.8rem) center;
+  background-repeat: no-repeat;
+}
+
+hr {
+  margin-top: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border: 1px solid #AEAEAE;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.btn.login {
+  margin-right: 50px;
+  margin-left: 50px;
   background-color: #22B07D;
-  border: 1px solid #22B07D;
-  height: 60px;
-  width: 464px;
+  border: none;
+  height: 50px;
+  width: 414px;
+  color: white;
+  border-radius: 12px;
 }

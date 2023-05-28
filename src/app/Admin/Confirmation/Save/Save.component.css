@@ -1,0 +1,32 @@
+.bg-color{
+  background-color: rgba(194, 189, 189, 0.566);
+  width: 100%;
+  height: 100vh;
+}
+.bg{
+   background-color: white;
+   height: 252px;
+   width: 452px;
+   margin: auto;
+}
+.top{
+  padding-top: 225px;
+}
+.bg-image{
+  content: url('https://s3-alpha-sig.figma.com/img/1661/f61a/262b7da0d0b4714cb41242b4a5d5773d?Expires=1685923200&Signature=lWxN69UVp3U1rMD18OVX7yllfl~oNcFbEqot-dcv5Ja7irQk91bObQoqaEU4wf3Tiyrg7NaA03JR1r2tF9xUWSf~DnECshVdsqN6tFdkIBY-K-QD0KxjZOkI2~koe6fIojN~gdMVulp~9KcCAdVRP8p3pYvls4NEpMEBUAp3d4epSd-TuDauqq7ajykc8fziSETnlzJis6qVT~r18P62AkW~92Y~AAFQpuXVemeKK7zfaSW9BtUo7J9TKy-3FwU9eiZQWqMz~2B6GLjggnkW0-KqMYVX8YFTRuj-XwDdwSpQyIx2p0PU1wcFBvppLolFtwNbkDELk1cLK3XVK3sNvg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+.btn.blue{
+  background-color: #22B07D;
+  border: 1px solid #22B07D;
+  border-radius: 10px;
+  color: white;
+  margin-left: 135px;
+}
+.btn.blue:hover{
+  background-color: #008656;
+  border: 1px solid #008656;
+}
+

@@ -47,6 +47,9 @@ import { AddAllEmployeesComponent } from './Admin/AddAllEmployees/AddAllEmployee
 import { EditAllEmployeesComponent } from './Admin/EditAllEmployees/EditAllEmployees.component';
 import { UserComponent } from './Admin/User/User.component';
 import { AddUserComponent } from './Admin/AddUser/AddUser.component';
+import { DoneComponent } from './Admin/Confirmation/Done/Done.component';
+import { SaveComponent } from './Admin/Confirmation/Save/Save.component';
+import { DeleteComponent } from './Admin/Confirmation/Delete/Delete.component';
 
 const appRoutes: Routes = [
   {
@@ -150,7 +153,7 @@ const appRoutes: Routes = [
     component: MenuPageComponent
   },
   {
-    path:'admin/editallrooms',
+    path:'admin/allrooms/editallrooms',
     component: EditAllRoomsComponent
   },
   {
@@ -188,6 +191,18 @@ const appRoutes: Routes = [
 {
   path:'admin/user/adduser',
   component: AddUserComponent
+},
+{
+  path:'admin/done',
+  component: DoneComponent
+},
+{
+  path:'admin/save',
+  component: SaveComponent
+},
+{
+  path:'admin/delete',
+  component: DeleteComponent
 },
 ];
 
@@ -229,6 +244,9 @@ const appRoutes: Routes = [
     EditAllEmployeesComponent,
     UserComponent,
     AddUserComponent,
+    DoneComponent,
+    SaveComponent,
+    DeleteComponent,
    ],
   imports: [
     BrowserModule,
