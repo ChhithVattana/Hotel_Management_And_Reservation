@@ -6,6 +6,9 @@
   background-color: #f5f5f5;
   position: relative;
 }
+.menu-size {
+  width: 240px;
+}
 .size {
   height: 90%;
   width: 100%;

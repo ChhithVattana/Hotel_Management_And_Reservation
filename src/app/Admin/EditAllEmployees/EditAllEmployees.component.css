@@ -5,6 +5,9 @@
 .btn1{
   border: none;
 }
+.menu-size {
+  width: 240px;
+}
 .bg{
   background-color: #e8e8e8;
   width: 1103px;

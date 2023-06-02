@@ -31,3 +31,6 @@
   border: none;
   --bs-btn-padding-y: -0.625rem;
 }
+.menu-size {
+  width: 240px;
+}
