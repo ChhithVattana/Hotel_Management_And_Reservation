@@ -1,135 +1,99 @@
-<div class="allpage">
-  <div class="row">
-    <div class="col-2 col-sm-2">
+<div class="allpage overflow-hidden">
+  <div class="row h-100 p-0 m-0">
+    <div class="col-2 h-100 p-0">
       <app-MenuPage></app-MenuPage>
     </div>
-    <div class="col-10 col-sm-2 mt-6">
-      <div class="row">
-        <div class="col-2 sm-1 mt-2">
-          <button class="btn btn1" (click)="onClickBack()">
-            <div class="icon"></div>
-          </button>
-        </div>
-        <div class="col-4">
-          <div class="fw-700 fs-32">Add&nbsp;New&nbsp;User</div>
-        </div>
+    <div class="col-10 h-100 p-0 scroll">
+      <div class="row p-0 m-0 w-100" style="height: 10%">
+        <div class="border size rounded bg-white"></div>
       </div>
-      <div class="bg mt-4 ms-5">
-        <div class="container ps-3">
-          <div class="row pt-3">
-            <div class="col-4 col-sm-4">
-              <p class="fw-500">Full Name</p>
-            </div>
-            <div class="col-4 col-sm-4">
-              <p class="fw-500">Email</p>
-            </div>
-            <div class="col-4 col-sm-4">
-              <p class="fw-500">Phone Number</p>
-            </div>
+      <div class="row p-0 m-0 w-100" style="height: 90%">
+        <div class="size1 border rounded bg-white">
+          <div class="d-flex">
+            <div class="fw-600 hover" (click)="onClickBack()">User</div>
+            <div class="mx-3">></div>
+            <div class="fw-600 l-gray">Add New User</div>
           </div>
-          <div class="row">
-            <div class="col-4 col-sm-4">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Text input with dropdown button"
-                />
-              </div>
-            </div>
-            <div class="col-4 col-sm-4">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Text input with dropdown button"
-                />
-              </div>
-            </div>
-            <div class="col-4 col-sm-4">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Text input with dropdown button"
-                />
+          <div class="row p-0 m-0">
+            <div class="p-0 position-relative d-flex">
+              <div>
+                <p class="fs-32 fw-700 my-2">
+                  <i
+                    class="bi bi-arrow-left-short hover"
+                    (click)="onClickBack()"
+                  ></i
+                  >Add New User
+                </p>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-4 col-sm-4">
-              <p class="fw-500">Gender</p>
-            </div>
-            <div class="col-4 col-sm-4">
-              <p class="fw-500">Salary</p>
-            </div>
-            <div class="col-4 col-sm-4">
-              <p class="fw-500">Date of birth</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-4 col-sm-4">
-              <select
-                class="form-select fw-400 fs-16 mt-2"
-                aria-label="Default select example"
-              >
-                <option selected>Select Gender</option>
-                <option value="1">Male</option>
-                <option value="2">Female</option>
-                <option value="3">Other</option>
-              </select>
-            </div>
-            <div class="col-4 col-sm-4">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Text input with dropdown button"
-                />
+          <div class="px-4 d-flex flex-column justify-content-between">
+            <!-- for flex fix -->
+            <div class="col-md-12 col">
+              <div class="d-flex flex-column my-0 my-md-3">
+                <div class="me-md-4 me-0 col-lg-6 col my-2 my-md-3 flex-fill">
+                  <p class="mb-2">Username</p>
+                  <div>
+                    <div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="me-md-4 me-0 col-lg-6 col my-2 my-md-3 flex-fill">
+                  <p class="mb-2">Password</p>
+                  <div>
+                    <input
+                      type="password"
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                    />
+                  </div>
+                </div>
+                <div class="me-md-4 me-0 col-lg-6 col my-2 my-md-3 flex-fill">
+                  <p class="mb-2">Role</p>
+                  <div>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Select Role</option>
+                      <option value="1">Admin</option>
+                      <option value="2">Staff</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-4 col-sm-4">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Text input with dropdown button"
-                  placeholder="  DD/MM/YYYY"
-                />
+            <div class="d-flex mt-3">
+              <div>
+                <button
+                  type="button"
+                  class="btn hover-blue dblue py-2 px-3 me-3"
+                  (click)="onClickAddNewRoom()"
+                >
+                  <div class="d-flex position-relative justify-content-between">
+                    <div class="icon my-auto"></div>
+                    <div class="fs my-auto mx-1 fw-600">Add User</div>
+                  </div>
+                </button>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-4 col-sm-4">
-              <p class="fw-500">Date-In</p>
-            </div>
-            <div class="col-4 col-sm-4">
-              <p class="fw-500">Positon</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-4 col-sm-4">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Text input with dropdown button"
-                />
+              <div>
+                <button
+                  type="button"
+                  class="btn btn-red hover-dred red py-2 px-3"
+                  (click)="onClickBack()"
+                >
+                  <div class="d-flex position-relative justify-content-between">
+                    <div class="fs my-auto mx-2 px-3 fw-600">Cancel</div>
+                  </div>
+                </button>
               </div>
-            </div>
-            <div class="col-4 col-sm-4">
-              <select
-                class="form-select fw-400 fs-16 mt-2"
-                aria-label="Default select example"
-              >
-                <option selected>Select Positon</option>
-                <option value="1">Male</option>
-                <option value="2">Female</option>
-                <option value="3">Other</option>
-              </select>
-            </div>
-            <div class="mt-5">
-              <button class="btn add fs-17 fw-600">Add User</button>
             </div>
           </div>
         </div>

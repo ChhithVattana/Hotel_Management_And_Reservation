@@ -56,8 +56,17 @@ export class SearchBoxComponent implements OnInit {
       document.querySelector('[aria-label="adults"]')
     )).value;
     console.log(date, date1, rooms, adults);
+    // this.goToUrl(
+    //   `https://m1g7.sey.iteg7.com/#/reservation/searchAvailable?checkInOn=${this.datePipe.transform(
+    //     date,
+    //     'yyyy-MM-dd'
+    //   )}&checkOutOn=${this.datePipe.transform(
+    //     date1,
+    //     'yyyy-MM-dd'
+    //   )}&adults=${adults}&rooms=${rooms}&isAvailable=true`
+    // );
     this.goToUrl(
-      `https://m1g7.sey.iteg7.com/#/reservation/searchAvailable?checkInOn=${this.datePipe.transform(
+      `http://localhost:4200/#/reservation/searchAvailable?checkInOn=${this.datePipe.transform(
         date,
         'yyyy-MM-dd'
       )}&checkOutOn=${this.datePipe.transform(

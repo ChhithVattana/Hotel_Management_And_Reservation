@@ -18,7 +18,7 @@ import { HotelFacilitiesComponent } from './HotelFacilities/HotelFacilities.comp
 import { LoginPageComponent } from './Admin/LoginPage/LoginPage.component';
 import { MenuPageComponent } from './Admin/MenuPage/MenuPage.component';
 import { AllRoomsComponent } from './Admin/AllRooms/AllRooms.component';
-
+import { AllReservationComponent } from './Admin/AllReservation/AllReservation.component';
 import { OurServiceComponent } from './OurService/OurService.component';
 import { ServicePageComponent } from './ServicePage/ServicePage.component';
 import { ServiceContentPageComponent } from './ServiceContentPage/ServiceContentPage.component';
@@ -54,6 +54,8 @@ import { DeleteComponent } from './Admin/Confirmation/Delete/Delete.component';
 import { LoadingPageComponent } from './LoadingPage/LoadingPage.component';
 import { AuthService } from './Service/Auth.service';
 import { AuthGaurdService } from './Service/AuthGaurd.service';
+import { ReservationPageComponent } from './ReservationPage/ReservationPage.component';
+import { AddReservationComponent } from './Admin/AddReservation/AddReservation.component';
 
 const appRoutes: Routes = [
   {
@@ -145,69 +147,85 @@ const appRoutes: Routes = [
     ],
   },
   {
+    path: 'reservation/searchAvailable',
+    component: ReservationPageComponent,
+  },
+  {
+    path: 'reservation/searchAvailable?checkInOn=:dateIn&checkOutOn=:dateOut&adults=:adults&rooms=:rooms&isAvailable=true',
+    component: ReservationPageComponent,
+  },
+  {
     path: 'admin',
-    component: LoginPageComponent
+    component: LoginPageComponent,
   },
   {
     path: 'admin/allrooms',
-    component: AllRoomsComponent
+    component: AllRoomsComponent,
   },
   {
-    path:'admin/menupage',
-    component: MenuPageComponent
+    path: 'admin/menupage',
+    component: MenuPageComponent,
   },
   {
-    path:'admin/allrooms/editallrooms',
-    component: EditAllRoomsComponent
+    path: 'admin/allrooms/editallrooms',
+    component: EditAllRoomsComponent,
   },
   {
     path: 'admin/allroomtype',
-    component: AllRoomTypeComponent
+    component: AllRoomTypeComponent,
   },
   {
     path: 'admin/allroomtype/addroomtype',
-    component: AddRoomTypeComponent
+    component: AddRoomTypeComponent,
   },
   {
     path: 'admin/editroomtype',
-    component: EditRoomsTypeComponent
+    component: EditRoomsTypeComponent,
   },
   {
     path: 'admin/editpicroomtype',
-    component: EditPicRoomTypeComponent
+    component: EditPicRoomTypeComponent,
   },
   {
-     path: 'admin/allemployees',
-     component: AllEmployeesComponent
+    path: 'admin/allemployees',
+    component: AllEmployeesComponent,
   },
   {
     path: 'admin/editallemployees',
-    component: EditAllEmployeesComponent
- },
- {
-  path: 'admin/allemployees/addallemployees',
-  component: AddAllEmployeesComponent
-},
-{
-  path:'admin/user',
-  component: UserComponent
-},
-{
-  path:'admin/user/adduser',
-  component: AddUserComponent
-},
-{
-  path:'admin/done',
-  component: DoneComponent
-},
-{
-  path:'admin/save',
-  component: SaveComponent
-},
-{
-  path:'admin/delete',
-  component: DeleteComponent
-},
+    component: EditAllEmployeesComponent,
+  },
+  {
+    path: 'admin/allemployees/addallemployees',
+    component: AddAllEmployeesComponent,
+  },
+  {
+    path: 'admin/allreservations',
+    component: AllReservationComponent,
+  },
+  {
+    path: 'admin/allreservations/addreservation',
+    component: AddReservationComponent,
+  },
+  {
+    path: 'admin/user',
+    component: UserComponent,
+  },
+  {
+    path: 'admin/user/adduser',
+    component: AddUserComponent,
+  },
+  {
+    path: 'admin/done',
+    component: DoneComponent,
+  },
+  {
+    path: 'admin/save',
+    component: SaveComponent,
+  },
+  {
+    path: 'admin/delete',
+    component: DeleteComponent,
+  },
 ];
 
 @NgModule({
@@ -220,6 +238,7 @@ const appRoutes: Routes = [
     MeetingAndEventsComponent,
     RoomsComponent,
     AboutUSComponent,
+    ReservationPageComponent,
     HotelFacilitiesComponent,
     OurServiceComponent,
     ServicePageComponent,
@@ -245,14 +264,16 @@ const appRoutes: Routes = [
     EditPicRoomTypeComponent,
     LoginPageComponent,
     AllEmployeesComponent,
+    AllReservationComponent,
     AddAllEmployeesComponent,
     EditAllEmployeesComponent,
     UserComponent,
     AddUserComponent,
+    AddReservationComponent,
     DoneComponent,
     SaveComponent,
     DeleteComponent,
-   ],
+  ],
   imports: [
     BrowserModule,
     CommonModule,

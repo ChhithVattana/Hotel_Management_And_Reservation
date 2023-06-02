@@ -1,0 +1,125 @@
+/* *{
+  outline: red dashed 1px;
+} */
+
+.allpage {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  margin: 0px;
+  background-color: #f5f5f5;
+  position: relative;
+}
+.menu-size {
+  width: 240px;
+}
+.size {
+  height: 90%;
+  width: 100%;
+}
+.size1 {
+  height: auto;
+  width: 100%;
+  padding: 40px 25px;
+}
+.icon {
+  content: url("../../../assets/icon/create.png");
+  width: 24px;
+  height: 24px;
+}
+.fs {
+  font-size: 17px;
+}
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border-radius: 13px;
+  width: 100%;
+}
+
+#customers td {
+  border-bottom: none;
+  padding: 8px;
+  padding-left: 15px;
+}
+
+#customers td:not(:first-child) {
+  border-left: 1px solid #e7e7e7;
+  padding: 8px;
+}
+
+#customers th:first-child {
+  border-bottom: none;
+  padding: 14px 8px;
+  padding-left: 15px;
+}
+
+#customers th {
+  border-bottom: none;
+  padding: 14px 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+#customers tr:nth-child(odd) {
+  background-color: #fcfcfc;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers#rounded th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: black;
+  font-size: 16px;
+}
+#customers tr {
+  font-size: 15px;
+}
+#customers th:nth-child(even) {
+  background-color: #ebf5ff;
+}
+#customers th:nth-child(odd) {
+  background-color: #d1e8fd;
+}
+th:first-of-type {
+  border-top-left-radius: 10px;
+}
+th:last-of-type {
+  border-top-right-radius: 10px;
+}
+.scroll {
+  overflow-y: scroll;
+}
+.icon-edit {
+  content: url("../../../assets/icon/edit.png");
+  height: 20px;
+  width: 20px;
+}
+.icon-add {
+  content: url("../../../assets/icon/add.png");
+  height: 20px;
+  width: 20px;
+}
+.icon-delete {
+  content: url("../../../assets/icon/delete.png");
+  height: 20px;
+  width: 20px;
+}
+.edit {
+  background-color: #ebf5ff;
+  height: 35px;
+}
+.add {
+  background-color: #deede5;
+  height: 35px;
+}
+.delete {
+  background-color: #eddede;
+  height: 35px;
+}

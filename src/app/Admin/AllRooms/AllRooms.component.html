@@ -1,139 +1,215 @@
-<div class="allpage">
-  <div class="row g-0">
-    <div class="col-2 sm-2">
+<div class="allpage overflow-hidden">
+  <div class="row h-100 p-0 m-0">
+    <div class="menu-size h-100 p-0">
       <app-MenuPage></app-MenuPage>
     </div>
-    <div class="col-10">
-      <div class="p-3">
-        <div class="border size rounded"></div>
-        <div class="size1 container">
-          <div class="container">
-            <div class="row">
-              <div class="col-6">
-                <p class="fs-32 fw-700">All&nbsp;Rooms</p>
+    <div class="col ms-2 h-100 p-0 scroll">
+      <div class="row p-0 m-0 w-100" style="height: 10%">
+        <div class="border size rounded bg-white"></div>
+      </div>
+      <div class="row p-0 m-0 w-100" style="height: 87.7vh">
+        <div class="size1 border rounded bg-white">
+          <div class="row p-0 m-0">
+            <div class="p-0 position-relative d-flex justify-content-between">
+              <div>
+                <p class="fs-32 fw-700">All Rooms</p>
               </div>
-              <div class="col">
-                <div class="col-6 col-sm-6 gy-3 ms mt-2">
-                  <button
-                    type="button"
-                    class="btn hover-blue dblue"
-                    (click)="onClickAddRoom()"
-                  >
-                    <div class="row">
-                      <div class="col col-sm-3">
-                        <div class="icon"></div>
-                      </div>
-                      <div class="col col-sm-2">
-                        <div class="fs">Add&nbsp;Room</div>
-                      </div>
+              <div>
+                <button
+                  type="button"
+                  class="btn hover-blue dblue py-2 px-3"
+                  (click)="onClickAddRoom()"
+                >
+                  <div class="d-flex position-relative justify-content-between">
+                    <div class="icon my-auto"></div>
+                    <div class="fs my-auto mx-1 fw-600">Add Room</div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="table borders">
+            <table id="customers">
+              <tr class="fw-600">
+                <th>R.Num</th>
+                <th>RoomType</th>
+                <th>Bed Type</th>
+                <th>Floor</th>
+                <th>Guest</th>
+                <th>Price($)</th>
+                <th class="text-center">Status</th>
+              </tr>
+              <tr>
+                <td>R100</td>
+                <td>Master Room</td>
+                <td>Sing Bed</td>
+                <td>Ground Floor</td>
+                <td>2</td>
+                <td>300.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div style="width: 60%">
+                    <div
+                      class="astatus d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto">Available</div>
                     </div>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="table borders">
-              <table id="customers">
-                <tr class="fw-600">
-                  <th>R.Num</th>
-                  <th>RoomType</th>
-                  <th>Bed Type</th>
-                  <th>Floor</th>
-                  <th>Guest</th>
-                  <th>Price($)</th>
-                  <th>Status</th>
-                </tr>
-                <tr>
-                  <td>R100</td>
-                  <td>Master Room</td>
-                  <td>Sing Bed</td>
-                  <td>Ground Floor</td>
-                  <td>2</td>
-                  <td>300.00</td>
-                  <td><div class="astatus fw-600 rounded">Available</div></td>
-                </tr>
-                <tr>
-                  <td>R101</td>
-                  <td>Master Room</td>
-                  <td>Sing Bed</td>
-                  <td>Ground Floor</td>
-                  <td>2</td>
-                  <td>300.00</td>
-                  <td><div class="Rstatus fw-600 rounded">Reserved</div></td>
-                </tr>
-                <tr>
-                  <td>R100</td>
-                  <td>Master Room</td>
-                  <td>Sing Bed</td>
-                  <td>Ground Floor</td>
-                  <td>2</td>
-                  <td>300.00</td>
-                  <td><div class="astatus fw-600 rounded">Available</div></td>
-                </tr>
-                <tr>
-                  <td>R101</td>
-                  <td>Master Room</td>
-                  <td>Sing Bed</td>
-                  <td>Ground Floor</td>
-                  <td>2</td>
-                  <td>300.00</td>
-                  <td><div class="Rstatus fw-600 rounded">Reserved</div></td>
-                </tr>
-                <tr>
-                  <td>R100</td>
-                  <td>Master Room</td>
-                  <td>Sing Bed</td>
-                  <td>Ground Floor</td>
-                  <td>2</td>
-                  <td>300.00</td>
-                  <td><div class="astatus fw-600 rounded">Available</div></td>
-                </tr>
-                <tr>
-                  <td>R101</td>
-                  <td>Master Room</td>
-                  <td>Sing Bed</td>
-                  <td>Ground Floor</td>
-                  <td>2</td>
-                  <td>300.00</td>
-                  <td><div class="Rstatus fw-600 rounded">Reserved</div></td>
-                </tr>
-                <tr>
-                  <td>R100</td>
-                  <td>Master Room</td>
-                  <td>Sing Bed</td>
-                  <td>Ground Floor</td>
-                  <td>2</td>
-                  <td>300.00</td>
-                  <td><div class="astatus fw-600 rounded">Available</div></td>
-                </tr>
-                <tr>
-                  <td>R101</td>
-                  <td>Master Room</td>
-                  <td>Sing Bed</td>
-                  <td>Ground Floor</td>
-                  <td>2</td>
-                  <td>300.00</td>
-                  <td><div class="Rstatus fw-600 rounded">Reserved</div></td>
-                </tr>
-                <tr>
-                  <td>R100</td>
-                  <td>Master Room</td>
-                  <td>Sing Bed</td>
-                  <td>Ground Floor</td>
-                  <td>2</td>
-                  <td>300.00</td>
-                  <td><div class="astatus fw-600 rounded">Available</div></td>
-                </tr>
-                <tr>
-                  <td>R101</td>
-                  <td>Master Room</td>
-                  <td>Sing Bed</td>
-                  <td>Ground Floor</td>
-                  <td>2</td>
-                  <td>300.00</td>
-                  <td><div class="Rstatus fw-600 rounded">Reserved</div></td>
-                </tr>
-              </table>
-            </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>R101</td>
+                <td>Master Room</td>
+                <td>Sing Bed</td>
+                <td>Ground Floor</td>
+                <td>2</td>
+                <td>300.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div style="width: 60%">
+                    <div
+                      class="Rstatus d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto">Reserved</div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>R100</td>
+                <td>Master Room</td>
+                <td>Sing Bed</td>
+                <td>Ground Floor</td>
+                <td>2</td>
+                <td>300.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div style="width: 60%">
+                    <div
+                      class="astatus d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto">Available</div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>R101</td>
+                <td>Master Room</td>
+                <td>Sing Bed</td>
+                <td>Ground Floor</td>
+                <td>2</td>
+                <td>300.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div style="width: 60%">
+                    <div
+                      class="Rstatus d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto">Reserved</div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>R100</td>
+                <td>Master Room</td>
+                <td>Sing Bed</td>
+                <td>Ground Floor</td>
+                <td>2</td>
+                <td>300.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div style="width: 60%">
+                    <div
+                      class="astatus d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto">Available</div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>R101</td>
+                <td>Master Room</td>
+                <td>Sing Bed</td>
+                <td>Ground Floor</td>
+                <td>2</td>
+                <td>300.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div style="width: 60%">
+                    <div
+                      class="Rstatus d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto">Reserved</div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>R100</td>
+                <td>Master Room</td>
+                <td>Sing Bed</td>
+                <td>Ground Floor</td>
+                <td>2</td>
+                <td>300.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div style="width: 60%">
+                    <div
+                      class="astatus d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto">Available</div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>R101</td>
+                <td>Master Room</td>
+                <td>Sing Bed</td>
+                <td>Ground Floor</td>
+                <td>2</td>
+                <td>300.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div style="width: 60%">
+                    <div
+                      class="Rstatus d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto">Reserved</div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>R100</td>
+                <td>Master Room</td>
+                <td>Sing Bed</td>
+                <td>Ground Floor</td>
+                <td>2</td>
+                <td>300.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div style="width: 60%">
+                    <div
+                      class="astatus d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto">Available</div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>R101</td>
+                <td>Master Room</td>
+                <td>Sing Bed</td>
+                <td>Ground Floor</td>
+                <td>2</td>
+                <td>300.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div style="width: 60%">
+                    <div
+                      class="Rstatus d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto">Reserved</div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>

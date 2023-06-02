@@ -1,308 +1,318 @@
-<div class="allpage">
-  <div class="row g-0">
-    <div class="col-2 col-sm-2">
+<div class="allpage overflow-hidden">
+  <div class="row h-100 p-0 m-0">
+    <div class="menu-size h-100 p-0">
       <app-MenuPage></app-MenuPage>
     </div>
-    <div class="col-10">
-      <div class="mt-6">
-        <div class="size1 rounded container">
-          <div class="container">
-            <div class="row mt-4">
-              <div class="col-6">
-                <p class="fs-32 fw-700">All&nbsp;Employees</p>
+    <div class="col ms-2 h-100 p-0 scroll">
+      <div class="row p-0 m-0 w-100" style="height: 10%">
+        <div class="border size rounded bg-white"></div>
+      </div>
+      <div class="row p-0 m-0 w-100" style="height: 87.7vh">
+        <div class="size1 border rounded bg-white">
+          <div class="row p-0 m-0">
+            <div class="p-0 position-relative d-flex justify-content-between">
+              <div>
+                <p class="fs-32 fw-700">All Employees</p>
               </div>
-              <div class="col-6 gy-3 ms mt-2">
+              <div>
                 <button
-                    type="button"
-                    class="btn blue"
-                    (click)="onClickEmployees()"
-                  >
-                    <div class="row">
-                      <div class="col-6 col-sm-3">
-                        <div class="icon"></div>
-                      </div>
-                      <div class="col-6 col-sm-3">
-                        <div class="fs">Add&nbsp;Employee</div>
-                      </div>
-                    </div>
-                  </button>
+                  type="button"
+                  class="btn hover-blue dblue py-2 px-3"
+                  (click)="onClickEmployees()"
+                >
+                  <div class="d-flex position-relative justify-content-between">
+                    <div class="icon my-auto"></div>
+                    <div class="fs my-auto mx-1 fw-600">Add Employee</div>
+                  </div>
+                </button>
               </div>
             </div>
-            <div class="table borders">
-              <table id="customers">
-                <tr class="fw-600">
-                  <th>No</th>
-                  <th>Full Name</th>
-                  <th>E-mail</th>
-                  <th>Position</th>
-                  <th>Gender</th>
-                  <th>Phone Num</th>
-                  <th>Date-in</th>
-                  <th>Salary($)</th>
-                  <th>Action</th>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Seyha</td>
-                  <td>piseychou1@gmail.com</td>
-                  <td>Marketing</td>
-                  <td>Female</td>
-                  <td>097 888 0992</td>
-                  <td>10/06/2022</td>
-                  <td>250.00</td>
-                  <td>
-                    <div class="m-auto">
-                      <div class="row">
-                        <div class="col-2 col-sm-3">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon1"></div>
-                          </button>
-                        </div>
-                        <div class="col-2 col-sm-3 pe-0">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon2"></div>
-                          </button>
-                        </div>
-                      </div>
+          </div>
+          <div class="table borders">
+            <table id="customers">
+              <tr class="fw-600">
+                <th>No</th>
+                <th>Full Name</th>
+                <th>E-mail</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>Position</th>
+                <th>Start Date</th>
+                <th>Salary</th>
+                <th class="text-center">Action</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Sey Na</td>
+                <td>seyna.chhith.chou@gmail.com</td>
+                <td>02/04/2022</td>
+                <td>Female</td>
+                <td>098 721 143</td>
+                <td>Chair Woman</td>
+                <td>10/06/2002</td>
+                <td>3000.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="edit d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-edit"></div></div>
                     </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Seyha</td>
-                  <td>piseychou1@gmail.com</td>
-                  <td>Marketing</td>
-                  <td>Female</td>
-                  <td>097 888 0992</td>
-                  <td>10/06/2022</td>
-                  <td>250.00</td>
-                  <td>
-                    <div class="m-auto">
-                      <div class="row">
-                        <div class="col-2 col-sm-3">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon1"></div>
-                          </button>
-                        </div>
-                        <div class="col-2 col-sm-3 pe-0">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon2"></div>
-                          </button>
-                        </div>
-                      </div>
+                  </div>
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="delete d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-delete"></div></div>
                     </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Seyha</td>
-                  <td>piseychou1@gmail.com</td>
-                  <td>Marketing</td>
-                  <td>Female</td>
-                  <td>097 888 0992</td>
-                  <td>10/06/2022</td>
-                  <td>250.00</td>
-                  <td>
-                    <div class="m-auto">
-                      <div class="row">
-                        <div class="col-2 col-sm-3">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon1"></div>
-                          </button>
-                        </div>
-                        <div class="col-2 col-sm-3 pe-0">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon2"></div>
-                          </button>
-                        </div>
-                      </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Sey Na</td>
+                <td>seyna.chhith.chou@gmail.com</td>
+                <td>02/04/2022</td>
+                <td>Female</td>
+                <td>098 721 143</td>
+                <td>Chair Woman</td>
+                <td>10/06/2002</td>
+                <td>3000.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="edit d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-edit"></div></div>
                     </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Seyha</td>
-                  <td>piseychou1@gmail.com</td>
-                  <td>Marketing</td>
-                  <td>Female</td>
-                  <td>097 888 0992</td>
-                  <td>10/06/2022</td>
-                  <td>250.00</td>
-                  <td>
-                    <div class="m-auto">
-                      <div class="row">
-                        <div class="col-2 col-sm-3">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon1"></div>
-                          </button>
-                        </div>
-                        <div class="col-2 col-sm-3 pe-0">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon2"></div>
-                          </button>
-                        </div>
-                      </div>
+                  </div>
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="delete d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-delete"></div></div>
                     </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Seyha</td>
-                  <td>piseychou1@gmail.com</td>
-                  <td>Marketing</td>
-                  <td>Female</td>
-                  <td>097 888 0992</td>
-                  <td>10/06/2022</td>
-                  <td>250.00</td>
-                  <td>
-                    <div class="m-auto">
-                      <div class="row">
-                        <div class="col-2 col-sm-3">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon1"></div>
-                          </button>
-                        </div>
-                        <div class="col-2 col-sm-3 pe-0">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon2"></div>
-                          </button>
-                        </div>
-                      </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Sey Na</td>
+                <td>seyna.chhith.chou@gmail.com</td>
+                <td>02/04/2022</td>
+                <td>Female</td>
+                <td>098 721 143</td>
+                <td>Chair Woman</td>
+                <td>10/06/2002</td>
+                <td>3000.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="edit d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-edit"></div></div>
                     </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Seyha</td>
-                  <td>piseychou1@gmail.com</td>
-                  <td>Marketing</td>
-                  <td>Female</td>
-                  <td>097 888 0992</td>
-                  <td>10/06/2022</td>
-                  <td>250.00</td>
-                  <td>
-                    <div class="m-auto">
-                      <div class="row">
-                        <div class="col-2 col-sm-3">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon1"></div>
-                          </button>
-                        </div>
-                        <div class="col-2 col-sm-3 pe-0">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon2"></div>
-                          </button>
-                        </div>
-                      </div>
+                  </div>
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="delete d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-delete"></div></div>
                     </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Seyha</td>
-                  <td>piseychou1@gmail.com</td>
-                  <td>Marketing</td>
-                  <td>Female</td>
-                  <td>097 888 0992</td>
-                  <td>10/06/2022</td>
-                  <td>250.00</td>
-                  <td>
-                    <div class="m-auto">
-                      <div class="row">
-                        <div class="col-2 col-sm-3">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon1"></div>
-                          </button>
-                        </div>
-                        <div class="col-2 col-sm-3 pe-0">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon2"></div>
-                          </button>
-                        </div>
-                      </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Sey Na</td>
+                <td>seyna.chhith.chou@gmail.com</td>
+                <td>02/04/2022</td>
+                <td>Female</td>
+                <td>098 721 143</td>
+                <td>Chair Woman</td>
+                <td>10/06/2002</td>
+                <td>3000.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="edit d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-edit"></div></div>
                     </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Seyha</td>
-                  <td>piseychou1@gmail.com</td>
-                  <td>Marketing</td>
-                  <td>Female</td>
-                  <td>097 888 0992</td>
-                  <td>10/06/2022</td>
-                  <td>250.00</td>
-                  <td>
-                    <div class="m-auto">
-                      <div class="row">
-                        <div class="col-2 col-sm-3">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon1"></div>
-                          </button>
-                        </div>
-                        <div class="col-2 col-sm-3 pe-0">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon2"></div>
-                          </button>
-                        </div>
-                      </div>
+                  </div>
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="delete d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-delete"></div></div>
                     </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Seyha</td>
-                  <td>piseychou1@gmail.com</td>
-                  <td>Marketing</td>
-                  <td>Female</td>
-                  <td>097 888 0992</td>
-                  <td>10/06/2022</td>
-                  <td>250.00</td>
-                  <td>
-                    <div class="m-auto">
-                      <div class="row">
-                        <div class="col-2 col-sm-3">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon1"></div>
-                          </button>
-                        </div>
-                        <div class="col-2 col-sm-3 pe-0">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon2"></div>
-                          </button>
-                        </div>
-                      </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Sey Na</td>
+                <td>seyna.chhith.chou@gmail.com</td>
+                <td>02/04/2022</td>
+                <td>Female</td>
+                <td>098 721 143</td>
+                <td>Chair Woman</td>
+                <td>10/06/2002</td>
+                <td>3000.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="edit d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-edit"></div></div>
                     </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Seyha</td>
-                  <td>piseychou1@gmail.com</td>
-                  <td>Marketing</td>
-                  <td>Female</td>
-                  <td>097 888 0992</td>
-                  <td>10/06/2022</td>
-                  <td>250.00</td>
-                  <td>
-                    <div class="m-auto">
-                      <div class="row">
-                        <div class="col-2 col-sm-3">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon1"></div>
-                          </button>
-                        </div>
-                        <div class="col-2 col-sm-3 pe-0">
-                          <button class="btn btn1 icon1">
-                            <div class="acctionicon2"></div>
-                          </button>
-                        </div>
-                      </div>
+                  </div>
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="delete d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-delete"></div></div>
                     </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Sey Na</td>
+                <td>seyna.chhith.chou@gmail.com</td>
+                <td>02/04/2022</td>
+                <td>Female</td>
+                <td>098 721 143</td>
+                <td>Chair Woman</td>
+                <td>10/06/2002</td>
+                <td>3000.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="edit d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-edit"></div></div>
+                    </div>
+                  </div>
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="delete d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-delete"></div></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Sey Na</td>
+                <td>seyna.chhith.chou@gmail.com</td>
+                <td>02/04/2022</td>
+                <td>Female</td>
+                <td>098 721 143</td>
+                <td>Chair Woman</td>
+                <td>10/06/2002</td>
+                <td>3000.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="edit d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-edit"></div></div>
+                    </div>
+                  </div>
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="delete d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-delete"></div></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Sey Na</td>
+                <td>seyna.chhith.chou@gmail.com</td>
+                <td>02/04/2022</td>
+                <td>Female</td>
+                <td>098 721 143</td>
+                <td>Chair Woman</td>
+                <td>10/06/2002</td>
+                <td>3000.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="edit d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-edit"></div></div>
+                    </div>
+                  </div>
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="delete d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-delete"></div></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Sey Na</td>
+                <td>seyna.chhith.chou@gmail.com</td>
+                <td>02/04/2022</td>
+                <td>Female</td>
+                <td>098 721 143</td>
+                <td>Chair Woman</td>
+                <td>10/06/2002</td>
+                <td>3000.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="edit d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-edit"></div></div>
+                    </div>
+                  </div>
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="delete d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-delete"></div></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Sey Na</td>
+                <td>seyna.chhith.chou@gmail.com</td>
+                <td>02/04/2022</td>
+                <td>Female</td>
+                <td>098 721 143</td>
+                <td>Chair Woman</td>
+                <td>10/06/2002</td>
+                <td>3000.00</td>
+                <td class="d-flex position-relative justify-content-center">
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="edit d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-edit"></div></div>
+                    </div>
+                  </div>
+                  <div class="mx-1" style="width: 35px">
+                    <div
+                      class="delete d-flex justify-content-center fw-600 rounded"
+                    >
+                      <div class="my-auto"><div class="icon-delete"></div></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>

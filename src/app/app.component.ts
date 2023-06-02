@@ -20,6 +20,8 @@ export class AppComponent implements OnInit  {
     const currentUrl = this.router.url;
     if(currentUrl.includes('reservation')){
       return false;
+    } else if(currentUrl.includes('admin')){
+      return false;
     }
     return true;
   }

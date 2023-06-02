@@ -3,159 +3,159 @@
   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
 />
 <div class="bg-color content rounded">
-  <div class="top">
+  <div class="py-5 px-3">
     <div class="image"></div>
   </div>
-  <div class="interface container">
-    <p>Menu</p>
-    <hr />
-    <div class="container">
-      <div class="row">
-        <button class="hover1 btn">
-          <div class="row">
-            <div class="col-2">
-              <div class="icon"></div>
-            </div>
-            <div class="col-4 text">DashBoard</div>
-            <div class="col-6 ps-5">
-              <span
-                class="material-symbols-outlined colorgray chevron_rightsize"
-              >
-                chevron_right
-              </span>
-            </div>
+  <div class="container">
+    <p class="mb-1 text-white">Menu</p>
+    <hr class="mt-1 mb-3" style="color: #fff"/>
+    <div class="row">
+      <button class="hover1 btn" (click)="onClickAllRoom()">
+        <div class="d-flex position-relative">
+          <div class="col-2 d-flex justify-content-center position-relative">
+            <span class="icon my-auto"></span>
           </div>
-        </button>
-      </div>
-
-      <div class="row">
-        <button class="hover1 btn" (click)="onClickAllRoom()">
-          <div class="row">
-            <div class="col-2">
-              <div class="icon1 pt-2"></div>
-            </div>
-            <div class="col-4 text">All&nbsp;Rooms</div>
-            <div class="col-6 ps-5">
-              <span
-                class="material-symbols-outlined colorgray chevron_rightsize"
-              >
-                chevron_right
-              </span>
-            </div>
+          <div class="text-white col-8 ps-3 text-start">Dashboard</div>
+          <div
+            class="text-white fw-600 col-2 position-relative d-flex justify-content-center"
+          >
+            <span
+              class="text-white material-symbols-outlined colorgray chevron_rightsize"
+            >
+              chevron_right
+            </span>
           </div>
-        </button>
-      </div>
-
-      <div class="row">
-        <button class="hover1 btn" (click)="onClickRoomType()">
-          <div class="row">
-            <div class="col-2">
-              <div class="icon2"></div>
-            </div>
-            <div class="col-4 text">Room&nbsp;Type</div>
-            <div class="col-6 ps-5">
-              <span
-                class="material-symbols-outlined colorgray chevron_rightsize"
-              >
-                chevron_right
-              </span>
-            </div>
-          </div>
-        </button>
-      </div>
-
-      <div class="row">
-        <button class="hover1 btn" (click)="onClickReservation()">
-          <div class="row">
-            <div class="col-2">
-              <div class="icon3"></div>
-            </div>
-            <div class="col-4 text">Reservation</div>
-            <div class="col-6 ps-5">
-              <span
-                class="material-symbols-outlined colorgray chevron_rightsize"
-              >
-                chevron_right
-              </span>
-            </div>
-          </div>
-        </button>
-      </div>
-
-      <div class="row">
-        <button class="hover1 btn" (click)="onClickEmployee()">
-          <div class="row">
-            <div class="col-2">
-              <div class="icon4"></div>
-            </div>
-            <div class="col-4 text">Employees</div>
-            <div class="col-6 ps-5">
-              <span
-                class="material-symbols-outlined colorgray chevron_rightsize"
-              >
-                chevron_right
-              </span>
-            </div>
-          </div>
-        </button>
-      </div>
-
-      <div class="row">
-        <button class="hover1 btn" (click)="onClickBilling()">
-          <div class="row">
-            <div class="col-2">
-              <div class="icon5"></div>
-            </div>
-            <div class="col-4 text">Billing</div>
-            <div class="col-6 ps-5">
-              <span
-                class="material-symbols-outlined colorgray chevron_rightsize"
-              >
-                chevron_right
-              </span>
-            </div>
-          </div>
-        </button>
-      </div>
+        </div>
+      </button>
     </div>
-
-    <div class="more">
-      <p>More</p>
-      <hr />
-      <div class="container">
-        <div class="row">
-          <button class="hover1 btn colorgray">
-            <div class="row">
-              <div class="col-2">
-                <div class="icon6"></div>
-              </div>
-              <div class="col-4 text">Report</div>
-            </div>
-          </button>
+    <div class="row">
+      <button class="hover1 btn" (click)="onClickAllRoom()">
+        <div class="d-flex position-relative">
+          <div class="col-2 d-flex justify-content-center position-relative">
+            <span class="icon my-auto"></span>
+          </div>
+          <div class="text-white col-8 ps-3 text-start">All Rooms</div>
+          <div
+            class="text-white fw-600 col-2 position-relative d-flex justify-content-center"
+          >
+            <span
+              class="text-white material-symbols-outlined colorgray chevron_rightsize"
+            >
+              chevron_right
+            </span>
+          </div>
         </div>
-
-        <div class="row">
-          <button class="hover1 btn colorgray" (click)="onClickUser()">
-            <div class="row">
-              <div class="col-2">
-                <div class="icon7"></div>
-              </div>
-              <div class="col-4 text">User</div>
-            </div>
-          </button>
+      </button>
+    </div>
+    <div class="row">
+      <button class="hover1 btn" (click)="onClickRoomType()">
+        <div class="d-flex position-relative">
+          <div class="col-2 d-flex justify-content-center position-relative">
+            <span class="icon my-auto"></span>
+          </div>
+          <div class="text-white col-8 ps-3 text-start">Room Type</div>
+          <div
+            class="text-white fw-600 col-2 position-relative d-flex justify-content-center"
+          >
+            <span
+              class="text-white material-symbols-outlined colorgray chevron_rightsize"
+            >
+              chevron_right
+            </span>
+          </div>
         </div>
-
-        <div class="row">
-          <button class="hover1 btn colorgray" (click)="onClickLogout()">
-            <div class="row">
-              <div class="col-2">
-                <div class="icon8"></div>
-              </div>
-              <div class="col-4 text1">Logout</div>
-            </div>
-          </button>
+      </button>
+    </div>
+    <div class="row">
+      <button class="hover1 btn" (click)="onClickReservation()">
+        <div class="d-flex position-relative">
+          <div class="col-2 d-flex justify-content-center position-relative">
+            <span class="icon my-auto"></span>
+          </div>
+          <div class="text-white col-8 ps-3 text-start">Reservation</div>
+          <div
+            class="text-white fw-600 col-2 position-relative d-flex justify-content-center"
+          >
+            <span
+              class="text-white material-symbols-outlined colorgray chevron_rightsize"
+            >
+              chevron_right
+            </span>
+          </div>
         </div>
-      </div>
+      </button>
+    </div>
+    <div class="row">
+      <button class="hover1 btn" (click)="onClickEmployee()">
+        <div class="d-flex position-relative">
+          <div class="col-2 d-flex justify-content-center position-relative">
+            <span class="icon my-auto"></span>
+          </div>
+          <div class="text-white col-8 ps-3 text-start">Employees</div>
+          <div
+            class="text-white fw-600 col-2 position-relative d-flex justify-content-center"
+          >
+            <span
+              class="text-white material-symbols-outlined colorgray chevron_rightsize"
+            >
+              chevron_right
+            </span>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div class="row">
+      <button class="hover1 btn" (click)="onClickBilling()">
+        <div class="d-flex position-relative">
+          <div class="col-2 d-flex justify-content-center position-relative">
+            <span class="icon my-auto"></span>
+          </div>
+          <div class="text-white col-8 ps-3 text-start">Billing</div>
+          <div
+            class="text-white fw-600 col-2 position-relative d-flex justify-content-center"
+          >
+            <span
+              class="text-white material-symbols-outlined colorgray chevron_rightsize"
+            >
+              chevron_right
+            </span>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div class="row mt-3">
+      <p class="mb-1 text-white">More</p>
+    </div>
+    <hr class="mt-1 mb-3" style="color: #fff"/>
+    <div class="row">
+      <button class="hover1 btn" (click)="onClickAllReport()">
+        <div class="d-flex position-relative">
+          <div class="col-2 d-flex justify-content-center position-relative">
+            <span class="icon my-auto"></span>
+          </div>
+          <div class="text-white col-8 ps-3 text-start">Report</div>
+        </div>
+      </button>
+    </div>
+    <div class="row">
+      <button class="hover1 btn" (click)="onClickUser()">
+        <div class="d-flex position-relative">
+          <div class="col-2 d-flex justify-content-center position-relative">
+            <span class="icon my-auto"></span>
+          </div>
+          <div class="text-white col-8 ps-3 text-start">User</div>
+        </div>
+      </button>
+    </div>
+    <div class="row">
+      <button class="hover1 btn" (click)="onClickLogout()">
+        <div class="d-flex position-relative">
+          <div class="col-2 d-flex justify-content-center position-relative">
+            <span class="icon8 my-auto"></span>
+          </div>
+          <div class="text1 col-8 ps-3 text-start">Logout</div>
+        </div>
+      </button>
     </div>
   </div>
 </div>

@@ -1,40 +1,42 @@
-*{
-  margin: 0;
-  padding: 0;
+.allpage {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  margin: 0px;
+  background-color: #f5f5f5;
+  position: relative;
 }
-.icon{
-  content: url('https://s3-alpha-sig.figma.com/img/ca7d/6ce0/9a12823dfccc14d0616ff00f033fe721?Expires=1682899200&Signature=a20Kf5eqfcKj6vEQl6ihKvayOuOeHPjShf7rWQOO0Pji-IOb1cAtuDICaJzqEhWmr8EkVL5bYn35vN4UpLVfRKFGwvbkdJw-Lc9BTcGUavtxme~mBRrlvs32VlEll4zxm1tFtkDkFJvQ7umi79R6lcZg2MwqIJ8YnSn8CrIQ72EliF~6aKVSxmP1u2l~KC-EJcoB-7puVlr6ZRjmmWhnyp2spcz1Gu0SjkEYoHuhsR803gFGNdjKCpypE7dwasFj0O-OudEG1bVW2VdDTkIEvjyks9q3Zsu1Pn~c7enfSheB3Tf817nGgcCuWVkI2sgaejEEo9WoP7SAzTZ26iCnFA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
-  width: 29px;
+.size {
+  height: 90%;
+  width: 100%;
+}
+.size1 {
+  height: auto;
+  width: 100%;
+  padding: 25px 30px;
+}
+.icon {
+  content: url("../../../assets/icon/create.png");
+  width: 24px;
   height: 24px;
 }
-.btn1{
-  border: none;
+.fs {
+  font-size: 17px;
 }
-.bg{
-  background-color: #e8e8e8;
-  width: 1103px;
-  height: 500px;
+.scroll {
+  overflow-y: scroll;
 }
-.input-group{
-  height: 52px;
-  width: 346px;
- padding-top: 8px;
+.aspic-33 {
+  width: 33.33%;
 }
-.form-select{
-  height: 44px;
-  width: 346px;
- padding-left: 8px;
- color: #898989;
+.form-select {
+  padding: 0.7rem 2.25rem 0.7rem 0.75rem;
+  background-color: #f7f7f7;
 }
-.sm-1{
-  width: 17%;
+.form-control {
+  padding: 0.7rem 0.75rem;
+  background-color: #f7f7f7;
 }
-.btn.add{
-  color: white;
-  background-color: #0057B2;
-  width: 190px;
-  height: 44px;
-}
-.btn.add:hover{
-  background-color: #307bf6;
+.hover:hover {
+  cursor: pointer;
 }

@@ -12,7 +12,11 @@ export class EditAllRoomsComponent implements OnInit {
 
   ngOnInit() {
   }
+
   onClickBack(){
     this.router.navigate(['admin/allrooms']);
+  }
+  onClickAddNewRoom(){
+
   }
 }

@@ -2,6 +2,15 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
+@font-face {
+  font-family: Inter;
+  src: url("../src/font/Inter.ttf") format("truetype");
+}
+
+* {
+  font-family: 'Inter';
+}
+
 /*follow-up standard for our website*/
 .allpage{
   margin-top: 5px;
@@ -14,6 +23,9 @@
 }
 .colorgray{
   color: gray;
+}
+.l-gray{
+  color: #B6B6B6
 }
 .l-blue {
   color: #28a7e1;
@@ -97,6 +109,16 @@
   border: 1px solid #0057b2;
 }
 
+.btn.dblue{
+  background-color: #002449;
+  color: white;;
+}
+
+.btn.red{
+  background-color: #F44336;
+  color: white;;
+}
+
 .btn.btn-black {
   border: 1px solid black;
 }
@@ -108,37 +130,10 @@
 .btn.btn-red {
   border: 1px solid #f44336;
 }
-.btn.cencle{
-  color: white;
-  background-color: red;
-  border: #f44336;
-  height: 39px;
-  width: 113px;
-}
-.btn.cencle:hover{
-  background-color: #c2352b;
-}
-.btn.save{
-  color: white;
-  background-color: #007d50;
-  border: #007d50;
-  height: 39px;
-  width: 113px;
-}
-.btn.save:hover{
-  background-color: #45a080;
-}
-
 .btn.hover-blue:hover {
   color: white;
   background-color: #307bf6;
   border: 1px solid #307bf6;
-}
-.btn.dblue{
-  background-color: #002449;
-  color: white;
-  width:  136px;
-  height: 39px;
 }
 .btn.hover-lblue:hover {
   color: white;
@@ -150,6 +145,12 @@
   color: white;
   background-color: #f44336;
   border: 1px solid #f44336;
+}
+
+.btn.hover-dred:hover {
+  color: white;
+  background-color: #B50C00;
+  border: 1px solid #B50C00;
 }
 
 @media screen and (min-width: 1400px) {

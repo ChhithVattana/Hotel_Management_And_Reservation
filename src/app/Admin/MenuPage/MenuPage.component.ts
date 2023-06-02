@@ -20,7 +20,7 @@ export class MenuPageComponent implements OnInit {
     this.router.navigate(['admin/allroomtype']);
   }
   onClickReservation(){
-    this.router.navigate(['admin/allrooms']);
+    this.router.navigate(['admin/allreservations']);
   }
   onClickEmployee(){
     this.router.navigate(['admin/allemployees']);
@@ -33,5 +33,8 @@ export class MenuPageComponent implements OnInit {
   }
   onClickLogout(){
     this.router.navigate(['admin']);
+  }
+  onClickAllReport() {
+    
   }
 }

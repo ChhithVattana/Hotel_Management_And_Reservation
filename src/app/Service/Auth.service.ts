@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import jwt_decode from 'jwt-decode';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable({
   providedIn: 'root',
@@ -28,7 +29,6 @@ export class AuthService {
       .post('https://m1g7.seyna.iteg7.com/oauth/token', body, this.httpOptions)
       .toPromise()
       .then((res: any) => {
-        console.log(res);
         localStorage.setItem('access_token', res.access_token);
         localStorage.setItem('refresh_token', res.refresh_token);
       });
@@ -44,5 +44,14 @@ export class AuthService {
     const currentTime = Date.now() / 1000; // convert to Unix timestamp format
 
     return decodedToken.exp > currentTime;
+  }
+
+  // Assuming you have a method to check authorities for access control
+  checkAuthorities(): boolean {
+    const token = localStorage.getItem('access_token');
+    const helper = new JwtHelperService();
+    const decodedToken = helper.decodeToken(token!!);
+    // Check if the user has a specific authority/role
+    return decodedToken.authorities.includes('PRIVILEGE_ADMIN');
   }
 }

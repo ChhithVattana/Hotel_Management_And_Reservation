@@ -1,53 +1,46 @@
-.bg1{
-  background-color: white;
-  width: 99%;
-  height: 75px;
-}
-.bg2{
-  width: 99%;
-  height: 640px;
-  margin-top: 10px;
-}
-.sm-2{
-  width: 13.666667%;
-}
-.sm-1{
-  width: 6.33333%;
-  margin-top: 2px;
-}
-.sm-3{
-  width: 1.666667%;
-}
-.icon{
-  --bs-btn-padding-y: -0.625rem;
-  border: none;
-}
-.col-sm-2{
-  width: 10% !important;
-}
+/* *{
+  outline: red dashed 1px;
+} */
 
-.form-select{
-  height: 46px;
-  width: 346px;
-  padding-left: 10px;
+.allpage {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  margin: 0px;
+  background-color: #f5f5f5;
+  position: relative;
 }
-.input{
-  height: 46px;
-  width: 346px
+.size {
+  height: 90%;
+  width: 100%;
 }
-.checkbox3{
-  width: 23.5%;
+.size1 {
+  height: auto;
+  width: 100%;
+  padding: 25px 30px;
 }
-.checkbox4{
-  width: 23.5%;
+.icon {
+  content: url("../../../assets/icon/create.png");
+  width: 24px;
+  height: 24px;
 }
-.checkbox1{
-  width: 25%;
+.fs {
+  font-size: 17px;
 }
-.checkbox2{
-  width: 26.5%;
+.scroll {
+  overflow-y: scroll;
 }
-.checkbox5{
-  width: 27%;
+.aspic-33 {
+  width: 33.33%;
 }
-
+.form-select {
+  padding: 0.7rem 2.25rem 0.7rem 0.75rem;
+  background-color: #f7f7f7;
+}
+.form-control {
+  padding: 0.7rem 0.75rem;
+  background-color: #f7f7f7;
+}
+.hover:hover {
+  cursor: pointer;
+}

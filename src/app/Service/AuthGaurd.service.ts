@@ -15,4 +15,11 @@ export class AuthGaurdService {
     this.router.navigate(['/']);
     return false;
   }
+
+  canAccess(): boolean {
+    if (this.auth.checkAuthorities()) {
+      return true;
+    }
+    return false
+  }
 }

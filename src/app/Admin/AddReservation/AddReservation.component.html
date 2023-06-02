@@ -10,9 +10,9 @@
       <div class="row p-0 m-0 w-100" style="height: 90%">
         <div class="size1 border rounded bg-white">
           <div class="d-flex">
-            <div class="fw-600 hover" (click)="onClickBack()">Employee</div>
+            <div class="fw-600 hover" (click)="onClickBack()">Reservation</div>
             <div class="mx-3">></div>
-            <div class="fw-600 l-gray">Add New Employee</div>
+            <div class="fw-600 l-gray">Add New Reservation</div>
           </div>
           <div class="row p-0 m-0">
             <div class="p-0 position-relative d-flex">
@@ -22,7 +22,7 @@
                     class="bi bi-arrow-left-short hover"
                     (click)="onClickBack()"
                   ></i
-                  >Add New Employee
+                  >Add New Reservation
                 </p>
               </div>
             </div>
@@ -31,78 +31,6 @@
             <!-- for flex fix -->
             <div class="col-md-12 col">
               <div class="d-flex flex-md-row flex-column my-0 my-md-3">
-                <div class="me-md-4 me-0 col-md-4 col my-2 my-md-0 flex-fill">
-                  <p class="mb-2">Full Name</p>
-                  <div>
-                    <input
-                      type="text"
-                      class="form-control"
-                      aria-label="Sizing example input"
-                      aria-describedby="inputGroup-sizing-default"
-                    />
-                  </div>
-                </div>
-                <div class="me-md-4 me-0 col-md-4 col my-2 my-md-0 flex-fill">
-                  <p class="mb-2">Email</p>
-                  <div>
-                    <input
-                      type="text"
-                      class="form-control"
-                      aria-label="Sizing example input"
-                      aria-describedby="inputGroup-sizing-default"
-                    />
-                  </div>
-                </div>
-                <div class="me-md-4 me-0 col-md-4 col my-2 my-md-0 flex-fill">
-                  <p class="mb-2">Phone Number</p>
-                  <div>
-                    <input
-                      type="text"
-                      class="form-control"
-                      aria-label="Sizing example input"
-                      aria-describedby="inputGroup-sizing-default"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex flex-md-row flex-column my-0 my-md-3">
-                <div class="me-md-4 me-0 col-md-4 col my-2 my-md-0 flex-fill">
-                  <p class="mb-2">Gender</p>
-                  <div>
-                    <select
-                      class="form-select"
-                      aria-label="Default select example"
-                    >
-                      <option selected>Select Gender</option>
-                      <option value="1">Male</option>
-                      <option value="2">Female</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="me-md-4 me-0 col-md-4 col my-2 my-md-0 flex-fill">
-                  <p class="mb-2">Salary</p>
-                  <div>
-                    <input
-                      type="text"
-                      class="form-control"
-                      aria-label="Sizing example input"
-                      aria-describedby="inputGroup-sizing-default"
-                    />
-                  </div>
-                </div>
-                <div class="me-md-4 me-0 col-md-4 col my-2 my-md-0 flex-fill">
-                  <p class="mb-2">Position</p>
-                  <div>
-                    <input
-                      type="text"
-                      class="form-control"
-                      aria-label="Sizing example input"
-                      aria-describedby="inputGroup-sizing-default"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex flex-md-row flex-column my-0 my-md-3 col-md-8 col">
                 <div class="me-md-4 me-0 col-md-4 col my-2 my-md-0 flex-fill">
                   <p class="mb-2">Date of Birth</p>
                   <mat-form-field appearance="fill" class="col-md-12 col">
@@ -136,6 +64,102 @@
                     <mat-datepicker #picker></mat-datepicker>
                   </mat-form-field>
                 </div>
+                <div class="me-md-4 me-0 col-md-4 col my-2 my-md-0 flex-fill">
+                  <p class="mb-2">Room Type</p>
+                  <div>
+                    <select
+                      class="form-select py-md-3"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Select Room Type</option>
+                      <option value="1">Master Room</option>
+                      <option value="2">Prime Room</option>
+                      <option value="3">Family Room</option>
+                      <option value="4">Executive Room</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-md-row flex-column my-0 my-md-3">
+                <div class="me-md-4 me-0 col-md-4 col my-2 my-md-0 flex-fill">
+                  <p class="mb-2">Room Number</p>
+                  <div>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Select Room Number</option>
+                      <option value="1">Master Room</option>
+                      <option value="2">Prime Room</option>
+                      <option value="3">Family Room</option>
+                      <option value="4">Executive Room</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="me-md-4 me-0 col-md-4 col my-2 my-md-0 flex-fill">
+                  <p class="mb-2">Capacity</p>
+                  <div>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Select Capacity</option>
+                      <option value="1">Master Room</option>
+                      <option value="2">Prime Room</option>
+                      <option value="3">Family Room</option>
+                      <option value="4">Executive Room</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="me-md-4 me-0 col-md-4 col my-2 my-md-0 flex-fill">
+                  <p class="mb-2">Client Name</p>
+                  <div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-md-row flex-column my-0 my-md-3">
+                <div class="me-md-4 me-0 col-md-4 col my-2 my-md-0 flex-fill">
+                  <p class="mb-2">Phone</p>
+                  <div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                    />
+                  </div>
+                </div>
+                <div class="me-md-4 me-0 col-md-4 col my-2 my-md-0 flex-fill">
+                  <p class="mb-2">Email</p>
+                  <div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                    />
+                  </div>
+                </div>
+                <div class="me-md-4 me-0 col-md-4 col my-2 my-md-0 flex-fill">
+                  <p class="mb-2">Payment Type</p>
+                  <div>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Select Payment Type</option>
+                      <option value="1">Cash</option>
+                      <option value="2">Visa</option>
+                      <option value="3">KHQR</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="d-flex mt-3">
@@ -147,7 +171,7 @@
                 >
                   <div class="d-flex position-relative justify-content-between">
                     <div class="icon my-auto"></div>
-                    <div class="fs my-auto mx-1 fw-600">Add Employee</div>
+                    <div class="fs my-auto mx-1 fw-600">Add Reservation</div>
                   </div>
                 </button>
               </div>

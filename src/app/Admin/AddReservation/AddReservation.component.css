@@ -1,0 +1,47 @@
+/* *{
+  outline: red dashed 1px;
+} */
+
+.allpage {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  margin: 0px;
+  background-color: #f5f5f5;
+  position: relative;
+}
+.size {
+  height: 90%;
+  width: 100%;
+}
+.size1 {
+  height: auto;
+  width: 100%;
+  padding: 25px 30px;
+}
+.icon {
+  content: url("../../../assets/icon/create.png");
+  width: 24px;
+  height: 24px;
+}
+.fs {
+  font-size: 17px;
+}
+.scroll {
+  overflow-y: scroll;
+}
+.aspic-33 {
+  width: 33.33%;
+}
+.form-select {
+  padding: 0.7rem 2.25rem 0.7rem 0.75rem;
+  background-color: #f7f7f7;
+}
+.form-control {
+  padding: 0.7rem 0.75rem;
+  background-color: #f7f7f7;
+}
+.hover:hover {
+  cursor: pointer;
+}
+

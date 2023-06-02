@@ -1,41 +1,70 @@
+/* *{
+  outline: red dashed 1px;
+} */
 
-.bg{
-  height: 100%;
-  background-color: white;
+.allpage {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  margin: 0px;
+  background-color: #f5f5f5;
+  position: relative;
 }
-.size{
-  height: 73px;
+.size {
+  height: 90%;
   width: 100%;
 }
-.size1{
-  height: 623px;
+.size1 {
+  height: auto;
   width: 100%;
-  margin-top: 10px;
+  padding: 40px 25px;
 }
-.ms{
-  padding-left: 25rem;
+.ms {
+  padding-left: 27rem;
 }
-.icon{
-  content: url('https://s3-alpha-sig.figma.com/img/e6d3/b08e/4691c376d85ab837b06044b290b7e1ee?Expires=1681689600&Signature=hdLdZuMDXtqKUbfYzBJt3jvbGwx4IpaReQi-Dp9lehnYEwpuxI-RAAjU93RzjSxlKTeR~RE4Lvr15D2phc1bLQsAwmaH6~nbVVO-3gjUtVf53XZyIetBogxfdAkqFcGgjfAuShfPC0Xq5fFMmtblkl4CA71JC5EOnW-JgCUJVVa5Z4TxIsCV9AKM6GJZWDpBubKVBXvdzh8GJS67krKTLwhQ5uLR139yZ1OZp1Fli6RaR1blAXMObXSLnk4K4J64J12SvNgM-oeVJDP8003-ak1Q8TTNVXOxc-WM~i7-DdneoH0RmHxixWA-uj0uPZrNa0qRdQi624wfVWAfmEo~Pw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+.icon {
+  content: url("../../../assets/icon/create.png");
   width: 24px;
   height: 24px;
 }
-.fs{
+.fs {
   font-size: 17px;
 }
 #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
+  border-radius: 13px;
   width: 100%;
 }
 
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 6px;
+#customers td {
+  border-bottom: none;
+  padding: 8px;
+  padding-left: 15px;
 }
 
-#customers tr:nth-child(even){
-  background-color: #f2f2f2;
+#customers td:not(:first-child) {
+  border-left: 1px solid #e7e7e7;
+  padding: 8px;
+}
+
+#customers th:first-child {
+  border-bottom: none;
+  padding: 14px 8px;
+  padding-left: 15px;
+}
+
+#customers th {
+  border-bottom: none;
+  padding: 14px 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+#customers tr:nth-child(odd) {
+  background-color: #fcfcfc;
 }
 
 #customers tr:hover {
@@ -49,76 +78,52 @@
   color: black;
   font-size: 16px;
 }
-#customers tr{
+#customers tr {
   font-size: 15px;
 }
-#customers th:nth-child(even){
-  background-color:#EBF5FF;
+#customers th:nth-child(even) {
+  background-color: #ebf5ff;
 }
-#customers th:nth-child(odd){
-  background-color: #D1E8FD;
+#customers th:nth-child(odd) {
+  background-color: #d1e8fd;
 }
-.borders{
-  border: 1px solid red;
-
-  height: 516px;
-  width: 100%;
+th:first-of-type {
+  border-top-left-radius: 10px;
 }
-.iconedit{
-  margin: auto;
-  content: url('https://s3-alpha-sig.figma.com/img/cf84/71c0/2ae7055e6177a9c77a216dc69e724bea?Expires=1681689600&Signature=CL~J5LUZ-MNFg5QZLWuv8dOjwRxx0oMZ67HfJYGWBhJFEk8I-QwEIgfbTQTJqKgIlpvOJdTgOGIuFRQBKIv9AtWt7ZnDehlnf5CaUUaUTtT7JogMDOssAv2EQmkqnJh~u4ifwhVFn8NeGuAyzZ9rDreS2mz~GjwRJ0E5Y~1y73dGyKf69i6LUl1GvxofQ0dgkZABQS3hs3h8WMM9N48N1KuQ8FGeCfwNvtBchIC~dKCCrcyH213dLvwFSAwwUWQCnVZA8Kouysd2cmXMgD8c~AaxFZdynW-1JC1OZoHEYDqUqsDUVlJ9a2QDCdmITjH84VMjVKtPEN6LPmsdukui9g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
-  height: 18px;
-  width: 18px;
+th:last-of-type {
+  border-top-right-radius: 10px;
 }
-.iconpic{
-  height: 18px;
-  width: 18px;
-  content: url('https://s3-alpha-sig.figma.com/img/db9b/9e1a/eb033a3f9acef8a28be2cfece3a0cf4c?Expires=1681689600&Signature=GJkHropcRkTFxUD7suSHkmRfjp6NEcl~YBN445R5IyW9~73snfM0d8tlhQQE8zb37jswC9ika2BWX9THbskRePgG1voWMZJO9YUZ6X8SBoVI1vl73Bi8fykXBZu3-2RPssr1936rsXh6GcMFZWR7y6BHCUGU13J92-3LMAFcQhV0d8N8HIAfvIJ-gj5lcnLjb8NnXiOcd2k2ivOjlC0TQLuSjvi7m4-Si1x9VkN-F8VpeTPR~mFLUcuuLFxrFFucbvBFCZvPqFYumipiUR0D9J84QGYa2kWrZDM3xG9znvb0hCleavZpG2IgHZfSyWyVBPx22VXQpY9MYLrGwt8f-g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
-
+.scroll {
+  overflow-y: scroll;
 }
-.icondelete{
-  height: 18px;
-  width: 18px;
-  content: url('https://s3-alpha-sig.figma.com/img/80f9/16be/35a63df60ab33f00c7f1086db737c46b?Expires=1681689600&Signature=TN5RwCTlsq1upaAa8mWFRZW6jJMW~FJoLIt7vHB-xGiI1mCgxD0gHdLn0ck8h0VdoWbvqPKjm7oj7cI6fN~NPkI33R0t5qBj2dKOBHU-AqwtTYJ0-OsC5bv7-IQDxYeTFEAj4KEe3HTbrqOcOrcMznsZv1yteelBQPKmDFP0E6kK6A~WW6s96AagklM8-MbHrQRqvGO1IryzWsUBuLpaJjILxyaNN1RqWzJ4s4R7oA11SEN7pAuiQ-xSpZ~cu7Tn4pbjaWEBqYdTr5Ovl9Wfl36PCtYinXVZf5j44n3rfcGcvnK2wa~AE7Mf3cx3R6TIjecL~fza3ZXCdHodgwuKAg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
-
+.icon-edit {
+  content: url("../../../assets/icon/edit.png");
+  height: 20px;
+  width: 20px;
 }
-.btn1{
-  --bs-btn-padding-x: -0.25rem;
+.icon-add {
+  content: url("../../../assets/icon/add.png");
+  height: 20px;
+  width: 20px;
 }
-.btn2{
-  --bs-btn-padding-x: 0.45rem;
+.icon-delete {
+  content: url("../../../assets/icon/delete.png");
+  height: 20px;
+  width: 20px;
 }
-.btn3{
-  --bs-btn-padding-x: 0.5rem;
-}
-.btn.icon1{
-  background-color: #EBF5FF;
-  border: 1px solid #EBF5FF;
+.edit {
+  background-color: #ebf5ff;
   height: 35px;
-  width: 37px;
 }
-.btn.icon2{
-  background-color: #DEEDE5;
-  border: 1px solid #DEEDE5;
+.add {
+  background-color: #deede5;
   height: 35px;
-  width: 37px;
 }
-.btn.icon3{
-  background-color: #EDDEDE;
-  border: 1px solid #EDDEDE;
+.delete {
+  background-color: #eddede;
   height: 35px;
-  width: 37px;
 }
-.btn.dblue{
-  background-color: #002449;
-  color: white;
-  width:  178px;
-  height: 39px;
+.menu-size {
+  width: 240px;
 }
-.btn.dblue:hover{
-  background-color: blue;
-  border: 1px solid blue;
-}
-.sm-2{
-  width: 210px;
-}
+

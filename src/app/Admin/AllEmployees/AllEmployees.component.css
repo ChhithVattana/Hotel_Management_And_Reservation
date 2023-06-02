@@ -1,36 +1,70 @@
-.bg{
-  height: 100%;
-  background-color: white;
-}
-.size1{
-  height: 623px;
+/* *{
+  outline: red dashed 1px;
+} */
+
+.allpage {
   width: 100%;
-  margin-top: 10px;
+  height: 100vh;
+  padding: 10px;
+  margin: 0px;
+  background-color: #f5f5f5;
+  position: relative;
 }
-.ms{
-  padding-left: 27rem;
+.menu-size {
+  width: 240px;
 }
-.icon{
-  content: url('https://s3-alpha-sig.figma.com/img/e6d3/b08e/4691c376d85ab837b06044b290b7e1ee?Expires=1681689600&Signature=hdLdZuMDXtqKUbfYzBJt3jvbGwx4IpaReQi-Dp9lehnYEwpuxI-RAAjU93RzjSxlKTeR~RE4Lvr15D2phc1bLQsAwmaH6~nbVVO-3gjUtVf53XZyIetBogxfdAkqFcGgjfAuShfPC0Xq5fFMmtblkl4CA71JC5EOnW-JgCUJVVa5Z4TxIsCV9AKM6GJZWDpBubKVBXvdzh8GJS67krKTLwhQ5uLR139yZ1OZp1Fli6RaR1blAXMObXSLnk4K4J64J12SvNgM-oeVJDP8003-ak1Q8TTNVXOxc-WM~i7-DdneoH0RmHxixWA-uj0uPZrNa0qRdQi624wfVWAfmEo~Pw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+.size {
+  height: 90%;
+  width: 100%;
+}
+.size1 {
+  height: auto;
+  width: 100%;
+  padding: 40px 25px;
+}
+.icon {
+  content: url("../../../assets/icon/create.png");
   width: 24px;
   height: 24px;
 }
-.fs{
+.fs {
   font-size: 17px;
 }
 #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
+  border-radius: 13px;
   width: 100%;
 }
 
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 6px;
+#customers td {
+  border-bottom: none;
+  padding: 8px;
+  padding-left: 15px;
 }
 
-#customers tr:nth-child(even){
-  background-color: #f2f2f2;
+#customers td:not(:first-child) {
+  border-left: 1px solid #e7e7e7;
+  padding: 8px;
+}
+
+#customers th:first-child {
+  border-bottom: none;
+  padding: 14px 8px;
+  padding-left: 15px;
+}
+
+#customers th {
+  border-bottom: none;
+  padding: 14px 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+#customers tr:nth-child(odd) {
+  background-color: #fcfcfc;
 }
 
 #customers tr:hover {
@@ -44,54 +78,48 @@
   color: black;
   font-size: 16px;
 }
-#customers tr{
+#customers tr {
   font-size: 15px;
 }
-#customers th:nth-child(even){
-  background-color:#EBF5FF;
+#customers th:nth-child(even) {
+  background-color: #ebf5ff;
 }
-#customers th:nth-child(odd){
-  background-color: #D1E8FD;
+#customers th:nth-child(odd) {
+  background-color: #d1e8fd;
 }
-.borders{
-  border: 1px solid red;
-  height: 516px;
-  width: 100%;
+th:first-of-type {
+  border-top-left-radius: 10px;
 }
-.acctionicon1{
-  content: url('https://s3-alpha-sig.figma.com/img/cf84/71c0/2ae7055e6177a9c77a216dc69e724bea?Expires=1682294400&Signature=YEEFfWbRWln7T-wemdAbs-W6qDSdPY0y8kzPlDQ2CKiSYOwi-VRzmok1FH3Pwg0sranV~VWGl4597mCqpIZVtltuSDDwB3BbGaLXdBRgF7FGhNKdUcO27Sbw~sc7PoHsJg~~oMdqye8Dxin-X6UjmYLFEVHmCMLkWfJwyy1JIqoisney7dRkZcD~Y6QQOhFFZ9bpiSOvbP~gVlFEHpLBCdNEEtN2Bb4KDgf9iGIfjYOeqxjOognkCZT5F1ZknDoHpClhefdWtU-8q4A3m2Vy3sF7rb9rqA-5je7XYUsnJKGp19SWYknD5~AsXHyYsdWarDMiMYajGuyTIh1V2HywAw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+th:last-of-type {
+  border-top-right-radius: 10px;
+}
+.scroll {
+  overflow-y: scroll;
+}
+.icon-edit {
+  content: url("../../../assets/icon/edit.png");
   height: 20px;
   width: 20px;
 }
-.acctionicon2{
-  content: url('https://s3-alpha-sig.figma.com/img/80f9/16be/35a63df60ab33f00c7f1086db737c46b?Expires=1682294400&Signature=hNoWzvJ6gI8Yyddf9q9RNKxSLDUn5Tvbg-wESUl5bSgcMkXm8WGfgKxV4DDRGvHsgmAoSlYkwZShXWL1VhTaQFHig71AZkrvVvi2xme~OScD15JLHwmlYARMABwEkFoUJ9~gw3Xul1jFjQQ8PLELCONSEjGL7FKd~kPUQIiu~Hj-475A~b5jvY~41f~JCUDshPoUyE1JyObvx9eysPf13mfccaUCzfdU1elyh-9EMa-1Unx8fZJO7bmagvZCrU1evkDnbi2iQ-Cn96fHSCYKEZ591OZlrd-aP6T7DsdRzSckLPHvgmRZtVyT5juTdWqCDfu6Ep4WXCz64Y3wOV3THw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+.icon-add {
+  content: url("../../../assets/icon/add.png");
   height: 20px;
   width: 20px;
 }
-.icon1{
-  border: none;
+.icon-delete {
+  content: url("../../../assets/icon/delete.png");
+  height: 20px;
+  width: 20px;
+}
+.edit {
+  background-color: #ebf5ff;
   height: 35px;
-  width: 37px;
 }
-.btn1{
-  --bs-btn-padding-x: -0.25rem;
+.add {
+  background-color: #deede5;
+  height: 35px;
 }
-.btn2{
-  --bs-btn-padding-x: -0.25rem;
-}
-.btn.blue{
-  border-radius: 10px;
-  background-color: #002449;;
-  color: white;
-  width:  180px;
-  height: 44px;
-}
-.btn.blue:hover{
-  background-color: #307bf6;
-}
-.col-sm-3{
-  width: 20% !important;
-}
-.col-sm-2{
-  width: 13.666667%;
+.delete {
+  background-color: #eddede;
+  height: 35px;
 }
