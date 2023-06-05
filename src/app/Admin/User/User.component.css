@@ -52,13 +52,15 @@
   padding: 14px 8px;
 }
 #customers tr:nth-child(even) {
-  background-color: #f7f7f7;
+  background-color: #FCFCFC;
 }
+
 #customers tr:nth-child(odd) {
-  background-color: #fcfcfc;
+  background-color: #F7F7F7;
 }
+
 #customers tr:hover {
-  background-color: #ddd;
+  background-color: #f1f1f1;
 }
 #customers#rounded th {
   padding-top: 12px;

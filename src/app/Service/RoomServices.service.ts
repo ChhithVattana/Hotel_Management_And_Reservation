@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { RoomTypeModel } from '../Model/RoomTypeModel';
 import { RoomModel } from '../Model/RoomModel';
+import { ResponseModel } from '../Model/ResponseModel';
 
 @Injectable({
   providedIn: 'root',
@@ -12,6 +13,7 @@ export class RoomServicesService {
   roomDataDetail: RoomTypeModel[] = [];
   roomTypeData: RoomTypeModel[] = [];
   roomData: RoomModel[] = [];
+  response: ResponseModel<RoomModel[]> = new ResponseModel<RoomModel[]>([], 0);
 
   httpOption = {
     headers: new HttpHeaders({
@@ -52,9 +54,8 @@ export class RoomServicesService {
     return this.roomDataDetail;
   }
 
-  // get all room list
   async getAllRoomList(page: number) {
-    this.roomData = [];
+    this.response.result = [];
     await this.http
       .get(
         `https://m1g7.seyna.iteg7.com/api/v1/room?page=${page}&size=10&q=`,
@@ -63,9 +64,11 @@ export class RoomServicesService {
       .toPromise()
       .then((res: any) => {
         res.result.forEach((r: RoomModel) => {
-          this.roomData.push(r);
+          this.response.result.push(r);
         });
+        this.response.length = res.length
       });
-    return this.roomData;
+      console.log(this.response)
+    return this.response;
   }
 }

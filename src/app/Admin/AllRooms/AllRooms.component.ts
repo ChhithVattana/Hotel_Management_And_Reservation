@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ResponseModel } from 'src/app/Model/ResponseModel';
 import { RoomModel } from 'src/app/Model/RoomModel';
 import { AuthGaurdService } from 'src/app/Service/AuthGaurd.service';
 import { RoomServicesService } from 'src/app/Service/RoomServices.service';
@@ -10,10 +11,10 @@ import { RoomServicesService } from 'src/app/Service/RoomServices.service';
   styleUrls: ['./AllRooms.component.css'],
 })
 export class AllRoomsComponent implements OnInit {
-  roomData: RoomModel[] = [];
   emptyList: number = 0;
   isLoading: boolean = true;
-  pageIndex = 0;
+  pageIndex = 1;
+  response: ResponseModel<RoomModel[]> = new ResponseModel<RoomModel[]>([], 0);
 
   constructor(
     private router: Router,
@@ -21,7 +22,7 @@ export class AllRoomsComponent implements OnInit {
   ) {}
 
   async ngOnInit() {
-    this.roomData = await this.roomService.getAllRoomList(0);
+    this.response = await this.roomService.getAllRoomList(0);
     this.isLoading = false;
   }
 
@@ -30,8 +31,12 @@ export class AllRoomsComponent implements OnInit {
   }
 
   getEmptyList(): number {
-    this.emptyList = 10 - this.roomData.length;
+    this.emptyList = 10 - this.response.result.length;
     return this.emptyList;
+  }
+
+  getloadedList(): number {
+    return this.response.length / 10;
   }
 
   getRange(length: number): number[] {
@@ -40,23 +45,37 @@ export class AllRoomsComponent implements OnInit {
 
   async getByPage(page: number) {
     this.isLoading = true;
-    this.roomData = await this.roomService.getAllRoomList(page);
+    this.response = await this.roomService.getAllRoomList(page);
     this.isLoading = false;
   }
 
   onClickChangePage(index: number) {
-    this.getByPage(index)
+    this.getByPage(index);
     this.showPageList((this.pageIndex = index + 1));
+  }
+
+  navigatePage(n: any) {
+    this.showPageList((this.pageIndex += n));
+    this.getByPage(this.pageIndex - 1);
   }
 
   showPageList(n: any) {
     let i;
-    let pageList = document.getElementsByClassName(
+    let pages = document.getElementsByClassName(
       'page-num'
     ) as HTMLCollectionOf<HTMLElement>;
-    for (i = 0; i < pageList.length; i++) {
-      pageList[i].className = pageList[i].className.replace(' active', '');
+    let dots = document.getElementsByClassName(
+      'page-num'
+    ) as HTMLCollectionOf<HTMLElement>;
+    if (n > pages.length) {
+      this.pageIndex = 1;
     }
-    pageList[this.pageIndex - 1].className += ' active';
+    if (n < 1) {
+      this.pageIndex = pages.length;
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(' active', '');
+    }
+    dots[this.pageIndex - 1].className += ' active';
   }
 }

@@ -40,7 +40,7 @@
                 <th class="text-center">Status</th>
               </tr>
               <ng-container *ngIf="!isLoading">
-                <tr *ngFor="let item of roomData; let no = index">
+                <tr *ngFor="let item of response.result; let no = index">
                   <td>{{ item.roomNo }}</td>
                   <td>{{ item.roomTypeId.name }}</td>
                   <td>{{ item.roomTypeId.bedType }}</td>
@@ -66,7 +66,10 @@
               </ng-container>
               <ng-container *ngIf="isLoading">
                 <tr *ngFor="let item of [].constructor(10)">
-                  <td *ngFor="let item of [].constructor(7)" style="height: 51px;">
+                  <td
+                    *ngFor="let item of [].constructor(7)"
+                    style="height: 51px"
+                  >
                     <div>
                       <ngx-skeleton-loader
                         [theme]="{
@@ -94,7 +97,7 @@
                   <td></td>
                   <td></td>
                   <td class="d-flex position-relative justify-content-center">
-                    <div style="height: 35px;"></div>
+                    <div style="height: 35px"></div>
                   </td>
                 </tr>
               </ng-container>
@@ -103,18 +106,36 @@
           <div class="d-flex justify-content-end">
             <div
               class="d-flex justify-content-around fs-15"
-              style="width: 400px; height: 20px"
+              [ngClass]="isLoading ? 'disabled' : ''"
+              style="width: auto; height: 20px"
             >
-              <div class="fw-600">Previous Page</div>
               <div
-                class="page-num"
+                id="previous"
+                class="fw-600 fs-14 btn p-0 me-1"
+                style="border: none"
+                (click)="navigatePage(-1)"
+              >
+                Previous Page
+              </div>
+              <div
+                class="page-num mx-1"
                 [ngClass]="index == 0 ? 'active' : ''"
-                *ngFor="let item of [].constructor(6); let index = index"
+                *ngFor="
+                  let item of getRange(getloadedList());
+                  let index = index
+                "
                 (click)="onClickChangePage(index)"
               >
                 {{ index + 1 }}
               </div>
-              <div class="fw-600">Next Page</div>
+              <div
+                id="next"
+                class="fw-600 fs-14 btn p-0 ms-1"
+                style="border: none"
+                (click)="navigatePage(1)"
+              >
+                Next Page
+              </div>
             </div>
           </div>
         </div>

@@ -57,15 +57,15 @@
 }
 
 #customers tr:nth-child(even) {
-  background-color: #f7f7f7;
+  background-color: #FCFCFC;
 }
 
 #customers tr:nth-child(odd) {
-  background-color: #fcfcfc;
+  background-color: #F7F7F7;
 }
 
 #customers tr:hover {
-  background-color: #ddd;
+  background-color: #f1f1f1;
 }
 
 #customers#rounded th {
@@ -116,12 +116,16 @@ th:last-of-type {
   position: relative;
   display: flex;
   justify-content: center;
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .page-num.active {
-  background-color: #0057B2;
+  background-color: #0057b2;
   color: white;
+}
+
+.disabled {
+  pointer-events: none;
 }
