@@ -39,177 +39,83 @@
                 <th>Price($)</th>
                 <th class="text-center">Status</th>
               </tr>
-              <tr>
-                <td>R100</td>
-                <td>Master Room</td>
-                <td>Sing Bed</td>
-                <td>Ground Floor</td>
-                <td>2</td>
-                <td>300.00</td>
-                <td class="d-flex position-relative justify-content-center">
-                  <div style="width: 60%">
-                    <div
-                      class="astatus d-flex justify-content-center fw-600 rounded"
-                    >
-                      <div class="my-auto">Available</div>
+              <ng-container *ngIf="!isLoading">
+                <tr *ngFor="let item of roomData; let no = index">
+                  <td>{{ item.roomNo }}</td>
+                  <td>{{ item.roomTypeId.name }}</td>
+                  <td>{{ item.roomTypeId.bedType }}</td>
+                  <td>{{ item.roomTypeId.floor }}</td>
+                  <td>{{ item.roomTypeId.capacity }}</td>
+                  <td>{{ item.roomTypeId.price | customNumber }}</td>
+                  <td class="d-flex position-relative justify-content-center">
+                    <div style="width: 60%">
+                      <div
+                        class="d-flex justify-content-center fw-600 rounded"
+                        [ngClass]="item.available ? 'astatus' : 'Rstatus'"
+                      >
+                        <div class="my-auto" *ngIf="item.available">
+                          Available
+                        </div>
+                        <div class="my-auto" *ngIf="!item.available">
+                          Reserverd
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>R101</td>
-                <td>Master Room</td>
-                <td>Sing Bed</td>
-                <td>Ground Floor</td>
-                <td>2</td>
-                <td>300.00</td>
-                <td class="d-flex position-relative justify-content-center">
-                  <div style="width: 60%">
-                    <div
-                      class="Rstatus d-flex justify-content-center fw-600 rounded"
-                    >
-                      <div class="my-auto">Reserved</div>
+                  </td>
+                </tr>
+              </ng-container>
+              <ng-container *ngIf="isLoading">
+                <tr *ngFor="let item of [].constructor(10)">
+                  <td *ngFor="let item of [].constructor(7)" style="height: 51px;">
+                    <div>
+                      <ngx-skeleton-loader
+                        [theme]="{
+                          margin: '0px',
+                          width: '100%',
+                          height: '33px',
+                          position: 'relative',
+                          display: 'flex',
+                          background: '#f0f0f0'
+                        }"
+                        animation="progress"
+                      ></ngx-skeleton-loader>
                     </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>R100</td>
-                <td>Master Room</td>
-                <td>Sing Bed</td>
-                <td>Ground Floor</td>
-                <td>2</td>
-                <td>300.00</td>
-                <td class="d-flex position-relative justify-content-center">
-                  <div style="width: 60%">
-                    <div
-                      class="astatus d-flex justify-content-center fw-600 rounded"
-                    >
-                      <div class="my-auto">Available</div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>R101</td>
-                <td>Master Room</td>
-                <td>Sing Bed</td>
-                <td>Ground Floor</td>
-                <td>2</td>
-                <td>300.00</td>
-                <td class="d-flex position-relative justify-content-center">
-                  <div style="width: 60%">
-                    <div
-                      class="Rstatus d-flex justify-content-center fw-600 rounded"
-                    >
-                      <div class="my-auto">Reserved</div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>R100</td>
-                <td>Master Room</td>
-                <td>Sing Bed</td>
-                <td>Ground Floor</td>
-                <td>2</td>
-                <td>300.00</td>
-                <td class="d-flex position-relative justify-content-center">
-                  <div style="width: 60%">
-                    <div
-                      class="astatus d-flex justify-content-center fw-600 rounded"
-                    >
-                      <div class="my-auto">Available</div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>R101</td>
-                <td>Master Room</td>
-                <td>Sing Bed</td>
-                <td>Ground Floor</td>
-                <td>2</td>
-                <td>300.00</td>
-                <td class="d-flex position-relative justify-content-center">
-                  <div style="width: 60%">
-                    <div
-                      class="Rstatus d-flex justify-content-center fw-600 rounded"
-                    >
-                      <div class="my-auto">Reserved</div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>R100</td>
-                <td>Master Room</td>
-                <td>Sing Bed</td>
-                <td>Ground Floor</td>
-                <td>2</td>
-                <td>300.00</td>
-                <td class="d-flex position-relative justify-content-center">
-                  <div style="width: 60%">
-                    <div
-                      class="astatus d-flex justify-content-center fw-600 rounded"
-                    >
-                      <div class="my-auto">Available</div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>R101</td>
-                <td>Master Room</td>
-                <td>Sing Bed</td>
-                <td>Ground Floor</td>
-                <td>2</td>
-                <td>300.00</td>
-                <td class="d-flex position-relative justify-content-center">
-                  <div style="width: 60%">
-                    <div
-                      class="Rstatus d-flex justify-content-center fw-600 rounded"
-                    >
-                      <div class="my-auto">Reserved</div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>R100</td>
-                <td>Master Room</td>
-                <td>Sing Bed</td>
-                <td>Ground Floor</td>
-                <td>2</td>
-                <td>300.00</td>
-                <td class="d-flex position-relative justify-content-center">
-                  <div style="width: 60%">
-                    <div
-                      class="astatus d-flex justify-content-center fw-600 rounded"
-                    >
-                      <div class="my-auto">Available</div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>R101</td>
-                <td>Master Room</td>
-                <td>Sing Bed</td>
-                <td>Ground Floor</td>
-                <td>2</td>
-                <td>300.00</td>
-                <td class="d-flex position-relative justify-content-center">
-                  <div style="width: 60%">
-                    <div
-                      class="Rstatus d-flex justify-content-center fw-600 rounded"
-                    >
-                      <div class="my-auto">Reserved</div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
+                  </td>
+                </tr>
+              </ng-container>
+              <ng-container
+                *ngFor="let item of getRange(getEmptyList()); let i = index"
+              >
+                <tr *ngIf="!isLoading">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="d-flex position-relative justify-content-center">
+                    <div style="height: 35px;"></div>
+                  </td>
+                </tr>
+              </ng-container>
             </table>
+          </div>
+          <div class="d-flex justify-content-end">
+            <div
+              class="d-flex justify-content-around fs-15"
+              style="width: 400px; height: 20px"
+            >
+              <div class="fw-600">Previous Page</div>
+              <div
+                class="page-num"
+                [ngClass]="index == 0 ? 'active' : ''"
+                *ngFor="let item of [].constructor(6); let index = index"
+                (click)="onClickChangePage(index)"
+              >
+                {{ index + 1 }}
+              </div>
+              <div class="fw-600">Next Page</div>
+            </div>
           </div>
         </div>
       </div>

@@ -127,3 +127,24 @@ th:last-of-type {
   width: 240px;
 }
 
+/* Page Num */
+.page-num {
+  width: 20px;
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #E6E6E6;
+  border-radius: 50%;
+}
+
+.page-num.active {
+  background-color: #0057B2;
+  color: white;
+}
+
+.circle {
+  width: 50px; /* Adjust the width and height as per your preference */
+  height: 50px;
+  border-radius: 50%; /* Make the border radius 50% to create a circle */
+}

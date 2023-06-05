@@ -11,14 +11,15 @@ export class ReservationService {
 
   availableRoomType: RoomModel[] = [];
 
+  httpOption = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('access_token')}`
+    }),
+  };
+
   async getavailableRoomType(dateIn: Date, dateOut: Date, capacity: number) {
     this.availableRoomType = [];
-    let httpOption = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${localStorage.getItem('access_token')}`
-      }),
-    };
     await this.http
       .get(
         `https://m1g7.seyna.iteg7.com/api/v1/reservation/searchAvailable?page=0&size=10&checkInOn=${this.datePipe.transform(
@@ -28,7 +29,7 @@ export class ReservationService {
           dateOut,
           'yyyy-MM-dd'
         )}&adults=${capacity}&isAvailable=true`,
-        httpOption
+        this.httpOption
       )
       .toPromise()
       .then((res: any) => {

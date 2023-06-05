@@ -56,6 +56,7 @@ import { AuthService } from './Service/Auth.service';
 import { AuthGaurdService } from './Service/AuthGaurd.service';
 import { ReservationPageComponent } from './ReservationPage/ReservationPage.component';
 import { AddReservationComponent } from './Admin/AddReservation/AddReservation.component';
+import { CustomNumberPipe } from './Pipe/custom-number.pipe';
 
 const appRoutes: Routes = [
   {
@@ -277,6 +278,7 @@ const appRoutes: Routes = [
     DoneComponent,
     SaveComponent,
     DeleteComponent,
+    CustomNumberPipe,
   ],
   imports: [
     BrowserModule,

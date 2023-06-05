@@ -11,16 +11,17 @@ export class ImageService {
   imageData: ImageModel[] = [];
   imageDataDetail: ImageModel[] = [];
 
+  httpOption = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('access_token')}`,
+    }),
+  };
+
   getAllImage() {
     this.imageData = [];
-    let httpOption = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${localStorage.getItem('access_token')}`,
-      }),
-    };
     this.http
-      .get('https://m1g7.seyna.iteg7.com/api/v1/images?page=0&size=10&q=', httpOption)
+      .get('https://m1g7.seyna.iteg7.com/api/v1/images?page=0&size=10&q=', this.httpOption)
       .toPromise()
       .then((res: any) => {
         res.result.forEach((r: ImageModel) => {
@@ -32,14 +33,8 @@ export class ImageService {
 
   getImageById(id: number) {
     this.imageDataDetail = [];
-    let httpOption = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${localStorage.getItem('access_token')}`,
-      }),
-    };
     this.http
-      .get(`https://m1g7.seyna.iteg7.com/api/v1/images/getById?id=${id}`, httpOption)
+      .get(`https://m1g7.seyna.iteg7.com/api/v1/images/getById?id=${id}`, this.httpOption)
       .toPromise()
       .then((res: any) => {
         res.result.forEach((r: ImageModel) => {
