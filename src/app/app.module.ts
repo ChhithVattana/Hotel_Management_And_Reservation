@@ -155,8 +155,12 @@ const appRoutes: Routes = [
     component: ReservationPageComponent,
   },
   {
-    path: 'admin',
+    path: 'login',
     component: LoginPageComponent,
+  },
+  {
+    path: 'admin',
+    component: AllRoomsComponent,
   },
   {
     path: 'admin/allrooms',

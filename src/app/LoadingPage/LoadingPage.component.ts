@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 export class LoadingPageComponent implements OnInit {
 
   isLoading: boolean = true;
-  token: any = null;
 
   constructor(private router: Router ,private authService: AuthService) { }
 

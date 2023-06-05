@@ -17,6 +17,6 @@ export class AddAllEmployeesComponent implements OnInit {
     this.router.navigate(['admin/allemployees']);
   }
   onClickAddNewRoom(){
-    
+
   }
 }

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import jwt_decode from 'jwt-decode';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { LoginModel } from '../Model/Login';
 
 @Injectable({
   providedIn: 'root',
@@ -31,6 +32,22 @@ export class AuthService {
       .then((res: any) => {
         localStorage.setItem('access_token', res.access_token);
         localStorage.setItem('refresh_token', res.refresh_token);
+      });
+  }
+
+  async login(loginModel: LoginModel) {
+    localStorage.removeItem('access_token');
+    const body = new URLSearchParams();
+    body.set('grant_type', 'password');
+    body.set('username', loginModel.username);
+    body.set('password', loginModel.password);
+    await this.http
+      .post('https://m1g7.seyna.iteg7.com/oauth/token', body, this.httpOptions)
+      .toPromise()
+      .then((res: any) => {
+        localStorage.setItem('access_token', res.access_token);
+        localStorage.setItem('refresh_token', res.refresh_token);
+        this.router.navigate(['/admin/allrooms']);
       });
   }
 

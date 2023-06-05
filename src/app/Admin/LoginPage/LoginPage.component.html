@@ -1,36 +1,61 @@
-<div class="bg-image">
-  <div class="pt">
-    <div class="bg-color">
-      <div class="pt-17">
-        <div class="logo"></div>
-        <div class="pt-33">
-          <div class="fs-28 fw-600 text-center">Login as ADMIN</div>
-        </div>
-        <div class="pt-45">
-          <div class="form-floating mb-45">
-            <input
-              type="email"
-              class="form-control user"
-              id="floatingInput"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Username</label>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="bg-image">
+    <div
+      class="d-flex position-relative flex-column justify-content-center h-100"
+    >
+      <div class="bg-color">
+        <div class="pt-17">
+          <div class="logo"></div>
+          <div class="pt-33">
+            <div class="fs-28 fw-600 text-center">Login as ADMIN</div>
           </div>
-          <div class="form-floating">
-            <input
-              type="password"
-              class="form-control pass"
-              id="floatingPassword"
-              placeholder="Password"
-            />
-            <label for="floatingPassword">Password</label>
+          <div class="pt-45">
+            <div class="form-floating mb-45">
+              <input
+                type="email"
+                class="form-control user"
+                id="floatingInput"
+                placeholder="name@example.com"
+                formControlName="username"
+              />
+              <label for="floatingInput">Username</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control pass"
+                id="floatingPassword"
+                placeholder="Password"
+                formControlName="password"
+              />
+              <label for="floatingPassword">Password</label>
+            </div>
           </div>
-        </div>
-        <hr />
-        <div class="mt-40" (click)="onClickLogin()">
-          <button class="btn login fw-600 fs-28">LogIn</button>
+          <hr />
+          <div class="mt-40">
+            <button class="btn login fw-600 fs-28 overflow-hidden">
+              <div *ngIf="!isLoading">Login</div>
+              <div
+                *ngIf="isLoading"
+                class="position-relative w-100 h-100 d-flex justify-content-center"
+              >
+                <div class="position-relative my-auto">
+                  <div class="dot-spinner">
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</form>

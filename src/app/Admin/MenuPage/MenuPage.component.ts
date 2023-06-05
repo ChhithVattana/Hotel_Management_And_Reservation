@@ -32,9 +32,11 @@ export class MenuPageComponent implements OnInit {
     this.router.navigate(['admin/user']);
   }
   onClickLogout(){
-    this.router.navigate(['admin']);
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('refresh_token');
+    this.router.navigate(['login']);
   }
   onClickAllReport() {
-    
+
   }
 }

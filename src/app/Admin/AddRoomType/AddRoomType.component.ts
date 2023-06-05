@@ -17,6 +17,6 @@ export class AddRoomTypeComponent implements OnInit {
     this.router.navigate(['admin/allroomtype']);
   }
   onClickAddNewRoom(){
-    
+
   }
 }

@@ -10,10 +10,9 @@ import { AuthGaurdService } from './Service/AuthGaurd.service';
 export class AppComponent implements OnInit  {
   title = 'Hotel_Management_And_Reservation';
 
-  constructor(private router: Router, private authGuard: AuthGaurdService){}
+  constructor(private router: Router, private auth: AuthGaurdService){}
 
   ngOnInit() {
-    this.authGuard.canActivate()
   }
 
   showNavigationBar(): boolean {
@@ -21,6 +20,9 @@ export class AppComponent implements OnInit  {
     if(currentUrl.includes('reservation')){
       return false;
     } else if(currentUrl.includes('admin')){
+      this.auth.canActivate()
+      return false;
+    } else if(currentUrl.includes('login')){
       return false;
     }
     return true;

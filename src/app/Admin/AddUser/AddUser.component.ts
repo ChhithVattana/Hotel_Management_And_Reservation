@@ -17,6 +17,6 @@ export class AddUserComponent implements OnInit {
     this.router.navigate(['admin/user']);
   }
   onClickAddNewRoom(){
-    
+
   }
 }
