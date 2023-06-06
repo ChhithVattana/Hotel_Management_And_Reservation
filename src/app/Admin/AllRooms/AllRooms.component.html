@@ -103,7 +103,7 @@
               </ng-container>
             </table>
           </div>
-          <div class="d-flex justify-content-end">
+          <div class="d-flex justify-content-end" *ngIf="getloadedList() > 1">
             <div
               class="d-flex justify-content-around fs-15"
               [ngClass]="isLoading ? 'disabled' : ''"

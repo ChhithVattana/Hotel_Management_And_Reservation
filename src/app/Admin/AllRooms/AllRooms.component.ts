@@ -36,7 +36,8 @@ export class AllRoomsComponent implements OnInit {
   }
 
   getloadedList(): number {
-    return this.response.length / 10;
+    // បង្គត់លេខឡើង 1.1 -> 2 | 2.9 -> 3
+    return Math.ceil(this.response.length / 10);
   }
 
   getRange(length: number): number[] {

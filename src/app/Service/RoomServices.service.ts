@@ -13,7 +13,13 @@ export class RoomServicesService {
   roomDataDetail: RoomTypeModel[] = [];
   roomTypeData: RoomTypeModel[] = [];
   roomData: RoomModel[] = [];
-  response: ResponseModel<RoomModel[]> = new ResponseModel<RoomModel[]>([], 0);
+  roomResponse: ResponseModel<RoomModel[]> = new ResponseModel<RoomModel[]>(
+    [],
+    0
+  );
+  roomTypeResponse: ResponseModel<RoomTypeModel[]> = new ResponseModel<
+    RoomTypeModel[]
+  >([], 0);
 
   httpOption = {
     headers: new HttpHeaders({
@@ -55,7 +61,7 @@ export class RoomServicesService {
   }
 
   async getAllRoomList(page: number) {
-    this.response.result = [];
+    this.roomResponse.result = [];
     await this.http
       .get(
         `https://m1g7.seyna.iteg7.com/api/v1/room?page=${page}&size=10&q=`,
@@ -64,11 +70,29 @@ export class RoomServicesService {
       .toPromise()
       .then((res: any) => {
         res.result.forEach((r: RoomModel) => {
-          this.response.result.push(r);
+          this.roomResponse.result.push(r);
         });
-        this.response.length = res.length
+        this.roomResponse.length = res.length;
       });
-      console.log(this.response)
-    return this.response;
+    console.log(this.roomResponse);
+    return this.roomResponse;
+  }
+
+  async getAllRoomTypeList(page: number) {
+    this.roomTypeResponse.result = [];
+    await this.http
+      .get(
+        `https://m1g7.seyna.iteg7.com/api/v1/roomType?page=${page}&size=10&q=`,
+        this.httpOption
+      )
+      .toPromise()
+      .then((res: any) => {
+        res.result.forEach((r: RoomTypeModel) => {
+          this.roomTypeResponse.result.push(r);
+        });
+        this.roomTypeResponse.length = res.length;
+      });
+    console.log(this.roomTypeResponse);
+    return this.roomTypeResponse;
   }
 }
