@@ -20,7 +20,9 @@ export class UserComponent implements OnInit {
 
   async ngOnInit() {
     this.response = await this.userService.getAllUserList(0);
-    this.isLoading = false;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 800);
   }
 
   onClickAddUser(){
@@ -44,7 +46,9 @@ export class UserComponent implements OnInit {
   async getByPage(page: number) {
     this.isLoading = true;
     this.response = await this.userService.getAllUserList(page);
-    this.isLoading = false;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 800);
   }
 
   onClickChangePage(index: number) {

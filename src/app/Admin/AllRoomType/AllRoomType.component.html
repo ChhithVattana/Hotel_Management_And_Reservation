@@ -39,37 +39,39 @@
                 <th>Price($)</th>
                 <th class="text-center">Status</th>
               </tr>
-              <tr *ngFor="let item of response.result; let no = index">
-                <td>{{ no + 1 }}</td>
-                <td>{{ item.name }}</td>
-                <td>{{ item.bedType }}</td>
-                <td>{{ item.floor }}</td>
-                <td>{{ item.capacity }}</td>
-                <td>{{ item.price | customNumber }}</td>
-                <td class="d-flex position-relative justify-content-center">
-                  <div class="mx-1" style="width: 35px">
-                    <div
-                      class="edit d-flex justify-content-center fw-600 rounded"
-                    >
-                      <div class="my-auto"><div class="icon-edit"></div></div>
+              <ng-container *ngIf="!isLoading">
+                <tr *ngFor="let item of response.result; let no = index">
+                  <td>{{ no + 1 }}</td>
+                  <td>{{ item.name }}</td>
+                  <td>{{ item.bedType }}</td>
+                  <td>{{ item.floor }}</td>
+                  <td>{{ item.capacity }}</td>
+                  <td>{{ item.price | customNumber }}</td>
+                  <td class="d-flex position-relative justify-content-center">
+                    <div class="mx-1" style="width: 35px">
+                      <div
+                        class="edit d-flex justify-content-center fw-600 rounded"
+                      >
+                        <div class="my-auto"><div class="icon-edit"></div></div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="mx-1" style="width: 35px">
-                    <div
-                      class="add d-flex justify-content-center fw-600 rounded"
-                    >
-                      <div class="my-auto"><div class="icon-add"></div></div>
+                    <div class="mx-1" style="width: 35px">
+                      <div
+                        class="add d-flex justify-content-center fw-600 rounded"
+                      >
+                        <div class="my-auto"><div class="icon-add"></div></div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="mx-1" style="width: 35px">
-                    <div
-                      class="delete d-flex justify-content-center fw-600 rounded"
-                    >
-                      <div class="my-auto"><div class="icon-delete"></div></div>
+                    <div class="mx-1" style="width: 35px">
+                      <div
+                        class="delete d-flex justify-content-center fw-600 rounded"
+                      >
+                        <div class="my-auto"><div class="icon-delete"></div></div>
+                      </div>
                     </div>
-                  </div>
-                </td>
-              </tr>
+                  </td>
+                </tr>
+              </ng-container>
               <ng-container *ngIf="isLoading">
                 <tr *ngFor="let item of [].constructor(10)">
                   <td

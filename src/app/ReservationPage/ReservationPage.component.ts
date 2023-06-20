@@ -68,7 +68,7 @@ export class ReservationPageComponent implements OnInit {
   }
 
   async availableRoomData(dateIn: Date, dateOut: Date, capacity: number) {
-    this.data = await this._reservation.getavailableRoomType(
+    this.data = await this._reservation.getAllAvailableRoomType(
       dateIn,
       dateOut,
       capacity

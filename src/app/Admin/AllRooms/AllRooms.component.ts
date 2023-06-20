@@ -23,7 +23,9 @@ export class AllRoomsComponent implements OnInit {
 
   async ngOnInit() {
     this.response = await this.roomService.getAllRoomList(0);
-    this.isLoading = false;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 800);
   }
 
   onClickAddRoom() {
@@ -47,7 +49,9 @@ export class AllRoomsComponent implements OnInit {
   async getByPage(page: number) {
     this.isLoading = true;
     this.response = await this.roomService.getAllRoomList(page);
-    this.isLoading = false;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 800);
   }
 
   onClickChangePage(index: number) {

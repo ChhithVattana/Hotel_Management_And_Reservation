@@ -18,7 +18,7 @@ export class ReservationService {
     }),
   };
 
-  async getavailableRoomType(dateIn: Date, dateOut: Date, capacity: number) {
+  async getAllAvailableRoomType(dateIn: Date, dateOut: Date, capacity: number) {
     this.availableRoomType = [];
     await this.http
       .get(

@@ -31,9 +31,7 @@ export class RoomsComponent implements OnInit {
   }
   constructor(
     private router: Router,
-    private _imageData: ImageService,
     private _roomData: RoomServicesService,
-    private authGuard: AuthGaurdService
   ) {}
   async ngOnInit() {
     this.roomData = await this._roomData.getAllRoom();

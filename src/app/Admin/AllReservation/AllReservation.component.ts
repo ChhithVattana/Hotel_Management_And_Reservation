@@ -21,7 +21,9 @@ export class AllReservationComponent implements OnInit {
 
   async ngOnInit() {
     this.response = await this.transactionService.getAllReservationList(0);
-    this.isLoading = false
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 800);
   }
 
   onClickAddReservation() {
@@ -45,7 +47,9 @@ export class AllReservationComponent implements OnInit {
   async getByPage(page: number) {
     this.isLoading = true;
     this.response = await this.transactionService.getAllReservationList(page);
-    this.isLoading = false;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 800);
   }
 
   onClickChangePage(index: number) {
