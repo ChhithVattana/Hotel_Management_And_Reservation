@@ -13,6 +13,9 @@ export class MenuPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClickDashboard(){
+    this.router.navigate(['admin/dashboard']);
+  }
   onClickAllRoom(){
     this.router.navigate(['admin/allrooms']);
   }

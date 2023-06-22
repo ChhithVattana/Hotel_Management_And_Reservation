@@ -57,6 +57,8 @@ import { AuthGaurdService } from './Service/AuthGaurd.service';
 import { ReservationPageComponent } from './ReservationPage/ReservationPage.component';
 import { AddReservationComponent } from './Admin/AddReservation/AddReservation.component';
 import { CustomNumberPipe } from './Pipe/custom-number.pipe';
+import { DashboardComponent } from './Admin/Dashboard/Dashboard.component';
+import { NgChartsModule } from 'ng2-charts';
 
 const appRoutes: Routes = [
   {
@@ -231,6 +233,10 @@ const appRoutes: Routes = [
     path: 'admin/delete',
     component: DeleteComponent,
   },
+  {
+    path:'admin/dashboard',
+    component: DashboardComponent,
+  }
 ];
 
 @NgModule({
@@ -279,6 +285,7 @@ const appRoutes: Routes = [
     SaveComponent,
     DeleteComponent,
     CustomNumberPipe,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -288,6 +295,7 @@ const appRoutes: Routes = [
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    NgChartsModule,
     NgxSkeletonLoaderModule,
     RouterModule.forRoot(appRoutes, {
       useHash: true,

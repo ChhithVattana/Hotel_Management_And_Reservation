@@ -1,0 +1,119 @@
+* {
+  /* outline: red dashed 1px; */
+}
+
+:host {
+  --all-rooms: linear-gradient(
+    260.68deg,
+    #d1e8fd -1.92%,
+    #9f30f6 -1.91%,
+    #61aeff 100%
+  );
+
+  --rooms-available: linear-gradient(270deg, #003ad2 0%, #0097ec 100%);
+  --service: linear-gradient(
+    270.23deg,
+    rgba(1, 149, 236, 0.3) 0.19%,
+    #0194eb 99.8%
+  );
+  --meeting-events: linear-gradient(269.97deg, #5900c9 0.02%, #9852f0 99.98%);
+}
+
+.allpage {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  margin: 0px;
+  background-color: #f5f5f5;
+  position: relative;
+}
+.size {
+  height: 90%;
+  width: 100%;
+}
+.scroll {
+  overflow-y: scroll;
+}
+.menu-size {
+  width: 240px;
+}
+.info-box {
+  height: 100px;
+  width: 100%;
+  box-shadow: 4px 4px 10px #b2b6d9;
+  border-radius: 12px;
+}
+.all-rooms {
+  background: var(--all-rooms);
+}
+.service {
+  background: var(--service);
+}
+.rooms-available {
+  background: var(--rooms-available);
+}
+.meeting-events {
+  background: var(--meeting-events);
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* dashboard */
+
+.activity {
+  height: 100%;
+  border-radius: 10px;
+  background-color: white;
+}
+.detail-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffe7e7 0%, #dbd6ff 100%);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.available {
+  background-color: #22b07d;
+}
+.available-text {
+  font-size: 14px;
+  color: #22b07d;
+}
+.not-available {
+  background-color: #f44336;
+}
+.not-available-text {
+  font-size: 14px;
+  color: #f44336;
+}
+.maintenance {
+  background-color: #ffba2f;
+}
+.maintenance-text {
+  font-size: 14px;
+  color: #ffba2f;
+}
+.grey {
+  color: #4c4c4c;
+}
+hr {
+  font-weight: 500;
+  opacity: 1;
+  color: #e9e9e9;
+  border-width: 2px;
+}
+
+/* chart */
+.chart-container {
+  height: 80%;
+  background-color: #fff;
+}
