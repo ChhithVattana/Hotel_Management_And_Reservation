@@ -3,13 +3,13 @@
     <div class="menu-size h-100 p-0">
       <app-MenuPage></app-MenuPage>
     </div>
-    <div class="col ms-2 h-100 p-0 scroll">
+    <div class="col ms-2 h-100 p-0">
       <div class="row p-0 m-0 w-100" style="height: 10%">
         <div class="border size rounded bg-white"></div>
       </div>
       <div class="row p-0 m-0 w-100" style="height: 87.7vh">
-        <div class="col-8 p-0 ps-2">
-          <div class="d-flex fs-32 fw-700 mb-2">Dashboard</div>
+        <div class="col-8 p-0 ps-2 d-flex flex-column justify-content-between">
+          <div class="d-flex fs-32 fw-700">Dashboard</div>
           <div class="d-flex">
             <div class="col p-0 pe-3">
               <div
@@ -84,10 +84,141 @@
               </div>
             </div>
           </div>
+
+          <div class="d-flex">
+            <div class="pie-chart-container">
+              <div class="fw-600 w-100 text-center">Overall Services</div>
+              <div style="height: 90%">
+                <canvas
+                  baseChart
+                  [type]="'pie'"
+                  [datasets]="pieChartDatasets"
+                  [labels]="pieChartLabels"
+                  [options]="pieChartOptions"
+                  [plugins]="pieChartPlugins"
+                  [legend]="pieChartLegend"
+                ></canvas>
+              </div>
+            </div>
+            <div class="line-chart-container col mx-3">
+              <div class="fw-600 w-100 text-center">Monthly Stats</div>
+              <div style="height: 90%">
+                <canvas
+                  baseChart
+                  [type]="'line'"
+                  [data]="lineChartData"
+                  [options]="lineChartOptions"
+                  [legend]="lineChartLegend"
+                >
+                </canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <div class="income-info-box col p-4 me-3">
+              <div class="d-flex col">
+                <div class="d-flex w-100 flex-column justify-content-between">
+                  <div class="fw-700 lh-1 mb-3" style="font-size: 20px">
+                    Meetings and Events
+                  </div>
+                  <div class="d-flex p-1 p-xxl-2 mb-2">
+                    <div class="lh-1 grey">Conference Rooms</div>
+                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                    <div class="col-4 d-flex h-100">
+                      <div class="dot mx-3 my-auto available"></div>
+                      <div class="lh-1 available-text">Available</div>
+                    </div>
+                  </div>
+                  <div class="d-flex p-1 p-xxl-2 mb-2">
+                    <div class="lh-1 grey">Luncheon</div>
+                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                    <div class="col-4 d-flex h-100">
+                      <div class="dot mx-3 my-auto available"></div>
+                      <div class="lh-1 available-text">Available</div>
+                    </div>
+                  </div>
+                  <div class="d-flex p-1 p-xxl-2 mb-2">
+                    <div class="lh-1 grey">Wedding Rooms</div>
+                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                    <div class="col-4 d-flex h-100">
+                      <div class="dot mx-3 my-auto available"></div>
+                      <div class="lh-1 available-text">Available</div>
+                    </div>
+                  </div>
+                  <div class="d-flex p-1 p-xxl-2 mb-2">
+                    <div class="lh-1 grey">Pool Party</div>
+                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                    <div class="col-4 d-flex h-100">
+                      <div class="dot mx-3 my-auto maintenance"></div>
+                      <div class="lh-1 maintenance-text">Maintenance</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="income-info-box col p-4 me-3">
+              <div class="d-flex col">
+                <div class="d-flex w-100 flex-column justify-content-between">
+                  <div class="fw-700 lh-1 mb-3" style="font-size: 20px">
+                    All Services
+                  </div>
+                  <div class="d-flex p-1 p-xxl-2">
+                    <div class="lh-1 grey">Swimming</div>
+                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                    <div class="col-4 d-flex h-100">
+                      <div class="dot mx-3 my-auto available"></div>
+                      <div class="lh-1 available-text">Available</div>
+                    </div>
+                  </div>
+                  <div class="d-flex p-1 p-xxl-2">
+                    <div class="lh-1 grey">Laundry</div>
+                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                    <div class="col-4 d-flex h-100">
+                      <div class="dot mx-3 my-auto available"></div>
+                      <div class="lh-1 available-text">Available</div>
+                    </div>
+                  </div>
+                  <div class="d-flex p-1 p-xxl-2">
+                    <div class="lh-1 grey">EDM</div>
+                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                    <div class="col-4 d-flex h-100">
+                      <div class="dot mx-3 my-auto available"></div>
+                      <div class="lh-1 available-text">Available</div>
+                    </div>
+                  </div>
+                  <div class="d-flex p-1 p-xxl-2">
+                    <div class="lh-1 grey">Restuarant</div>
+                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                    <div class="col-4 d-flex h-100">
+                      <div class="dot mx-3 my-auto maintenance"></div>
+                      <div class="lh-1 maintenance-text">Maintenance</div>
+                    </div>
+                  </div>
+                  <div class="d-flex p-1 p-xxl-2">
+                    <div class="lh-1 grey">Spa</div>
+                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                    <div class="col-4 d-flex h-100">
+                      <div class="dot mx-3 my-auto not-available"></div>
+                      <div class="lh-1 not-available-text">Not Available</div>
+                    </div>
+                  </div>
+                  <div class="d-flex p-1 p-xxl-2">
+                    <div class="lh-1 grey">Fitness Center</div>
+                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                    <div class="col-4 d-flex h-100">
+                      <div class="dot mx-3 my-auto available"></div>
+                      <div class="lh-1 available-text">Available</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-4 p-0">
-          <div class="activity d-flex flex-column justify-content-between p-4">
-            <div class="d-flex flex-column">
+        <div class="col-4 p-0 chart-col">
+          <div class="activity d-flex flex-column p-4">
+            <div class="d-flex flex-column mb-3">
               <div class="fw-700 lh-1 mb-3" style="font-size: 20px">
                 Today’s Activities
               </div>
@@ -130,8 +261,27 @@
                 </div>
               </div>
             </div>
-            <div class="d-flex col mt-3">
-              <div class="d-flex w-100 flex-column">
+
+            <div class="d-flex col mb-3">
+              <div class="d-flex w-100 flex-column justify-content-between">
+                <div class="fw-700 lh-1 mb-3" style="font-size: 20px">
+                  Weekly Stats
+                </div>
+                <div class="chart-container">
+                  <canvas
+                    baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [type]="'bar'"
+                  ></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex col">
+              <div class="d-flex w-100 flex-column justify-content-between">
                 <div class="fw-700 lh-1 mb-3" style="font-size: 20px">
                   All Services
                 </div>
@@ -182,23 +332,6 @@
                     <div class="dot mx-3 my-auto available"></div>
                     <div class="lh-1 available-text">Available</div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex col">
-              <div class="d-flex w-100 flex-column justify-content-between">
-                <div class="fw-700 lh-1 mb-3" style="font-size: 20px">
-                  Weekly Stats
-                </div>
-                <div class="chart-container">
-                  <canvas
-                    baseChart
-                    [datasets]="barChartData"
-                    [labels]="barChartLabels"
-                    [options]="barChartOptions"
-                    [legend]="barChartLegend"
-                    [type]="'bar'"
-                  ></canvas>
                 </div>
               </div>
             </div>
