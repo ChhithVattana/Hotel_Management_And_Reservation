@@ -131,9 +131,17 @@ a {
   transform: translate(-50%, 50%);
   opacity: 1;
 }
-
+.fs{
+  font-size: 24px !important;
+}
 @media screen and (max-width: 576px) {
   hr {
     display: none;
+  }
+  .fs{
+    font-size: 18px;
+  }
+  .mb-0{
+    margin-top: 10px;
   }
 }
