@@ -114,7 +114,7 @@ a {
   background-size: cover;
   background-position-y: 30%;
   background-repeat: no-repeat;
-  background-image: url("../../assets/resources/service/ser6.jpg");
+  background-image: url("../../assets/resources/service/ser6.jpg") !important;
 }
 
 img {

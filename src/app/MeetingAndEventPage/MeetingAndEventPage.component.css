@@ -6,7 +6,7 @@
       rgba(0, 0, 0, 0.2) 100%,
       transparent 70%
     ),
-    url("../../assets/resources/conference/head_meet.jpg");
+    url("../../assets/resources/conference/head_meet.jpg") !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 40%;
@@ -31,7 +31,7 @@
       rgba(0, 0, 0, 0.2) 100%,
       transparent 70%
     ),
-    url("https://s3-alpha-sig.figma.com/img/7dd1/0d31/484be8f8964861fe490801af36350bf5?Expires=1679270400&Signature=Kshxs-HBAwQ9Lq3~wMGr3r95ZLCRM3fpbVhsWkzD~hHdBreTAxUnEo9~ic0oU6sDP81Hmryj1AZDOyZ3z5uH0Zvxx9sgHa44HrVXak-sbs2SHjSbUTGiFJ18AvE13iOUv5HW5rTbC0gFV54orTFFLFKJzS~6fKGMFhBJPtcaCatlrJEWiyWkOivnNPX4KQRqElooHoSAu4qSRS8tebWoqdxjThVlHsVHhlu1edZpUG7s84ALhOI~CzwvWERt6qs~yDlqbtcBJJTOFp4CyWcc504odgv1EupcXK3KB66yWPYH7VeRYCTifeF1jx1u90EWGMEJZSpLDroK7Gk2WooHRQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    url("https://s3-alpha-sig.figma.com/img/5d2f/ec45/eccda3f82c0a9a60eb6ebea1fd3ca355?Expires=1688947200&Signature=i~ba3~KP4OegrY3aTWEkouK6TF1wGrL1ZQacFbdEC7x4CgkC8wWcbdN39hTxRK9DWBXDQc5EVsGiC9~0kGoLIGOIlhMwB1dfd~DB8ElLxrwm6b8yOFbpVc1FbysBxstMLwCSiDDgPQUpubJFXjI1wMYUxYX3D6k3D1hznylNkotuNug91Nzj1mmBQvXANwqLohF83VWAX6L6NDQpbOb~lu2YXTXfLdAFr3f90QJS6RM2n4IYf3~CUiWMmbLvQNH2EdiBJhRNCKGHBNZGV8Qn4l9oKUAwla1VCKWk~bwaXmkxFVFFYGJ8zO6xgTv7H1sk9kjz8UhhPBFGhxcl2SztXQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 100%;
@@ -55,7 +55,7 @@
         rgba(0, 0, 0, 0.2) 100%,
         transparent 70%
       ),
-      url("https://s3-alpha-sig.figma.com/img/8494/5f61/63130f99bbc637eae74b07ff5c6d5224?Expires=1679270400&Signature=gd1w59FxhvKUyyyG4CEp~hloOPd0unJTkrhHqAqNT2l-QYufcXfv~gZ6yl8l4fRj2ublQLoEDVXo-ERrqKgMqh12Y-Y7RnVUmCRfaStqxinD3JFfe3nnu~8mb8SopKA4CnNy1HPHS8O5bHC-Iqa9bJb4QcUIQrBV~FyE6DsPXKa9wjucQvY70VuEjQzlb3Nu19L9Vgh7DfD7F3uMqm1iW9gWsNE9YT0BvnSEyPj2NBCoou7KtDtbNq5hXuBCm0YSVU~PC40~jrXHfWq1lnQPGFrUQXRG0zvzxJJMCbMObdmkpLAChttY2H8vz~L3H4hj6IoFwHmimJQd~bF0IWxhPQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+      url("../../assets/resources/conference/head_meet.jpg") !important;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 40%;
