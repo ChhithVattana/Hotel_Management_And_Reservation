@@ -17,7 +17,7 @@ export class MeetingAndEventPageComponent implements OnInit {
       guest: '100 people',
       location: 'Floor 5',
       size: '1000sqm',
-      img: 'https://s3-alpha-sig.figma.com/img/5d2f/ec45/eccda3f82c0a9a60eb6ebea1fd3ca355?Expires=1688947200&Signature=i~ba3~KP4OegrY3aTWEkouK6TF1wGrL1ZQacFbdEC7x4CgkC8wWcbdN39hTxRK9DWBXDQc5EVsGiC9~0kGoLIGOIlhMwB1dfd~DB8ElLxrwm6b8yOFbpVc1FbysBxstMLwCSiDDgPQUpubJFXjI1wMYUxYX3D6k3D1hznylNkotuNug91Nzj1mmBQvXANwqLohF83VWAX6L6NDQpbOb~lu2YXTXfLdAFr3f90QJS6RM2n4IYf3~CUiWMmbLvQNH2EdiBJhRNCKGHBNZGV8Qn4l9oKUAwla1VCKWk~bwaXmkxFVFFYGJ8zO6xgTv7H1sk9kjz8UhhPBFGhxcl2SztXQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+      img: 'https://i.pinimg.com/736x/03/52/d0/0352d0c81ed7ee30fe25a4f254b039f1--parlament-classroom-setup.jpg',
     },
     {
       name: 'LUNCHEON',
@@ -25,7 +25,7 @@ export class MeetingAndEventPageComponent implements OnInit {
       guest: '100 people',
       location: 'Ground Floor',
       size: '500sqm',
-      img: 'https://s3-alpha-sig.figma.com/img/7dd1/0d31/484be8f8964861fe490801af36350bf5?Expires=1688947200&Signature=LvSVaap2UFdV4YKtizTtDbckOknd4pK1nHiuehpMq-~EDiwScM2ed8AVnxdUpKcRYCwaIEKlDF7Ob-QQCXNmwv-rcd4qqj9ez7OV82LUGVpDqOvNt5I1LdPcN6cHDfTXbUzc7jOj~lt86ZlAfisDF8fS8O0JfbymvlcoTbAbyFSEOuezQWdTjFA9oXVqTEFTFdiy8fwNmWlUwruUpDpKGdM1aUQlpSpIPMsNKiZPz8OOmuS66DmeNZs-7OqmGuNHiTzwhS4Zn0vvH6jeP5MnqGRgzGEb7BMQ69cjdR3zjDmxgVJoudXiMTgH40akjXAtdozH6xcVrb1~96woCqT2-A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+      img: 'https://s3-alpha-sig.figma.com/img/4fab/c38d/46ba2155fb3528382183cd5d5b2ca57c?Expires=1688947200&Signature=kJBWIny0e1nQs5Pc96SmdTqrP2i~hIsRXVKiGfkyJyYg3OTYk6NU-IhTDCDhkpo~UjTrPmNQB6yDTex0lWmBFscnEB6U4CQivLbIkKrib6o2C9d9wkjumCcPkW1GDN7yDkg8saNK4P5gGXePyBhW60aIXVC4YN7QxLLDf6pmuszTxf~youQvdhW0q0fw4ytERi3duaer1Z6dG65yLePg6oiXqxiAeL2VLdGLWZsq2-f-NO-ZIgbY~uyqsKbnwkgrunZWEBDoiK1k~jl4izEL-DDEyiX4QCxEl4ijzyjyjPTZQy0C4R~CMzO~HREktSOVD7e-XELfO5VzU9icR8c20w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
     },
     {
       name: 'WEDDING ROOM',
@@ -33,7 +33,7 @@ export class MeetingAndEventPageComponent implements OnInit {
       guest: '200 people',
       location: 'Out Door',
       size: '1500sqm',
-      img: 'https://s3-alpha-sig.figma.com/img/c1cd/3782/f2ea02cc7e186dfcb1ebf7ca7822e82c?Expires=1688947200&Signature=epZJKrVE7Exi7aXx1mR08DRS7uvvzhO-ytysXfKhaQPnMm7PB-Op5~qtoTzCwbHSbyCyHuZOzZM4B-d9eDJlrnSI8r-B993LzInFp3FcU5o5JMkVlZbJ5UxbILDhp-2gQJkLFexNMNNWZiuuQxtWcQOuJ9W98aohd0iJ3f6hXQWk6KVh-ehX2eYlnxuUKuT0nrkGk6K7J~BeTZmRg4hY1TDUADJGeHuP4LaXPa5DUY2tNeclyyRqD2UDsTVchsZrZXoNmM1MN3NU31xcUhBI7W~hiOARB8fLuwAdw8MRM8jZE5xc3-LzahGi3FQhEPSoyyuzsZVkUTYpBnspKrAArw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+      img: 'https://s3-alpha-sig.figma.com/img/2371/0589/c2a237777cfcbace68d81c3b17ada6f7?Expires=1688947200&Signature=Zj~tfjSQIzwaf27pleMpNMT5GC6gpiQ39TPMr9OfYuaH1leC6sI2xQXxn1RqKzPfOBLz-xOeyM6YaBLKJFJeHIwH0He5N6i0Kd44hme1iUMgpMPXUUwIkcOHVOIOdN8bfKjNPyznAFNcH8ZTOk~AY~ZU52MZyzwZ14orDNDI4fChmt~ZGf56SB7Y50IMX8AQ9ITfmGJSpDTGoA91zcYcLwLrBWLQjWTA10mQ4FL2UGyxYI3~txmb7ck7whPStUJUa8pwPk6fzebc9IZOGieGFCRd1iHtVqSLpI2o0k6t9s3XGipMepT-tn7tgQw2ZaDxDjn5fuYa0Vhj3KGl1LjsBg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
     },
     {
       name: 'POOL PARTY ',
@@ -41,7 +41,7 @@ export class MeetingAndEventPageComponent implements OnInit {
       guest: '50 people',
       location: 'Top Floor',
       size: '400sqm',
-      img: 'https://s3-alpha-sig.figma.com/img/7dd1/0d31/484be8f8964861fe490801af36350bf5?Expires=1688947200&Signature=LvSVaap2UFdV4YKtizTtDbckOknd4pK1nHiuehpMq-~EDiwScM2ed8AVnxdUpKcRYCwaIEKlDF7Ob-QQCXNmwv-rcd4qqj9ez7OV82LUGVpDqOvNt5I1LdPcN6cHDfTXbUzc7jOj~lt86ZlAfisDF8fS8O0JfbymvlcoTbAbyFSEOuezQWdTjFA9oXVqTEFTFdiy8fwNmWlUwruUpDpKGdM1aUQlpSpIPMsNKiZPz8OOmuS66DmeNZs-7OqmGuNHiTzwhS4Zn0vvH6jeP5MnqGRgzGEb7BMQ69cjdR3zjDmxgVJoudXiMTgH40akjXAtdozH6xcVrb1~96woCqT2-A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+      img: 'https://s3-alpha-sig.figma.com/img/fc3f/701e/550ee3f6b45778887b1f853b54d300db?Expires=1688947200&Signature=C~-YBytOyejeaii0qv8S9xAX4GvDvi7HnHVElmwrSh3yI0dRZfRn5zbT90Mubjs54LvuD82mCRGjhZUcG0nH8hSUabcuQRCV2VDOBeS8i9-nh7Hx~K1PjSRGJHA0lG~INZLuSRlJ5GjAMZdB5SKRCjsqw32rTmue~eyd8ZqT083dMq8OE2PPSfP7kraZs5MdHdY9jFGHA-ZWYI~MLCwqe1H01wM-liAOzUm~W3jXLd-zE4670VV1UADmFaiZpdfc69mJEHXsOqch84p-jAGgb4ohmuC~pe~IvNuztVlIQ0qh1rpqLMw4uNUl4ER5sHm3XUpxtFNWHhPr3JNL2oHkBQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
     },
   ];
 
