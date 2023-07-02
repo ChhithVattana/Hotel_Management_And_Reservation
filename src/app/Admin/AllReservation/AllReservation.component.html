@@ -40,7 +40,15 @@
                 <th>Stay Duration</th>
               </tr>
               <ng-container *ngIf="!isLoading">
-                <!-- table here -->
+                <tr *ngFor="let item of response.result; let no = index">
+                  <td>{{ no + 1 }}</td>
+                  <td>{{ item.customerId.name }}</td>
+                  <td>{{ item.customerId.phone }}</td>
+                  <td>{{ item.customerId.name }}</td>
+                  <td>{{ item.reservation[0].checkInOn }}</td>
+                  <td>{{ item.reservation[0].checkOutOn  }}</td>
+                  <td>{{ item.reservation[0].stayDuration  }}</td>
+                </tr>
               </ng-container>
               <ng-container *ngIf="isLoading">
                 <tr *ngFor="let item of [].constructor(10)">

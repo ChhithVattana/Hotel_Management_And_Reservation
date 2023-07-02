@@ -5,6 +5,7 @@ export class TransactionModel {
   constructor(
     public id: number,
     public reservation: ReservationModel[],
-    public customerId: CustomerModel
+    public customerId: CustomerModel,
+    public date: Date
   ) {}
 }

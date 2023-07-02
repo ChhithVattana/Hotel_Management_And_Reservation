@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { RoomModel } from '../Model/RoomModel';
 import { RoomServicesService } from '../Service/RoomServices.service';
 import { ReservationService } from '../Service/Reservation.service';
@@ -19,6 +19,8 @@ import { AuthGaurdService } from '../Service/AuthGaurd.service';
   styleUrls: ['./ReservationPage.component.css'],
 })
 export class ReservationPageComponent implements OnInit {
+  @ViewChild('input_info', { static: false }) scrollTarget!: ElementRef;
+
   roomData: RoomTypeModel[] = [];
   available: RoomModel[] = [];
   data: RoomModel[] = [];
@@ -26,6 +28,11 @@ export class ReservationPageComponent implements OnInit {
   form: FormGroup;
   check: boolean = false;
   isLoading: boolean = true;
+  ordering: boolean = false;
+  tmp: any = {};
+  getCheckInData: any = {};
+  getCheckOutData: any = {};
+  getGuestData: any = {};
 
   constructor(
     private _roomData: RoomServicesService,
@@ -48,15 +55,19 @@ export class ReservationPageComponent implements OnInit {
     this.authGuard.canActivate();
     this.roomData = await this._roomData.getAllRoom();
     this.route.queryParams.subscribe((params) => {
-      const dateIn = params['checkInOn'];
-      const dateOut = params['checkOutOn'];
-      const capacity = params['adults'];
+      this.getCheckInData = params['checkInOn'];
+      this.getCheckOutData = params['checkOutOn'];
+      this.getGuestData = params['adults'];
       this.noRoom = params['rooms'];
-      this.availableRoomData(dateIn, dateOut, capacity);
+      this.availableRoomData(
+        this.getCheckInData,
+        this.getCheckOutData,
+        this.getGuestData
+      );
       this.form.patchValue({
-        date: dateIn,
-        date1: dateOut,
-        adults: capacity,
+        date: this.getCheckInData,
+        date1: this.getCheckOutData,
+        adults: this.getGuestData,
         rooms: this.noRoom,
       });
     });
@@ -64,7 +75,9 @@ export class ReservationPageComponent implements OnInit {
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     };
-    this.isLoading = false;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1000);
   }
 
   async availableRoomData(dateIn: Date, dateOut: Date, capacity: number) {
@@ -144,9 +157,17 @@ export class ReservationPageComponent implements OnInit {
     }
 
     // Truncate to the nearest sentence within maxLength
-    const truncatedText = text.slice(0, maxLength).replace(/([^.?!])\s+[a-zA-Z0-9]*$/, "$1...");
+    const truncatedText = text
+      .slice(0, maxLength)
+      .replace(/([^.?!])\s+[a-zA-Z0-9]*$/, '$1...');
 
     return truncatedText;
   }
 
+  onClickBook(room: any) {
+    this.ordering = true;
+    this.tmp = room;
+    const element = document.getElementById('input_info');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  }
 }

@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -234,9 +236,9 @@ const appRoutes: Routes = [
     component: DeleteComponent,
   },
   {
-    path:'admin/dashboard',
+    path: 'admin/dashboard',
     component: DashboardComponent,
-  }
+  },
 ];
 
 @NgModule({
@@ -293,7 +295,9 @@ const appRoutes: Routes = [
     HttpClientModule,
     AppRoutingModule,
     MaterialModule,
+    MatFormFieldModule,
     FormsModule,
+    MatSelectModule,
     ReactiveFormsModule,
     NgChartsModule,
     NgxSkeletonLoaderModule,

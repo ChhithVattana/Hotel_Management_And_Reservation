@@ -37,6 +37,7 @@ export class ReservationService {
           this.availableRoomType.push(r);
         });
       });
+      console.log(this.availableRoomType)
     return this.availableRoomType;
   }
 }

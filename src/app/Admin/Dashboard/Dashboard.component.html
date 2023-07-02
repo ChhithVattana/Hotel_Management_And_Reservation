@@ -10,211 +10,295 @@
       <div class="row p-0 m-0 w-100" style="height: 87.7vh">
         <div class="col-8 p-0 ps-2 d-flex flex-column justify-content-between">
           <div class="d-flex fs-32 fw-700">Dashboard</div>
-          <div class="d-flex">
-            <div class="col p-0 pe-3">
-              <div
-                class="info-box py-2 px-3 all-rooms d-flex justify-content-between flex-column"
-              >
-                <div class="d-flex justify-content-between">
-                  <div class="text-white position-relative my-auto fw-600">
-                    All Rooms
-                  </div>
-                  <div class="icon"></div>
-                </div>
-                <div class="d-flex">
-                  <div class="text-white fs-32 lh-1 fw-300">50</div>
-                </div>
-                <div class="d-flex">
-                  <div class="text-white lh-sm fw-300">Rooms</div>
-                </div>
-              </div>
-            </div>
-            <div class="col p-0 pe-3">
-              <div
-                class="info-box py-2 px-3 rooms-available d-flex justify-content-between flex-column"
-              >
-                <div class="d-flex justify-content-between">
-                  <div class="text-white position-relative my-auto fw-600">
-                    Rooms Available
-                  </div>
-                  <div class="icon"></div>
-                </div>
-                <div class="d-flex">
-                  <div class="text-white fs-32 lh-1 fw-300">32</div>
-                </div>
-                <div class="d-flex">
-                  <div class="text-white lh-sm fw-300">Rooms</div>
-                </div>
-              </div>
-            </div>
-            <div class="col p-0 pe-3">
-              <div
-                class="info-box py-2 px-3 service d-flex justify-content-between flex-column"
-              >
-                <div class="d-flex justify-content-between">
-                  <div class="text-white position-relative my-auto fw-600">
-                    Services
-                  </div>
-                  <div class="icon"></div>
-                </div>
-                <div class="d-flex">
-                  <div class="text-white fs-32 lh-1 fw-300">8</div>
-                </div>
-                <div class="d-flex">
-                  <div class="text-white lh-sm fw-300">Rooms</div>
-                </div>
-              </div>
-            </div>
-            <div class="col p-0 pe-3">
-              <div
-                class="info-box py-2 px-3 meeting-events d-flex justify-content-between flex-column"
-              >
-                <div class="d-flex justify-content-between">
-                  <div class="text-white position-relative my-auto fw-600">
-                    Meeting Room
-                  </div>
-                  <div class="icon"></div>
-                </div>
-                <div class="d-flex">
-                  <div class="text-white fs-32 lh-1 fw-300">4</div>
-                </div>
-                <div class="d-flex">
-                  <div class="text-white lh-sm fw-300">Rooms</div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="d-flex">
-            <div class="pie-chart-container">
-              <div class="fw-600 w-100 text-center">Overall Services</div>
-              <div style="height: 90%">
-                <canvas
-                  baseChart
-                  [type]="'pie'"
-                  [datasets]="pieChartDatasets"
-                  [labels]="pieChartLabels"
-                  [options]="pieChartOptions"
-                  [plugins]="pieChartPlugins"
-                  [legend]="pieChartLegend"
-                ></canvas>
+          <!-- Is Loading -->
+          <ng-container *ngIf="isLoading">
+            <div class="d-flex">
+              <div *ngFor="let item of [].constructor(4)" class="col p-0 pe-3">
+                <ngx-skeleton-loader
+                  [theme]="{
+                    margin: '0px',
+                    width: '100%',
+                    height: '100px',
+                    position: 'relative',
+                    display: 'flex',
+                    background: '#f0f0f0',
+                    'box-shadow': '2px 2px 10px #4c4c4c39'
+                  }"
+                  animation="progress"
+                ></ngx-skeleton-loader>
               </div>
             </div>
-            <div class="line-chart-container col mx-3">
-              <div class="fw-600 w-100 text-center">Monthly Stats</div>
-              <div style="height: 90%">
-                <canvas
-                  baseChart
-                  [type]="'line'"
-                  [data]="lineChartData"
-                  [options]="lineChartOptions"
-                  [legend]="lineChartLegend"
+          </ng-container>
+
+          <!-- Is Loading Success-->
+          <ng-container *ngIf="!isLoading">
+            <div class="d-flex">
+              <div class="col p-0 pe-3">
+                <div
+                  class="info-box py-2 px-3 all-rooms d-flex justify-content-between flex-column"
                 >
-                </canvas>
+                  <div class="d-flex justify-content-between">
+                    <div class="text-white position-relative my-auto fw-600">
+                      All Rooms
+                    </div>
+                    <div class="icon"></div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="text-white fs-32 lh-1 fw-300">50</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="text-white lh-sm fw-300">Rooms</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col p-0 pe-3">
+                <div
+                  class="info-box py-2 px-3 rooms-available d-flex justify-content-between flex-column"
+                >
+                  <div class="d-flex justify-content-between">
+                    <div class="text-white position-relative my-auto fw-600">
+                      Rooms Available
+                    </div>
+                    <div class="icon"></div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="text-white fs-32 lh-1 fw-300">32</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="text-white lh-sm fw-300">Rooms</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col p-0 pe-3">
+                <div
+                  class="info-box py-2 px-3 service d-flex justify-content-between flex-column"
+                >
+                  <div class="d-flex justify-content-between">
+                    <div class="text-white position-relative my-auto fw-600">
+                      Services
+                    </div>
+                    <div class="icon"></div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="text-white fs-32 lh-1 fw-300">8</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="text-white lh-sm fw-300">Rooms</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col p-0 pe-3">
+                <div
+                  class="info-box py-2 px-3 meeting-events d-flex justify-content-between flex-column"
+                >
+                  <div class="d-flex justify-content-between">
+                    <div class="text-white position-relative my-auto fw-600">
+                      Meeting Room
+                    </div>
+                    <div class="icon"></div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="text-white fs-32 lh-1 fw-300">4</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="text-white lh-sm fw-300">Rooms</div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </ng-container>
 
-          <div class="d-flex">
-            <div class="income-info-box col p-4 me-3">
-              <div class="d-flex col">
-                <div class="d-flex w-100 flex-column justify-content-between">
-                  <div class="fw-700 lh-1 mb-3" style="font-size: 20px">
-                    Meetings and Events
-                  </div>
-                  <div class="d-flex p-1 p-xxl-2 mb-2">
-                    <div class="lh-1 grey">Conference Rooms</div>
-                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
-                    <div class="col-4 d-flex h-100">
-                      <div class="dot mx-3 my-auto available"></div>
-                      <div class="lh-1 available-text">Available</div>
+          <!-- Is Loading -->
+          <ng-container *ngIf="isLoading">
+            <div class="d-flex">
+              <div class="col-4 p-0 pe-3">
+                <ngx-skeleton-loader
+                  [theme]="{
+                    margin: '0px',
+                    width: '100%',
+                    height: '280px',
+                    position: 'relative',
+                    display: 'flex',
+                    background: '#f0f0f0',
+                    'box-shadow': '2px 2px 10px #4c4c4c39'
+                  }"
+                  animation="progress"
+                ></ngx-skeleton-loader>
+              </div>
+              <div class="col-8 p-0 pe-3">
+                <ngx-skeleton-loader
+                  [theme]="{
+                    margin: '0px',
+                    width: '100%',
+                    height: '280px',
+                    position: 'relative',
+                    display: 'flex',
+                    background: '#f0f0f0',
+                    'box-shadow': '2px 2px 10px #4c4c4c39'
+                  }"
+                  animation="progress"
+                ></ngx-skeleton-loader>
+              </div>
+            </div>
+          </ng-container>
+
+          <!-- Loading Completed -->
+          <ng-container *ngIf="!isLoading">
+            <div class="d-flex">
+              <div class="pie-chart-container">
+                <div class="fw-600 w-100 text-center">Overall Services</div>
+                <div style="height: 90%">
+                  <canvas
+                    baseChart
+                    [type]="'pie'"
+                    [datasets]="pieChartDatasets"
+                    [labels]="pieChartLabels"
+                    [options]="pieChartOptions"
+                    [plugins]="pieChartPlugins"
+                    [legend]="pieChartLegend"
+                  ></canvas>
+                </div>
+              </div>
+              <div class="line-chart-container col mx-3">
+                <div class="fw-600 w-100 text-center">Monthly Stats</div>
+                <div style="height: 90%">
+                  <canvas
+                    baseChart
+                    [type]="'line'"
+                    [data]="lineChartData"
+                    [options]="lineChartOptions"
+                    [legend]="lineChartLegend"
+                  >
+                  </canvas>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+
+          <!-- Is Loading -->
+          <ng-container *ngIf="isLoading">
+            <div class="d-flex">
+              <div *ngFor="let item of [].constructor(2)" class="col me-3">
+                <ngx-skeleton-loader
+                  [theme]="{
+                    margin: '0px',
+                    width: '100%',
+                    height: '280px',
+                    position: 'relative',
+                    display: 'flex',
+                    background: '#f0f0f0',
+                    'box-shadow': '2px 2px 10px #4c4c4c39'
+                  }"
+                  animation="progress"
+                ></ngx-skeleton-loader>
+              </div>
+            </div>
+          </ng-container>
+
+          <!-- Loading Completed -->
+          <ng-container *ngIf="!isLoading">
+            <div class="d-flex">
+              <div class="income-info-box col p-4 me-3">
+                <div class="d-flex col">
+                  <div class="d-flex w-100 flex-column justify-content-between">
+                    <div class="fw-700 lh-1 mb-3" style="font-size: 20px">
+                      Meetings and Events
+                    </div>
+                    <div class="d-flex p-1 p-xxl-2 mb-2">
+                      <div class="lh-1 grey">Conference Rooms</div>
+                      <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                      <div class="col-4 d-flex h-100">
+                        <div class="dot mx-3 my-auto available"></div>
+                        <div class="lh-1 available-text">Available</div>
+                      </div>
+                    </div>
+                    <div class="d-flex p-1 p-xxl-2 mb-2">
+                      <div class="lh-1 grey">Luncheon</div>
+                      <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                      <div class="col-4 d-flex h-100">
+                        <div class="dot mx-3 my-auto available"></div>
+                        <div class="lh-1 available-text">Available</div>
+                      </div>
+                    </div>
+                    <div class="d-flex p-1 p-xxl-2 mb-2">
+                      <div class="lh-1 grey">Wedding Rooms</div>
+                      <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                      <div class="col-4 d-flex h-100">
+                        <div class="dot mx-3 my-auto available"></div>
+                        <div class="lh-1 available-text">Available</div>
+                      </div>
+                    </div>
+                    <div class="d-flex p-1 p-xxl-2 mb-2">
+                      <div class="lh-1 grey">Pool Party</div>
+                      <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                      <div class="col-4 d-flex h-100">
+                        <div class="dot mx-3 my-auto maintenance"></div>
+                        <div class="lh-1 maintenance-text">Maintenance</div>
+                      </div>
                     </div>
                   </div>
-                  <div class="d-flex p-1 p-xxl-2 mb-2">
-                    <div class="lh-1 grey">Luncheon</div>
-                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
-                    <div class="col-4 d-flex h-100">
-                      <div class="dot mx-3 my-auto available"></div>
-                      <div class="lh-1 available-text">Available</div>
+                </div>
+              </div>
+              <div class="income-info-box col p-4 me-3">
+                <div class="d-flex col">
+                  <div class="d-flex w-100 flex-column justify-content-between">
+                    <div class="fw-700 lh-1 mb-3" style="font-size: 20px">
+                      All Services
                     </div>
-                  </div>
-                  <div class="d-flex p-1 p-xxl-2 mb-2">
-                    <div class="lh-1 grey">Wedding Rooms</div>
-                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
-                    <div class="col-4 d-flex h-100">
-                      <div class="dot mx-3 my-auto available"></div>
-                      <div class="lh-1 available-text">Available</div>
+                    <div class="d-flex p-1 p-xxl-2">
+                      <div class="lh-1 grey">Swimming</div>
+                      <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                      <div class="col-4 d-flex h-100">
+                        <div class="dot mx-3 my-auto available"></div>
+                        <div class="lh-1 available-text">Available</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="d-flex p-1 p-xxl-2 mb-2">
-                    <div class="lh-1 grey">Pool Party</div>
-                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
-                    <div class="col-4 d-flex h-100">
-                      <div class="dot mx-3 my-auto maintenance"></div>
-                      <div class="lh-1 maintenance-text">Maintenance</div>
+                    <div class="d-flex p-1 p-xxl-2">
+                      <div class="lh-1 grey">Laundry</div>
+                      <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                      <div class="col-4 d-flex h-100">
+                        <div class="dot mx-3 my-auto available"></div>
+                        <div class="lh-1 available-text">Available</div>
+                      </div>
+                    </div>
+                    <div class="d-flex p-1 p-xxl-2">
+                      <div class="lh-1 grey">EDM</div>
+                      <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                      <div class="col-4 d-flex h-100">
+                        <div class="dot mx-3 my-auto available"></div>
+                        <div class="lh-1 available-text">Available</div>
+                      </div>
+                    </div>
+                    <div class="d-flex p-1 p-xxl-2">
+                      <div class="lh-1 grey">Restuarant</div>
+                      <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                      <div class="col-4 d-flex h-100">
+                        <div class="dot mx-3 my-auto maintenance"></div>
+                        <div class="lh-1 maintenance-text">Maintenance</div>
+                      </div>
+                    </div>
+                    <div class="d-flex p-1 p-xxl-2">
+                      <div class="lh-1 grey">Spa</div>
+                      <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                      <div class="col-4 d-flex h-100">
+                        <div class="dot mx-3 my-auto not-available"></div>
+                        <div class="lh-1 not-available-text">Not Available</div>
+                      </div>
+                    </div>
+                    <div class="d-flex p-1 p-xxl-2">
+                      <div class="lh-1 grey">Fitness Center</div>
+                      <div class="col my-auto"><hr class="my-1 ms-5" /></div>
+                      <div class="col-4 d-flex h-100">
+                        <div class="dot mx-3 my-auto available"></div>
+                        <div class="lh-1 available-text">Available</div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="income-info-box col p-4 me-3">
-              <div class="d-flex col">
-                <div class="d-flex w-100 flex-column justify-content-between">
-                  <div class="fw-700 lh-1 mb-3" style="font-size: 20px">
-                    All Services
-                  </div>
-                  <div class="d-flex p-1 p-xxl-2">
-                    <div class="lh-1 grey">Swimming</div>
-                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
-                    <div class="col-4 d-flex h-100">
-                      <div class="dot mx-3 my-auto available"></div>
-                      <div class="lh-1 available-text">Available</div>
-                    </div>
-                  </div>
-                  <div class="d-flex p-1 p-xxl-2">
-                    <div class="lh-1 grey">Laundry</div>
-                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
-                    <div class="col-4 d-flex h-100">
-                      <div class="dot mx-3 my-auto available"></div>
-                      <div class="lh-1 available-text">Available</div>
-                    </div>
-                  </div>
-                  <div class="d-flex p-1 p-xxl-2">
-                    <div class="lh-1 grey">EDM</div>
-                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
-                    <div class="col-4 d-flex h-100">
-                      <div class="dot mx-3 my-auto available"></div>
-                      <div class="lh-1 available-text">Available</div>
-                    </div>
-                  </div>
-                  <div class="d-flex p-1 p-xxl-2">
-                    <div class="lh-1 grey">Restuarant</div>
-                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
-                    <div class="col-4 d-flex h-100">
-                      <div class="dot mx-3 my-auto maintenance"></div>
-                      <div class="lh-1 maintenance-text">Maintenance</div>
-                    </div>
-                  </div>
-                  <div class="d-flex p-1 p-xxl-2">
-                    <div class="lh-1 grey">Spa</div>
-                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
-                    <div class="col-4 d-flex h-100">
-                      <div class="dot mx-3 my-auto not-available"></div>
-                      <div class="lh-1 not-available-text">Not Available</div>
-                    </div>
-                  </div>
-                  <div class="d-flex p-1 p-xxl-2">
-                    <div class="lh-1 grey">Fitness Center</div>
-                    <div class="col my-auto"><hr class="my-1 ms-5" /></div>
-                    <div class="col-4 d-flex h-100">
-                      <div class="dot mx-3 my-auto available"></div>
-                      <div class="lh-1 available-text">Available</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </ng-container>
         </div>
         <div class="col-4 p-0 chart-col">
           <div class="activity d-flex flex-column p-4">
@@ -222,44 +306,79 @@
               <div class="fw-700 lh-1 mb-3" style="font-size: 20px">
                 Today’s Activities
               </div>
-              <div class="d-flex col mx-5">
-                <div class="d-flex col flex-column">
-                  <div class="w-100">
-                    <div class="detail-box mx-auto">
-                      <div class="w-100 h-100 d-flex">
-                        <div class="m-auto fw-700 lh-1" style="font-size: 20px">
-                          5
-                        </div>
-                      </div>
-                    </div>
-                    <div class="my-2 text-center">Booked</div>
+
+              <!-- Is Loading -->
+              <ng-container *ngIf="isLoading">
+                <div class="d-flex px-5">
+                  <div
+                    *ngFor="let item of [].constructor(3)"
+                    class="col d-flex justify-content-center"
+                  >
+                    <ngx-skeleton-loader
+                      appearance="circle"
+                      [theme]="{
+                        margin: '0px',
+                        width: '60px',
+                        height: '60px',
+                        position: 'relative',
+                        background: '#f0f0f0'
+                      }"
+                      animation="progress"
+                    ></ngx-skeleton-loader>
                   </div>
                 </div>
-                <div class="d-flex col flex-column">
-                  <div class="w-100">
-                    <div class="detail-box mx-auto">
-                      <div class="w-100 h-100 d-flex">
-                        <div class="m-auto fw-700 lh-1" style="font-size: 20px">
-                          22
+              </ng-container>
+
+              <!-- Loading Completed -->
+              <ng-container *ngIf="!isLoading">
+                <div class="d-flex col mx-5">
+                  <div class="d-flex col flex-column">
+                    <div class="w-100">
+                      <div class="detail-box mx-auto">
+                        <div class="w-100 h-100 d-flex">
+                          <div
+                            class="m-auto fw-700 lh-1"
+                            style="font-size: 20px"
+                          >
+                            5
+                          </div>
                         </div>
                       </div>
+                      <div class="my-2 text-center">Booked</div>
                     </div>
-                    <div class="my-2 text-center">Guest</div>
                   </div>
-                </div>
-                <div class="d-flex col flex-column">
-                  <div class="w-100">
-                    <div class="detail-box mx-auto">
-                      <div class="w-100 h-100 d-flex">
-                        <div class="m-auto fw-700 lh-1" style="font-size: 20px">
-                          1k
+                  <div class="d-flex col flex-column">
+                    <div class="w-100">
+                      <div class="detail-box mx-auto">
+                        <div class="w-100 h-100 d-flex">
+                          <div
+                            class="m-auto fw-700 lh-1"
+                            style="font-size: 20px"
+                          >
+                            22
+                          </div>
                         </div>
                       </div>
+                      <div class="my-2 text-center">Guest</div>
                     </div>
-                    <div class="my-2 text-center">Revenue<b>($)</b></div>
+                  </div>
+                  <div class="d-flex col flex-column">
+                    <div class="w-100">
+                      <div class="detail-box mx-auto">
+                        <div class="w-100 h-100 d-flex">
+                          <div
+                            class="m-auto fw-700 lh-1"
+                            style="font-size: 20px"
+                          >
+                            1k
+                          </div>
+                        </div>
+                      </div>
+                      <div class="my-2 text-center">Revenue<b>($)</b></div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </ng-container>
             </div>
 
             <div class="d-flex col mb-3">
@@ -267,16 +386,34 @@
                 <div class="fw-700 lh-1 mb-3" style="font-size: 20px">
                   Weekly Stats
                 </div>
-                <div class="chart-container">
-                  <canvas
-                    baseChart
-                    [datasets]="barChartData"
-                    [labels]="barChartLabels"
-                    [options]="barChartOptions"
-                    [legend]="barChartLegend"
-                    [type]="'bar'"
-                  ></canvas>
-                </div>
+
+                <!-- Is Loading -->
+                <ng-container *ngIf="isLoading">
+                  <ngx-skeleton-loader
+                    [theme]="{
+                      margin: '0px',
+                      width: '100%',
+                      height: '250px',
+                      position: 'relative',
+                      background: '#f0f0f0'
+                    }"
+                    animation="progress"
+                  ></ngx-skeleton-loader>
+                </ng-container>
+
+                <!-- Loading Completed -->
+                <ng-container *ngIf="!isLoading">
+                  <div class="chart-container">
+                    <canvas
+                      baseChart
+                      [datasets]="barChartData"
+                      [labels]="barChartLabels"
+                      [options]="barChartOptions"
+                      [legend]="barChartLegend"
+                      [type]="'bar'"
+                    ></canvas>
+                  </div>
+                </ng-container>
               </div>
             </div>
 
@@ -285,93 +422,114 @@
                 <div class="fw-700 lh-1 mb-1" style="font-size: 20px">
                   Top Rating Rooms
                 </div>
-                <div class="d-flex">
-                  <div class="top-room-card">
-                    <div class="p-1 mt-1 h-100 d-flex">
-                      <div class="col-2">
-                        <div class="w-100 h-100 d-flex">
-                          <div class="img-round m-auto">
-                            <img
-                              src="https://assets.editorial.aetnd.com/uploads/2016/11/donald-trump-gettyimages-687193180.jpg"
-                            />
+
+                <!-- Is Loading -->
+                <ng-container *ngIf="isLoading">
+                  <div *ngFor="let item of [].constructor(3)">
+                    <ngx-skeleton-loader
+                    [theme]="{
+                      margin: '0px',
+                      width: '100%',
+                      height: '55px',
+                      position: 'relative',
+                      display: 'flex',
+                      background: '#f0f0f0'
+                    }"
+                    animation="progress"
+                  ></ngx-skeleton-loader>
+                  </div>
+                </ng-container>
+
+                <!-- Loading Completed -->
+                <ng-container *ngIf="!isLoading">
+                  <div class="d-flex">
+                    <div class="top-room-card">
+                      <div class="p-1 mt-1 h-100 d-flex">
+                        <div class="col-2">
+                          <div class="w-100 h-100 d-flex">
+                            <div class="img-round m-auto">
+                              <img
+                                src="https://assets.editorial.aetnd.com/uploads/2016/11/donald-trump-gettyimages-687193180.jpg"
+                              />
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-8">
-                        <div
-                          class="d-flex flex-column justify-content-center w-100 h-100"
-                        >
-                          <div class="fw-600 blue">Ocean View Room</div>
-                          <div class="fs-12 d-flex grey lh-1">
-                            <div style="opacity: 0.65">Best Natural View</div>
-                            <b class="blue ms-1">(287)</b>
-                            <i class="bi bi-star-fill star ms-1"></i>
-                            <b class="blue ms-1">4.8</b>
+                        <div class="col-8">
+                          <div
+                            class="d-flex flex-column justify-content-center w-100 h-100"
+                          >
+                            <div class="fw-600 blue">Ocean View Room</div>
+                            <div class="fs-12 d-flex grey lh-1">
+                              <div style="opacity: 0.65">Best Natural View</div>
+                              <b class="blue ms-1">(287)</b>
+                              <i class="bi bi-star-fill star ms-1"></i>
+                              <b class="blue ms-1">4.8</b>
+                            </div>
                           </div>
                         </div>
+                        <div class="col-2"></div>
                       </div>
-                      <div class="col-2"></div>
                     </div>
                   </div>
-                </div>
-                <div class="d-flex">
-                  <div class="top-room-card">
-                    <div class="p-1 mt-1 h-100 d-flex">
-                      <div class="col-2">
-                        <div class="w-100 h-100 d-flex">
-                          <div class="img-round m-auto">
-                            <img
-                              src="https://assets.editorial.aetnd.com/uploads/2016/11/donald-trump-gettyimages-687193180.jpg"
-                            />
+                  <div class="d-flex">
+                    <div class="top-room-card">
+                      <div class="p-1 mt-1 h-100 d-flex">
+                        <div class="col-2">
+                          <div class="w-100 h-100 d-flex">
+                            <div class="img-round m-auto">
+                              <img
+                                src="https://assets.editorial.aetnd.com/uploads/2016/11/donald-trump-gettyimages-687193180.jpg"
+                              />
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-8">
-                        <div
-                          class="d-flex flex-column justify-content-center w-100 h-100"
-                        >
-                          <div class="fw-600 blue">Master Room</div>
-                          <div class="fs-12 d-flex grey lh-1">
-                            <div style="opacity: 0.65">Most Expensive</div>
-                            <b class="blue ms-1">(127)</b>
-                            <i class="bi bi-star-fill star ms-1"></i>
-                            <b class="blue ms-1">5.0</b>
+                        <div class="col-8">
+                          <div
+                            class="d-flex flex-column justify-content-center w-100 h-100"
+                          >
+                            <div class="fw-600 blue">Master Room</div>
+                            <div class="fs-12 d-flex grey lh-1">
+                              <div style="opacity: 0.65">Most Expensive</div>
+                              <b class="blue ms-1">(127)</b>
+                              <i class="bi bi-star-fill star ms-1"></i>
+                              <b class="blue ms-1">5.0</b>
+                            </div>
                           </div>
                         </div>
+                        <div class="col-2"></div>
                       </div>
-                      <div class="col-2"></div>
                     </div>
                   </div>
-                </div>
-                <div class="d-flex">
-                  <div class="top-room-card">
-                    <div class="p-1 mt-1 h-100 d-flex">
-                      <div class="col-2">
-                        <div class="w-100 h-100 d-flex">
-                          <div class="img-round m-auto">
-                            <img
-                              src="https://assets.editorial.aetnd.com/uploads/2016/11/donald-trump-gettyimages-687193180.jpg"
-                            />
+                  <div class="d-flex">
+                    <div class="top-room-card">
+                      <div class="p-1 mt-1 h-100 d-flex">
+                        <div class="col-2">
+                          <div class="w-100 h-100 d-flex">
+                            <div class="img-round m-auto">
+                              <img
+                                src="https://assets.editorial.aetnd.com/uploads/2016/11/donald-trump-gettyimages-687193180.jpg"
+                              />
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-8">
-                        <div
-                          class="d-flex flex-column justify-content-center w-100 h-100"
-                        >
-                          <div class="fw-600 blue">Honeymoon Room</div>
-                          <div class="fs-12 d-flex grey lh-1">
-                            <div style="opacity: 0.65">Romantic Outlet</div>
-                            <b class="blue ms-1">(74)</b>
-                            <i class="bi bi-star-fill star ms-1"></i>
-                            <b class="blue ms-1">4.5</b>
+                        <div class="col-8">
+                          <div
+                            class="d-flex flex-column justify-content-center w-100 h-100"
+                          >
+                            <div class="fw-600 blue">Honeymoon Room</div>
+                            <div class="fs-12 d-flex grey lh-1">
+                              <div style="opacity: 0.65">Romantic Outlet</div>
+                              <b class="blue ms-1">(74)</b>
+                              <i class="bi bi-star-fill star ms-1"></i>
+                              <b class="blue ms-1">4.5</b>
+                            </div>
                           </div>
                         </div>
+                        <div class="col-2"></div>
                       </div>
-                      <div class="col-2"></div>
                     </div>
                   </div>
-                </div>
+                </ng-container>
               </div>
             </div>
           </div>

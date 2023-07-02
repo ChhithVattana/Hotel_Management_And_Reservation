@@ -7,9 +7,14 @@ import { ChartConfiguration, ChartOptions } from 'chart.js';
   styleUrls: ['./Dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
+  isLoading: boolean = true;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 3500);
+  }
 
   // bar chart
   public barChartOptions: ChartConfiguration<'bar'>['options'] = {

@@ -74,7 +74,6 @@ export class RoomServicesService {
         });
         this.roomResponse.length = res.length;
       });
-    console.log(this.roomResponse);
     return this.roomResponse;
   }
 
@@ -92,7 +91,6 @@ export class RoomServicesService {
         });
         this.roomTypeResponse.length = res.length;
       });
-    console.log(this.roomTypeResponse);
     return this.roomTypeResponse;
   }
 }
