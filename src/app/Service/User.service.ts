@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UserModel } from '../Model/UserModel';
 import { ResponseModel } from '../Model/ResponseModel';
+import { UserDto } from '../Model/CustomModel/UserDto';
 
 @Injectable({
   providedIn: 'root',
@@ -38,5 +39,19 @@ export class UserService {
       });
     console.log(this.userResponse.result);
     return this.userResponse;
+  }
+
+  async addNewUser(user: UserDto) {
+    try {
+      await this.http
+        .post<any>(
+          `https://m1g7.seyna.iteg7.com/api/v1/account`,
+          user,
+          this.httpOption
+        )
+        .toPromise();
+    } catch (error) {
+      console.error(error);
+    }
   }
 }

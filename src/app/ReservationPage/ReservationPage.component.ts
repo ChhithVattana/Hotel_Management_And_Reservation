@@ -12,6 +12,9 @@ import {
   Validators,
 } from '@angular/forms';
 import { AuthGaurdService } from '../Service/AuthGaurd.service';
+import { ReservationDto } from '../Model/CustomModel/ReservationDto';
+import { TransactionDto } from '../Model/CustomModel/TransactionDto';
+import { CustomerModel } from '../Model/CustomerModel';
 
 @Component({
   selector: 'app-ReservationPage',
@@ -48,6 +51,11 @@ export class ReservationPageComponent implements OnInit {
       date1: new FormControl('', Validators.required),
       rooms: new FormControl('', Validators.required),
       adults: new FormControl('', Validators.required),
+      gender: new FormControl('', Validators.required),
+      name: new FormControl('', Validators.required),
+      phone: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required),
+      request: new FormControl('', Validators.nullValidator),
     });
   }
 
@@ -169,5 +177,28 @@ export class ReservationPageComponent implements OnInit {
     this.tmp = room;
     const element = document.getElementById('input_info');
     element?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  confirmBooking() {
+    this._reservation.addBooking(
+      new ReservationDto(
+        this.getCheckInData,
+        this.getCheckOutData,
+        this.form.value.request,
+        new TransactionDto(
+          'Online',
+          new CustomerModel(
+            0,
+            this.form.value.name,
+            this.form.value.phone,
+            this.form.value.email
+          )
+        )
+      ),
+      this.getCheckInData,
+      this.getCheckOutData,
+      this.noRoom,
+      this.tmp.name
+    );
   }
 }

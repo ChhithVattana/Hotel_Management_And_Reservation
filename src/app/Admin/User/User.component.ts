@@ -2,30 +2,42 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ResponseModel } from 'src/app/Model/ResponseModel';
 import { UserModel } from 'src/app/Model/UserModel';
+import { AuthGaurdService } from 'src/app/Service/AuthGaurd.service';
 import { UserService } from 'src/app/Service/User.service';
 
 @Component({
   selector: 'app-User',
   templateUrl: './User.component.html',
-  styleUrls: ['./User.component.css']
+  styleUrls: ['./User.component.css'],
 })
 export class UserComponent implements OnInit {
-
-  emptyList: number = 0;
   isLoading: boolean = true;
+  searchTerm: string = '';
+  canAccess: Boolean = false;
+  emptyList: number = 0;
   pageIndex = 1;
   response: ResponseModel<UserModel[]> = new ResponseModel<UserModel[]>([], 0);
 
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(
+    private router: Router,
+    private userService: UserService,
+    private authGuardService: AuthGaurdService
+  ) {}
 
   async ngOnInit() {
-    this.response = await this.userService.getAllUserList(0);
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 800);
+    if (this.authGuardService.canAccess()) {
+      this.response = await this.userService.getAllUserList(0);
+      setTimeout(() => {
+        this.getUserInfo();
+        this.canAccess = this.authGuardService.canAccess();
+        this.isLoading = false;
+      }, 800);
+    } else {
+      this.router.navigate(['login']);
+    }
   }
 
-  onClickAddUser(){
+  onClickAddUser() {
     this.router.navigate(['admin/user/adduser']);
   }
 
@@ -79,5 +91,21 @@ export class UserComponent implements OnInit {
       dots[i].className = dots[i].className.replace(' active', '');
     }
     dots[this.pageIndex - 1].className += ' active';
+  }
+  // search box
+  search() {
+    // Perform search functionality using the searchTerm
+    console.log('Searching for:', this.searchTerm);
+  }
+
+  clearSearch() {
+    this.searchTerm = '';
+  }
+
+  username: string = '';
+
+  // get user info
+  getUserInfo() {
+    this.username = this.authGuardService.getUserName();
   }
 }

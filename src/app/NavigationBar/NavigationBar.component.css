@@ -152,6 +152,10 @@ input:checked + div span.line-2 {
   height: 30px;
 }
 
+.disabled {
+  display: none;
+}
+
 @media screen and (max-width: 576px) {
   ul {
     height: 100vh;

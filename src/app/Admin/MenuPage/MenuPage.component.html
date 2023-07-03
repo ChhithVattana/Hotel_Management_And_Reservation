@@ -8,8 +8,8 @@
   </div>
   <div class="container">
     <p class="mb-1 text-white">Menu</p>
-    <hr class="mt-1 mb-3" style="color: #fff"/>
-    <div class="row">
+    <hr class="mt-1 mb-3" style="color: #fff" />
+    <div class="row" *ngIf="canAccess">
       <button class="hover1 btn" (click)="onClickDashboard()">
         <div class="d-flex position-relative">
           <div class="col-2 d-flex justify-content-center position-relative">
@@ -85,7 +85,7 @@
         </div>
       </button>
     </div>
-    <div class="row">
+    <div class="row" *ngIf="canAccess">
       <button class="hover1 btn" (click)="onClickEmployee()">
         <div class="d-flex position-relative">
           <div class="col-2 d-flex justify-content-center position-relative">
@@ -104,7 +104,7 @@
         </div>
       </button>
     </div>
-    <div class="row">
+    <div class="row" *ngIf="canAccess">
       <button class="hover1 btn" (click)="onClickBilling()">
         <div class="d-flex position-relative">
           <div class="col-2 d-flex justify-content-center position-relative">
@@ -126,7 +126,7 @@
     <div class="row mt-3">
       <p class="mb-1 text-white">More</p>
     </div>
-    <hr class="mt-1 mb-3" style="color: #fff"/>
+    <hr class="mt-1 mb-3" style="color: #fff" />
     <div class="row">
       <button class="hover1 btn" (click)="onClickAllReport()">
         <div class="d-flex position-relative">
@@ -137,7 +137,7 @@
         </div>
       </button>
     </div>
-    <div class="row">
+    <div class="row" *ngIf="canAccess">
       <button class="hover1 btn" (click)="onClickUser()">
         <div class="d-flex position-relative">
           <div class="col-2 d-flex justify-content-center position-relative">

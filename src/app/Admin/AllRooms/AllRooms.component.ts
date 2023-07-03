@@ -11,19 +11,24 @@ import { RoomServicesService } from 'src/app/Service/RoomServices.service';
   styleUrls: ['./AllRooms.component.css'],
 })
 export class AllRoomsComponent implements OnInit {
-  emptyList: number = 0;
   isLoading: boolean = true;
+  searchTerm: string = '';
+  canAccess: Boolean = false;
+  emptyList: number = 0;
   pageIndex = 1;
   response: ResponseModel<RoomModel[]> = new ResponseModel<RoomModel[]>([], 0);
 
   constructor(
     private router: Router,
-    private roomService: RoomServicesService
+    private roomService: RoomServicesService,
+    private authGuardService: AuthGaurdService
   ) {}
 
   async ngOnInit() {
     this.response = await this.roomService.getAllRoomList(0);
     setTimeout(() => {
+      this.getUserInfo();
+      this.canAccess = this.authGuardService.canAccess();
       this.isLoading = false;
     }, 800);
   }
@@ -82,5 +87,21 @@ export class AllRoomsComponent implements OnInit {
       dots[i].className = dots[i].className.replace(' active', '');
     }
     dots[this.pageIndex - 1].className += ' active';
+  }
+  // search box
+  search() {
+    // Perform search functionality using the searchTerm
+    console.log('Searching for:', this.searchTerm);
+  }
+
+  clearSearch() {
+    this.searchTerm = '';
+  }
+
+  username: string = '';
+
+  // get user info
+  getUserInfo() {
+    this.username = this.authGuardService.getUserName();
   }
 }

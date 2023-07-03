@@ -1,3 +1,4 @@
 <app-NavigationBar *ngIf="showNavigationBar()"></app-NavigationBar>
 <router-outlet></router-outlet>
 <app-Footer></app-Footer>
+<app-Footer *ngIf="showNavigationBar()"></app-Footer>

@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { RoomModel } from '../Model/RoomModel';
 import { DatePipe } from '@angular/common';
+import { ReservationDto } from '../Model/CustomModel/ReservationDto';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ export class ReservationService {
   httpOption = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${localStorage.getItem('access_token')}`
+      Authorization: `Bearer ${localStorage.getItem('access_token')}`,
     }),
   };
 
@@ -37,7 +38,27 @@ export class ReservationService {
           this.availableRoomType.push(r);
         });
       });
-      console.log(this.availableRoomType)
+    console.log(this.availableRoomType);
     return this.availableRoomType;
+  }
+
+  async addBooking(
+    booking: ReservationDto,
+    dateIn: Date,
+    dateOut: Date,
+    capacity: number,
+    roomName: string
+  ) {
+    try {
+      await this.http
+        .post<any>(
+          `https://m1g7.seyna.iteg7.com/api/v1/reservation/addBooking/searchAvailable?page=0&size=10&checkInOn=${dateIn}&checkOutOn=${dateOut}&noOfRoom=${capacity}&q=${roomName}&isAvailable=true`,
+          booking,
+          this.httpOption
+        )
+        .toPromise();
+    } catch (error) {
+      console.error(error);
+    }
   }
 }

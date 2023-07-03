@@ -209,90 +209,118 @@
     </div>
   </div>
   <ng-container *ngIf="ordering">
-    <div *ngIf="ordering" class="container" id="input_info">
-      <div class="row mt-4">
-        <div class="col-7 pe-3">
-          <div class="traveller-info">
-            <div class="w-100 d-flex bg-dblue p-2 px-3">
-              <h4 class="fw-700 d-flex align-items-center m-0">
-                Traveller Information
-              </h4>
-            </div>
-            <div
-              class="d-flex justify-content-between flex-column p-3 bg-white"
-            >
-              <div class="d-flex justify-content-between">
-                <div class="pe-3">
-                  <mat-form-field>
-                    <mat-label>Select</mat-label>
-                    <mat-select>
-                      <mat-option value="one">First option</mat-option>
-                      <mat-option value="two">Second option</mat-option>
-                    </mat-select>
+    <form [formGroup]="form" (submit)="confirmBooking()">
+      <div *ngIf="ordering" class="container" id="input_info">
+        <div class="row mt-4">
+          <div class="col-7 pe-3">
+            <div class="traveller-info">
+              <div class="w-100 d-flex bg-dblue p-2 px-3">
+                <h4 class="fw-700 d-flex align-items-center m-0">
+                  Traveller Information
+                </h4>
+              </div>
+              <div
+                class="d-flex justify-content-between flex-column p-3 bg-white"
+              >
+                <div class="d-flex justify-content-between">
+                  <div class="pe-3">
+                    <mat-form-field>
+                      <mat-label>Select</mat-label>
+                      <mat-select formControlName="gender">
+                        <mat-option value="one">Mr</mat-option>
+                        <mat-option value="two">Mrs</mat-option>
+                        <mat-option value="two">Ms</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                  <mat-form-field class="w-100">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" />
                   </mat-form-field>
                 </div>
                 <mat-form-field class="w-100">
-                  <mat-label>Input</mat-label>
-                  <input matInput />
+                  <mat-label>Email</mat-label>
+                  <input matInput formControlName="email" />
+                </mat-form-field>
+                <mat-form-field class="w-100">
+                  <mat-label>Phone</mat-label>
+                  <input matInput formControlName="phone" />
+                </mat-form-field>
+                <mat-form-field>
+                  <mat-label>Special Request</mat-label>
+                  <textarea matInput formControlName="request"></textarea>
                 </mat-form-field>
               </div>
-              <mat-form-field class="w-100">
-                <mat-label>Input</mat-label>
-                <input matInput />
-              </mat-form-field>
-              <mat-form-field class="w-100">
-                <mat-label>Input</mat-label>
-                <input matInput />
-              </mat-form-field>
-              <mat-form-field>
-                <mat-label>Textarea</mat-label>
-                <textarea matInput></textarea>
-              </mat-form-field>
             </div>
           </div>
-        </div>
-        <div class="col-5 selection-info">
-          <div class="w-100 d-flex bg-dblue p-2 px-3">
-            <h4 class="fw-600 d-flex align-items-center m-0">Your Selection</h4>
-          </div>
-          <div class="d-flex p-3 bg-white">
-            <div class="col-6">
-              <p>Check In</p>
-              <p>Check Out</p>
-              <p>Room</p>
-              <p>Rate Plan</p>
-              <p>Guest</p>
+          <div class="col-5 selection-info">
+            <div class="w-100 d-flex bg-dblue p-2 px-3">
+              <h4 class="fw-600 d-flex align-items-center m-0">
+                Your Selection
+              </h4>
             </div>
-            <div class="col-6">
-              <p class="fw-700">: {{ getCheckInData }}</p>
-              <p class="fw-700">: {{ getCheckOutData }}</p>
-              <p class="fw-700">: {{ tmp.name }}</p>
-              <p class="fw-700">: Include Breakfast</p>
-              <p class="fw-700">: {{ getGuestData }}</p>
+            <div class="d-flex p-3 bg-white">
+              <div class="col-6">
+                <p>Check In</p>
+                <p>Check Out</p>
+                <p>Room</p>
+                <p>Num of Room</p>
+                <p>Guest</p>
+              </div>
+              <div class="col-6">
+                <p class="fw-700">: {{ getCheckInData }}</p>
+                <p class="fw-700">: {{ getCheckOutData }}</p>
+                <p class="fw-700">: {{ tmp.name }}</p>
+                <p class="fw-700">: {{ noRoom }}</p>
+                <p class="fw-700">: {{ getGuestData }}</p>
+              </div>
+            </div>
+            <div
+              class="d-flex p-3 pb-2 bg-white"
+              style="border-top: 1px solid black"
+            >
+              <div class="col-6">
+                <p class="mb-2">Amount</p>
+                <p class="mb-2">Taxes</p>
+              </div>
+              <div class="col-6">
+                <p class="fw-700 mb-2">: ${{ tmp.price }}</p>
+                <p class="fw-700 mb-2">: $0</p>
+              </div>
+            </div>
+            <div class="w-100 d-flex bg-main p-2 px-3">
+              <p class="text-white fw-700 m-0 col-6">Total Amount</p>
+              <p class="text-white fw-700 m-0 col-6">
+                : ${{ tmp.price * noRoom }}
+              </p>
             </div>
           </div>
-          <div
-            class="d-flex p-3 pb-2 bg-white"
-            style="border-top: 1px solid black"
-          >
-            <div class="col-6">
-              <p class="mb-2">Amount</p>
-              <p class="mb-2">Taxes</p>
-            </div>
-            <div class="col-6">
-              <p class="fw-700 mb-2">: ${{ tmp.price }}</p>
-              <p class="fw-700 mb-2">: $0</p>
-            </div>
+          <div class="col-5 mt-2 mb-5 pt-2">
+            <button class="w-100 btn dblue hover-blue">
+              Confirm Booking
+            </button>
           </div>
-          <div class="w-100 d-flex bg-main p-2 px-3">
-            <p class="text-white fw-700 m-0 col-6">Total Amount</p>
-            <p class="text-white fw-700 m-0 col-6">: ${{ tmp.price }}</p>
-          </div>
-        </div>
-        <div class="col-5 mt-2 mb-5 pt-2">
-          <button class="w-100 btn dblue hover-blue">Confirm Booking</button>
         </div>
       </div>
-    </div>
+    </form>
   </ng-container>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Modal body content goes here -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>

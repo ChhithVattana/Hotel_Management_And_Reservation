@@ -47,7 +47,11 @@ export class AuthService {
       .then((res: any) => {
         localStorage.setItem('access_token', res.access_token);
         localStorage.setItem('refresh_token', res.refresh_token);
-        this.router.navigate(['/admin/dashboard']);
+        if (this.checkAuthorities()) {
+          this.router.navigate(['admin/dashboard']);
+        } else {
+          this.router.navigate(['admin/allrooms']);
+        }
       });
   }
 
@@ -70,5 +74,20 @@ export class AuthService {
     const decodedToken = helper.decodeToken(token!!);
     // Check if the user has a specific authority/role
     return decodedToken.authorities.includes('PRIVILEGE_ADMIN');
+  }
+
+  checkUser(): string {
+    const token = localStorage.getItem('access_token');
+    const helper = new JwtHelperService();
+
+    // Check if the token is valid and not expired
+    if (token && !helper.isTokenExpired(token)) {
+      const decodedToken = helper.decodeToken(token);
+      const username = decodedToken.user_name;
+      return username;
+    } else {
+      // Handle invalid or expired token case
+      return 'Invalid Token';
+    }
   }
 }

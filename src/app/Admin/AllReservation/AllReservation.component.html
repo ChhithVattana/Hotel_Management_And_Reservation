@@ -5,7 +5,90 @@
     </div>
     <div class="col ms-2 h-100 p-0 scroll">
       <div class="row p-0 m-0 w-100" style="height: 10%">
-        <div class="border size rounded bg-white"></div>
+        <div class="border size rounded bg-white">
+          <div class="d-flex w-100 h-100 justify-content-between">
+            <div class="d-flex flex-column justify-content-center">
+              <div class="search-box">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  [(ngModel)]="searchTerm"
+                  (keyup)="search()"
+                />
+                <i class="bi bi-search search-icon"></i>
+                <button
+                  *ngIf="searchTerm"
+                  class="clear-button"
+                  (click)="clearSearch()"
+                >
+                  X
+                </button>
+              </div>
+            </div>
+            <div class="d-flex flex-column">
+              <div class="d-flex h-100">
+                <div class="search-box-icon me-2 my-auto">
+                  <div class="w-100 h-100 d-flex">
+                    <img
+                      class="m-auto"
+                      src="../../../assets/icon/Sun.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="search-box-icon me-2 my-auto">
+                  <div class="w-100 h-100 d-flex">
+                    <img
+                      class="m-auto"
+                      src="../../../assets/icon/ClockCounterClockwise.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="search-box-icon me-2 my-auto">
+                  <div class="w-100 h-100 d-flex">
+                    <img
+                      class="m-auto"
+                      src="../../../assets/icon/Bell.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="search-box-icon me-2 my-auto">
+                  <div class="w-100 h-100 d-flex">
+                    <img
+                      class="m-auto"
+                      src="../../../assets/icon/Sidebar.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="search-box-pf-info me-2 my-auto">
+                  <div
+                    class="w-100 h-100 d-flex flex-column justify-content-between"
+                  >
+                    <div class="fs-link fw-700">
+                      {{ username }}
+                    </div>
+                    <ng-container *ngIf="!isLoading">
+                      <div class="fs-12 text-end" *ngIf="canAccess">Admin</div>
+                      <div class="fs-12 text-end" *ngIf="!canAccess">Staff</div>
+                    </ng-container>
+                  </div>
+                </div>
+                <div class="search-box-pf me-2 my-auto">
+                  <div class="w-100 h-100 d-flex">
+                    <img
+                      class="m-auto"
+                      src="../../../assets/icon/Ellipse 2.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="row p-0 m-0 w-100" style="height: 87.7vh">
         <div class="size1 border rounded bg-white">
@@ -44,10 +127,10 @@
                   <td>{{ no + 1 }}</td>
                   <td>{{ item.customerId.name }}</td>
                   <td>{{ item.customerId.phone }}</td>
-                  <td>{{ item.customerId.name }}</td>
+                  <td>{{ item.reservation[0].roomId[0].roomNo }}</td>
                   <td>{{ item.reservation[0].checkInOn }}</td>
-                  <td>{{ item.reservation[0].checkOutOn  }}</td>
-                  <td>{{ item.reservation[0].stayDuration  }}</td>
+                  <td>{{ item.reservation[0].checkOutOn }}</td>
+                  <td>{{ item.reservation[0].stayDuration }}</td>
                 </tr>
               </ng-container>
               <ng-container *ngIf="isLoading">
