@@ -156,7 +156,7 @@ a {
     scroll-snap-align: start;
   }
   .scroll-card{
-    display: inline-block;
+    display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory ;
   }
