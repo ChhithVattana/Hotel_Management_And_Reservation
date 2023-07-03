@@ -154,13 +154,11 @@ a {
   }
   .scroll-card.item{
     scroll-snap-align: start;
-
-
   }
   .scroll-card{
-    display: flex;
+    display: inline-block;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory ;
   }
   .item{
     min-width: 100%;
