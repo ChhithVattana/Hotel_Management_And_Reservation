@@ -90,3 +90,15 @@ div.card-body::-webkit-scrollbar {
     box-shadow: 0 0 0 0 var(--hoverContorno);
   }
 }
+.scroll-card.item{
+  scroll-snap-align: start;
+}
+.scroll-card{
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+}
+.item{
+  min-width: 100%;
+}

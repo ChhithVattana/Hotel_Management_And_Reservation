@@ -15,7 +15,7 @@ a {
 
 .card {
   width: 100%;
-  height: 400px;
+  height: 380px;
   padding: 0px;
   border-radius: 10px;
   border: none;
@@ -100,8 +100,8 @@ a {
 
 /* custom card */
 .card-cus {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 410px;
   border-radius: 10px;
   background: #fff;
   position: relative;
@@ -140,6 +140,8 @@ a {
 .fs{
   font-size: 24px !important;
 }
+
+
 @media screen and (max-width: 576px) {
   hr {
     display: none;
@@ -149,5 +151,18 @@ a {
   }
   .mb-0{
     margin-top: 10px !important;
+  }
+  .scroll-card.item{
+    scroll-snap-align: start;
+
+
+  }
+  .scroll-card{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .item{
+    min-width: 100%;
   }
 }

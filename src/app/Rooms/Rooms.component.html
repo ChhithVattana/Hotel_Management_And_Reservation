@@ -42,25 +42,26 @@
         </div>
       </div>
       <ng-template #onecard>
-        <div class="col-xxl-3" *ngFor="let i of [1]">
-          <div class="card mx-auto secondAnimation">
-            <div class="card-header" (click)="onClickNavigate(i)">
-              <div class="bg-img room-img-1"></div>
-            </div>
-            <div class="card-body p-4">
-              <p class="fs-lg-content blue fw-600">DELUXE KING ROOM</p>
-              <p class="fs-content mb-0">
-                Contemporary furnishing with great views of the cityscape. King
-                bedded
-              </p>
-            </div>
-            <div class="card-footer px-4 py-3">
-              <div class="row">
-                <div class="col-6 fw-700 fs-lg-content">$ 60.00</div>
-                <div class="col-6 fw-700 fs-lg-content text-end">
-                  <button class="btn fw-600 blue px-3 hover-blue">
-                    Book Now
-                  </button>
+        <div class="scroll-card">
+          <div class="col-xxl-3 item" *ngFor="let i of roomData.slice(0, 4)">
+            <div class="card mx-auto secondAnimation">
+              <div class="card-header" (click)="onClickNavigate(i)">
+                <div class="bg-img room-img-1" [ngStyle]="{ 'background-image': 'url(' + i.url + ')' }"></div>
+              </div>
+              <div class="card-body p-4">
+                <p class="fs-lg-content blue fw-600">{{ i.name }}</p>
+                <p class="fs-content mb-0">
+                  {{ truncateText(i.mainDescription, 100) }}
+                </p>
+              </div>
+              <div class="card-footer px-4 py-3">
+                <div class="row">
+                  <div class="col-6 fw-700 fs-lg-content">{{ i.price }}$</div>
+                  <div class="col-6 fw-700 fs-lg-content text-end">
+                    <button class="btn fw-600 blue px-3 hover-blue">
+                      Book Now
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
