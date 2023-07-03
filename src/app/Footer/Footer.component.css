@@ -10,7 +10,7 @@ a {
   background-color: #002449
 }
 img {
-  content: url("../../assets/Hotel-Main-White-2.png");
+  content: url("../../assets/Hotel-Main-White-2.png") !important;
   object-fit: contain;
   width: 270px;
   height: 96px;

@@ -9,7 +9,7 @@
       </p>
     </div>
     <div class="row px-xxl-4 py-xxl-3">
-      <div *ngFor="let i of image" class="col-xxl-4 p-1">
+      <div *ngFor="let i of data" class="col-xxl-4 p-1">
         <div
           style="
             box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
@@ -17,10 +17,10 @@
           "
         >
           <div style="overflow: hidden; border-radius: 15px">
-            <div class="service-img" style="background-image: url({{i}});">
-              <div class="on-hover">
-                <div class="text-center text-white py-5 px-3">
-                  <p class="fs-28 fs-sm-20 fw-600 mb-1">FITNESS CENTRE</p>
+            <div class="service-img" style="background-image: url({{i.url}});">
+              <div class="on-hover" >
+                <div class="text-center text-white py-5 px-3" >
+                  <p class="fs-28 fs-sm-20 fw-600 mb-1">{{i.title}}</p>
                   <p class="fs-content fs-sm-16">
                     Get your cardio or weight trainning at our hotel Get your
                     cardio or weight

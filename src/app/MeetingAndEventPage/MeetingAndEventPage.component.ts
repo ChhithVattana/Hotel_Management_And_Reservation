@@ -41,7 +41,7 @@ export class MeetingAndEventPageComponent implements OnInit {
     },
     {
       id: 3,
-      name: 'WEDDING ROOM',
+      name: 'WEDDING Hall',
       room_info: "BEST WEDDING PLACE PHNOM PENH",
       des: 'One of our favorites venues in the center of Budapest in the Mallika Hotel. Elegant, classic and royal wedding hotel perfect for engagement parties, pre wedding days, wedding ceremony and gala dinners and also big enough to host the weddings.',
       main_des: "It really hard to find the place to celebrate the wedding to the new couple that hard to think what we have to host this event. MAILLIKA Hotel can help you that host this event to be a success and provide all the step to who chose this packages. Brides will love these new features and want them to be part of their weddings experience. We provide Free Meals for the couple at on site restaurants if they book a certain number of guests in their hotel block. Post Wedding Pictures, include Photoshoot and also Partner with videographers.",

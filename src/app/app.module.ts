@@ -106,6 +106,13 @@ const appRoutes: Routes = [
   {
     path: 'dinning',
     component: DinningPageComponent,
+    children: [
+      {
+        path: '',
+        outlet: 'menu',
+        component: BreakfastMenuComponent,
+      },
+    ],
   },
   {
     path: 'dinning/breakfast',
@@ -117,6 +124,7 @@ const appRoutes: Routes = [
         component: BreakfastMenuComponent,
       },
     ],
+
   },
   {
     path: 'dinning/launch',

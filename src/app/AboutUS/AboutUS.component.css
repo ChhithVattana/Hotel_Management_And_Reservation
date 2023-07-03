@@ -140,7 +140,7 @@ i {
   transition: 0.5s;
   border-radius: 50%;
   border: 3px solid white;
-  object-fit: fill;
+  object-fit: cover;
   background-color: #0057b2;
   transition: 0.5s;
 }

@@ -18,7 +18,9 @@
   --bs-navbar-padding-y: 0rem;
   --bs-nav-link-font-size: 16px;
 }
-
+.sticky-1{
+  display: none;
+}
 .active {
   color: #0057b2;
 }
