@@ -114,6 +114,7 @@
 .income-info-box {
   height: 270px;
   padding: 5px;
+  background-color: #fff;
   border-radius: 8px;
   box-shadow: 4px 4px 10px 0px rgba(78, 92, 100, 0.3);
 }

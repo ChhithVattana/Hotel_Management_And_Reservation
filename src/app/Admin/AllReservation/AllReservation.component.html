@@ -44,10 +44,10 @@
                   <td>{{ no + 1 }}</td>
                   <td>{{ item.customerId.name }}</td>
                   <td>{{ item.customerId.phone }}</td>
-                  <td>{{ item.customerId.name }}</td>
+                  <td>{{ item.reservation[0].roomId[0].roomNo }}</td>
                   <td>{{ item.reservation[0].checkInOn }}</td>
-                  <td>{{ item.reservation[0].checkOutOn  }}</td>
-                  <td>{{ item.reservation[0].stayDuration  }}</td>
+                  <td>{{ item.reservation[0].checkOutOn }}</td>
+                  <td>{{ item.reservation[0].stayDuration }}</td>
                 </tr>
               </ng-container>
               <ng-container *ngIf="isLoading">

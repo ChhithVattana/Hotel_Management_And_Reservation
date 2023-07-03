@@ -6,6 +6,7 @@ export class TransactionModel {
     public id: number,
     public reservation: ReservationModel[],
     public customerId: CustomerModel,
-    public date: Date
+    public date: Date,
+    public paymentType: String
   ) {}
 }

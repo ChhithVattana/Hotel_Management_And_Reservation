@@ -123,3 +123,24 @@ th:last-of-type {
   background-color: #eddede;
   height: 35px;
 }
+
+/* Page Num */
+.page-num {
+  width: 20px;
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #e6e6e6;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.page-num.active {
+  background-color: #0057b2;
+  color: white;
+}
+
+.disabled {
+  pointer-events: none;
+}
