@@ -2,25 +2,36 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ResponseModel } from 'src/app/Model/ResponseModel';
 import { RoomTypeModel } from 'src/app/Model/RoomTypeModel';
+import { AuthGaurdService } from 'src/app/Service/AuthGaurd.service';
 import { RoomServicesService } from 'src/app/Service/RoomServices.service';
 
 @Component({
   selector: 'app-AllRoomType',
   templateUrl: './AllRoomType.component.html',
-  styleUrls: ['./AllRoomType.component.css']
+  styleUrls: ['./AllRoomType.component.css'],
 })
 export class AllRoomTypeComponent implements OnInit {
-
-  response: ResponseModel<RoomTypeModel[]> = new ResponseModel<RoomTypeModel[]>([], 0);
+  response: ResponseModel<RoomTypeModel[]> = new ResponseModel<RoomTypeModel[]>(
+    [],
+    0
+  );
   emptyList: number = 0;
   isLoading: boolean = true;
   pageIndex = 1;
+  canAccess: Boolean = false;
+  searchTerm: string = '';
 
-  constructor(private router: Router, private roomTypeService: RoomServicesService) { }
+  constructor(
+    private router: Router,
+    private roomTypeService: RoomServicesService,
+    private authGuardService: AuthGaurdService
+  ) {}
 
   async ngOnInit() {
     this.response = await this.roomTypeService.getAllRoomTypeList(0);
     setTimeout(() => {
+      this.getUserInfo();
+      this.canAccess = this.authGuardService.canAccess();
       this.isLoading = false;
     }, 800);
   }
@@ -79,5 +90,21 @@ export class AllRoomTypeComponent implements OnInit {
       dots[i].className = dots[i].className.replace(' active', '');
     }
     dots[this.pageIndex - 1].className += ' active';
+  }
+  // search box
+  search() {
+    // Perform search functionality using the searchTerm
+    console.log('Searching for:', this.searchTerm);
+  }
+
+  clearSearch() {
+    this.searchTerm = '';
+  }
+
+  username: string = '';
+
+  // get user info
+  getUserInfo() {
+    this.username = this.authGuardService.getUserName();
   }
 }

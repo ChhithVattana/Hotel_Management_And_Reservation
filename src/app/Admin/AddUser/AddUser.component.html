@@ -5,7 +5,90 @@
     </div>
     <div class="col ms-2 h-100 p-0 scroll">
       <div class="row p-0 m-0 w-100" style="height: 10%">
-        <div class="border size rounded bg-white"></div>
+        <div class="border size rounded bg-white">
+          <div class="d-flex w-100 h-100 justify-content-between">
+            <div class="d-flex flex-column justify-content-center">
+              <div class="search-box">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  [(ngModel)]="searchTerm"
+                  (keyup)="search()"
+                />
+                <i class="bi bi-search search-icon"></i>
+                <button
+                  *ngIf="searchTerm"
+                  class="clear-button"
+                  (click)="clearSearch()"
+                >
+                  X
+                </button>
+              </div>
+            </div>
+            <div class="d-flex flex-column">
+              <div class="d-flex h-100">
+                <div class="search-box-icon me-2 my-auto">
+                  <div class="w-100 h-100 d-flex">
+                    <img
+                      class="m-auto"
+                      src="../../../assets/icon/Sun.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="search-box-icon me-2 my-auto">
+                  <div class="w-100 h-100 d-flex">
+                    <img
+                      class="m-auto"
+                      src="../../../assets/icon/ClockCounterClockwise.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="search-box-icon me-2 my-auto">
+                  <div class="w-100 h-100 d-flex">
+                    <img
+                      class="m-auto"
+                      src="../../../assets/icon/Bell.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="search-box-icon me-2 my-auto">
+                  <div class="w-100 h-100 d-flex">
+                    <img
+                      class="m-auto"
+                      src="../../../assets/icon/Sidebar.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="search-box-pf-info me-2 my-auto">
+                  <div
+                    class="w-100 h-100 d-flex flex-column justify-content-between"
+                  >
+                    <div class="fs-link fw-700">
+                      {{ username }}
+                    </div>
+                    <ng-container *ngIf="!isLoading">
+                      <div class="fs-12 text-end" *ngIf="canAccess">Admin</div>
+                      <div class="fs-12 text-end" *ngIf="!canAccess">Staff</div>
+                    </ng-container>
+                  </div>
+                </div>
+                <div class="search-box-pf me-2 my-auto">
+                  <div class="w-100 h-100 d-flex">
+                    <img
+                      class="m-auto"
+                      src="../../../assets/icon/Ellipse 2.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="row p-0 m-0 w-100" style="height: 90%">
         <div class="size1 border rounded bg-white">
@@ -27,75 +110,83 @@
               </div>
             </div>
           </div>
-          <div class="px-4 d-flex flex-column justify-content-between">
-            <!-- for flex fix -->
-            <div class="col-md-12 col">
-              <div class="d-flex flex-column my-0 my-md-3">
-                <div class="me-md-4 me-0 col-lg-6 col my-2 my-md-3 flex-fill">
-                  <p class="mb-2">Username</p>
-                  <div>
+          <form [formGroup]="form" (submit)="onSubmit()">
+            <div class="px-4 d-flex flex-column justify-content-between">
+              <!-- for flex fix -->
+              <div class="col-md-12 col">
+                <div class="d-flex flex-column my-0 my-md-3">
+                  <div class="me-md-4 me-0 col-lg-6 col my-2 my-md-3 flex-fill">
+                    <p class="mb-2">Username</p>
+                    <div>
+                      <div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          aria-label="Sizing example input"
+                          aria-describedby="inputGroup-sizing-default"
+                          formControlName="username"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="me-md-4 me-0 col-lg-6 col my-2 my-md-3 flex-fill">
+                    <p class="mb-2">Password</p>
                     <div>
                       <input
-                        type="text"
+                        type="password"
                         class="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
+                        formControlName="password"
                       />
                     </div>
                   </div>
-                </div>
-                <div class="me-md-4 me-0 col-lg-6 col my-2 my-md-3 flex-fill">
-                  <p class="mb-2">Password</p>
-                  <div>
-                    <input
-                      type="password"
-                      class="form-control"
-                      aria-label="Sizing example input"
-                      aria-describedby="inputGroup-sizing-default"
-                    />
+                  <div class="me-md-4 me-0 col-lg-6 col my-2 my-md-3 flex-fill">
+                    <p class="mb-2">Role</p>
+                    <div>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                        formControlName="role"
+                      >
+                        <option selected>Select Role</option>
+                        <option value="1">Admin</option>
+                        <option value="2">Staff</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
-                <div class="me-md-4 me-0 col-lg-6 col my-2 my-md-3 flex-fill">
-                  <p class="mb-2">Role</p>
-                  <div>
-                    <select
-                      class="form-select"
-                      aria-label="Default select example"
+              </div>
+              <div class="d-flex mt-3">
+                <div>
+                  <button
+                    type="submit"
+                    class="btn hover-blue dblue py-2 px-3 me-3"
+                  >
+                    <div
+                      class="d-flex position-relative justify-content-between"
                     >
-                      <option selected>Select Role</option>
-                      <option value="1">Admin</option>
-                      <option value="2">Staff</option>
-                    </select>
-                  </div>
+                      <div class="icon my-auto"></div>
+                      <div class="fs my-auto mx-1 fw-600">Add User</div>
+                    </div>
+                  </button>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-red hover-dred red py-2 px-3"
+                    (click)="onClickBack()"
+                  >
+                    <div
+                      class="d-flex position-relative justify-content-between"
+                    >
+                      <div class="fs my-auto mx-2 px-3 fw-600">Cancel</div>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
-            <div class="d-flex mt-3">
-              <div>
-                <button
-                  type="button"
-                  class="btn hover-blue dblue py-2 px-3 me-3"
-                  (click)="onClickAddNewRoom()"
-                >
-                  <div class="d-flex position-relative justify-content-between">
-                    <div class="icon my-auto"></div>
-                    <div class="fs my-auto mx-1 fw-600">Add User</div>
-                  </div>
-                </button>
-              </div>
-              <div>
-                <button
-                  type="button"
-                  class="btn btn-red hover-dred red py-2 px-3"
-                  (click)="onClickBack()"
-                >
-                  <div class="d-flex position-relative justify-content-between">
-                    <div class="fs my-auto mx-2 px-3 fw-600">Cancel</div>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

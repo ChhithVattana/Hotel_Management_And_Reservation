@@ -35,7 +35,6 @@ export class TransactionService {
         });
         this.response.length = res.length;
       });
-    console.log(this.response.result);
     return this.response;
   }
 }

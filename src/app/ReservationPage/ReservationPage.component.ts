@@ -180,25 +180,25 @@ export class ReservationPageComponent implements OnInit {
   }
 
   confirmBooking() {
-    // this._reservation.addBooking(
-    //   new ReservationDto(
-    //     this.getCheckInData,
-    //     this.getCheckOutData,
-    //     this.form.value.request,
-    //     new TransactionDto(
-    //       'Online',
-    //       new CustomerModel(
-    //         0,
-    //         this.form.value.name,
-    //         this.form.value.phone,
-    //         this.form.value.email
-    //       )
-    //     )
-    //   ),
-    //   this.getCheckInData,
-    //   this.getCheckOutData,
-    //   this.noRoom,
-    //   this.tmp.name
-    // );
+    this._reservation.addBooking(
+      new ReservationDto(
+        this.getCheckInData,
+        this.getCheckOutData,
+        this.form.value.request,
+        new TransactionDto(
+          'Online',
+          new CustomerModel(
+            0,
+            this.form.value.name,
+            this.form.value.phone,
+            this.form.value.email
+          )
+        )
+      ),
+      this.getCheckInData,
+      this.getCheckOutData,
+      this.noRoom,
+      this.tmp.name
+    );
   }
 }

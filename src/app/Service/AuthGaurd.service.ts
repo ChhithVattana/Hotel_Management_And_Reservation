@@ -22,4 +22,8 @@ export class AuthGaurdService {
     }
     return false
   }
+
+  getUserName(): string {
+    return this.auth.checkUser();
+  }
 }

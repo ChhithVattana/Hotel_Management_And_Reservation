@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthGaurdService } from 'src/app/Service/AuthGaurd.service';
 
 @Component({
   selector: 'app-MenuPage',
@@ -8,9 +9,13 @@ import { Router } from '@angular/router';
 })
 export class MenuPageComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  canAccess: Boolean = false;
+
+  constructor(private router: Router, private authGuard: AuthGaurdService) { }
 
   ngOnInit() {
+    this.authGuard.canActivate();
+    this.canAccess = this.authGuard.canAccess()
   }
 
   onClickDashboard(){

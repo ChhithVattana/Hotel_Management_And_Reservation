@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ResponseModel } from 'src/app/Model/ResponseModel';
 import { TransactionModel } from 'src/app/Model/TransactionModel';
+import { AuthGaurdService } from 'src/app/Service/AuthGaurd.service';
 import { TransactionService } from 'src/app/Service/Transaction.service';
 
 @Component({
@@ -10,18 +11,26 @@ import { TransactionService } from 'src/app/Service/Transaction.service';
   styleUrls: ['./AllReservation.component.css'],
 })
 export class AllReservationComponent implements OnInit {
-  emptyList: number = 0;
   isLoading: boolean = true;
+  searchTerm: string = '';
+  canAccess: Boolean = false;
+  emptyList: number = 0;
   pageIndex = 1;
   response: ResponseModel<TransactionModel[]> = new ResponseModel<
     TransactionModel[]
   >([], 0);
 
-  constructor(private rotuer: Router, private transactionService: TransactionService) {}
+  constructor(
+    private rotuer: Router,
+    private transactionService: TransactionService,
+    private authGuardService: AuthGaurdService
+  ) {}
 
   async ngOnInit() {
     this.response = await this.transactionService.getAllReservationList(0);
     setTimeout(() => {
+      this.getUserInfo();
+      this.canAccess = this.authGuardService.canAccess();
       this.isLoading = false;
     }, 800);
   }
@@ -80,5 +89,21 @@ export class AllReservationComponent implements OnInit {
       dots[i].className = dots[i].className.replace(' active', '');
     }
     dots[this.pageIndex - 1].className += ' active';
+  }
+  // search box
+  search() {
+    // Perform search functionality using the searchTerm
+    console.log('Searching for:', this.searchTerm);
+  }
+
+  clearSearch() {
+    this.searchTerm = '';
+  }
+
+  username: string = '';
+
+  // get user info
+  getUserInfo() {
+    this.username = this.authGuardService.getUserName();
   }
 }

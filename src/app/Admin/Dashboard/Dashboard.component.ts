@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ChartConfiguration, ChartOptions } from 'chart.js';
+import { AuthGaurdService } from 'src/app/Service/AuthGaurd.service';
 
 @Component({
   selector: 'app-Dashboard',
@@ -8,12 +10,24 @@ import { ChartConfiguration, ChartOptions } from 'chart.js';
 })
 export class DashboardComponent implements OnInit {
   isLoading: boolean = true;
-  constructor() {}
+  searchTerm: string = '';
+  canAccess: Boolean = false;
+
+  constructor(
+    private authGuardService: AuthGaurdService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 3500);
+    if (this.authGuardService.canAccess()) {
+      setTimeout(() => {
+        this.getUserInfo();
+        this.canAccess = this.authGuardService.canAccess();
+        this.isLoading = false;
+      }, 1000);
+    } else {
+      this.router.navigate(['login']);
+    }
   }
 
   // bar chart
@@ -182,4 +196,21 @@ export class DashboardComponent implements OnInit {
     },
   };
   public lineChartLegend_1 = false;
+
+  // search box
+  search() {
+    // Perform search functionality using the searchTerm
+    console.log('Searching for:', this.searchTerm);
+  }
+
+  clearSearch() {
+    this.searchTerm = '';
+  }
+
+  username: string = '';
+
+  // get user info
+  getUserInfo() {
+    this.username = this.authGuardService.getUserName();
+  }
 }
