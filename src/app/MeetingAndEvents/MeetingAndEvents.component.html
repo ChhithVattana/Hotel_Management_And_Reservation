@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row p-xxl-5 p-4 pe-3">
         <div class="d-flex justify-content-between p-0">
-          <h2 class="fw-700 blue mb-0">MEETINGS & EVENTS</h2>
+          <h2 class="fw-700 blue mb-0 fs">MEETINGS & EVENTS</h2>
           <hr
             style="
               width: 50%;
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="row py-5 pt-2 px-6">
-        <div class="col-xxl-4 px-2 mb-xxl-auto mb-3" *ngFor="let i of [1, 2, 3]">
+        <div class="col-xxl-4 px-2 mb-xxl-auto mb-3">
           <div class="card-cus">
             <div class="card" (click)="onClickNavigate()">
               <div class="card-header">
@@ -43,8 +43,48 @@
               <div class="card-body text-center p-3 pt-3">
                 <p class="fs-lg-content blue fw-600">CONFERENCE ROOMS</p>
                 <p class="fs-content">
-                  Enjoy a seamless experience organising and holding a meeting in
-                  our varied selection of meeting rooms.
+                  The best collaboration spaces are more
+                  than a table and chairs—they’re built to
+                  support how teams work. Collaboration
+                  is the foundation of getting done in workplace.
+                </p>
+              </div>
+            </div>
+            <button class="card-button">More info</button>
+          </div>
+        </div>
+        <div class="col-xxl-4 px-2 mb-xxl-auto mb-3">
+          <div class="card-cus">
+            <div class="card" (click)="onClickNavigate()">
+              <div class="card-header">
+                <div class="bg-img event-img-2"></div>
+              </div>
+              <div class="card-body text-center p-3 pt-3">
+                <p class="fs-lg-content blue fw-600">PARTY EVENTS</p>
+                <p class="fs-content">
+                  No matter their reason for
+                  celebrating, guests who rent space
+                  for a private party may require some
+                  extra care and attention.
+                </p>
+              </div>
+            </div>
+            <button class="card-button">More info</button>
+          </div>
+        </div>
+        <div class="col-xxl-4 px-2 mb-xxl-auto mb-3">
+          <div class="card-cus">
+            <div class="card" (click)="onClickNavigate()">
+              <div class="card-header">
+                <div class="bg-img event-img-3"></div>
+              </div>
+              <div class="card-body text-center p-3 pt-3">
+                <p class="fs-lg-content blue fw-600">WEDDINGS EVENTS</p>
+                <p class="fs-content">
+                  Hotel wedding venues are among the
+                  most popular, stylish, and convenient
+                  places to get married to see the view
+                  out door of our hotel.
                 </p>
               </div>
             </div>

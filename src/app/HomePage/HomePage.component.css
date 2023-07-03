@@ -114,7 +114,7 @@ a {
   background-size: cover;
   background-position-y: 30%;
   background-repeat: no-repeat;
-  background-image: url("../../assets/resources/service/ser6.jpg");
+  background-image: url("../../assets/resources/service/ser6.jpg") !important;
 }
 
 img {
@@ -352,6 +352,9 @@ iframe {
   hr {
     display: none;
   }
+  .text{
+    text-align: center;
+  }
   .card-cus {
     overflow: hidden;
     width: 100%;
@@ -362,15 +365,19 @@ iframe {
     border-bottom-right-radius: 50px;
     border-top-left-radius: 50px;
   }
+  .mb-0{
+    margin-top: 10px;
+  }
 
   .abt-info {
     position: absolute;
-    background-color: #0057b2;
+    background-color: #002449;
     width: 100%;
     height: 580px;
     top: 1.7%;
     left: 0%;
     z-index: 1;
+
   }
   .bg-img {
     height: 500px;
@@ -379,5 +386,8 @@ iframe {
   iframe {
     width: 100%;
     height: 300px;
+  }
+  .fs-sm-24{
+    font-size: 18px !important;
   }
 }
