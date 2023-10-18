@@ -25,7 +25,7 @@ export class TransactionService {
     this.response.result = [];
     await this.http
       .get(
-        `https://m1g7.seyna.iteg7.com/api/v1/transaction?page=${page}&size=10&q=`,
+        `https://cloudnotebase.seynaa.com/api/v1/transaction?page=${page}&size=10&q=`,
         this.httpOption
       )
       .toPromise()

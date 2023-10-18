@@ -33,7 +33,7 @@ export class RoomServicesService {
     this.roomTypeData = [];
     await this.http
       .get(
-        'https://m1g7.seyna.iteg7.com/api/v1/roomType?page=0&size=10&q=',
+        'https://cloudnotebase.seynaa.com/api/v1/room-type?page=0&size=10&q=',
         this.httpOption
       )
       .toPromise()
@@ -50,7 +50,7 @@ export class RoomServicesService {
     this.roomDataDetail = [];
     await this.http
       .get(
-        `https://m1g7.seyna.iteg7.com/api/v1/roomType/getById?id=${id}`,
+        `https://cloudnotebase.seynaa.com/api/v1/room-type/getById?id=${id}`,
         this.httpOption
       )
       .toPromise()
@@ -64,7 +64,7 @@ export class RoomServicesService {
     this.roomResponse.result = [];
     await this.http
       .get(
-        `https://m1g7.seyna.iteg7.com/api/v1/room?page=${page}&size=10&q=`,
+        `https://cloudnotebase.seynaa.com/api/v1/room?page=${page}&size=10&q=`,
         this.httpOption
       )
       .toPromise()
@@ -81,7 +81,7 @@ export class RoomServicesService {
     this.roomTypeResponse.result = [];
     await this.http
       .get(
-        `https://m1g7.seyna.iteg7.com/api/v1/roomType?page=${page}&size=10&q=`,
+        `https://cloudnotebase.seynaa.com/api/v1/room-type?page=${page}&size=10&q=`,
         this.httpOption
       )
       .toPromise()

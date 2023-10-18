@@ -27,7 +27,7 @@ export class AuthService {
     body.set('username', 'admin');
     body.set('password', 'admin');
     await this.http
-      .post('https://m1g7.seyna.iteg7.com/oauth/token', body, this.httpOptions)
+      .post('https://cloudnotebase.seynaa.com/api/v1/login', body, this.httpOptions)
       .toPromise()
       .then((res: any) => {
         localStorage.setItem('access_token', res.access_token);
@@ -42,7 +42,7 @@ export class AuthService {
     body.set('username', loginModel.username);
     body.set('password', loginModel.password);
     await this.http
-      .post('https://m1g7.seyna.iteg7.com/oauth/token', body, this.httpOptions)
+      .post('https://cloudnotebase.seynaa.com/api/v1/login', body, this.httpOptions)
       .toPromise()
       .then((res: any) => {
         localStorage.setItem('access_token', res.access_token);

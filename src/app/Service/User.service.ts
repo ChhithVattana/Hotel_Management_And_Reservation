@@ -27,7 +27,7 @@ export class UserService {
     this.userResponse.result = [];
     await this.http
       .get(
-        `https://m1g7.seyna.iteg7.com/api/v1/account?page=${page}&size=10&q=`,
+        `https://cloudnotebase.seynaa.com/api/v1/account?page=${page}&size=10&q=`,
         this.httpOption
       )
       .toPromise()
@@ -45,7 +45,7 @@ export class UserService {
     try {
       await this.http
         .post<any>(
-          `https://m1g7.seyna.iteg7.com/api/v1/account`,
+          `https://cloudnotebase.seynaa.com/api/v1/account`,
           user,
           this.httpOption
         )

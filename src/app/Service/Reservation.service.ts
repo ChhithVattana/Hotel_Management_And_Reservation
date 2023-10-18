@@ -23,7 +23,7 @@ export class ReservationService {
     this.availableRoomType = [];
     await this.http
       .get(
-        `https://m1g7.seyna.iteg7.com/api/v1/reservation/searchAvailable?page=0&size=10&checkInOn=${this.datePipe.transform(
+        `https://cloudnotebase.seynaa.com/api/v1/reservation/search-available-all?page=0&size=10&checkInOn=${this.datePipe.transform(
           dateIn,
           'yyyy-MM-dd'
         )}&checkOutOn=${this.datePipe.transform(
@@ -52,7 +52,7 @@ export class ReservationService {
     try {
       await this.http
         .post<any>(
-          `https://m1g7.seyna.iteg7.com/api/v1/reservation/addBooking/searchAvailable?page=0&size=10&checkInOn=${dateIn}&checkOutOn=${dateOut}&noOfRoom=${capacity}&q=${roomName}&isAvailable=true`,
+          `https://cloudnotebase.seynaa.com/api/v1/reservation/addBooking/search-available?page=0&size=10&checkInOn=${dateIn}&checkOutOn=${dateOut}&noOfRoom=${capacity}&q=${roomName}&isAvailable=true`,
           booking,
           this.httpOption
         )
