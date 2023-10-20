@@ -25,7 +25,7 @@ export class AuthService {
     const body = new URLSearchParams();
     body.set('grant_type', 'password');
     body.set('username', 'admin');
-    body.set('password', 'admin');
+    body.set('password', 'seyna123');
     await this.http
       .post('https://cloudnotebase.seynaa.com/api/v1/login', body, this.httpOptions)
       .toPromise()
