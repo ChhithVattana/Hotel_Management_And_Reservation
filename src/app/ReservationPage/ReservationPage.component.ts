@@ -175,8 +175,11 @@ export class ReservationPageComponent implements OnInit {
   onClickBook(room: any) {
     this.ordering = true;
     this.tmp = room;
-    const element = document.getElementById('input_info');
-    element?.scrollIntoView({ behavior: 'smooth' });
+
+    setTimeout(() => {
+      const element = document.getElementById('input_info');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }, 0); // The delay of 0 milliseconds ensures that it runs after the previous code
   }
 
   confirmBooking() {

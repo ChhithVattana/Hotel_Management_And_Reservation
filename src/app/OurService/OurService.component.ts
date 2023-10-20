@@ -21,7 +21,7 @@ export class OurServiceComponent implements OnInit {
     title : "The Spa",
    },
    {
-    url : "https://s3-alpha-sig.figma.com/img/d0a9/beca/c8dca55718bf1c9f532482fbc05b34cf?Expires=1689552000&Signature=etPmi5xq2N3GYq9XocJnqC1MnmNr0~H~IHMXnyEbbCvrf3WJN~n1R-mb0LiKlw6hJt46B48nmGHXz1dvO5nlaPRTa40mdispInzTydng1W5v1IH0XeTp39xXtw5hHw1b4NTg8MLe4BuxxUtQ5C69h6gexldLwgcwdjyCHetqxpbhT1vPUU3EOgC5kK7VnBVPbRhNCFQVhhhmTxh3z6rTJOZNNGmy2HDTzCixbwqqhff-ZG8xU4MOpnw0m8S34zpRLjEfHGH7hcohZFssfoBNznuaZ7ABDR06S8~hKn4TakWsldR4nI0lB8spoahSzdmGIk4qYVK3u-fg4tRwbXUrcA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+    url : "../../assets/resources/service/ser4.jpg",
     title : "CATERED JUST FOR YOU",
    },
    {
@@ -29,7 +29,7 @@ export class OurServiceComponent implements OnInit {
     title : "FITNESS CENTRE"
    },
    {
-    url : "../../assets/resources/service/ser.jpg",
+    url : "../../assets/resources/service/ser6.jpg",
     title : "Swimming Pool",
    },
  ]
