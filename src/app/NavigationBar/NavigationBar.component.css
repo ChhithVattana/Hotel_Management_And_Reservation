@@ -24,8 +24,17 @@
 }
 
 .navbar-nav .show > .nav-link,
-.navbar-nav .nav-link.active {
+.navbar-nav a.nav-link.active::after {
   color: #0057b2;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  background: white;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 100%;
 }
 
 a {
@@ -131,7 +140,7 @@ a:hover:after {
   transform-origin: 100% 0;
 }
 
-input:checked + div span.line-1 {
+/* input:checked + div span.line-1 {
   width: 50%;
   transform: translate(0, 0) rotate(-45deg);
 }
@@ -143,7 +152,7 @@ input:checked + div span.line-3 {
 
 input:checked + div span.line-2 {
   transform: translate(-50%, -50%) rotate(45deg);
-}
+} */
 
 .free-space {
   width: 30px;

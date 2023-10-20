@@ -8,6 +8,7 @@ import { HostListener, ElementRef } from '@angular/core';
 })
 export class NavigationBarComponent implements OnInit {
   isSticky: boolean = false;
+  btn: boolean = false;
   tmp: number = 0;
   index = 1;
   scrWidth: any;
@@ -55,7 +56,15 @@ export class NavigationBarComponent implements OnInit {
   }
 
   currentLink(n: any) {
+    let i;
     this.showActive((this.index = n));
+    let link = document.getElementsByClassName(
+      'collapse navbar-collapse'
+    ) as HTMLCollectionOf<HTMLElement>;
+    for (i = 0; i < link.length; i++) {
+      link[i].className = link[i].className.replace(' show', '');
+    }
+    this.btn = false
   }
 
   showActive(n: any) {
