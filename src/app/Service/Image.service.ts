@@ -34,7 +34,7 @@ export class ImageService {
   getImageById(id: number) {
     this.imageDataDetail = [];
     this.http
-      .get(`https://cloudnotebase.seynaa.com/api/v1/images/getById?id=${id}`, this.httpOption)
+      .get(`https://cloudnotebase.seynaa.com/api/v1/images/id?id=${id}`, this.httpOption)
       .toPromise()
       .then((res: any) => {
         res.result.forEach((r: ImageModel) => {

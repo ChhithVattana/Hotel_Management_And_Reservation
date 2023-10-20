@@ -50,7 +50,7 @@ export class RoomServicesService {
     this.roomDataDetail = [];
     await this.http
       .get(
-        `https://cloudnotebase.seynaa.com/api/v1/room-type/getById?id=${id}`,
+        `https://cloudnotebase.seynaa.com/api/v1/room-type/id?id=${id}`,
         this.httpOption
       )
       .toPromise()
