@@ -57,7 +57,7 @@ export class SearchBoxComponent implements OnInit {
     )).value;
     console.log(date, date1, rooms, adults);
     this.goToUrl(
-      `https://m1g7.cloudnote.seynaa.com/#/reservation/searchAvailable?checkInOn=${this.datePipe.transform(
+      `https://cloudnote.seynaa.com/#/reservation/searchAvailable?checkInOn=${this.datePipe.transform(
         date,
         'yyyy-MM-dd'
       )}&checkOutOn=${this.datePipe.transform(
