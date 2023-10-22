@@ -211,8 +211,8 @@
   <ng-container *ngIf="ordering">
     <form [formGroup]="form" (submit)="confirmBooking()">
       <div *ngIf="ordering" class="container" id="input_info">
-        <div class="row mt-4">
-          <div class="col-7 pe-3">
+        <div class="row">
+          <div class="col-lg-7 pe-3 mt-4">
             <div class="traveller-info">
               <div class="w-100 d-flex bg-dblue p-2 px-3">
                 <h4 class="fw-700 d-flex align-items-center m-0">
@@ -253,7 +253,7 @@
               </div>
             </div>
           </div>
-          <div class="col-5 selection-info">
+          <div class="col-lg-5 mt-4 selection-info">
             <div class="w-100 d-flex bg-dblue p-2 px-3">
               <h4 class="fw-600 d-flex align-items-center m-0">
                 Your Selection
@@ -295,7 +295,7 @@
               </p>
             </div>
           </div>
-          <div class="col-5 mt-2 mb-5 pt-2">
+          <div class="col-lg-5 mt-2 mb-5 pt-2">
             <button class="w-100 btn dblue hover-blue">
               Confirm Booking
             </button>
