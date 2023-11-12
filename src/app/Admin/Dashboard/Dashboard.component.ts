@@ -24,7 +24,7 @@ export class DashboardComponent implements OnInit {
         this.getUserInfo();
         this.canAccess = this.authGuardService.canAccess();
         this.isLoading = false;
-      }, 1100);
+      }, 1000);
     } else {
       this.router.navigate(['login']);
     }
